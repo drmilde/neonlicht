@@ -110,6 +110,14 @@ int Neonlicht::tick( void *outputBuffer, void *inputBuffer, unsigned int nBuffer
 
 /// this routine is setting up Neonlicht
 void Neonlicht::setup() {
+  cfm = new ConfigurationManager();
+
+  std::string path = cfm->getWorkingPath();
+  std::cout << "You started Neonlicht from here :" << path << std::endl;
+
+  
+  cfm->load("configuration/neonlicht.cfg");
+  
   // Set the global sample rate before creating class instances.
   Stk::setSampleRate( 44100.0 );
 

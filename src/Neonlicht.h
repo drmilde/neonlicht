@@ -9,6 +9,7 @@ using namespace stk;
 
 // Neonlicht includes
 #include "store/CentralStore.h"
+#include "configuration/ConfigurationManager.h"
 #include "unit/NoiseGen.h"
 #include "unit/NoiseUnit.h"
 
@@ -43,6 +44,8 @@ class Neonlicht {
   RtAudio::StreamParameters parameters;
   RtAudioFormat format;
   unsigned int bufferFrames;
+  ConfigurationManager* cfm;
+
 
 };
 

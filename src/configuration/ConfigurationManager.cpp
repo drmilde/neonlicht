@@ -11,6 +11,12 @@ ConfigurationManager::~ConfigurationManager() {
   }
 }
 
+std::string ConfigurationManager::getWorkingPath() {
+  int MAXPATHLEN = 256;
+  char temp[MAXPATHLEN];
+  return ( getcwd(temp, MAXPATHLEN) ? std::string( temp ) : std::string("") );
+}
+
 void ConfigurationManager::load(std::string fname) {
   try {
 
