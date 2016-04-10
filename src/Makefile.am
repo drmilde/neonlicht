@@ -1,9 +1,16 @@
 # whatever flags you want to pass to the C compiler & linker
-AM_CFLAGS = --pedantic -Wall -O3 -Wextra 
+AM_CFLAGS = --pedantic -Wall -O3 -Wextra -fPIC
 #AM_LDFLAGS = -lm -lpthread -lstk -lasound -loscpack
+
 # die LD flags muessen nach dem Quellcode positioniert werden
-LDADD = -lm -lpthread -lstk -lasound -loscpack
-AM_CPPFLAGS = -std=c++11 -O3 -Wextra -D__LINUX_ALSA__ -I/usr/local/include/stk -I/usr/local/include/oscpack/ -L/usr/local/lib
+LDADD = -L$(abs_top_builddir)/src/configuration/config4cpp/lib \
+	-L/usr/local/lib \
+	-lm -lpthread -lstk -lasound -loscpack -lconfig4cpp
+
+AM_CPPFLAGS = -std=c++11 -O3 -Wextra -D__LINUX_ALSA__ \
+	-I$(abs_top_builddir)/src/configuration/config4cpp/include \
+	-I/usr/local/include/stk -I/usr/local/include/oscpack/
+
 
 AUTOMAKE_OPTIONS = subdir-objects
 
@@ -11,8 +18,6 @@ AUTOMAKE_OPTIONS = subdir-objects
 # the previous manual Makefile
 #bin_PROGRAMS = first crtsine simple cmidiin oscsend oscreceive static store/gqueue
 #bin_PROGRAMS = store/mdqueue store/mdstore store/oscw
-bin_PROGRAMS =  store/mdstore kraftmaschine ugentest fliehkraft cmidiin
-
 #first_SOURCES = first.cpp utilities.cpp
 #crtsine_SOURCES = crtsine.cpp
 #simple_SOURCES = SimpleReceive.cpp
@@ -24,6 +29,8 @@ cmidiin_SOURCES = cmidiin.cpp MidiConnector.cpp OscOutConnector.cpp
 
 #store_mdqueue_SOURCES = store/mdqueue.cpp store/MessageDataQueue.cpp MessageData.cpp OscInConnector.cpp
 #store_oscw_SOURCES = store/oscw.cpp store/OscWrapper.cpp OscInConnector.cpp MessageData.cpp
+
+bin_PROGRAMS =  store/mdstore kraftmaschine ugentest fliehkraft cmidiin
 
 store_mdstore_SOURCES = store/mdstore.cpp store/CentralStore.cpp \
 	store/MessageDataQueue.cpp MessageData.cpp OscInConnector.cpp
@@ -38,7 +45,8 @@ kraftmaschine_SOURCES = kraftmaschine.cpp Neonlicht.cpp store/CentralStore.cpp \
 	unit/STKTwoZeroGen.cpp unit/STKBiQuadGen.cpp unit/STKOnePoleGen.cpp \
 	unit/WaveOutGen.cpp unit/AddTwoGen.cpp unit/MultiplyTwoGen.cpp \
 	unit/MultiplyGen.cpp unit/NumberGen.cpp unit/PhasorGen.cpp \
-	unit/EGOneStepGen.cpp unit/ADSRGen.cpp unit/GatedConstantGen.cpp 
+	unit/EGOneStepGen.cpp unit/ADSRGen.cpp unit/GatedConstantGen.cpp \
+	configuration/ConfigurationManager.cpp
 
 ugentest_SOURCES = unit/UGen.cpp unit/Port.cpp ugentest.cpp WaveWriter.cpp \
 	unit/SoundUnit.cpp unit/Patch.cpp unit/NoiseGen.cpp unit/IDGenerator.cpp \

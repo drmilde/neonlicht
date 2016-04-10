@@ -119,7 +119,8 @@ am_kraftmaschine_OBJECTS = kraftmaschine.$(OBJEXT) Neonlicht.$(OBJEXT) \
 	unit/MultiplyTwoGen.$(OBJEXT) unit/MultiplyGen.$(OBJEXT) \
 	unit/NumberGen.$(OBJEXT) unit/PhasorGen.$(OBJEXT) \
 	unit/EGOneStepGen.$(OBJEXT) unit/ADSRGen.$(OBJEXT) \
-	unit/GatedConstantGen.$(OBJEXT)
+	unit/GatedConstantGen.$(OBJEXT) \
+	configuration/ConfigurationManager.$(OBJEXT)
 kraftmaschine_OBJECTS = $(am_kraftmaschine_OBJECTS)
 kraftmaschine_LDADD = $(LDADD)
 kraftmaschine_DEPENDENCIES =
@@ -300,24 +301,28 @@ top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
 
 # whatever flags you want to pass to the C compiler & linker
-AM_CFLAGS = --pedantic -Wall -O3 -Wextra 
+AM_CFLAGS = --pedantic -Wall -O3 -Wextra -fPIC
 #AM_LDFLAGS = -lm -lpthread -lstk -lasound -loscpack
+
 # die LD flags muessen nach dem Quellcode positioniert werden
-LDADD = -lm -lpthread -lstk -lasound -loscpack
-AM_CPPFLAGS = -std=c++11 -O3 -Wextra -D__LINUX_ALSA__ -I/usr/local/include/stk -I/usr/local/include/oscpack/ -L/usr/local/lib
+LDADD = -L$(abs_top_builddir)/src/configuration/config4cpp/lib \
+	-L/usr/local/lib \
+	-lm -lpthread -lstk -lasound -loscpack -lconfig4cpp
+
+AM_CPPFLAGS = -std=c++11 -O3 -Wextra -D__LINUX_ALSA__ \
+	-I$(abs_top_builddir)/src/configuration/config4cpp/include \
+	-I/usr/local/include/stk -I/usr/local/include/oscpack/
+
 AUTOMAKE_OPTIONS = subdir-objects
 
+# this lists the binaries to produce, the (non-PHONY, binary) targets in
+# the previous manual Makefile
+#bin_PROGRAMS = first crtsine simple cmidiin oscsend oscreceive static store/gqueue
+#bin_PROGRAMS = store/mdqueue store/mdstore store/oscw
 #first_SOURCES = first.cpp utilities.cpp
 #crtsine_SOURCES = crtsine.cpp
 #simple_SOURCES = SimpleReceive.cpp
 cmidiin_SOURCES = cmidiin.cpp MidiConnector.cpp OscOutConnector.cpp
-#oscsend_SOURCES = oscsend.cpp OscOutConnector.cpp
-#oscreceive_SOURCES = oscreceive.cpp OscInConnector.cpp
-#static_SOURCES = teststatic.cpp TestStatic.cpp MessageData.cpp
-#store_gqueue_SOURCES = store/gqueue.cpp store/GenericThread.cpp
-
-#store_mdqueue_SOURCES = store/mdqueue.cpp store/MessageDataQueue.cpp MessageData.cpp OscInConnector.cpp
-#store_oscw_SOURCES = store/oscw.cpp store/OscWrapper.cpp OscInConnector.cpp MessageData.cpp
 store_mdstore_SOURCES = store/mdstore.cpp store/CentralStore.cpp \
 	store/MessageDataQueue.cpp MessageData.cpp OscInConnector.cpp
 
@@ -331,7 +336,8 @@ kraftmaschine_SOURCES = kraftmaschine.cpp Neonlicht.cpp store/CentralStore.cpp \
 	unit/STKTwoZeroGen.cpp unit/STKBiQuadGen.cpp unit/STKOnePoleGen.cpp \
 	unit/WaveOutGen.cpp unit/AddTwoGen.cpp unit/MultiplyTwoGen.cpp \
 	unit/MultiplyGen.cpp unit/NumberGen.cpp unit/PhasorGen.cpp \
-	unit/EGOneStepGen.cpp unit/ADSRGen.cpp unit/GatedConstantGen.cpp 
+	unit/EGOneStepGen.cpp unit/ADSRGen.cpp unit/GatedConstantGen.cpp \
+	configuration/ConfigurationManager.cpp
 
 ugentest_SOURCES = unit/UGen.cpp unit/Port.cpp ugentest.cpp WaveWriter.cpp \
 	unit/SoundUnit.cpp unit/Patch.cpp unit/NoiseGen.cpp unit/IDGenerator.cpp \
@@ -517,6 +523,15 @@ unit/ADSRGen.$(OBJEXT): unit/$(am__dirstamp) \
 	unit/$(DEPDIR)/$(am__dirstamp)
 unit/GatedConstantGen.$(OBJEXT): unit/$(am__dirstamp) \
 	unit/$(DEPDIR)/$(am__dirstamp)
+configuration/$(am__dirstamp):
+	@$(MKDIR_P) configuration
+	@: > configuration/$(am__dirstamp)
+configuration/$(DEPDIR)/$(am__dirstamp):
+	@$(MKDIR_P) configuration/$(DEPDIR)
+	@: > configuration/$(DEPDIR)/$(am__dirstamp)
+configuration/ConfigurationManager.$(OBJEXT):  \
+	configuration/$(am__dirstamp) \
+	configuration/$(DEPDIR)/$(am__dirstamp)
 
 kraftmaschine$(EXEEXT): $(kraftmaschine_OBJECTS) $(kraftmaschine_DEPENDENCIES) $(EXTRA_kraftmaschine_DEPENDENCIES) 
 	@rm -f kraftmaschine$(EXEEXT)
@@ -534,6 +549,7 @@ ugentest$(EXEEXT): $(ugentest_OBJECTS) $(ugentest_DEPENDENCIES) $(EXTRA_ugentest
 
 mostlyclean-compile:
 	-rm -f *.$(OBJEXT)
+	-rm -f configuration/*.$(OBJEXT)
 	-rm -f sequencer/*.$(OBJEXT)
 	-rm -f store/*.$(OBJEXT)
 	-rm -f unit/*.$(OBJEXT)
@@ -550,6 +566,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/cmidiin.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/kraftmaschine.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/ugentest.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@configuration/$(DEPDIR)/ConfigurationManager.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@sequencer/$(DEPDIR)/Activator.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@sequencer/$(DEPDIR)/OscActivator.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@sequencer/$(DEPDIR)/Pulse.Po@am__quote@
@@ -717,6 +734,8 @@ clean-generic:
 distclean-generic:
 	-test -z "$(CONFIG_CLEAN_FILES)" || rm -f $(CONFIG_CLEAN_FILES)
 	-test . = "$(srcdir)" || test -z "$(CONFIG_CLEAN_VPATH_FILES)" || rm -f $(CONFIG_CLEAN_VPATH_FILES)
+	-rm -f configuration/$(DEPDIR)/$(am__dirstamp)
+	-rm -f configuration/$(am__dirstamp)
 	-rm -f sequencer/$(DEPDIR)/$(am__dirstamp)
 	-rm -f sequencer/$(am__dirstamp)
 	-rm -f store/$(DEPDIR)/$(am__dirstamp)
@@ -732,7 +751,7 @@ clean: clean-am
 clean-am: clean-binPROGRAMS clean-generic mostlyclean-am
 
 distclean: distclean-am
-	-rm -rf ./$(DEPDIR) sequencer/$(DEPDIR) store/$(DEPDIR) unit/$(DEPDIR)
+	-rm -rf ./$(DEPDIR) configuration/$(DEPDIR) sequencer/$(DEPDIR) store/$(DEPDIR) unit/$(DEPDIR)
 	-rm -f Makefile
 distclean-am: clean-am distclean-compile distclean-generic \
 	distclean-tags
@@ -778,7 +797,7 @@ install-ps-am:
 installcheck-am:
 
 maintainer-clean: maintainer-clean-am
-	-rm -rf ./$(DEPDIR) sequencer/$(DEPDIR) store/$(DEPDIR) unit/$(DEPDIR)
+	-rm -rf ./$(DEPDIR) configuration/$(DEPDIR) sequencer/$(DEPDIR) store/$(DEPDIR) unit/$(DEPDIR)
 	-rm -f Makefile
 maintainer-clean-am: distclean-am maintainer-clean-generic
 
