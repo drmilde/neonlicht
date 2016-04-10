@@ -114,7 +114,6 @@ void Neonlicht::setup() {
 
   std::string path = cfm->getWorkingPath();
   std::cout << "You started Neonlicht from here :" << path << std::endl;
-
   
   cfm->load("configuration/neonlicht.cfg");
   
