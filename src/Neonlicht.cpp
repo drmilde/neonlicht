@@ -51,69 +51,23 @@ int Neonlicht::tick( void *outputBuffer, void *inputBuffer, unsigned int nBuffer
     if (midiMessage != NULL) { // first the midi data
       
       int type = midiMessage->getType();
-      float key = midiMessage->getKey();
-      float value = midiMessage->getValue()/127.0;
+      int key = midiMessage->getKey();
+      float value = midiMessage->getValue()/127.0; // norm value to [0,1]
 
-      switch(type) {
-      case osc::MessageData::Types::MIDIOFF: {
-	std::cout << "midi OFF message value=" << value  << ", KEY=" << key << std::endl;
-	break;
-      }
-      case osc::MessageData::Types::MIDION: {
-	std::cout << "midi ON message: value=" << value  << ", KEY =" << key << std::endl;
-
-	SU->control("key", key);
-
-	break;
-      }
-      }
-      
+      SU->processMidiMessage(type, key, value);
             
     } else {      
       osc::MessageData* controlMessage = CS.getControlData();
-      
+
       if (controlMessage != NULL) { // now the control data
 	
-	int type = midiMessage->getType();
-	float key = controlMessage->getKey();
-	float value = controlMessage->getValue()/127.0;
+	int type = controlMessage->getType();
+	int key = controlMessage->getKey();
+        float value = controlMessage->getValue()/127.0; // norm value to [0,1]
 	
 	std::cout << "control message: ," << value  << ", KEY =" << key << std::endl;
-	
-	if (key == 74) { // cutoff
-	  SU->control("cutoff", value);
-	}
-	if (key == 7) { // volume
-	  SU->control("volume", value);
-	} 
-	if (key == 71) { // resonance
-	  SU->control("resonance", value);
-	}
-	if (key == 76) { // lfo rate
-	  SU->control("lfo rate", value);
-	}
-	if (key == 18) { // param 1
-	  SU->control("one pole zero", value);
-	  SU->control("two pole zero", value);
-	}
-	if (key == 19) { // param 2
-	  SU->control("two pole resonance", value);
-	}
-	if (key == 16) { // param 3
-	  SU->control("two pole radius", value);
-	}
-	if (key == 17) { // param 4
-	  SU->control("filter type", value);
-	}
-	if (key == 91) { // delay amt
-	  SU->control("record on/off", value);
-	}
-	if (key == 43) { // pad #8, trigger EG
-	  SU->control("trigger eg", value);
-	}
-	if (key == 79) { // sustain, test trigger ADSR
-	  SU->control("trigger adsr", value);
-	}
+	SU->processControlMessage(type, key, value);
+      
      }      
     }
   }

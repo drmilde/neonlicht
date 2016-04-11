@@ -5,6 +5,7 @@
 #include <math.h>
 #include <chrono>
 
+#include "osc/MessageData.h"
 
 #include "SoundUnit.h"
 #include "NoiseGen.h"
@@ -31,10 +32,13 @@ class NoiseUnit : public SoundUnit {
 
   // have to be implemented
   void setup();
-  void control(std::string portName, float value);
   float tick();
+  void processMidiMessage(int type, int key, float value);
+  void processControlMessage(int type, int key, float value);
 
  private:
+  void control(std::string portName, float value);
+
   unit::NoiseGen* noise1;
   unit::NoiseGen* noise2;
   unit::SawGen* saw1;

@@ -52,6 +52,63 @@ void NoiseUnit::setup() {
   addUGen(mixer2);
 }
 
+
+void NoiseUnit::processMidiMessage(int type, int key, float value) {
+  // process incoming midi messages here
+  switch(type) {
+  case osc::MessageData::Types::MIDIOFF: {
+    std::cout << "midi OFF message value=" << value  << ", KEY=" << key << std::endl;
+    break;
+  }
+  case osc::MessageData::Types::MIDION: {
+    std::cout << "midi ON message: value=" << value  << ", KEY =" << key << std::endl;
+    
+    control("key", key);
+    
+    break;
+  }
+  }
+
+}
+
+void NoiseUnit::processControlMessage(int type, int key, float value) {
+  // process incoming control messages here
+  if (key == 74) { // cutoff
+    control("cutoff", value);
+  }
+  if (key == 7) { // volume
+    control("volume", value);
+  } 
+  if (key == 71) { // resonance
+    control("resonance", value);
+  }
+  if (key == 76) { // lfo rate
+    control("lfo rate", value);
+  }
+  if (key == 18) { // param 1
+    control("one pole zero", value);
+    control("two pole zero", value);
+  }
+  if (key == 19) { // param 2
+    control("two pole resonance", value);
+  }
+  if (key == 16) { // param 3
+    control("two pole radius", value);
+  }
+  if (key == 17) { // param 4
+    control("filter type", value);
+  }
+  if (key == 91) { // delay amt
+    control("record on/off", value);
+  }
+  if (key == 43) { // pad #8, trigger EG
+    control("trigger eg", value);
+  }
+  if (key == 79) { // sustain, test trigger ADSR
+    control("trigger adsr", value);
+  }
+}
+
 void NoiseUnit::control (std::string portName, float value) {
   if (portName == "cutoff") {
     onelpf->control("cutoff", value);

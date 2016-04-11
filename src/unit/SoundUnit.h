@@ -17,11 +17,14 @@ class SoundUnit {
 
   // abstract functions, must be implemented
   virtual void setup() = 0;
-  virtual void control(std::string portName, float value) = 0;
   virtual float tick() = 0;
+
+  virtual void processMidiMessage(int type, int key, float value) = 0;
+  virtual void processControlMessage(int type, int key, float value) = 0;
 
  protected:
   std::map<std::string, unit::UGen*> UGENS;
+  virtual void control(std::string portName, float value) = 0;
 
  private:
   std::string NAME;

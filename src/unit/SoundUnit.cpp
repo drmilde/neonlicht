@@ -33,3 +33,12 @@ float SoundUnit::tick() {
   return 0;
 }
 
+void SoundUnit::processMidiMessage(int type, int key, float value) {
+  // process incoming MIDI messages here
+}
+
+void SoundUnit::processControlMessage(int type, int key, float value) {
+  // process incoming CONTROL messages here
+}
+
+
