@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['ugen',['UGen',['../classUGen.html',1,'']]]
+  ['ugen',['UGen',['../classunit_1_1UGen.html',1,'unit']]]
 ];

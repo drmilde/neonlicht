@@ -6,8 +6,8 @@
 
 int main()
 {
-  NoiseGen n("rand-Noise");
-  NoiseGen n2("rand-Noise");
+  unit::NoiseGen n("rand-Noise");
+  unit::NoiseGen n2("rand-Noise");
 
   std::cout << n.getName() << ", " << n.getID() << std::endl;
   std::cout << n2.getName() << ", " << n2.getID() << std::endl;

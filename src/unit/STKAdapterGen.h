@@ -3,7 +3,9 @@
 
 #include "UGen.h"
 
-class STKAdapterGen : public UGen {
-};
+namespace unit {
+  class STKAdapterGen : public UGen {
+  };
+}
 
 #endif

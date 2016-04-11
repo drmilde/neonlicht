@@ -5,25 +5,27 @@
 #include <stdlib.h>    
 #include "UGen.h"
 
-class SquareGen: public UGen {
+namespace unit {
+  class SquareGen: public UGen {
 
- public:
-  SquareGen();
-  SquareGen(std::string name);
+  public:
+    SquareGen();
+    SquareGen(std::string name);
   
-  void control(std::string portName, float value);  
-  float tick(); // override standard implementation
+    void control(std::string portName, float value);  
+    float tick(); // override standard implementation
 
- private:
-  Port outPort;
+  private:
+    Port outPort;
   
-  float frequency;
+    float frequency;
 
-  float currentx;
-  float currenty;
-  float stepx;
+    float currentx;
+    float currenty;
+    float stepx;
 
   
-};
+  };
+}
 
 #endif

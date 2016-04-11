@@ -4,19 +4,21 @@
 #include <stdlib.h>
 #include "UGen.h"
 
-class GatedConstantGen : public UGen {
+namespace unit {
+  class GatedConstantGen : public UGen {
 
- public:
-  GatedConstantGen();
-  GatedConstantGen(std::string name);
+  public:
+    GatedConstantGen();
+    GatedConstantGen(std::string name);
 
-  void control(std::string portName, float value);
-  float tick();
+    void control(std::string portName, float value);
+    float tick();
 
- private:
-  bool isGated;
+  private:
+    bool isGated;
   
-};
+  };
+}
 
 
 #endif

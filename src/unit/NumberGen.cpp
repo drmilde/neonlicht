@@ -1,5 +1,7 @@
 #include "NumberGen.h"
 
+using namespace unit;
+
 NumberGen::NumberGen() : NumberGen("Mr. White") {
 }
 

@@ -9,20 +9,22 @@
 // include from STK
 #include "BiQuad.h"
 
-class STKBiQuadGen : public STKAdapterGen {
+namespace unit {
+  class STKBiQuadGen : public STKAdapterGen {
 
- public:
-  STKBiQuadGen();
-  void control (std::string portName, float value);
-  float tick();
+  public:
+    STKBiQuadGen();
+    void control (std::string portName, float value);
+    float tick();
 
- private:
-  void updateSettings();
-  float frequency;
-  float radius;
-  float type;
-  stk::BiQuad stkBiQuad;
+  private:
+    void updateSettings();
+    float frequency;
+    float radius;
+    float type;
+    stk::BiQuad stkBiQuad;
   
-};
+  };
+}
 
 #endif

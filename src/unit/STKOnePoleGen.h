@@ -9,16 +9,18 @@
 // include from STK
 #include "OnePole.h"
 
-class STKOnePoleGen : public STKAdapterGen {
+namespace unit {
+  class STKOnePoleGen : public STKAdapterGen {
 
- public:
-  STKOnePoleGen();
-  void control (std::string portName, float value);
-  float tick();
+  public:
+    STKOnePoleGen();
+    void control (std::string portName, float value);
+    float tick();
 
- private:
-  stk::OnePole stkOnePole;
+  private:
+    stk::OnePole stkOnePole;
   
-};
+  };
+}
 
 #endif

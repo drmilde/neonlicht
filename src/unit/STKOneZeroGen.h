@@ -9,16 +9,18 @@
 // include from STK
 #include "OneZero.h"
 
-class STKOneZeroGen : public STKAdapterGen {
+namespace unit {
+  class STKOneZeroGen : public STKAdapterGen {
 
- public:
-  STKOneZeroGen();
-  void control (std::string portName, float value);
-  float tick();
+  public:
+    STKOneZeroGen();
+    void control (std::string portName, float value);
+    float tick();
 
- private:
-  stk::OneZero stkOneZero;
+  private:
+    stk::OneZero stkOneZero;
   
-};
+  };
+}
 
 #endif

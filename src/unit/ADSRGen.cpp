@@ -1,5 +1,6 @@
 #include "ADSRGen.h"
 
+using namespace unit;
 
 ADSRGen::ADSRGen() : ADSRGen("") {
 }

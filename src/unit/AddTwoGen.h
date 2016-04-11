@@ -5,15 +5,17 @@
 #include <stdlib.h>    
 #include "UGen.h"
 
-class AddTwoGen: public UGen {
+namespace unit {
+  class AddTwoGen: public UGen {
 
- public:
-  AddTwoGen();
-  AddTwoGen(std::string name);
+  public:
+    AddTwoGen();
+    AddTwoGen(std::string name);
   
-  void control(std::string portName, float value);  
-  float tick(); // override standard implementation
+    void control(std::string portName, float value);  
+    float tick(); // override standard implementation
   
-};
+  };
+}
 
 #endif

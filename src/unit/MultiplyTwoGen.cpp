@@ -1,5 +1,7 @@
 #include "MultiplyTwoGen.h"
 
+using namespace unit;
+
 MultiplyTwoGen::MultiplyTwoGen() : MultiplyTwoGen("Made in Germany") {
 }
 

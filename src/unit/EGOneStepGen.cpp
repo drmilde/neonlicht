@@ -1,5 +1,6 @@
 #include "EGOneStepGen.h"
 
+using namespace unit;
 
 EGOneStepGen::EGOneStepGen() : EGOneStepGen("Madness") {
 }

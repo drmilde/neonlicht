@@ -9,19 +9,21 @@
 // include from STK
 #include "TwoPole.h"
 
-class STKTwoPoleGen : public STKAdapterGen {
+namespace unit {
+  class STKTwoPoleGen : public STKAdapterGen {
 
- public:
-  STKTwoPoleGen();
-  void control (std::string portName, float value);
-  float tick();
+  public:
+    STKTwoPoleGen();
+    void control (std::string portName, float value);
+    float tick();
 
- private:
-  void updateSettings();
-  float frequency;
-  float radius;
-  stk::TwoPole stkTwoPole;
+  private:
+    void updateSettings();
+    float frequency;
+    float radius;
+    stk::TwoPole stkTwoPole;
   
-};
+  };
+}
 
 #endif

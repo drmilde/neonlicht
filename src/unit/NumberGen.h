@@ -4,15 +4,17 @@
 #include <stdlib.h>    
 #include "UGen.h"
 
-class NumberGen: public UGen {
+namespace unit {
+  class NumberGen: public UGen {
 
- public:
-  NumberGen();
-  NumberGen(std::string name);
+  public:
+    NumberGen();
+    NumberGen(std::string name);
   
-  void control(std::string portName, float value);  
-  float tick(); // overrides standard implementation
+    void control(std::string portName, float value);  
+    float tick(); // overrides standard implementation
   
-};
+  };
+}
 
 #endif

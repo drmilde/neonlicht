@@ -1,5 +1,7 @@
 #include "AddTwoGen.h"
 
+using namespace unit;
+
 AddTwoGen::AddTwoGen() : AddTwoGen("Mr. White") {
 }
 

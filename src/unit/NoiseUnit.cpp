@@ -7,31 +7,31 @@ NoiseUnit::NoiseUnit():SoundUnit("NoiseUnit 1") {
 
 void NoiseUnit::setup() {
   
-  noise1 = new NoiseGen("Noise Generator 1");
-  noise2 = new NoiseGen("Noise Generator 2");
-  saw1 = new SawGen("Saw Generator 1");
-  phasor1 = new PhasorGen("Phasor Generator 1");
-  square1 = new SquareGen("Square Generator 1");
-  eg1 = new EGUpDownGen("EG Up Down 1");
-  onelpf = new OnePoleLPFGen("One Pole LPF");
-  mixer1 = new TwoInputMixerGen("Two Input Mixer 1");
-  mixer2 = new TwoInputMixerGen("Two Input Mixer 2");
-  oneStepEG = new EGOneStepGen("One Step EG");
+  noise1 = new unit::NoiseGen("Noise Generator 1");
+  noise2 = new unit::NoiseGen("Noise Generator 2");
+  saw1 = new unit::SawGen("Saw Generator 1");
+  phasor1 = new unit::PhasorGen("Phasor Generator 1");
+  square1 = new unit::SquareGen("Square Generator 1");
+  eg1 = new unit::EGUpDownGen("EG Up Down 1");
+  onelpf = new unit::OnePoleLPFGen("One Pole LPF");
+  mixer1 = new unit::TwoInputMixerGen("Two Input Mixer 1");
+  mixer2 = new unit::TwoInputMixerGen("Two Input Mixer 2");
+  oneStepEG = new unit::EGOneStepGen("One Step EG");
   oneStepEG->setDuration(2.0);
   oneStepEG->setStartLevel(1.0);
   oneStepEG->setEndLevel(.0);
 
-  adsr1 = new ADSRGen("adsr 1");
+  adsr1 = new unit::ADSRGen("adsr 1");
 
-  stkOneZero = new STKOneZeroGen();
+  stkOneZero = new unit::STKOneZeroGen();
   stkOneZero-> control ("amnt1", 0.0); // setting pole to -1.0
 
-  stkTwoPole = new STKTwoPoleGen();
-  stkTwoZero = new STKTwoZeroGen();
-  stkBiQuad = new STKBiQuadGen();
-  stkOnePole = new STKOnePoleGen();
+  stkTwoPole = new unit::STKTwoPoleGen();
+  stkTwoZero = new unit::STKTwoZeroGen();
+  stkBiQuad = new unit::STKBiQuadGen();
+  stkOnePole = new unit::STKOnePoleGen();
 
-  waveOut = new WaveOutGen();
+  waveOut = new unit::WaveOutGen();
   
   mixer1->control("amnt1", 0.5);
   mixer1->control("amnt2", 0.5);

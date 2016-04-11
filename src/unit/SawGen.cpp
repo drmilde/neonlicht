@@ -1,5 +1,6 @@
 #include "SawGen.h"
 
+using namespace unit;
 
 SawGen::SawGen() : SawGen("Comme ci, Comme ca") {
 }

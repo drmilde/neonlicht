@@ -1,5 +1,6 @@
 #include "TwoInputMixerGen.h"
 
+using namespace unit;
 
 TwoInputMixerGen::TwoInputMixerGen() : TwoInputMixerGen("Tom Cruise") {
 }

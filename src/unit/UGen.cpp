@@ -1,5 +1,7 @@
 #include "UGen.h"
 
+using namespace unit;
+
 // static members
 IDGenerator UGen::IDG;
 

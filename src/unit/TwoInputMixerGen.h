@@ -6,23 +6,25 @@
 #include <stdlib.h>    
 #include "UGen.h"
 
-class TwoInputMixerGen: public UGen {
+namespace unit {
+  class TwoInputMixerGen: public UGen {
 
- public:
-  TwoInputMixerGen();
-  TwoInputMixerGen(std::string name);
+  public:
+    TwoInputMixerGen();
+    TwoInputMixerGen(std::string name);
   
-  float tick(); // override standard implementation
-  void control(std::string portName, float value);
+    float tick(); // override standard implementation
+    void control(std::string portName, float value);
 
- private:
-  Port amntPort1;
-  Port amntPort2;
-  Port inPort1;
-  Port inPort2;
-  Port outPort;
+  private:
+    Port amntPort1;
+    Port amntPort2;
+    Port inPort1;
+    Port inPort2;
+    Port outPort;
    
   
-};
+  };
+}
 
 #endif

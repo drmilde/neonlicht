@@ -26,6 +26,9 @@
  * allowing students to experiment without the need of having access to
  * expensive fruity systems. 
  *
+ * @author JTM, @email email: milde@hs-fulda.de
+ * @date April 2016
+ *
  * \section install_sec Installation
  * 
  * Installing Neonlicht on your computer is done by taking the usual steps.

@@ -1,5 +1,6 @@
 #include "NoiseGen.h"
 
+using namespace unit;
 
 NoiseGen::NoiseGen() : NoiseGen("Mr. White") {
 }

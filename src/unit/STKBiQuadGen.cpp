@@ -1,5 +1,7 @@
 #include "STKBiQuadGen.h"
 
+using namespace unit;
+
 STKBiQuadGen::STKBiQuadGen() {
   // do something useful here
   stkBiQuad = stk::BiQuad();

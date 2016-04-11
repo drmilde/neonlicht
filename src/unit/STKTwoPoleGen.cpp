@@ -1,5 +1,7 @@
 #include "STKTwoPoleGen.h"
 
+using namespace unit;
+
 STKTwoPoleGen::STKTwoPoleGen() {
   // do something useful here
   stkTwoPole = stk::TwoPole();

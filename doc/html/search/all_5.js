@@ -4,6 +4,6 @@ var searchData=
   ['messagedataqueue',['MessageDataQueue',['../classMessageDataQueue.html',1,'']]],
   ['midiconnector',['MidiConnector',['../classMidiConnector.html',1,'']]],
   ['midipacketlistener',['MidiPacketListener',['../classOscInConnector_1_1MidiPacketListener.html',1,'OscInConnector']]],
-  ['multiplygen',['MultiplyGen',['../classMultiplyGen.html',1,'']]],
-  ['multiplytwogen',['MultiplyTwoGen',['../classMultiplyTwoGen.html',1,'']]]
+  ['multiplygen',['MultiplyGen',['../classunit_1_1MultiplyGen.html',1,'unit']]],
+  ['multiplytwogen',['MultiplyTwoGen',['../classunit_1_1MultiplyTwoGen.html',1,'unit']]]
 ];

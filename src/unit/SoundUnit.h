@@ -12,7 +12,7 @@ class SoundUnit {
   SoundUnit();
   SoundUnit(std::string name);
 
-  void addUGen(UGen* u);
+  void addUGen(unit::UGen* u);
   std::string getName();
 
   // abstract functions, must be implemented
@@ -21,7 +21,7 @@ class SoundUnit {
   virtual float tick() = 0;
 
  protected:
-  std::map<std::string, UGen*> UGENS;
+  std::map<std::string, unit::UGen*> UGENS;
 
  private:
   std::string NAME;

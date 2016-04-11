@@ -9,7 +9,7 @@ SoundUnit::SoundUnit(std::string name) {
   NAME = name;
 }
 
-void SoundUnit::addUGen(UGen* u) {
+void SoundUnit::addUGen(unit::UGen* u) {
   // adding UGen to the SoundUnit
   UGENS[u->getName()] = u;
 }

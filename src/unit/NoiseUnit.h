@@ -35,25 +35,25 @@ class NoiseUnit : public SoundUnit {
   float tick();
 
  private:
-  NoiseGen* noise1;
-  NoiseGen* noise2;
-  SawGen* saw1;
-  PhasorGen* phasor1;
-  SquareGen* square1;
-  EGUpDownGen* eg1;
-  OnePoleLPFGen* onelpf;
-  TwoInputMixerGen* mixer1;
-  TwoInputMixerGen* mixer2;
-  EGOneStepGen* oneStepEG;
+  unit::NoiseGen* noise1;
+  unit::NoiseGen* noise2;
+  unit::SawGen* saw1;
+  unit::PhasorGen* phasor1;
+  unit::SquareGen* square1;
+  unit::EGUpDownGen* eg1;
+  unit::OnePoleLPFGen* onelpf;
+  unit::TwoInputMixerGen* mixer1;
+  unit::TwoInputMixerGen* mixer2;
+  unit::EGOneStepGen* oneStepEG;
 
-  STKOneZeroGen* stkOneZero;
-  STKTwoPoleGen* stkTwoPole;
-  STKTwoZeroGen* stkTwoZero;
-  STKBiQuadGen* stkBiQuad;
-  STKOnePoleGen* stkOnePole;
+  unit::STKOneZeroGen* stkOneZero;
+  unit::STKTwoPoleGen* stkTwoPole;
+  unit::STKTwoZeroGen* stkTwoZero;
+  unit::STKBiQuadGen* stkBiQuad;
+  unit::STKOnePoleGen* stkOnePole;
 
-  WaveOutGen* waveOut;
-  ADSRGen* adsr1;
+  unit::WaveOutGen* waveOut;
+  unit::ADSRGen* adsr1;
 
 };
 

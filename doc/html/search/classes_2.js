@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['egonestepgen',['EGOneStepGen',['../classEGOneStepGen.html',1,'']]],
-  ['egupdowngen',['EGUpDownGen',['../classEGUpDownGen.html',1,'']]],
+  ['egonestepgen',['EGOneStepGen',['../classunit_1_1EGOneStepGen.html',1,'unit']]],
+  ['egupdowngen',['EGUpDownGen',['../classunit_1_1EGUpDownGen.html',1,'unit']]],
   ['examplepacketlistener',['ExamplePacketListener',['../classExamplePacketListener.html',1,'']]]
 ];

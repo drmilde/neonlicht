@@ -1,5 +1,7 @@
 #include "WaveOutGen.h"
 
+using namespace unit;
+
 WaveOutGen::WaveOutGen() : WaveOutGen("Morton Rhue") {
 }
 

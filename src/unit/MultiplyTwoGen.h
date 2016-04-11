@@ -4,15 +4,17 @@
 #include <stdlib.h>    
 #include "UGen.h"
 
-class MultiplyTwoGen: public UGen {
+namespace unit {
+  class MultiplyTwoGen: public UGen {
 
- public:
-  MultiplyTwoGen();
-  MultiplyTwoGen(std::string name);
+  public:
+    MultiplyTwoGen();
+    MultiplyTwoGen(std::string name);
   
-  void control(std::string portName, float value);  
-  float tick(); // override standard implementation
+    void control(std::string portName, float value);  
+    float tick(); // override standard implementation
   
-};
+  };
+}
 
 #endif

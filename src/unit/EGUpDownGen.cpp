@@ -1,5 +1,6 @@
 #include "EGUpDownGen.h"
 
+using namespace unit;
 
 EGUpDownGen::EGUpDownGen() : EGUpDownGen("Tom Hanks") {
 }

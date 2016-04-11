@@ -6,36 +6,38 @@
 #include "EGOneStepGen.h"
 #include "GatedConstantGen.h"
 
-class ADSRGen : public UGen {
+namespace unit {
+  class ADSRGen : public UGen {
 
-  enum States {ATTACK, DECAY, SUSTAIN, RELEASE, IDLE};
+    enum States {ATTACK, DECAY, SUSTAIN, RELEASE, IDLE};
 
- public:
-  ADSRGen();
-  ADSRGen(std::string name);
-  void control(std::string portName, float value);
+  public:
+    ADSRGen();
+    ADSRGen(std::string name);
+    void control(std::string portName, float value);
 
-  float tick();
+    float tick();
 
- private:
-  void reset();
+  private:
+    void reset();
 
-  States state;
-  bool isTriggered;
-  bool gate;
+    States state;
+    bool isTriggered;
+    bool gate;
 
-  float attack; // in seconds
-  float decay; // in seconds
-  float sustain; // value, usually in [0,1]
-  float release; // in seconds
-  float lastval;
+    float attack; // in seconds
+    float decay; // in seconds
+    float sustain; // value, usually in [0,1]
+    float release; // in seconds
+    float lastval;
 
-  EGOneStepGen* AttackGen;
-  EGOneStepGen* DecayGen;
-  GatedConstantGen* SustainGen;
-  EGOneStepGen* ReleaseGen;
+    EGOneStepGen* AttackGen;
+    EGOneStepGen* DecayGen;
+    GatedConstantGen* SustainGen;
+    EGOneStepGen* ReleaseGen;
   
-};
+  };
+}
 
 
 #endif

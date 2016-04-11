@@ -1,5 +1,7 @@
 #include "GatedConstantGen.h"
 
+using namespace unit;
+
 GatedConstantGen::GatedConstantGen() : GatedConstantGen("Frank Morris") {
 }
 

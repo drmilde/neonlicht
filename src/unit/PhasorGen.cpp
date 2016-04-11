@@ -1,5 +1,7 @@
 #include "PhasorGen.h"
 
+using namespace unit;
+
 PhasorGen::PhasorGen() : PhasorGen("set to stun") {
   //do something useful here 
 }

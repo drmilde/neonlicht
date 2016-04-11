@@ -1,5 +1,7 @@
 #include "STKOnePoleGen.h"
 
+using namespace unit;
+
 STKOnePoleGen::STKOnePoleGen() {
   // do something useful here
   stkOnePole = stk::OnePole(-1.0);

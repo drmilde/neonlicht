@@ -6,27 +6,29 @@
 #include "UGen.h"
 #include "Interpolation.h"
 
-class EGUpDownGen: public UGen {
+namespace unit {
+  class EGUpDownGen: public UGen {
 
- public:
-  EGUpDownGen();
-  EGUpDownGen(std::string name);
+  public:
+    EGUpDownGen();
+    EGUpDownGen(std::string name);
   
-  float tick(); // override standard implementation
-  void control(std::string portName, float value);
+    float tick(); // override standard implementation
+    void control(std::string portName, float value);
 
- private:
-  void reset();
+  private:
+    void reset();
   
-  Port durationPort;
-  Port triggerPort;
-  Port outPort;
+    Port durationPort;
+    Port triggerPort;
+    Port outPort;
 
-  float duration; // in seconds
-  int numberTicks;
-  int currentTick;
-  bool up;
+    float duration; // in seconds
+    int numberTicks;
+    int currentTick;
+    bool up;
   
-};
+  };
+}
 
 #endif

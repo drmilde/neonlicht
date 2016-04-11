@@ -1,5 +1,7 @@
 #include "MultiplyGen.h"
 
+using namespace unit;
+
 MultiplyGen::MultiplyGen() : MultiplyGen("Larger than life") {
 }
 

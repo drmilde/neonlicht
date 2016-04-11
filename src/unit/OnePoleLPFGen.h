@@ -5,24 +5,26 @@
 #include <stdlib.h>    
 #include "UGen.h"
 
-class OnePoleLPFGen: public UGen {
+namespace unit {
+  class OnePoleLPFGen: public UGen {
 
- public:
-  OnePoleLPFGen();
-  OnePoleLPFGen(std::string name);
+  public:
+    OnePoleLPFGen();
+    OnePoleLPFGen(std::string name);
   
-  void control (std::string portName, float value);
-  float tick(); // override standard implementation
+    void control (std::string portName, float value);
+    float tick(); // override standard implementation
 
- private:
-  Port cutoffPort;
-  Port lastPort;
-  Port inPort;
-  Port outPort;
+  private:
+    Port cutoffPort;
+    Port lastPort;
+    Port inPort;
+    Port outPort;
 
-  float cutoff;
+    float cutoff;
 
   
-};
+  };
+}
 
 #endif

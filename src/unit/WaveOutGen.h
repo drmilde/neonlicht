@@ -6,23 +6,25 @@
 #include "Interpolation.h"
 #include "WaveWriter.h"
 
-class WaveOutGen: public UGen {
+namespace unit {
+  class WaveOutGen: public UGen {
 
- public:
-  WaveOutGen();
-  WaveOutGen(std::string name);
+  public:
+    WaveOutGen();
+    WaveOutGen(std::string name);
 
-  void control(std::string portName, float value);
-  float tick(); // override standard implementation
-  long count = 0;
+    void control(std::string portName, float value);
+    float tick(); // override standard implementation
+    long count = 0;
 
- private:
-  std::string fname;
-  WaveWriter waveWriter;
-  bool doRecord = false;
-  bool isOpen = false;
-  bool isClosed = true;
+  private:
+    std::string fname;
+    WaveWriter waveWriter;
+    bool doRecord = false;
+    bool isOpen = false;
+    bool isClosed = true;
 
-};
+  };
+}
 
 #endif

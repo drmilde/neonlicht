@@ -3,13 +3,15 @@
 
 #include "SawGen.h"
 
-class PhasorGen : public SawGen {
-  
- public:
-  PhasorGen();
-  PhasorGen(std::string name);
-  float tick();
-  
-};
+namespace unit {
+  class PhasorGen : public SawGen {
+    
+  public:
+    PhasorGen();
+    PhasorGen(std::string name);
+    float tick();
+    
+  };
+}
 
 #endif

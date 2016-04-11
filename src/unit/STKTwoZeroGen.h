@@ -9,19 +9,21 @@
 // include from STK
 #include "TwoZero.h"
 
-class STKTwoZeroGen : public STKAdapterGen {
+namespace unit {
+  class STKTwoZeroGen : public STKAdapterGen {
 
- public:
-  STKTwoZeroGen();
-  void control (std::string portName, float value);
-  float tick();
+  public:
+    STKTwoZeroGen();
+    void control (std::string portName, float value);
+    float tick();
 
- private:
-  void updateSettings();
-  float frequency;
-  float radius;
-  stk::TwoZero stkTwoZero;
+  private:
+    void updateSettings();
+    float frequency;
+    float radius;
+    stk::TwoZero stkTwoZero;
   
-};
+  };
+}
 
 #endif

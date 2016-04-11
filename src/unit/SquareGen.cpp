@@ -1,5 +1,6 @@
 #include "SquareGen.h"
 
+using namespace unit;
 
 SquareGen::SquareGen() : SquareGen("Mr. White") {
 }

@@ -1,5 +1,6 @@
 #include "OnePoleLPFGen.h"
 
+using namespace unit;
 
 OnePoleLPFGen::OnePoleLPFGen() : OnePoleLPFGen("Lili Marleen") {
 }

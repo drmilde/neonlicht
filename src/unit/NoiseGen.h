@@ -5,19 +5,21 @@
 #include <stdlib.h>    
 #include "UGen.h"
 
-class NoiseGen: public UGen {
+namespace unit {
+  class NoiseGen: public UGen {
 
- public:
-  NoiseGen();
-  NoiseGen(std::string name);
-
-  void control(std::string portName, float value);
-  float tick(); // override standard implementation
-  long count = 0;
-
- private:
-  Port outPort;
-
-};
+  public:
+    NoiseGen();
+    NoiseGen(std::string name);
+    
+    void control(std::string portName, float value);
+    float tick(); // override standard implementation
+    long count = 0;
+    
+  private:
+    Port outPort;
+    
+  };
+}
 
 #endif

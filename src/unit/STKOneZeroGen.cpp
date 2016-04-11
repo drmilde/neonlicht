@@ -1,5 +1,7 @@
 #include "STKOneZeroGen.h"
 
+using namespace unit;
+
 STKOneZeroGen::STKOneZeroGen() {
   // do something useful here
   stkOneZero = stk::OneZero(-1.0);
