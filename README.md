@@ -7,7 +7,7 @@ It is unstable, not meant to be used, DANGEROUS, as it may harm your computer, y
 This repository is meant strictly for internal use. I need a place to do backups of my work.
 
 
-Please: give me another one or two month. I will then relase the software to the general public.
+Please: give me another one or two month. I will then release the software to the general public.
 But not NOW !
 
 
