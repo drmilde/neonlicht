@@ -13,6 +13,6 @@ But not NOW !
 
 JTM
 
-As part of sabatical in Sweden at
+As part of a sabatical in Sweden at
 Linnéuniversitetet, Växjö,
 April, 2016
