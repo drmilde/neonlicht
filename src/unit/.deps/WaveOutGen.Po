@@ -105,12 +105,12 @@ unit/WaveOutGen.o: unit/WaveOutGen.cpp /usr/include/stdc-predef.h \
  /usr/include/c++/4.9/bits/locale_facets.tcc \
  /usr/include/c++/4.9/bits/basic_ios.tcc \
  /usr/include/c++/4.9/bits/ostream.tcc /usr/include/c++/4.9/istream \
- /usr/include/c++/4.9/bits/istream.tcc unit/Interpolation.h WaveWriter.h \
- /usr/local/include/stk/RtWvIn.h /usr/local/include/stk/WvIn.h \
- /usr/local/include/stk/Stk.h /usr/include/c++/4.9/cstring \
- /usr/include/string.h /usr/include/c++/4.9/sstream \
- /usr/include/c++/4.9/bits/sstream.tcc /usr/include/c++/4.9/vector \
- /usr/include/c++/4.9/bits/stl_construct.h \
+ /usr/include/c++/4.9/bits/istream.tcc unit/Interpolation.h \
+ util/WaveWriter.h /usr/local/include/stk/RtWvIn.h \
+ /usr/local/include/stk/WvIn.h /usr/local/include/stk/Stk.h \
+ /usr/include/c++/4.9/cstring /usr/include/string.h \
+ /usr/include/c++/4.9/sstream /usr/include/c++/4.9/bits/sstream.tcc \
+ /usr/include/c++/4.9/vector /usr/include/c++/4.9/bits/stl_construct.h \
  /usr/include/c++/4.9/ext/alloc_traits.h \
  /usr/include/c++/4.9/bits/alloc_traits.h \
  /usr/include/c++/4.9/bits/stl_uninitialized.h \
@@ -392,7 +392,7 @@ unit/IDGenerator.h:
 
 unit/Interpolation.h:
 
-WaveWriter.h:
+util/WaveWriter.h:
 
 /usr/local/include/stk/RtWvIn.h:
 

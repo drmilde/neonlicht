@@ -134,7 +134,7 @@ sequencer/fliehkraft.o: sequencer/fliehkraft.cpp \
  /usr/include/arm-linux-gnueabihf/bits/posix_opt.h \
  /usr/include/arm-linux-gnueabihf/bits/environments.h \
  /usr/include/arm-linux-gnueabihf/bits/confname.h /usr/include/getopt.h \
- sequencer/Activator.h sequencer/OscActivator.h OscOutConnector.h \
+ sequencer/Activator.h sequencer/OscActivator.h osc/OscOutConnector.h \
  /usr/include/c++/4.9/cstring /usr/include/string.h \
  /usr/local/include/oscpack/osc/OscOutboundPacketStream.h \
  /usr/local/include/oscpack/osc/OscTypes.h \
@@ -492,7 +492,7 @@ sequencer/Activator.h:
 
 sequencer/OscActivator.h:
 
-OscOutConnector.h:
+osc/OscOutConnector.h:
 
 /usr/include/c++/4.9/cstring:
 

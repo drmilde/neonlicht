@@ -127,7 +127,7 @@ unit/NoiseUnit.o: unit/NoiseUnit.cpp /usr/include/stdc-predef.h \
  /usr/include/c++/4.9/bits/istream.tcc unit/NoiseGen.h unit/SawGen.h \
  unit/PhasorGen.h unit/SquareGen.h unit/OnePoleLPFGen.h \
  unit/TwoInputMixerGen.h unit/EGUpDownGen.h unit/Interpolation.h \
- unit/WaveOutGen.h WaveWriter.h /usr/local/include/stk/RtWvIn.h \
+ unit/WaveOutGen.h util/WaveWriter.h /usr/local/include/stk/RtWvIn.h \
  /usr/local/include/stk/WvIn.h /usr/local/include/stk/Stk.h \
  /usr/include/c++/4.9/cstring /usr/include/string.h \
  /usr/include/c++/4.9/sstream /usr/include/c++/4.9/bits/sstream.tcc \
@@ -491,7 +491,7 @@ unit/Interpolation.h:
 
 unit/WaveOutGen.h:
 
-WaveWriter.h:
+util/WaveWriter.h:
 
 /usr/local/include/stk/RtWvIn.h:
 

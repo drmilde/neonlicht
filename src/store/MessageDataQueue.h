@@ -5,7 +5,7 @@
 #include <stdlib.h>
 #include <string>
 #include "GenericQueue.h"
-#include "MessageData.h"
+#include "osc/MessageData.h"
 #include <unistd.h>
 
 class MessageDataQueue {

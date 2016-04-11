@@ -94,8 +94,9 @@ store/MessageDataQueue.o: store/MessageDataQueue.cpp \
  /usr/include/arm-linux-gnueabihf/bits/confname.h /usr/include/getopt.h \
  store/MessageDataQueue.h store/GenericQueue.h /usr/include/c++/4.9/list \
  /usr/include/c++/4.9/bits/stl_list.h /usr/include/c++/4.9/bits/list.tcc \
- MessageData.h /usr/include/c++/4.9/iostream /usr/include/c++/4.9/ostream \
- /usr/include/c++/4.9/ios /usr/include/c++/4.9/bits/ios_base.h \
+ osc/MessageData.h /usr/include/c++/4.9/iostream \
+ /usr/include/c++/4.9/ostream /usr/include/c++/4.9/ios \
+ /usr/include/c++/4.9/bits/ios_base.h \
  /usr/include/c++/4.9/bits/locale_classes.h \
  /usr/include/c++/4.9/bits/locale_classes.tcc \
  /usr/include/c++/4.9/streambuf /usr/include/c++/4.9/bits/streambuf.tcc \
@@ -350,7 +351,7 @@ store/GenericQueue.h:
 
 /usr/include/c++/4.9/bits/list.tcc:
 
-MessageData.h:
+osc/MessageData.h:
 
 /usr/include/c++/4.9/iostream:
 

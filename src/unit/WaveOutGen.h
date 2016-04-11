@@ -4,7 +4,7 @@
 #include <stdlib.h>    
 #include "UGen.h"
 #include "Interpolation.h"
-#include "WaveWriter.h"
+#include "util/WaveWriter.h"
 
 namespace unit {
   class WaveOutGen: public UGen {

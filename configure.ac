@@ -2,8 +2,8 @@
 # Process this file with autoconf to produce a configure script.
 
 AC_PREREQ(2.57)
-AC_INIT([first], [0.0.1], [milde@hs-fulda.de])
-AC_CONFIG_SRCDIR([src/first.cpp])
+AC_INIT([Neonlicht], [0.0.1], [milde@hs-fulda.de])
+AC_CONFIG_SRCDIR([src/Neonlicht.cpp])
 AM_INIT_AUTOMAKE
 
 # Checks for programs.

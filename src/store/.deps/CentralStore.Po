@@ -90,7 +90,7 @@ store/CentralStore.o: store/CentralStore.cpp /usr/include/stdc-predef.h \
  /usr/include/c++/4.9/bits/hash_bytes.h \
  /usr/include/c++/4.9/bits/basic_string.tcc store/GenericQueue.h \
  /usr/include/c++/4.9/list /usr/include/c++/4.9/bits/stl_list.h \
- /usr/include/c++/4.9/bits/list.tcc MessageData.h \
+ /usr/include/c++/4.9/bits/list.tcc osc/MessageData.h \
  /usr/include/c++/4.9/iostream /usr/include/c++/4.9/ostream \
  /usr/include/c++/4.9/ios /usr/include/c++/4.9/bits/ios_base.h \
  /usr/include/c++/4.9/bits/locale_classes.h \
@@ -109,7 +109,7 @@ store/CentralStore.o: store/CentralStore.cpp /usr/include/stdc-predef.h \
  /usr/include/arm-linux-gnueabihf/bits/posix_opt.h \
  /usr/include/arm-linux-gnueabihf/bits/environments.h \
  /usr/include/arm-linux-gnueabihf/bits/confname.h /usr/include/getopt.h \
- OscInConnector.h /usr/include/c++/4.9/cstring /usr/include/string.h \
+ osc/OscInConnector.h /usr/include/c++/4.9/cstring /usr/include/string.h \
  /usr/include/c++/4.9/thread /usr/include/c++/4.9/chrono \
  /usr/include/c++/4.9/ratio /usr/include/c++/4.9/limits \
  /usr/include/c++/4.9/ctime /usr/include/c++/4.9/bits/parse_numbers.h \
@@ -141,8 +141,8 @@ store/CentralStore.o: store/CentralStore.cpp /usr/include/stdc-predef.h \
  /usr/local/include/oscpack/osc/../ip/PacketListener.h \
  /usr/local/include/oscpack/ip/UdpSocket.h \
  /usr/local/include/oscpack/ip/NetworkingUtils.h \
- /usr/local/include/oscpack/ip/IpEndpointName.h MessageData.h \
- store/TickData.h utilities.h /usr/local/include/stk/Instrmnt.h \
+ /usr/local/include/oscpack/ip/IpEndpointName.h osc/MessageData.h \
+ store/TickData.h util/utilities.h /usr/local/include/stk/Instrmnt.h \
  /usr/local/include/stk/Stk.h /usr/include/c++/4.9/sstream \
  /usr/include/c++/4.9/bits/sstream.tcc /usr/include/c++/4.9/vector \
  /usr/include/c++/4.9/bits/stl_vector.h \
@@ -410,7 +410,7 @@ store/GenericQueue.h:
 
 /usr/include/c++/4.9/bits/list.tcc:
 
-MessageData.h:
+osc/MessageData.h:
 
 /usr/include/c++/4.9/iostream:
 
@@ -462,7 +462,7 @@ MessageData.h:
 
 /usr/include/getopt.h:
 
-OscInConnector.h:
+osc/OscInConnector.h:
 
 /usr/include/c++/4.9/cstring:
 
@@ -552,11 +552,11 @@ OscInConnector.h:
 
 /usr/local/include/oscpack/ip/IpEndpointName.h:
 
-MessageData.h:
+osc/MessageData.h:
 
 store/TickData.h:
 
-utilities.h:
+util/utilities.h:
 
 /usr/local/include/stk/Instrmnt.h:
 

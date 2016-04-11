@@ -104,7 +104,7 @@ sequencer/OscActivator.o: sequencer/OscActivator.cpp \
  /usr/include/c++/4.9/bits/basic_ios.tcc \
  /usr/include/c++/4.9/bits/ostream.tcc /usr/include/c++/4.9/istream \
  /usr/include/c++/4.9/bits/istream.tcc sequencer/Activator.h \
- OscOutConnector.h /usr/include/c++/4.9/cstring /usr/include/string.h \
+ osc/OscOutConnector.h /usr/include/c++/4.9/cstring /usr/include/string.h \
  /usr/local/include/oscpack/osc/OscOutboundPacketStream.h \
  /usr/local/include/oscpack/osc/OscTypes.h \
  /usr/local/include/oscpack/osc/OscException.h \
@@ -377,7 +377,7 @@ sequencer/OscActivator.h:
 
 sequencer/Activator.h:
 
-OscOutConnector.h:
+osc/OscOutConnector.h:
 
 /usr/include/c++/4.9/cstring:
 

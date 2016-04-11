@@ -1,7 +1,7 @@
 #ifndef _TICK_DATA_h_
 #define _TICK_DATA_h_
 
-#include "utilities.h"
+#include "util/utilities.h"
 
 struct TickData {
   stk::StkFloat volume;

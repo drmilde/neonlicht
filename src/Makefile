@@ -60,10 +60,10 @@ am__make_running_with_option = \
   test $$has_opt = yes
 am__make_dryrun = (target_option=n; $(am__make_running_with_option))
 am__make_keepgoing = (target_option=k; $(am__make_running_with_option))
-pkgdatadir = $(datadir)/first
-pkgincludedir = $(includedir)/first
-pkglibdir = $(libdir)/first
-pkglibexecdir = $(libexecdir)/first
+pkgdatadir = $(datadir)/neonlicht
+pkgincludedir = $(includedir)/neonlicht
+pkglibdir = $(libdir)/neonlicht
+pkglibexecdir = $(libexecdir)/neonlicht
 am__cd = CDPATH="$${ZSH_VERSION+.}$(PATH_SEPARATOR)" && cd
 install_sh_DATA = $(install_sh) -c -m 644
 install_sh_PROGRAM = $(install_sh) -c
@@ -90,62 +90,62 @@ CONFIG_CLEAN_FILES =
 CONFIG_CLEAN_VPATH_FILES =
 am__installdirs = "$(DESTDIR)$(bindir)"
 PROGRAMS = $(bin_PROGRAMS)
-am_cmidiin_OBJECTS = cmidiin.$(OBJEXT) MidiConnector.$(OBJEXT) \
-	OscOutConnector.$(OBJEXT)
+am__dirstamp = $(am__leading_dot)dirstamp
+am_cmidiin_OBJECTS = cmidiin.$(OBJEXT) osc/MidiConnector.$(OBJEXT) \
+	osc/OscOutConnector.$(OBJEXT)
 cmidiin_OBJECTS = $(am_cmidiin_OBJECTS)
 cmidiin_LDADD = $(LDADD)
 cmidiin_DEPENDENCIES =
-am__dirstamp = $(am__leading_dot)dirstamp
 am_fliehkraft_OBJECTS = sequencer/fliehkraft.$(OBJEXT) \
 	sequencer/Pulse.$(OBJEXT) sequencer/Activator.$(OBJEXT) \
-	sequencer/OscActivator.$(OBJEXT) OscOutConnector.$(OBJEXT) \
-	MidiConnector.$(OBJEXT)
+	sequencer/OscActivator.$(OBJEXT) osc/OscOutConnector.$(OBJEXT) \
+	osc/MidiConnector.$(OBJEXT)
 fliehkraft_OBJECTS = $(am_fliehkraft_OBJECTS)
 fliehkraft_LDADD = $(LDADD)
 fliehkraft_DEPENDENCIES =
 am_kraftmaschine_OBJECTS = kraftmaschine.$(OBJEXT) Neonlicht.$(OBJEXT) \
+	util/WaveWriter.$(OBJEXT) \
+	configuration/ConfigurationManager.$(OBJEXT) \
+	osc/MessageData.$(OBJEXT) osc/OscInConnector.$(OBJEXT) \
 	store/CentralStore.$(OBJEXT) store/MessageDataQueue.$(OBJEXT) \
-	MessageData.$(OBJEXT) OscInConnector.$(OBJEXT) \
-	WaveWriter.$(OBJEXT) unit/NoiseGen.$(OBJEXT) \
-	unit/UGen.$(OBJEXT) unit/Port.$(OBJEXT) \
-	unit/SoundUnit.$(OBJEXT) unit/Patch.$(OBJEXT) \
-	unit/IDGenerator.$(OBJEXT) unit/NoiseUnit.$(OBJEXT) \
-	unit/OnePoleLPFGen.$(OBJEXT) unit/TwoInputMixerGen.$(OBJEXT) \
-	unit/SawGen.$(OBJEXT) unit/SquareGen.$(OBJEXT) \
-	unit/Interpolation.$(OBJEXT) unit/EGUpDownGen.$(OBJEXT) \
-	unit/STKAdapterGen.$(OBJEXT) unit/STKOneZeroGen.$(OBJEXT) \
+	unit/ADSRGen.$(OBJEXT) unit/AddTwoGen.$(OBJEXT) \
+	unit/EGOneStepGen.$(OBJEXT) unit/EGUpDownGen.$(OBJEXT) \
+	unit/GatedConstantGen.$(OBJEXT) unit/IDGenerator.$(OBJEXT) \
+	unit/Interpolation.$(OBJEXT) unit/MultiplyGen.$(OBJEXT) \
+	unit/MultiplyTwoGen.$(OBJEXT) unit/NoiseGen.$(OBJEXT) \
+	unit/NoiseUnit.$(OBJEXT) unit/NumberGen.$(OBJEXT) \
+	unit/OnePoleLPFGen.$(OBJEXT) unit/Patch.$(OBJEXT) \
+	unit/PhasorGen.$(OBJEXT) unit/Port.$(OBJEXT) \
+	unit/STKAdapterGen.$(OBJEXT) unit/STKBiQuadGen.$(OBJEXT) \
+	unit/STKOnePoleGen.$(OBJEXT) unit/STKOneZeroGen.$(OBJEXT) \
 	unit/STKTwoPoleGen.$(OBJEXT) unit/STKTwoZeroGen.$(OBJEXT) \
-	unit/STKBiQuadGen.$(OBJEXT) unit/STKOnePoleGen.$(OBJEXT) \
-	unit/WaveOutGen.$(OBJEXT) unit/AddTwoGen.$(OBJEXT) \
-	unit/MultiplyTwoGen.$(OBJEXT) unit/MultiplyGen.$(OBJEXT) \
-	unit/NumberGen.$(OBJEXT) unit/PhasorGen.$(OBJEXT) \
-	unit/EGOneStepGen.$(OBJEXT) unit/ADSRGen.$(OBJEXT) \
-	unit/GatedConstantGen.$(OBJEXT) \
-	configuration/ConfigurationManager.$(OBJEXT)
+	unit/SawGen.$(OBJEXT) unit/SoundUnit.$(OBJEXT) \
+	unit/SquareGen.$(OBJEXT) unit/TwoInputMixerGen.$(OBJEXT) \
+	unit/UGen.$(OBJEXT) unit/WaveOutGen.$(OBJEXT)
 kraftmaschine_OBJECTS = $(am_kraftmaschine_OBJECTS)
 kraftmaschine_LDADD = $(LDADD)
 kraftmaschine_DEPENDENCIES =
 am_store_mdstore_OBJECTS = store/mdstore.$(OBJEXT) \
 	store/CentralStore.$(OBJEXT) store/MessageDataQueue.$(OBJEXT) \
-	MessageData.$(OBJEXT) OscInConnector.$(OBJEXT)
+	osc/MessageData.$(OBJEXT) osc/OscInConnector.$(OBJEXT)
 store_mdstore_OBJECTS = $(am_store_mdstore_OBJECTS)
 store_mdstore_LDADD = $(LDADD)
 store_mdstore_DEPENDENCIES =
-am_ugentest_OBJECTS = unit/UGen.$(OBJEXT) unit/Port.$(OBJEXT) \
-	ugentest.$(OBJEXT) WaveWriter.$(OBJEXT) \
-	unit/SoundUnit.$(OBJEXT) unit/Patch.$(OBJEXT) \
-	unit/NoiseGen.$(OBJEXT) unit/IDGenerator.$(OBJEXT) \
-	unit/NoiseUnit.$(OBJEXT) unit/OnePoleLPFGen.$(OBJEXT) \
-	unit/TwoInputMixerGen.$(OBJEXT) unit/SawGen.$(OBJEXT) \
-	unit/SquareGen.$(OBJEXT) unit/Interpolation.$(OBJEXT) \
-	unit/EGUpDownGen.$(OBJEXT) unit/STKAdapterGen.$(OBJEXT) \
-	unit/STKOneZeroGen.$(OBJEXT) unit/STKTwoPoleGen.$(OBJEXT) \
-	unit/STKTwoZeroGen.$(OBJEXT) unit/STKBiQuadGen.$(OBJEXT) \
-	unit/STKOnePoleGen.$(OBJEXT) unit/WaveOutGen.$(OBJEXT) \
-	unit/AddTwoGen.$(OBJEXT) unit/MultiplyTwoGen.$(OBJEXT) \
-	unit/MultiplyGen.$(OBJEXT) unit/NumberGen.$(OBJEXT) \
-	unit/PhasorGen.$(OBJEXT) unit/EGOneStepGen.$(OBJEXT) \
-	unit/ADSRGen.$(OBJEXT) unit/GatedConstantGen.$(OBJEXT)
+am_ugentest_OBJECTS = ugentest.$(OBJEXT) util/WaveWriter.$(OBJEXT) \
+	unit/ADSRGen.$(OBJEXT) unit/AddTwoGen.$(OBJEXT) \
+	unit/EGOneStepGen.$(OBJEXT) unit/EGUpDownGen.$(OBJEXT) \
+	unit/GatedConstantGen.$(OBJEXT) unit/IDGenerator.$(OBJEXT) \
+	unit/Interpolation.$(OBJEXT) unit/MultiplyGen.$(OBJEXT) \
+	unit/MultiplyTwoGen.$(OBJEXT) unit/NoiseGen.$(OBJEXT) \
+	unit/NoiseUnit.$(OBJEXT) unit/NumberGen.$(OBJEXT) \
+	unit/OnePoleLPFGen.$(OBJEXT) unit/Patch.$(OBJEXT) \
+	unit/PhasorGen.$(OBJEXT) unit/Port.$(OBJEXT) \
+	unit/STKAdapterGen.$(OBJEXT) unit/STKBiQuadGen.$(OBJEXT) \
+	unit/STKOnePoleGen.$(OBJEXT) unit/STKOneZeroGen.$(OBJEXT) \
+	unit/STKTwoPoleGen.$(OBJEXT) unit/STKTwoZeroGen.$(OBJEXT) \
+	unit/SawGen.$(OBJEXT) unit/SoundUnit.$(OBJEXT) \
+	unit/SquareGen.$(OBJEXT) unit/TwoInputMixerGen.$(OBJEXT) \
+	unit/UGen.$(OBJEXT) unit/WaveOutGen.$(OBJEXT)
 ugentest_OBJECTS = $(am_ugentest_OBJECTS)
 ugentest_LDADD = $(LDADD)
 ugentest_DEPENDENCIES =
@@ -225,7 +225,7 @@ CXX = g++
 CXXDEPMODE = depmode=gcc3
 CXXFLAGS = -g -O2
 CYGPATH_W = echo
-DEFS = -DPACKAGE_NAME=\"first\" -DPACKAGE_TARNAME=\"first\" -DPACKAGE_VERSION=\"0.0.1\" -DPACKAGE_STRING=\"first\ 0.0.1\" -DPACKAGE_BUGREPORT=\"milde@hs-fulda.de\" -DPACKAGE_URL=\"\" -DPACKAGE=\"first\" -DVERSION=\"0.0.1\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_STDLIB_H=1 -DHAVE_UNISTD_H=1 -DHAVE_STDLIB_H=1 -DHAVE_MALLOC=1
+DEFS = -DPACKAGE_NAME=\"Neonlicht\" -DPACKAGE_TARNAME=\"neonlicht\" -DPACKAGE_VERSION=\"0.0.1\" -DPACKAGE_STRING=\"Neonlicht\ 0.0.1\" -DPACKAGE_BUGREPORT=\"milde@hs-fulda.de\" -DPACKAGE_URL=\"\" -DPACKAGE=\"neonlicht\" -DVERSION=\"0.0.1\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_STDLIB_H=1 -DHAVE_UNISTD_H=1 -DHAVE_STDLIB_H=1 -DHAVE_MALLOC=1
 DEPDIR = .deps
 ECHO_C = 
 ECHO_N = -n
@@ -245,11 +245,11 @@ LTLIBOBJS =
 MAKEINFO = ${SHELL} /home/pi/programming/synthesizer/clone/neonlicht/missing makeinfo
 MKDIR_P = /bin/mkdir -p
 OBJEXT = o
-PACKAGE = first
+PACKAGE = neonlicht
 PACKAGE_BUGREPORT = milde@hs-fulda.de
-PACKAGE_NAME = first
-PACKAGE_STRING = first 0.0.1
-PACKAGE_TARNAME = first
+PACKAGE_NAME = Neonlicht
+PACKAGE_STRING = Neonlicht 0.0.1
+PACKAGE_TARNAME = neonlicht
 PACKAGE_URL = 
 PACKAGE_VERSION = 0.0.1
 PATH_SEPARATOR = :
@@ -315,45 +315,89 @@ AM_CPPFLAGS = -std=c++11 -O3 -Wextra -D__LINUX_ALSA__ \
 	-I/usr/local/include/stk -I/usr/local/include/oscpack/
 
 AUTOMAKE_OPTIONS = subdir-objects
+store_mdstore_SOURCES = store/mdstore.cpp \
+	store/CentralStore.cpp \
+	store/MessageDataQueue.cpp \
+	osc/MessageData.cpp \
+	osc/OscInConnector.cpp
 
-# this lists the binaries to produce, the (non-PHONY, binary) targets in
-# the previous manual Makefile
-#bin_PROGRAMS = first crtsine simple cmidiin oscsend oscreceive static store/gqueue
-#bin_PROGRAMS = store/mdqueue store/mdstore store/oscw
-#first_SOURCES = first.cpp utilities.cpp
-#crtsine_SOURCES = crtsine.cpp
-#simple_SOURCES = SimpleReceive.cpp
-cmidiin_SOURCES = cmidiin.cpp MidiConnector.cpp OscOutConnector.cpp
-store_mdstore_SOURCES = store/mdstore.cpp store/CentralStore.cpp \
-	store/MessageDataQueue.cpp MessageData.cpp OscInConnector.cpp
+kraftmaschine_SOURCES = kraftmaschine.cpp Neonlicht.cpp \
+	util/WaveWriter.cpp \
+	configuration/ConfigurationManager.cpp \
+	osc/MessageData.cpp \
+	osc/OscInConnector.cpp \
+	store/CentralStore.cpp \
+	store/MessageDataQueue.cpp \
+	unit/ADSRGen.cpp \
+	unit/AddTwoGen.cpp \
+	unit/EGOneStepGen.cpp \
+	unit/EGUpDownGen.cpp \
+	unit/GatedConstantGen.cpp \
+	unit/IDGenerator.cpp \
+	unit/Interpolation.cpp \
+	unit/MultiplyGen.cpp \
+	unit/MultiplyTwoGen.cpp \
+	unit/NoiseGen.cpp \
+	unit/NoiseUnit.cpp \
+	unit/NumberGen.cpp \
+	unit/OnePoleLPFGen.cpp \
+	unit/Patch.cpp \
+	unit/PhasorGen.cpp \
+	unit/Port.cpp \
+	unit/STKAdapterGen.cpp \
+	unit/STKBiQuadGen.cpp \
+	unit/STKOnePoleGen.cpp \
+	unit/STKOneZeroGen.cpp \
+	unit/STKTwoPoleGen.cpp \
+	unit/STKTwoZeroGen.cpp \
+	unit/SawGen.cpp \
+	unit/SoundUnit.cpp \
+	unit/SquareGen.cpp \
+	unit/TwoInputMixerGen.cpp \
+	unit/UGen.cpp \
+	unit/WaveOutGen.cpp
 
-kraftmaschine_SOURCES = kraftmaschine.cpp Neonlicht.cpp store/CentralStore.cpp \
-	store/MessageDataQueue.cpp MessageData.cpp OscInConnector.cpp \
-	WaveWriter.cpp unit/NoiseGen.cpp unit/UGen.cpp unit/Port.cpp unit/SoundUnit.cpp \
-	unit/Patch.cpp unit/IDGenerator.cpp unit/NoiseUnit.cpp \
-	unit/OnePoleLPFGen.cpp unit/TwoInputMixerGen.cpp unit/SawGen.cpp \
-	unit/SquareGen.cpp unit/Interpolation.cpp unit/EGUpDownGen.cpp \
-	unit/STKAdapterGen.cpp unit/STKOneZeroGen.cpp unit/STKTwoPoleGen.cpp \
-	unit/STKTwoZeroGen.cpp unit/STKBiQuadGen.cpp unit/STKOnePoleGen.cpp \
-	unit/WaveOutGen.cpp unit/AddTwoGen.cpp unit/MultiplyTwoGen.cpp \
-	unit/MultiplyGen.cpp unit/NumberGen.cpp unit/PhasorGen.cpp \
-	unit/EGOneStepGen.cpp unit/ADSRGen.cpp unit/GatedConstantGen.cpp \
-	configuration/ConfigurationManager.cpp
+ugentest_SOURCES = ugentest.cpp \
+	util/WaveWriter.cpp \
+	unit/ADSRGen.cpp  \
+	unit/AddTwoGen.cpp \
+	unit/EGOneStepGen.cpp \
+	unit/EGUpDownGen.cpp \
+	unit/GatedConstantGen.cpp \
+	unit/IDGenerator.cpp \
+	unit/Interpolation.cpp \
+	unit/MultiplyGen.cpp \
+	unit/MultiplyTwoGen.cpp \
+	unit/NoiseGen.cpp \
+	unit/NoiseUnit.cpp \
+	unit/NumberGen.cpp \
+	unit/OnePoleLPFGen.cpp \
+	unit/Patch.cpp \
+	unit/PhasorGen.cpp \
+	unit/Port.cpp \
+	unit/STKAdapterGen.cpp \
+	unit/STKBiQuadGen.cpp \
+	unit/STKOnePoleGen.cpp \
+	unit/STKOneZeroGen.cpp \
+	unit/STKTwoPoleGen.cpp \
+	unit/STKTwoZeroGen.cpp \
+	unit/SawGen.cpp \
+	unit/SoundUnit.cpp \
+	unit/SquareGen.cpp \
+	unit/TwoInputMixerGen.cpp \
+	unit/UGen.cpp \
+	unit/WaveOutGen.cpp 
 
-ugentest_SOURCES = unit/UGen.cpp unit/Port.cpp ugentest.cpp WaveWriter.cpp \
-	unit/SoundUnit.cpp unit/Patch.cpp unit/NoiseGen.cpp unit/IDGenerator.cpp \
-	unit/NoiseUnit.cpp unit/OnePoleLPFGen.cpp unit/TwoInputMixerGen.cpp \
-	unit/SawGen.cpp unit/SquareGen.cpp unit/Interpolation.cpp \
-	unit/EGUpDownGen.cpp unit/STKAdapterGen.cpp unit/STKOneZeroGen.cpp \
-	unit/STKTwoPoleGen.cpp unit/STKTwoZeroGen.cpp unit/STKBiQuadGen.cpp \
-	unit/STKOnePoleGen.cpp unit/WaveOutGen.cpp unit/AddTwoGen.cpp \
-	unit/MultiplyTwoGen.cpp unit/MultiplyGen.cpp unit/NumberGen.cpp \
-	unit/PhasorGen.cpp unit/EGOneStepGen.cpp unit/ADSRGen.cpp  \
-	unit/GatedConstantGen.cpp 
+fliehkraft_SOURCES = sequencer/fliehkraft.cpp \
+	sequencer/Pulse.cpp \
+	sequencer/Activator.cpp \
+	sequencer/OscActivator.cpp \
+	osc/OscOutConnector.cpp \
+	osc/MidiConnector.cpp
 
-fliehkraft_SOURCES = sequencer/fliehkraft.cpp sequencer/Pulse.cpp \
-	sequencer/Activator.cpp sequencer/OscActivator.cpp \
-	OscOutConnector.cpp MidiConnector.cpp
+cmidiin_SOURCES = cmidiin.cpp \
+	osc/MidiConnector.cpp \
+	osc/OscOutConnector.cpp
 
 all: all-am
 
@@ -431,6 +475,16 @@ uninstall-binPROGRAMS:
 
 clean-binPROGRAMS:
 	-test -z "$(bin_PROGRAMS)" || rm -f $(bin_PROGRAMS)
+osc/$(am__dirstamp):
+	@$(MKDIR_P) osc
+	@: > osc/$(am__dirstamp)
+osc/$(DEPDIR)/$(am__dirstamp):
+	@$(MKDIR_P) osc/$(DEPDIR)
+	@: > osc/$(DEPDIR)/$(am__dirstamp)
+osc/MidiConnector.$(OBJEXT): osc/$(am__dirstamp) \
+	osc/$(DEPDIR)/$(am__dirstamp)
+osc/OscOutConnector.$(OBJEXT): osc/$(am__dirstamp) \
+	osc/$(DEPDIR)/$(am__dirstamp)
 
 cmidiin$(EXEEXT): $(cmidiin_OBJECTS) $(cmidiin_DEPENDENCIES) $(EXTRA_cmidiin_DEPENDENCIES) 
 	@rm -f cmidiin$(EXEEXT)
@@ -453,6 +507,27 @@ sequencer/OscActivator.$(OBJEXT): sequencer/$(am__dirstamp) \
 fliehkraft$(EXEEXT): $(fliehkraft_OBJECTS) $(fliehkraft_DEPENDENCIES) $(EXTRA_fliehkraft_DEPENDENCIES) 
 	@rm -f fliehkraft$(EXEEXT)
 	$(AM_V_CXXLD)$(CXXLINK) $(fliehkraft_OBJECTS) $(fliehkraft_LDADD) $(LIBS)
+util/$(am__dirstamp):
+	@$(MKDIR_P) util
+	@: > util/$(am__dirstamp)
+util/$(DEPDIR)/$(am__dirstamp):
+	@$(MKDIR_P) util/$(DEPDIR)
+	@: > util/$(DEPDIR)/$(am__dirstamp)
+util/WaveWriter.$(OBJEXT): util/$(am__dirstamp) \
+	util/$(DEPDIR)/$(am__dirstamp)
+configuration/$(am__dirstamp):
+	@$(MKDIR_P) configuration
+	@: > configuration/$(am__dirstamp)
+configuration/$(DEPDIR)/$(am__dirstamp):
+	@$(MKDIR_P) configuration/$(DEPDIR)
+	@: > configuration/$(DEPDIR)/$(am__dirstamp)
+configuration/ConfigurationManager.$(OBJEXT):  \
+	configuration/$(am__dirstamp) \
+	configuration/$(DEPDIR)/$(am__dirstamp)
+osc/MessageData.$(OBJEXT): osc/$(am__dirstamp) \
+	osc/$(DEPDIR)/$(am__dirstamp)
+osc/OscInConnector.$(OBJEXT): osc/$(am__dirstamp) \
+	osc/$(DEPDIR)/$(am__dirstamp)
 store/$(am__dirstamp):
 	@$(MKDIR_P) store
 	@: > store/$(am__dirstamp)
@@ -469,33 +544,43 @@ unit/$(am__dirstamp):
 unit/$(DEPDIR)/$(am__dirstamp):
 	@$(MKDIR_P) unit/$(DEPDIR)
 	@: > unit/$(DEPDIR)/$(am__dirstamp)
-unit/NoiseGen.$(OBJEXT): unit/$(am__dirstamp) \
+unit/ADSRGen.$(OBJEXT): unit/$(am__dirstamp) \
 	unit/$(DEPDIR)/$(am__dirstamp)
-unit/UGen.$(OBJEXT): unit/$(am__dirstamp) \
+unit/AddTwoGen.$(OBJEXT): unit/$(am__dirstamp) \
 	unit/$(DEPDIR)/$(am__dirstamp)
-unit/Port.$(OBJEXT): unit/$(am__dirstamp) \
-	unit/$(DEPDIR)/$(am__dirstamp)
-unit/SoundUnit.$(OBJEXT): unit/$(am__dirstamp) \
-	unit/$(DEPDIR)/$(am__dirstamp)
-unit/Patch.$(OBJEXT): unit/$(am__dirstamp) \
-	unit/$(DEPDIR)/$(am__dirstamp)
-unit/IDGenerator.$(OBJEXT): unit/$(am__dirstamp) \
-	unit/$(DEPDIR)/$(am__dirstamp)
-unit/NoiseUnit.$(OBJEXT): unit/$(am__dirstamp) \
-	unit/$(DEPDIR)/$(am__dirstamp)
-unit/OnePoleLPFGen.$(OBJEXT): unit/$(am__dirstamp) \
-	unit/$(DEPDIR)/$(am__dirstamp)
-unit/TwoInputMixerGen.$(OBJEXT): unit/$(am__dirstamp) \
-	unit/$(DEPDIR)/$(am__dirstamp)
-unit/SawGen.$(OBJEXT): unit/$(am__dirstamp) \
-	unit/$(DEPDIR)/$(am__dirstamp)
-unit/SquareGen.$(OBJEXT): unit/$(am__dirstamp) \
-	unit/$(DEPDIR)/$(am__dirstamp)
-unit/Interpolation.$(OBJEXT): unit/$(am__dirstamp) \
+unit/EGOneStepGen.$(OBJEXT): unit/$(am__dirstamp) \
 	unit/$(DEPDIR)/$(am__dirstamp)
 unit/EGUpDownGen.$(OBJEXT): unit/$(am__dirstamp) \
 	unit/$(DEPDIR)/$(am__dirstamp)
+unit/GatedConstantGen.$(OBJEXT): unit/$(am__dirstamp) \
+	unit/$(DEPDIR)/$(am__dirstamp)
+unit/IDGenerator.$(OBJEXT): unit/$(am__dirstamp) \
+	unit/$(DEPDIR)/$(am__dirstamp)
+unit/Interpolation.$(OBJEXT): unit/$(am__dirstamp) \
+	unit/$(DEPDIR)/$(am__dirstamp)
+unit/MultiplyGen.$(OBJEXT): unit/$(am__dirstamp) \
+	unit/$(DEPDIR)/$(am__dirstamp)
+unit/MultiplyTwoGen.$(OBJEXT): unit/$(am__dirstamp) \
+	unit/$(DEPDIR)/$(am__dirstamp)
+unit/NoiseGen.$(OBJEXT): unit/$(am__dirstamp) \
+	unit/$(DEPDIR)/$(am__dirstamp)
+unit/NoiseUnit.$(OBJEXT): unit/$(am__dirstamp) \
+	unit/$(DEPDIR)/$(am__dirstamp)
+unit/NumberGen.$(OBJEXT): unit/$(am__dirstamp) \
+	unit/$(DEPDIR)/$(am__dirstamp)
+unit/OnePoleLPFGen.$(OBJEXT): unit/$(am__dirstamp) \
+	unit/$(DEPDIR)/$(am__dirstamp)
+unit/Patch.$(OBJEXT): unit/$(am__dirstamp) \
+	unit/$(DEPDIR)/$(am__dirstamp)
+unit/PhasorGen.$(OBJEXT): unit/$(am__dirstamp) \
+	unit/$(DEPDIR)/$(am__dirstamp)
+unit/Port.$(OBJEXT): unit/$(am__dirstamp) \
+	unit/$(DEPDIR)/$(am__dirstamp)
 unit/STKAdapterGen.$(OBJEXT): unit/$(am__dirstamp) \
+	unit/$(DEPDIR)/$(am__dirstamp)
+unit/STKBiQuadGen.$(OBJEXT): unit/$(am__dirstamp) \
+	unit/$(DEPDIR)/$(am__dirstamp)
+unit/STKOnePoleGen.$(OBJEXT): unit/$(am__dirstamp) \
 	unit/$(DEPDIR)/$(am__dirstamp)
 unit/STKOneZeroGen.$(OBJEXT): unit/$(am__dirstamp) \
 	unit/$(DEPDIR)/$(am__dirstamp)
@@ -503,37 +588,18 @@ unit/STKTwoPoleGen.$(OBJEXT): unit/$(am__dirstamp) \
 	unit/$(DEPDIR)/$(am__dirstamp)
 unit/STKTwoZeroGen.$(OBJEXT): unit/$(am__dirstamp) \
 	unit/$(DEPDIR)/$(am__dirstamp)
-unit/STKBiQuadGen.$(OBJEXT): unit/$(am__dirstamp) \
+unit/SawGen.$(OBJEXT): unit/$(am__dirstamp) \
 	unit/$(DEPDIR)/$(am__dirstamp)
-unit/STKOnePoleGen.$(OBJEXT): unit/$(am__dirstamp) \
+unit/SoundUnit.$(OBJEXT): unit/$(am__dirstamp) \
+	unit/$(DEPDIR)/$(am__dirstamp)
+unit/SquareGen.$(OBJEXT): unit/$(am__dirstamp) \
+	unit/$(DEPDIR)/$(am__dirstamp)
+unit/TwoInputMixerGen.$(OBJEXT): unit/$(am__dirstamp) \
+	unit/$(DEPDIR)/$(am__dirstamp)
+unit/UGen.$(OBJEXT): unit/$(am__dirstamp) \
 	unit/$(DEPDIR)/$(am__dirstamp)
 unit/WaveOutGen.$(OBJEXT): unit/$(am__dirstamp) \
 	unit/$(DEPDIR)/$(am__dirstamp)
-unit/AddTwoGen.$(OBJEXT): unit/$(am__dirstamp) \
-	unit/$(DEPDIR)/$(am__dirstamp)
-unit/MultiplyTwoGen.$(OBJEXT): unit/$(am__dirstamp) \
-	unit/$(DEPDIR)/$(am__dirstamp)
-unit/MultiplyGen.$(OBJEXT): unit/$(am__dirstamp) \
-	unit/$(DEPDIR)/$(am__dirstamp)
-unit/NumberGen.$(OBJEXT): unit/$(am__dirstamp) \
-	unit/$(DEPDIR)/$(am__dirstamp)
-unit/PhasorGen.$(OBJEXT): unit/$(am__dirstamp) \
-	unit/$(DEPDIR)/$(am__dirstamp)
-unit/EGOneStepGen.$(OBJEXT): unit/$(am__dirstamp) \
-	unit/$(DEPDIR)/$(am__dirstamp)
-unit/ADSRGen.$(OBJEXT): unit/$(am__dirstamp) \
-	unit/$(DEPDIR)/$(am__dirstamp)
-unit/GatedConstantGen.$(OBJEXT): unit/$(am__dirstamp) \
-	unit/$(DEPDIR)/$(am__dirstamp)
-configuration/$(am__dirstamp):
-	@$(MKDIR_P) configuration
-	@: > configuration/$(am__dirstamp)
-configuration/$(DEPDIR)/$(am__dirstamp):
-	@$(MKDIR_P) configuration/$(DEPDIR)
-	@: > configuration/$(DEPDIR)/$(am__dirstamp)
-configuration/ConfigurationManager.$(OBJEXT):  \
-	configuration/$(am__dirstamp) \
-	configuration/$(DEPDIR)/$(am__dirstamp)
 
 kraftmaschine$(EXEEXT): $(kraftmaschine_OBJECTS) $(kraftmaschine_DEPENDENCIES) $(EXTRA_kraftmaschine_DEPENDENCIES) 
 	@rm -f kraftmaschine$(EXEEXT)
@@ -552,23 +618,24 @@ ugentest$(EXEEXT): $(ugentest_OBJECTS) $(ugentest_DEPENDENCIES) $(EXTRA_ugentest
 mostlyclean-compile:
 	-rm -f *.$(OBJEXT)
 	-rm -f configuration/*.$(OBJEXT)
+	-rm -f osc/*.$(OBJEXT)
 	-rm -f sequencer/*.$(OBJEXT)
 	-rm -f store/*.$(OBJEXT)
 	-rm -f unit/*.$(OBJEXT)
+	-rm -f util/*.$(OBJEXT)
 
 distclean-compile:
 	-rm -f *.tab.c
 
-include ./$(DEPDIR)/MessageData.Po
-include ./$(DEPDIR)/MidiConnector.Po
 include ./$(DEPDIR)/Neonlicht.Po
-include ./$(DEPDIR)/OscInConnector.Po
-include ./$(DEPDIR)/OscOutConnector.Po
-include ./$(DEPDIR)/WaveWriter.Po
 include ./$(DEPDIR)/cmidiin.Po
 include ./$(DEPDIR)/kraftmaschine.Po
 include ./$(DEPDIR)/ugentest.Po
 include configuration/$(DEPDIR)/ConfigurationManager.Po
+include osc/$(DEPDIR)/MessageData.Po
+include osc/$(DEPDIR)/MidiConnector.Po
+include osc/$(DEPDIR)/OscInConnector.Po
+include osc/$(DEPDIR)/OscOutConnector.Po
 include sequencer/$(DEPDIR)/Activator.Po
 include sequencer/$(DEPDIR)/OscActivator.Po
 include sequencer/$(DEPDIR)/Pulse.Po
@@ -604,6 +671,7 @@ include unit/$(DEPDIR)/SquareGen.Po
 include unit/$(DEPDIR)/TwoInputMixerGen.Po
 include unit/$(DEPDIR)/UGen.Po
 include unit/$(DEPDIR)/WaveOutGen.Po
+include util/$(DEPDIR)/WaveWriter.Po
 
 .cpp.o:
 	$(AM_V_CXX)depbase=`echo $@ | sed 's|[^/]*$$|$(DEPDIR)/&|;s|\.o$$||'`;\
@@ -738,12 +806,16 @@ distclean-generic:
 	-test . = "$(srcdir)" || test -z "$(CONFIG_CLEAN_VPATH_FILES)" || rm -f $(CONFIG_CLEAN_VPATH_FILES)
 	-rm -f configuration/$(DEPDIR)/$(am__dirstamp)
 	-rm -f configuration/$(am__dirstamp)
+	-rm -f osc/$(DEPDIR)/$(am__dirstamp)
+	-rm -f osc/$(am__dirstamp)
 	-rm -f sequencer/$(DEPDIR)/$(am__dirstamp)
 	-rm -f sequencer/$(am__dirstamp)
 	-rm -f store/$(DEPDIR)/$(am__dirstamp)
 	-rm -f store/$(am__dirstamp)
 	-rm -f unit/$(DEPDIR)/$(am__dirstamp)
 	-rm -f unit/$(am__dirstamp)
+	-rm -f util/$(DEPDIR)/$(am__dirstamp)
+	-rm -f util/$(am__dirstamp)
 
 maintainer-clean-generic:
 	@echo "This command is intended for maintainers to use"
@@ -753,7 +825,7 @@ clean: clean-am
 clean-am: clean-binPROGRAMS clean-generic mostlyclean-am
 
 distclean: distclean-am
-	-rm -rf ./$(DEPDIR) configuration/$(DEPDIR) sequencer/$(DEPDIR) store/$(DEPDIR) unit/$(DEPDIR)
+	-rm -rf ./$(DEPDIR) configuration/$(DEPDIR) osc/$(DEPDIR) sequencer/$(DEPDIR) store/$(DEPDIR) unit/$(DEPDIR) util/$(DEPDIR)
 	-rm -f Makefile
 distclean-am: clean-am distclean-compile distclean-generic \
 	distclean-tags
@@ -799,7 +871,7 @@ install-ps-am:
 installcheck-am:
 
 maintainer-clean: maintainer-clean-am
-	-rm -rf ./$(DEPDIR) configuration/$(DEPDIR) sequencer/$(DEPDIR) store/$(DEPDIR) unit/$(DEPDIR)
+	-rm -rf ./$(DEPDIR) configuration/$(DEPDIR) osc/$(DEPDIR) sequencer/$(DEPDIR) store/$(DEPDIR) unit/$(DEPDIR) util/$(DEPDIR)
 	-rm -f Makefile
 maintainer-clean-am: distclean-am maintainer-clean-generic
 

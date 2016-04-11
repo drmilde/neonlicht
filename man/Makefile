@@ -59,10 +59,10 @@ am__make_running_with_option = \
   test $$has_opt = yes
 am__make_dryrun = (target_option=n; $(am__make_running_with_option))
 am__make_keepgoing = (target_option=k; $(am__make_running_with_option))
-pkgdatadir = $(datadir)/first
-pkgincludedir = $(includedir)/first
-pkglibdir = $(libdir)/first
-pkglibexecdir = $(libexecdir)/first
+pkgdatadir = $(datadir)/neonlicht
+pkgincludedir = $(includedir)/neonlicht
+pkglibdir = $(libdir)/neonlicht
+pkglibexecdir = $(libexecdir)/neonlicht
 am__cd = CDPATH="$${ZSH_VERSION+.}$(PATH_SEPARATOR)" && cd
 install_sh_DATA = $(install_sh) -c -m 644
 install_sh_PROGRAM = $(install_sh) -c
@@ -152,7 +152,7 @@ CXX = g++
 CXXDEPMODE = depmode=gcc3
 CXXFLAGS = -g -O2
 CYGPATH_W = echo
-DEFS = -DPACKAGE_NAME=\"first\" -DPACKAGE_TARNAME=\"first\" -DPACKAGE_VERSION=\"0.0.1\" -DPACKAGE_STRING=\"first\ 0.0.1\" -DPACKAGE_BUGREPORT=\"milde@hs-fulda.de\" -DPACKAGE_URL=\"\" -DPACKAGE=\"first\" -DVERSION=\"0.0.1\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_STDLIB_H=1 -DHAVE_UNISTD_H=1 -DHAVE_STDLIB_H=1 -DHAVE_MALLOC=1
+DEFS = -DPACKAGE_NAME=\"Neonlicht\" -DPACKAGE_TARNAME=\"neonlicht\" -DPACKAGE_VERSION=\"0.0.1\" -DPACKAGE_STRING=\"Neonlicht\ 0.0.1\" -DPACKAGE_BUGREPORT=\"milde@hs-fulda.de\" -DPACKAGE_URL=\"\" -DPACKAGE=\"neonlicht\" -DVERSION=\"0.0.1\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_STDLIB_H=1 -DHAVE_UNISTD_H=1 -DHAVE_STDLIB_H=1 -DHAVE_MALLOC=1
 DEPDIR = .deps
 ECHO_C = 
 ECHO_N = -n
@@ -172,11 +172,11 @@ LTLIBOBJS =
 MAKEINFO = ${SHELL} /home/pi/programming/synthesizer/clone/neonlicht/missing makeinfo
 MKDIR_P = /bin/mkdir -p
 OBJEXT = o
-PACKAGE = first
+PACKAGE = neonlicht
 PACKAGE_BUGREPORT = milde@hs-fulda.de
-PACKAGE_NAME = first
-PACKAGE_STRING = first 0.0.1
-PACKAGE_TARNAME = first
+PACKAGE_NAME = Neonlicht
+PACKAGE_STRING = Neonlicht 0.0.1
+PACKAGE_TARNAME = neonlicht
 PACKAGE_URL = 
 PACKAGE_VERSION = 0.0.1
 PATH_SEPARATOR = :
