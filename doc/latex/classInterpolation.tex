@@ -11,7 +11,50 @@ static float {\bfseries map} (int value, int s1, int e1, float s2, float e2)\hyp
 \item 
 static int {\bfseries discrete} (float value, float s1, float e1, int max)\hypertarget{classInterpolation_a246c72a835822b7674758d657ed44230}{}\label{classInterpolation_a246c72a835822b7674758d657ed44230}
 
+\item 
+static float \hyperlink{classInterpolation_a5549f8859f14153da891222a8ff1a22f}{maplog} (float value, float s1, float e1, float s2, float e2)
+\item 
+static float {\bfseries mapexp} (float value, float s1, float e1, float s2, float e2)\hypertarget{classInterpolation_a08d1fe5e82708ab26a019e9ae9f851c8}{}\label{classInterpolation_a08d1fe5e82708ab26a019e9ae9f851c8}
+
 \end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\index{Interpolation@{Interpolation}!maplog@{maplog}}
+\index{maplog@{maplog}!Interpolation@{Interpolation}}
+\subsubsection[{\texorpdfstring{maplog(float value, float s1, float e1, float s2, float e2)}{maplog(float value, float s1, float e1, float s2, float e2)}}]{\setlength{\rightskip}{0pt plus 5cm}float Interpolation\+::maplog (
+\begin{DoxyParamCaption}
+\item[{float}]{value, }
+\item[{float}]{s1, }
+\item[{float}]{e1, }
+\item[{float}]{s2, }
+\item[{float}]{e2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classInterpolation_a5549f8859f14153da891222a8ff1a22f}{}\label{classInterpolation_a5549f8859f14153da891222a8ff1a22f}
+Calculates the logarithm() of the linear mapping of the input value from interval \mbox{[}s1,e1\mbox{]} to interval \mbox{[}s2,e2\mbox{]}.
+
+
+\begin{DoxyItemize}
+\item The logarithmic result allows for a more fine grained control of the {\bfseries higher} end of the interval.
+\item The result should be normalized by dividing the result by log(e2-\/s2).
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{Returns}
+The log() of the linear mapping.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em value} & the value to be mapped (e.\+g. a knob value) \\
+\hline
+{\em s1} & start of domain interval \\
+\hline
+{\em e1} & end of domain interval \\
+\hline
+{\em s2} & start of range interval \\
+\hline
+{\em e2} & end of range interval \\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

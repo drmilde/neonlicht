@@ -1,7 +1,7 @@
 var searchData=
 [
   ['sawgen',['SawGen',['../classunit_1_1SawGen.html',1,'unit']]],
-  ['soundunit',['SoundUnit',['../classSoundUnit.html',1,'']]],
+  ['soundunit',['SoundUnit',['../classunit_1_1SoundUnit.html',1,'unit']]],
   ['squaregen',['SquareGen',['../classunit_1_1SquareGen.html',1,'unit']]],
   ['startthread',['startThread',['../classosc_1_1OscInConnector.html#af546d19cf2adc1ed7c701a4804586cb9',1,'osc::OscInConnector']]],
   ['stkadaptergen',['STKAdapterGen',['../classunit_1_1STKAdapterGen.html',1,'unit']]],

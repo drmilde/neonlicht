@@ -25,7 +25,7 @@
 #include "STKBiQuadGen.h"
 #include "STKOnePoleGen.h"
 
-class NoiseUnit : public SoundUnit {
+class NoiseUnit : public unit::SoundUnit {
 
  public:
   NoiseUnit();
@@ -37,8 +37,10 @@ class NoiseUnit : public SoundUnit {
   void processControlMessage(int type, int key, float value);
 
  private:
+  // has to be implemented
   void control(std::string portName, float value);
 
+  // UGens used by this SPU
   unit::NoiseGen* noise1;
   unit::NoiseGen* noise2;
   unit::SawGen* saw1;

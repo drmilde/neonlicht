@@ -1,5 +1,7 @@
 #include "SoundUnit.h"
 
+using namespace unit;
+
 SoundUnit::SoundUnit():SoundUnit("RobertM") {
   // do something useful here
 }

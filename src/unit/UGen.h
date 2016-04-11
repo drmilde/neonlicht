@@ -7,6 +7,8 @@
 
 namespace unit {
 
+/* {{{ */
+
 /**
  * UGen is the base class for all Unit Generators.
  * It provides the underlying interface of the UGens.
@@ -31,6 +33,8 @@ namespace unit {
  * @since 04-2016
  * @version 1.0
  **/
+
+/* }}} */
 
   class UGen {
   public:

@@ -1,6 +1,5 @@
 #include "NoiseUnit.h"
 
-
 NoiseUnit::NoiseUnit():SoundUnit("NoiseUnit 1") {
   setup();
 }
@@ -112,11 +111,14 @@ void NoiseUnit::processControlMessage(int type, int key, float value) {
 void NoiseUnit::control (std::string portName, float value) {
   if (portName == "cutoff") {
     onelpf->control("cutoff", value);
+    std::cout << "value : " << value << std::endl;
   }
+
   if (portName == "volume") {
     mixer2->control("amnt1", value);
     mixer2->control("amnt2", (1.0 - value)*0.1f);
   }
+
   if (portName == "lfo rate") {
     // calculate midi frequency
     float frequency = 440 * pow(2.0,((int)(value*127) - 69.0)/12.0);

@@ -1,5 +1,9 @@
 \hypertarget{classSoundUnit}{}\section{Sound\+Unit Class Reference}
 \label{classSoundUnit}\index{Sound\+Unit@{Sound\+Unit}}
+
+
+{\ttfamily \#include $<$Sound\+Unit.\+h$>$}
+
 Inheritance diagram for Sound\+Unit\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -21,10 +25,19 @@ std\+::string {\bfseries get\+Name} ()\hypertarget{classSoundUnit_a4854dfb9b839f
 virtual void {\bfseries setup} ()=0\hypertarget{classSoundUnit_aedfa9b99f4555ed5df4ceffe001c1e63}{}\label{classSoundUnit_aedfa9b99f4555ed5df4ceffe001c1e63}
 
 \item 
-virtual void {\bfseries control} (std\+::string port\+Name, float value)=0\hypertarget{classSoundUnit_a0a74ef3d6c9343f1ee64a9a96bdbbe78}{}\label{classSoundUnit_a0a74ef3d6c9343f1ee64a9a96bdbbe78}
+virtual float {\bfseries tick} ()=0\hypertarget{classSoundUnit_af1f6ccffb8d1919bd774b340c01bea68}{}\label{classSoundUnit_af1f6ccffb8d1919bd774b340c01bea68}
 
 \item 
-virtual float {\bfseries tick} ()=0\hypertarget{classSoundUnit_af1f6ccffb8d1919bd774b340c01bea68}{}\label{classSoundUnit_af1f6ccffb8d1919bd774b340c01bea68}
+virtual void {\bfseries process\+Midi\+Message} (int type, int key, float value)=0\hypertarget{classSoundUnit_a1e73f915afac67a2103f8d79daf40ec3}{}\label{classSoundUnit_a1e73f915afac67a2103f8d79daf40ec3}
+
+\item 
+virtual void {\bfseries process\+Control\+Message} (int type, int key, float value)=0\hypertarget{classSoundUnit_ad20e07c321b9d206f0f9303bbdf2a67d}{}\label{classSoundUnit_ad20e07c321b9d206f0f9303bbdf2a67d}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void {\bfseries control} (std\+::string port\+Name, float value)=0\hypertarget{classSoundUnit_a0a74ef3d6c9343f1ee64a9a96bdbbe78}{}\label{classSoundUnit_a0a74ef3d6c9343f1ee64a9a96bdbbe78}
 
 \end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
@@ -33,6 +46,40 @@ virtual float {\bfseries tick} ()=0\hypertarget{classSoundUnit_af1f6ccffb8d1919b
 std\+::map$<$ std\+::string, \hyperlink{classunit_1_1UGen}{unit\+::\+U\+Gen} $\ast$ $>$ {\bfseries U\+G\+E\+NS}\hypertarget{classSoundUnit_af89c0c537f05fde2f775dcaddc09bc3e}{}\label{classSoundUnit_af89c0c537f05fde2f775dcaddc09bc3e}
 
 \end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classSoundUnit}{Sound\+Unit} is an abstract class defining the interface of the sound unit, which represents the concept of a Sound Processing Unit (S\+PU). This S\+PU could be the implementation of a virtual analog synthesizer, a purely digital synthesizer, a digital audio effect or the brand new never heard of sound device you have always dreamt of.
+
+In an S\+PU you would typically
+
+
+\begin{DoxyItemize}
+\item combine a set of Unit Generators (\hyperlink{classunit_1_1UGen}{unit\+::\+U\+Gen}),
+\item define the routing bewtween the U\+Gens
+\item define input, output and control ports
+\item map the control message to these ports
+\end{DoxyItemize}
+
+S\+P\+Us will be registered in \hyperlink{classNeonlicht}{Neonlicht} and incoming Midi and Control messages are then dispatched to the S\+PU. The S\+PU is responsible for processing (or ignoring!) these messages.
+
+Anyway\+: the interface forces you to implement 5 methods\+:
+
+
+\begin{DoxyItemize}
+\item setup() is where you configure and initialize your S\+PU.
+\item float tick() is where the actual sound processing takes place
+\item process\+Midi\+Message() is where you process the incoming midi data
+\item process\+Control\+Message() is where you process the incoming control data
+\item control() is where you map messages to internal parameters of the S\+PU
+\end{DoxyItemize}
+
+\begin{DoxyAuthor}{Author}
+J\+TM 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+April, 2016 
+\end{DoxySince}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

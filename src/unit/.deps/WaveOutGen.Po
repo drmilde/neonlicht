@@ -106,11 +106,19 @@ unit/WaveOutGen.o: unit/WaveOutGen.cpp /usr/include/stdc-predef.h \
  /usr/include/c++/4.9/bits/basic_ios.tcc \
  /usr/include/c++/4.9/bits/ostream.tcc /usr/include/c++/4.9/istream \
  /usr/include/c++/4.9/bits/istream.tcc util/Interpolation.h \
- util/WaveWriter.h /usr/local/include/stk/RtWvIn.h \
- /usr/local/include/stk/WvIn.h /usr/local/include/stk/Stk.h \
- /usr/include/c++/4.9/cstring /usr/include/string.h \
- /usr/include/c++/4.9/sstream /usr/include/c++/4.9/bits/sstream.tcc \
- /usr/include/c++/4.9/vector /usr/include/c++/4.9/bits/stl_construct.h \
+ /usr/include/math.h /usr/include/arm-linux-gnueabihf/bits/huge_val.h \
+ /usr/include/arm-linux-gnueabihf/bits/huge_valf.h \
+ /usr/include/arm-linux-gnueabihf/bits/huge_vall.h \
+ /usr/include/arm-linux-gnueabihf/bits/inf.h \
+ /usr/include/arm-linux-gnueabihf/bits/nan.h \
+ /usr/include/arm-linux-gnueabihf/bits/mathdef.h \
+ /usr/include/arm-linux-gnueabihf/bits/mathcalls.h \
+ /usr/include/arm-linux-gnueabihf/bits/mathinline.h util/WaveWriter.h \
+ /usr/local/include/stk/RtWvIn.h /usr/local/include/stk/WvIn.h \
+ /usr/local/include/stk/Stk.h /usr/include/c++/4.9/cstring \
+ /usr/include/string.h /usr/include/c++/4.9/sstream \
+ /usr/include/c++/4.9/bits/sstream.tcc /usr/include/c++/4.9/vector \
+ /usr/include/c++/4.9/bits/stl_construct.h \
  /usr/include/c++/4.9/ext/alloc_traits.h \
  /usr/include/c++/4.9/bits/alloc_traits.h \
  /usr/include/c++/4.9/bits/stl_uninitialized.h \
@@ -391,6 +399,24 @@ util/IDGenerator.h:
 /usr/include/c++/4.9/bits/istream.tcc:
 
 util/Interpolation.h:
+
+/usr/include/math.h:
+
+/usr/include/arm-linux-gnueabihf/bits/huge_val.h:
+
+/usr/include/arm-linux-gnueabihf/bits/huge_valf.h:
+
+/usr/include/arm-linux-gnueabihf/bits/huge_vall.h:
+
+/usr/include/arm-linux-gnueabihf/bits/inf.h:
+
+/usr/include/arm-linux-gnueabihf/bits/nan.h:
+
+/usr/include/arm-linux-gnueabihf/bits/mathdef.h:
+
+/usr/include/arm-linux-gnueabihf/bits/mathcalls.h:
+
+/usr/include/arm-linux-gnueabihf/bits/mathinline.h:
 
 util/WaveWriter.h:
 

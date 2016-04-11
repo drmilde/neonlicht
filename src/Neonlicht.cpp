@@ -23,7 +23,7 @@ int Neonlicht::tick( void *outputBuffer, void *inputBuffer, unsigned int nBuffer
          double streamTime, RtAudioStreamStatus status, void *dataPointer )
 {
 
-  SoundUnit *SU = (SoundUnit *) dataPointer;
+  unit::SoundUnit *SU = (unit::SoundUnit *) dataPointer;
 
   
   register StkFloat *samples = (StkFloat *) outputBuffer;  

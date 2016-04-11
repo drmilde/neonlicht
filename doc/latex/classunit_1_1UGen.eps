@@ -5,7 +5,7 @@
 %%For: 
 %Magnification: 1.00
 %%Orientation: Portrait
-%%BoundingBox: 0 0 500 1059.602649
+%%BoundingBox: 0 0 500 1125.827815
 %%Pages: 0
 %%BeginSetup
 %%EndSetup
@@ -19,12 +19,12 @@
 /marginwidth 10 def
 /distx 20 def
 /disty 40 def
-/boundaspect 0.471875 def  % aspect ratio of the BoundingBox (width/height)
+/boundaspect 0.444118 def  % aspect ratio of the BoundingBox (width/height)
 /boundx 500 def
 /boundy boundx boundaspect div def
 /xspacing 0 def
 /yspacing 0 def
-/rows 16 def
+/rows 17 def
 /cols 2 def
 /scalefactor 0 def
 /boxfont /Times-Roman findfont fontheight scalefont def
@@ -185,6 +185,7 @@ boxfont setfont
 (unit::NumberGen) cw
 (unit::OnePoleLPFGen) cw
 (unit::SawGen) cw
+(unit::SoundUnit) cw
 (unit::SquareGen) cw
 (unit::STKAdapterGen) cw
 (unit::TwoInputMixerGen) cw
@@ -200,18 +201,20 @@ boundx scalefactor div boundy scalefactor div scale
 
 % ----- classes -----
 
- (unit::UGen) 0.000000 15.000000 box
- (unit::AddTwoGen) 1.000000 14.000000 box
- (unit::ADSRGen) 1.000000 13.000000 box
- (unit::EGOneStepGen) 1.000000 12.000000 box
- (unit::EGUpDownGen) 1.000000 11.000000 box
- (unit::GatedConstantGen) 1.000000 10.000000 box
- (unit::MultiplyGen) 1.000000 9.000000 box
- (unit::MultiplyTwoGen) 1.000000 8.000000 box
- (unit::NoiseGen) 1.000000 7.000000 box
- (unit::NumberGen) 1.000000 6.000000 box
- (unit::OnePoleLPFGen) 1.000000 5.000000 box
- (unit::SawGen) 1.000000 4.000000 box
+ (unit::UGen) 0.000000 16.000000 box
+ (unit::AddTwoGen) 1.000000 15.000000 box
+ (unit::ADSRGen) 1.000000 14.000000 box
+ (unit::EGOneStepGen) 1.000000 13.000000 box
+ (unit::EGUpDownGen) 1.000000 12.000000 box
+ (unit::GatedConstantGen) 1.000000 11.000000 box
+ (unit::MultiplyGen) 1.000000 10.000000 box
+ (unit::MultiplyTwoGen) 1.000000 9.000000 box
+ (unit::NoiseGen) 1.000000 8.000000 box
+ (unit::NumberGen) 1.000000 7.000000 box
+ (unit::OnePoleLPFGen) 1.000000 6.000000 box
+ (unit::SawGen) 1.000000 5.000000 box
+1.000000 5.000000 mark
+ (unit::SoundUnit) 1.000000 4.000000 box
 1.000000 4.000000 mark
  (unit::SquareGen) 1.000000 3.000000 box
  (unit::STKAdapterGen) 1.000000 2.000000 box
@@ -222,7 +225,9 @@ boundx scalefactor div boundy scalefactor div scale
 % ----- relations -----
 
 solid
-1 0.000000 14.250000 out
+1 0.000000 15.250000 out
+solid
+0 0.000000 15.500000 hedge
 solid
 0 0.000000 14.500000 hedge
 solid
@@ -254,4 +259,4 @@ solid
 solid
 0 0.000000 0.500000 hedge
 solid
-0.000000 15.000000 0.500000 vedge
+0.000000 16.000000 0.500000 vedge

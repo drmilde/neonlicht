@@ -3,7 +3,7 @@
 Inheritance diagram for Noise\+Unit\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2.000000cm]{classNoiseUnit}
+\includegraphics[height=3.000000cm]{classNoiseUnit}
 \end{center}
 \end{figure}
 \subsection*{Public Member Functions}
@@ -12,10 +12,13 @@ Inheritance diagram for Noise\+Unit\+:\begin{figure}[H]
 void {\bfseries setup} ()\hypertarget{classNoiseUnit_a81666e8bdea833fad6a4451a765c6b83}{}\label{classNoiseUnit_a81666e8bdea833fad6a4451a765c6b83}
 
 \item 
-void {\bfseries control} (std\+::string port\+Name, float value)\hypertarget{classNoiseUnit_a7014ea85fb499bbe69fcf7ce96be8d32}{}\label{classNoiseUnit_a7014ea85fb499bbe69fcf7ce96be8d32}
+float {\bfseries tick} ()\hypertarget{classNoiseUnit_af48a9a915f7f593105e8fe2d2ddb745a}{}\label{classNoiseUnit_af48a9a915f7f593105e8fe2d2ddb745a}
 
 \item 
-float {\bfseries tick} ()\hypertarget{classNoiseUnit_af48a9a915f7f593105e8fe2d2ddb745a}{}\label{classNoiseUnit_af48a9a915f7f593105e8fe2d2ddb745a}
+void {\bfseries process\+Midi\+Message} (int type, int key, float value)\hypertarget{classNoiseUnit_a58e18639dc527bb67184b38107bd6acf}{}\label{classNoiseUnit_a58e18639dc527bb67184b38107bd6acf}
+
+\item 
+void {\bfseries process\+Control\+Message} (int type, int key, float value)\hypertarget{classNoiseUnit_a755cc04254bf8ecba6082ea8d6151d6c}{}\label{classNoiseUnit_a755cc04254bf8ecba6082ea8d6151d6c}
 
 \end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}

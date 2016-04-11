@@ -85,12 +85,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="classSoundUnit-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">SoundUnit Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="SoundUnit_8h_source.html">SoundUnit.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for SoundUnit:</div>
 <div class="dyncontent">
@@ -115,12 +118,21 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>getName</b> ()
 <tr class="memitem:aedfa9b99f4555ed5df4ceffe001c1e63"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aedfa9b99f4555ed5df4ceffe001c1e63"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setup</b> ()=0</td></tr>
 <tr class="separator:aedfa9b99f4555ed5df4ceffe001c1e63"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0a74ef3d6c9343f1ee64a9a96bdbbe78"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0a74ef3d6c9343f1ee64a9a96bdbbe78"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>control</b> (std::string portName, float value)=0</td></tr>
-<tr class="separator:a0a74ef3d6c9343f1ee64a9a96bdbbe78"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af1f6ccffb8d1919bd774b340c01bea68"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af1f6ccffb8d1919bd774b340c01bea68"></a>
 virtual float&#160;</td><td class="memItemRight" valign="bottom"><b>tick</b> ()=0</td></tr>
 <tr class="separator:af1f6ccffb8d1919bd774b340c01bea68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e73f915afac67a2103f8d79daf40ec3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1e73f915afac67a2103f8d79daf40ec3"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>processMidiMessage</b> (int type, int key, float value)=0</td></tr>
+<tr class="separator:a1e73f915afac67a2103f8d79daf40ec3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad20e07c321b9d206f0f9303bbdf2a67d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad20e07c321b9d206f0f9303bbdf2a67d"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>processControlMessage</b> (int type, int key, float value)=0</td></tr>
+<tr class="separator:ad20e07c321b9d206f0f9303bbdf2a67d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:a0a74ef3d6c9343f1ee64a9a96bdbbe78"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0a74ef3d6c9343f1ee64a9a96bdbbe78"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>control</b> (std::string portName, float value)=0</td></tr>
+<tr class="separator:a0a74ef3d6c9343f1ee64a9a96bdbbe78"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -128,7 +140,27 @@ Protected Attributes</h2></td></tr>
 std::map&lt; std::string, <a class="el" href="classunit_1_1UGen.html">unit::UGen</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>UGENS</b></td></tr>
 <tr class="separator:af89c0c537f05fde2f775dcaddc09bc3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>The documentation for this class was generated from the following files:<ul>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p><a class="el" href="classSoundUnit.html">SoundUnit</a> is an abstract class defining the interface of the sound unit, which represents the concept of a Sound Processing Unit (SPU). This SPU could be the implementation of a virtual analog synthesizer, a purely digital synthesizer, a digital audio effect or the brand new never heard of sound device you have always dreamt of.</p>
+<p>In an SPU you would typically</p>
+<ul>
+<li>combine a set of Unit Generators (<a class="el" href="classunit_1_1UGen.html">unit::UGen</a>),</li>
+<li>define the routing bewtween the UGens</li>
+<li>define input, output and control ports</li>
+<li>map the control message to these ports</li>
+</ul>
+<p>SPUs will be registered in <a class="el" href="classNeonlicht.html">Neonlicht</a> and incoming Midi and Control messages are then dispatched to the SPU. The SPU is responsible for processing (or ignoring!) these messages.</p>
+<p>Anyway: the interface forces you to implement 5 methods:</p>
+<ul>
+<li>setup() is where you configure and initialize your SPU.</li>
+<li>float tick() is where the actual sound processing takes place</li>
+<li>processMidiMessage() is where you process the incoming midi data</li>
+<li>processControlMessage() is where you process the incoming control data</li>
+<li>control() is where you map messages to internal parameters of the SPU</li>
+</ul>
+<dl class="section author"><dt>Author</dt><dd>JTM </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>April, 2016 </dd></dl>
+</div><hr/>The documentation for this class was generated from the following files:<ul>
 <li>unit/<a class="el" href="SoundUnit_8h_source.html">SoundUnit.h</a></li>
 <li>unit/SoundUnit.cpp</li>
 </ul>
