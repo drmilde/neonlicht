@@ -90,7 +90,7 @@ unit/AddTwoGen.o: unit/AddTwoGen.cpp /usr/include/stdc-predef.h \
  /usr/include/c++/4.9/bits/functional_hash.h \
  /usr/include/c++/4.9/bits/hash_bytes.h \
  /usr/include/c++/4.9/bits/basic_string.tcc unit/Port.h unit/PortType.h \
- unit/IDGenerator.h /usr/include/c++/4.9/iostream \
+ util/IDGenerator.h /usr/include/c++/4.9/iostream \
  /usr/include/c++/4.9/ostream /usr/include/c++/4.9/ios \
  /usr/include/c++/4.9/bits/ios_base.h \
  /usr/include/c++/4.9/bits/locale_classes.h \
@@ -335,7 +335,7 @@ unit/Port.h:
 
 unit/PortType.h:
 
-unit/IDGenerator.h:
+util/IDGenerator.h:
 
 /usr/include/c++/4.9/iostream:
 

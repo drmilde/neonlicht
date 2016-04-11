@@ -104,14 +104,14 @@ fliehkraft_OBJECTS = $(am_fliehkraft_OBJECTS)
 fliehkraft_LDADD = $(LDADD)
 fliehkraft_DEPENDENCIES =
 am_kraftmaschine_OBJECTS = kraftmaschine.$(OBJEXT) Neonlicht.$(OBJEXT) \
-	util/WaveWriter.$(OBJEXT) \
+	util/WaveWriter.$(OBJEXT) util/Interpolation.$(OBJEXT) \
+	util/IDGenerator.$(OBJEXT) \
 	configuration/ConfigurationManager.$(OBJEXT) \
 	osc/MessageData.$(OBJEXT) osc/OscInConnector.$(OBJEXT) \
 	store/CentralStore.$(OBJEXT) store/MessageDataQueue.$(OBJEXT) \
 	unit/ADSRGen.$(OBJEXT) unit/AddTwoGen.$(OBJEXT) \
 	unit/EGOneStepGen.$(OBJEXT) unit/EGUpDownGen.$(OBJEXT) \
-	unit/GatedConstantGen.$(OBJEXT) unit/IDGenerator.$(OBJEXT) \
-	unit/Interpolation.$(OBJEXT) unit/MultiplyGen.$(OBJEXT) \
+	unit/GatedConstantGen.$(OBJEXT) unit/MultiplyGen.$(OBJEXT) \
 	unit/MultiplyTwoGen.$(OBJEXT) unit/NoiseGen.$(OBJEXT) \
 	unit/NoiseUnit.$(OBJEXT) unit/NumberGen.$(OBJEXT) \
 	unit/OnePoleLPFGen.$(OBJEXT) unit/Patch.$(OBJEXT) \
@@ -132,10 +132,10 @@ store_mdstore_OBJECTS = $(am_store_mdstore_OBJECTS)
 store_mdstore_LDADD = $(LDADD)
 store_mdstore_DEPENDENCIES =
 am_ugentest_OBJECTS = ugentest.$(OBJEXT) util/WaveWriter.$(OBJEXT) \
+	util/Interpolation.$(OBJEXT) util/IDGenerator.$(OBJEXT) \
 	unit/ADSRGen.$(OBJEXT) unit/AddTwoGen.$(OBJEXT) \
 	unit/EGOneStepGen.$(OBJEXT) unit/EGUpDownGen.$(OBJEXT) \
-	unit/GatedConstantGen.$(OBJEXT) unit/IDGenerator.$(OBJEXT) \
-	unit/Interpolation.$(OBJEXT) unit/MultiplyGen.$(OBJEXT) \
+	unit/GatedConstantGen.$(OBJEXT) unit/MultiplyGen.$(OBJEXT) \
 	unit/MultiplyTwoGen.$(OBJEXT) unit/NoiseGen.$(OBJEXT) \
 	unit/NoiseUnit.$(OBJEXT) unit/NumberGen.$(OBJEXT) \
 	unit/OnePoleLPFGen.$(OBJEXT) unit/Patch.$(OBJEXT) \
@@ -323,6 +323,8 @@ store_mdstore_SOURCES = store/mdstore.cpp \
 
 kraftmaschine_SOURCES = kraftmaschine.cpp Neonlicht.cpp \
 	util/WaveWriter.cpp \
+	util/Interpolation.cpp \
+	util/IDGenerator.cpp \
 	configuration/ConfigurationManager.cpp \
 	osc/MessageData.cpp \
 	osc/OscInConnector.cpp \
@@ -333,8 +335,6 @@ kraftmaschine_SOURCES = kraftmaschine.cpp Neonlicht.cpp \
 	unit/EGOneStepGen.cpp \
 	unit/EGUpDownGen.cpp \
 	unit/GatedConstantGen.cpp \
-	unit/IDGenerator.cpp \
-	unit/Interpolation.cpp \
 	unit/MultiplyGen.cpp \
 	unit/MultiplyTwoGen.cpp \
 	unit/NoiseGen.cpp \
@@ -359,13 +359,13 @@ kraftmaschine_SOURCES = kraftmaschine.cpp Neonlicht.cpp \
 
 ugentest_SOURCES = ugentest.cpp \
 	util/WaveWriter.cpp \
+	util/Interpolation.cpp \
+	util/IDGenerator.cpp \
 	unit/ADSRGen.cpp  \
 	unit/AddTwoGen.cpp \
 	unit/EGOneStepGen.cpp \
 	unit/EGUpDownGen.cpp \
 	unit/GatedConstantGen.cpp \
-	unit/IDGenerator.cpp \
-	unit/Interpolation.cpp \
 	unit/MultiplyGen.cpp \
 	unit/MultiplyTwoGen.cpp \
 	unit/NoiseGen.cpp \
@@ -515,6 +515,10 @@ util/$(DEPDIR)/$(am__dirstamp):
 	@: > util/$(DEPDIR)/$(am__dirstamp)
 util/WaveWriter.$(OBJEXT): util/$(am__dirstamp) \
 	util/$(DEPDIR)/$(am__dirstamp)
+util/Interpolation.$(OBJEXT): util/$(am__dirstamp) \
+	util/$(DEPDIR)/$(am__dirstamp)
+util/IDGenerator.$(OBJEXT): util/$(am__dirstamp) \
+	util/$(DEPDIR)/$(am__dirstamp)
 configuration/$(am__dirstamp):
 	@$(MKDIR_P) configuration
 	@: > configuration/$(am__dirstamp)
@@ -553,10 +557,6 @@ unit/EGOneStepGen.$(OBJEXT): unit/$(am__dirstamp) \
 unit/EGUpDownGen.$(OBJEXT): unit/$(am__dirstamp) \
 	unit/$(DEPDIR)/$(am__dirstamp)
 unit/GatedConstantGen.$(OBJEXT): unit/$(am__dirstamp) \
-	unit/$(DEPDIR)/$(am__dirstamp)
-unit/IDGenerator.$(OBJEXT): unit/$(am__dirstamp) \
-	unit/$(DEPDIR)/$(am__dirstamp)
-unit/Interpolation.$(OBJEXT): unit/$(am__dirstamp) \
 	unit/$(DEPDIR)/$(am__dirstamp)
 unit/MultiplyGen.$(OBJEXT): unit/$(am__dirstamp) \
 	unit/$(DEPDIR)/$(am__dirstamp)
@@ -648,8 +648,6 @@ include unit/$(DEPDIR)/AddTwoGen.Po
 include unit/$(DEPDIR)/EGOneStepGen.Po
 include unit/$(DEPDIR)/EGUpDownGen.Po
 include unit/$(DEPDIR)/GatedConstantGen.Po
-include unit/$(DEPDIR)/IDGenerator.Po
-include unit/$(DEPDIR)/Interpolation.Po
 include unit/$(DEPDIR)/MultiplyGen.Po
 include unit/$(DEPDIR)/MultiplyTwoGen.Po
 include unit/$(DEPDIR)/NoiseGen.Po
@@ -671,6 +669,8 @@ include unit/$(DEPDIR)/SquareGen.Po
 include unit/$(DEPDIR)/TwoInputMixerGen.Po
 include unit/$(DEPDIR)/UGen.Po
 include unit/$(DEPDIR)/WaveOutGen.Po
+include util/$(DEPDIR)/IDGenerator.Po
+include util/$(DEPDIR)/Interpolation.Po
 include util/$(DEPDIR)/WaveWriter.Po
 
 .cpp.o:

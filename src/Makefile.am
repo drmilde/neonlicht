@@ -27,6 +27,8 @@ store_mdstore_SOURCES = store/mdstore.cpp \
 
 kraftmaschine_SOURCES = kraftmaschine.cpp Neonlicht.cpp \
 	util/WaveWriter.cpp \
+	util/Interpolation.cpp \
+	util/IDGenerator.cpp \
 	configuration/ConfigurationManager.cpp \
 	osc/MessageData.cpp \
 	osc/OscInConnector.cpp \
@@ -37,8 +39,6 @@ kraftmaschine_SOURCES = kraftmaschine.cpp Neonlicht.cpp \
 	unit/EGOneStepGen.cpp \
 	unit/EGUpDownGen.cpp \
 	unit/GatedConstantGen.cpp \
-	unit/IDGenerator.cpp \
-	unit/Interpolation.cpp \
 	unit/MultiplyGen.cpp \
 	unit/MultiplyTwoGen.cpp \
 	unit/NoiseGen.cpp \
@@ -63,13 +63,13 @@ kraftmaschine_SOURCES = kraftmaschine.cpp Neonlicht.cpp \
 
 ugentest_SOURCES =  ugentest.cpp \
 	util/WaveWriter.cpp \
+	util/Interpolation.cpp \
+	util/IDGenerator.cpp \
 	unit/ADSRGen.cpp  \
 	unit/AddTwoGen.cpp \
 	unit/EGOneStepGen.cpp \
 	unit/EGUpDownGen.cpp \
 	unit/GatedConstantGen.cpp \
-	unit/IDGenerator.cpp \
-	unit/Interpolation.cpp \
 	unit/MultiplyGen.cpp \
 	unit/MultiplyTwoGen.cpp \
 	unit/NoiseGen.cpp \

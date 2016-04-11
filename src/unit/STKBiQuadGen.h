@@ -4,7 +4,7 @@
 #include "STKAdapterGen.h"
 #include <iostream>    
 #include <stdlib.h>
-#include "Interpolation.h"
+#include "util/Interpolation.h"
 
 // include from STK
 #include "BiQuad.h"

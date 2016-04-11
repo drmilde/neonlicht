@@ -3,7 +3,7 @@
 
 #include <string>
 #include "PortType.h"
-#include "IDGenerator.h"
+#include "util/IDGenerator.h"
 
 class Port {
 

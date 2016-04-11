@@ -98,7 +98,7 @@ unit/SoundUnit.o: unit/SoundUnit.cpp /usr/include/stdc-predef.h \
  /usr/include/c++/4.9/bits/basic_string.tcc \
  /usr/include/c++/4.9/bits/uses_allocator.h \
  /usr/include/c++/4.9/bits/stl_multimap.h unit/UGen.h unit/Port.h \
- unit/PortType.h unit/IDGenerator.h /usr/include/c++/4.9/iostream \
+ unit/PortType.h util/IDGenerator.h /usr/include/c++/4.9/iostream \
  /usr/include/c++/4.9/ostream /usr/include/c++/4.9/ios \
  /usr/include/c++/4.9/bits/ios_base.h \
  /usr/include/c++/4.9/bits/locale_classes.h \
@@ -369,7 +369,7 @@ unit/Port.h:
 
 unit/PortType.h:
 
-unit/IDGenerator.h:
+util/IDGenerator.h:
 
 /usr/include/c++/4.9/iostream:
 

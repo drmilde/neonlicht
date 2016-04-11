@@ -104,7 +104,7 @@ unit/TwoInputMixerGen.o: unit/TwoInputMixerGen.cpp \
  /usr/include/c++/4.9/bits/basic_ios.tcc \
  /usr/include/c++/4.9/bits/ostream.tcc /usr/include/c++/4.9/istream \
  /usr/include/c++/4.9/bits/istream.tcc unit/UGen.h unit/Port.h \
- unit/PortType.h unit/IDGenerator.h
+ unit/PortType.h util/IDGenerator.h
 
 /usr/include/stdc-predef.h:
 
@@ -374,4 +374,4 @@ unit/Port.h:
 
 unit/PortType.h:
 
-unit/IDGenerator.h:
+util/IDGenerator.h:

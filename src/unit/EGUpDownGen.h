@@ -4,7 +4,7 @@
 
 #include <stdlib.h>    
 #include "UGen.h"
-#include "Interpolation.h"
+#include "util/Interpolation.h"
 
 namespace unit {
   class EGUpDownGen: public UGen {

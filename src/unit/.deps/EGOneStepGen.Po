@@ -103,7 +103,7 @@ unit/EGOneStepGen.o: unit/EGOneStepGen.cpp /usr/include/stdc-predef.h \
  /usr/include/c++/4.9/bits/basic_ios.tcc \
  /usr/include/c++/4.9/bits/ostream.tcc /usr/include/c++/4.9/istream \
  /usr/include/c++/4.9/bits/istream.tcc unit/UGen.h unit/Port.h \
- unit/PortType.h unit/IDGenerator.h unit/Interpolation.h
+ unit/PortType.h util/IDGenerator.h util/Interpolation.h
 
 /usr/include/stdc-predef.h:
 
@@ -373,6 +373,6 @@ unit/Port.h:
 
 unit/PortType.h:
 
-unit/IDGenerator.h:
+util/IDGenerator.h:
 
-unit/Interpolation.h:
+util/Interpolation.h:

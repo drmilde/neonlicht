@@ -3,7 +3,7 @@
 
 #include <stdlib.h>    
 #include "UGen.h"
-#include "Interpolation.h"
+#include "util/Interpolation.h"
 #include "util/WaveWriter.h"
 
 namespace unit {

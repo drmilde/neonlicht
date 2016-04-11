@@ -109,7 +109,7 @@ unit/NoiseUnit.o: unit/NoiseUnit.cpp /usr/include/stdc-predef.h \
  /usr/include/c++/4.9/array /usr/include/c++/4.9/stdexcept \
  /usr/include/c++/4.9/bits/uses_allocator.h \
  /usr/include/c++/4.9/bits/stl_multimap.h unit/UGen.h unit/Port.h \
- unit/PortType.h unit/IDGenerator.h /usr/include/c++/4.9/iostream \
+ unit/PortType.h util/IDGenerator.h /usr/include/c++/4.9/iostream \
  /usr/include/c++/4.9/ostream /usr/include/c++/4.9/ios \
  /usr/include/c++/4.9/bits/ios_base.h \
  /usr/include/c++/4.9/bits/locale_classes.h \
@@ -126,7 +126,7 @@ unit/NoiseUnit.o: unit/NoiseUnit.cpp /usr/include/stdc-predef.h \
  /usr/include/c++/4.9/bits/ostream.tcc /usr/include/c++/4.9/istream \
  /usr/include/c++/4.9/bits/istream.tcc unit/NoiseGen.h unit/SawGen.h \
  unit/PhasorGen.h unit/SquareGen.h unit/OnePoleLPFGen.h \
- unit/TwoInputMixerGen.h unit/EGUpDownGen.h unit/Interpolation.h \
+ unit/TwoInputMixerGen.h unit/EGUpDownGen.h util/Interpolation.h \
  unit/WaveOutGen.h util/WaveWriter.h /usr/local/include/stk/RtWvIn.h \
  /usr/local/include/stk/WvIn.h /usr/local/include/stk/Stk.h \
  /usr/include/c++/4.9/cstring /usr/include/string.h \
@@ -431,7 +431,7 @@ unit/Port.h:
 
 unit/PortType.h:
 
-unit/IDGenerator.h:
+util/IDGenerator.h:
 
 /usr/include/c++/4.9/iostream:
 
@@ -487,7 +487,7 @@ unit/TwoInputMixerGen.h:
 
 unit/EGUpDownGen.h:
 
-unit/Interpolation.h:
+util/Interpolation.h:
 
 unit/WaveOutGen.h:
 

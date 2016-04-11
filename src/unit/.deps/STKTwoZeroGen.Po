@@ -90,7 +90,7 @@ unit/STKTwoZeroGen.o: unit/STKTwoZeroGen.cpp /usr/include/stdc-predef.h \
  /usr/include/c++/4.9/bits/functional_hash.h \
  /usr/include/c++/4.9/bits/hash_bytes.h \
  /usr/include/c++/4.9/bits/basic_string.tcc unit/Port.h unit/PortType.h \
- unit/IDGenerator.h /usr/include/c++/4.9/iostream \
+ util/IDGenerator.h /usr/include/c++/4.9/iostream \
  /usr/include/c++/4.9/ostream /usr/include/c++/4.9/ios \
  /usr/include/c++/4.9/bits/ios_base.h \
  /usr/include/c++/4.9/bits/locale_classes.h \
@@ -105,7 +105,7 @@ unit/STKTwoZeroGen.o: unit/STKTwoZeroGen.cpp /usr/include/stdc-predef.h \
  /usr/include/c++/4.9/bits/locale_facets.tcc \
  /usr/include/c++/4.9/bits/basic_ios.tcc \
  /usr/include/c++/4.9/bits/ostream.tcc /usr/include/c++/4.9/istream \
- /usr/include/c++/4.9/bits/istream.tcc unit/Interpolation.h \
+ /usr/include/c++/4.9/bits/istream.tcc util/Interpolation.h \
  /usr/local/include/stk/TwoZero.h /usr/local/include/stk/Filter.h \
  /usr/local/include/stk/Stk.h /usr/include/c++/4.9/cstring \
  /usr/include/string.h /usr/include/c++/4.9/sstream \
@@ -356,7 +356,7 @@ unit/Port.h:
 
 unit/PortType.h:
 
-unit/IDGenerator.h:
+util/IDGenerator.h:
 
 /usr/include/c++/4.9/iostream:
 
@@ -398,7 +398,7 @@ unit/IDGenerator.h:
 
 /usr/include/c++/4.9/bits/istream.tcc:
 
-unit/Interpolation.h:
+util/Interpolation.h:
 
 /usr/local/include/stk/TwoZero.h:
 
