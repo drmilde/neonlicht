@@ -26,7 +26,7 @@ int main(int argc, char** argv)
   for (int i = 0; i < 50; i++) {
     MessageData* data = CS.getMidiData();
     if (data != NULL) {
-      std::cout << data->getV3() << ",";
+      std::cout << data->getValue() << ",";
     }
     usleep(1 * 1000); // ein bischen warten
   }

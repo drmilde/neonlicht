@@ -84,7 +84,7 @@ void MidiConnector::defaultCallback( double deltatime, std::vector< unsigned cha
   }
   }
 
-  std::cout << messageType << ", " << a2 << std::endl;
+  std::cout << messageType << ": code=" << a1 << ", key =" << a2 << ", value/velocity:" << a3 << std::endl;
   
   MidiConnector::oscCon.sendMessage(messageType, a1, a2, a3, f1);
 }

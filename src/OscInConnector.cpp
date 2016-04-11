@@ -19,9 +19,9 @@ protected:
   void writeData (std::string s, int a1, int a2, int a3, float f) {
     if (oscIn != 0) { // HACK, (mal wieder), Zugriff auf die globalen Variablen des Connectors
       oscIn->MD->setMessage(s);
-      oscIn->MD->setV1(a1);
-      oscIn->MD->setV2(a2);
-      oscIn->MD->setV3(a3);
+      oscIn->MD->setCode(a1);
+      oscIn->MD->setKey(a2);
+      oscIn->MD->setValue(a3);
       oscIn->MD->setF1(f);
       oscIn->fresh = true;
     }

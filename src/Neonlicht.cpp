@@ -45,16 +45,16 @@ int Neonlicht::tick( void *outputBuffer, void *inputBuffer, unsigned int nBuffer
     MessageData* midiMessage = CS.getMidiData();
     
     if (midiMessage != NULL) { // first the Mididata
-      float con = midiMessage->getV2();
-      float a = midiMessage->getV3()/127.0;
-      std::cout << "midi message: ," << a  << ", ID =" << con << std::endl;
+      float key = midiMessage->getKey();
+      float value = midiMessage->getValue()/127.0;
+      std::cout << "midi message: ," << value  << ", KEY =" << key << std::endl;
 
-      if (con == 76) { // notes send from fliehkraft
-	  SU->control("lfo rate", a);
+      if (key == 76) { // notes send from fliehkraft
+	  SU->control("lfo rate", value);
       }	
 
-      if (con == 73) { // eg duration rate
-	SU->control("eg duration", a);
+      if (key == 73) { // eg duration rate
+	SU->control("eg duration", value);
       }	
             
     } else {      
@@ -62,43 +62,43 @@ int Neonlicht::tick( void *outputBuffer, void *inputBuffer, unsigned int nBuffer
       
       if (controlMessage != NULL) { // now the control data
 	
-	float con = controlMessage->getV2();
-	float a = controlMessage->getV3()/127.0;
-	std::cout << "control message: ," << a  << ", ID =" << con << std::endl;
+	float key = controlMessage->getKey();
+	float value = controlMessage->getValue()/127.0;
+	std::cout << "control message: ," << value  << ", KEY =" << key << std::endl;
 	
-	if (con == 74) { // cutoff
-	  SU->control("cutoff", a);
+	if (key == 74) { // cutoff
+	  SU->control("cutoff", value);
 	}
-	if (con == 7) { // volume
-	  SU->control("volume", a);
+	if (key == 7) { // volume
+	  SU->control("volume", value);
 	} 
-	if (con == 71) { // resonance
-	  SU->control("resonance", a);
+	if (key == 71) { // resonance
+	  SU->control("resonance", value);
 	}
-	if (con == 76) { // lfo rate
-	  SU->control("lfo rate", a);
+	if (key == 76) { // lfo rate
+	  SU->control("lfo rate", value);
 	}
-	if (con == 18) { // param 1
-	  SU->control("one pole zero", a);
-	  SU->control("two pole zero", a);
+	if (key == 18) { // param 1
+	  SU->control("one pole zero", value);
+	  SU->control("two pole zero", value);
 	}
-	if (con == 19) { // param 2
-	  SU->control("two pole resonance", a);
+	if (key == 19) { // param 2
+	  SU->control("two pole resonance", value);
 	}
-	if (con == 16) { // param 3
-	  SU->control("two pole radius", a);
+	if (key == 16) { // param 3
+	  SU->control("two pole radius", value);
 	}
-	if (con == 17) { // param 4
-	  SU->control("filter type", a);
+	if (key == 17) { // param 4
+	  SU->control("filter type", value);
 	}
-	if (con == 91) { // delay amt
-	  SU->control("record on/off", a);
+	if (key == 91) { // delay amt
+	  SU->control("record on/off", value);
 	}
-	if (con == 43) { // pad #8, trigger EG
-	  SU->control("trigger eg", a);
+	if (key == 43) { // pad #8, trigger EG
+	  SU->control("trigger eg", value);
 	}
-	if (con == 79) { // sustain, test trigger ADSR
-	  SU->control("trigger adsr", a);
+	if (key == 79) { // sustain, test trigger ADSR
+	  SU->control("trigger adsr", value);
 	}
      }      
     }

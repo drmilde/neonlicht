@@ -3,7 +3,7 @@
 // constructor
 
 
-MessageData::MessageData(MessageData* md): MessageData (md->getMessage(), md->getV1(), md->getV2(), md->getV3(),md->getF1()) {
+MessageData::MessageData(MessageData* md): MessageData (md->getMessage(), md->getCode(), md->getKey(), md->getValue(),md->getF1()) {
   // create copy of that
 }
 
@@ -19,19 +19,19 @@ std::string MessageData::getMessage() {
   return message;
 }
 
-int MessageData::getV1() {
+int MessageData::getCode() {
   fresh = false;
-  return v1;
+  return code;
 }
 
-int MessageData::getV2() {
+int MessageData::getKey() {
   fresh = false;
-  return v2;
+  return key;
 }
 
-int MessageData::getV3() {
+int MessageData::getValue() {
   fresh = false;
-  return v3;
+  return value;
 }
 
 float MessageData::getF1() {
@@ -46,9 +46,9 @@ void MessageData::setMessageData (std::string s,
 				  int a1, int a2, int a3,
 				  float f) {
   setMessage(s);
-  setV1(a1);
-  setV2(a2);
-  setV3(a3);
+  setCode(a1);
+  setKey(a2);
+  setValue(a3);
   setF1(f);
   
   fresh = true;
@@ -62,17 +62,17 @@ void MessageData::setMessage(std::string s) {
   message = s;
 }
 
-void MessageData::setV1(int a1) {
-  v1 = a1;
+void MessageData::setCode(int a1) {
+  code = a1;
 }
 
 
-void MessageData::setV2(int a2) {
- v2 = a2;
+void MessageData::setKey(int a2) {
+ key = a2;
 }
 
-void MessageData::setV3(int a3) {
-  v3 = a3;
+void MessageData::setValue(int a3) {
+  value = a3;
 }
 
 void MessageData::setF1(float f) {
