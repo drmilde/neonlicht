@@ -43,50 +43,61 @@ void MidiConnector::defaultCallback( double deltatime, std::vector< unsigned cha
   unsigned int nBytes = message->size();
 
   // Message Values
-  int a1 = 0;
-  int a2 = 0;
-  int a3 = 0;
+  int code = 0;
+  int key = 0;
+  int value = 0;
   float f1 = 0.0;
 
   if ((nBytes) > 0) {
-    a1 = (int)message->at(0);
+    code = (int)message->at(0);
     f1 = (float) deltatime;
   }
   
   if ((nBytes) > 1)
-    a2 = (int)message->at(1);
+    key = (int)message->at(1);
 
   if ((nBytes) > 2)
-    a3 = (int)message->at(2);
+    value = (int)message->at(2);
 
   
   // dispatch and send to OSC
-  std::string messageType = "/midi";
+  std::string messageType = "/unknown";
   
-  switch (a2) {
-  case 7: // volume
-  case 74: // cutoff
-  case 71: // resonance
-  case 76: // lfo rate
-  case 77: // lfo amnt
-  case 93: // chorus amnt   
-  case 75: // decay
-  case 18: // param1
-  case 19: // param2
-  case 16: // param3
-  case 17: // param4
-  case 79: // sustain
-  case 91: // delay amnt
-  case 43: // pad #8
-    {
+  // process code and set message type
+  switch (code) {
+  case 176: {
     messageType = "/control";
+    break;
+  }
+  case 144: {
+    messageType = "/midi on";
+    break;
+  }
+  case 128: {
+    messageType = "/midi off";
+    break;
+  }
+  case 153: {
+    messageType = "/pad on";
+    break;
+  }
+  case 137: {
+    messageType = "/pad off";
+    break;
+  }
+  case 224: {
+    messageType = "/slider";
     break;
   }
   }
 
-  std::cout << messageType << ": code=" << a1 << ", key =" << a2 << ", value/velocity:" << a3 << std::endl;
-  
-  MidiConnector::oscCon.sendMessage(messageType, a1, a2, a3, f1);
+  std::cout << messageType << " code=" << code << ", key=" << key << ", value/velocity=" << value << ", delta=" << f1 << std::endl;
+
+  MidiConnector::oscCon.sendMessage(messageType, code, key, value, f1);
+}
+
+void MidiConnector::sendMessage(std::string messageType, int code, int key, int value, float f1) {
+  MidiConnector::oscCon.sendMessage(messageType, code, key, value, f1);
 }
 
 // This function should be embedded in a try/catch block in case of

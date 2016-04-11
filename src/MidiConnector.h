@@ -31,6 +31,8 @@ public:
   MidiConnector(int p);
   MidiConnector();
   ~MidiConnector();
+
+  void sendMessage(std::string messageType, int code, int key, int value, float f1);
   
 private:
   static void defaultCallback( double deltatime, std::vector< unsigned char > *message, void */*userData*/ );

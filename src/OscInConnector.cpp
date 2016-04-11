@@ -42,8 +42,8 @@ protected:
       int a3 = (arg++)->AsInt32();
       float f1 = (arg++)->AsFloat();
       
-      // HACK, to check reaktion
-      if (a2 == 36) { // first pad on Arturia MiniLab
+      // HACK, to check reaction
+      if ((a1 == 153) && (a2 == 36)) { // first pad on Arturia MiniLab
 	std::cout << "OK, bye bye, closing down" << std::endl;
 	exit(0);
       }
@@ -53,24 +53,8 @@ protected:
 	throw osc::ExcessArgumentException();
       
 
-      // dispatch messages
-      if( std::strcmp( m.AddressPattern(), "/midi" ) == 0 ){
-	writeData ("/midi", a1, a2, a3, f1);
-	
-	if ((oscIn!=0) && (oscIn->talk)) {
-	  std::cout << "received '/midi' message with arguments: "
-		    << a1 << " " << a2 << " " << a3 << " " << f1 << "\n";
-	}
-      }
-      if( std::strcmp( m.AddressPattern(), "/control" ) == 0 ){
-	writeData ("/control", a1, a2, a3, f1);
-	
-	if ((oscIn!=0) && (oscIn->talk)) {
-	  std::cout << "received '/control' message with arguments: "
-		    << a1 << " " << a2 << " " << a3 << " " << f1 << "\n";
-	}
-      }
-
+      // just send message, dont dispatch
+      writeData (m.AddressPattern(), a1, a2, a3, f1);
       
     } catch( osc::Exception& e ){
       // any parsing errors such as unexpected argument types, or 
@@ -99,14 +83,15 @@ bool OscInConnector::isFresh() {
 }
 
 MessageData* OscInConnector::getData() {
-
   // get data
   oscMutex.lock();
   fresh = false;
   // MESSAGE DATA should be copied here !!!!!
+  // free result after usage !! -> otherwise memory leak !
+  MessageData* result = new MessageData(MD);
   oscMutex.unlock();
   
-  return MD;
+  return result;
 }
 
 void OscInConnector::listening() {

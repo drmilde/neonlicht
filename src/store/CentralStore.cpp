@@ -18,15 +18,22 @@ void CentralStore:: tick() {
     
     if (data != NULL) { // don't copy empty data
 
-      // check for midi data
-      if (data->getMessage() == "/midi") {
-	midiQueue.add(new MessageData(data)); // create new MessageData and put it into queue
+      switch(data->getType()) {
+      case MessageData::Types::PADON:
+      case MessageData::Types::PADOFF:
+      case MessageData::Types::MIDION:
+      case MessageData::Types::MIDIOFF: {
+	midiQueue.add(new MessageData(data)); // create new MessageData and put it into midi queue
+	break;
+      }
+      case MessageData::Types::SLIDER: 
+      case MessageData::Types::CONTROL: {
+	controlQueue.add(new MessageData(data)); // create new MessageData and put it into control queue
+	break;
+      }
       }
 
-      // check for control data
-      if (data->getMessage() == "/control") {
-	controlQueue.add(new MessageData(data)); // create new MessageData and put it into queue
-      }      
+      delete(data); // free memory
     }    
   }
 }

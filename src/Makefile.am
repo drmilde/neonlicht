@@ -60,5 +60,6 @@ ugentest_SOURCES = unit/UGen.cpp unit/Port.cpp ugentest.cpp WaveWriter.cpp \
 	unit/GatedConstantGen.cpp 
 
 fliehkraft_SOURCES = sequencer/fliehkraft.cpp sequencer/Pulse.cpp \
-	sequencer/Activator.cpp sequencer/OscActivator.cpp OscOutConnector.cpp
+	sequencer/Activator.cpp sequencer/OscActivator.cpp \
+	OscOutConnector.cpp MidiConnector.cpp
 

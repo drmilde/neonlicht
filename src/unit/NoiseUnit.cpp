@@ -70,6 +70,16 @@ void NoiseUnit::control (std::string portName, float value) {
 
     eg1->control("trigger", 1.0);
   }
+
+  if (portName == "key") {
+    // calculate midi frequency
+    float frequency = 440 * pow(2.0,((int)(value) - 69.0)/12.0);
+    saw1->control("frequency", frequency * 1.012f);
+    square1->control("frequency", frequency);
+
+    //eg1->control("trigger", 1.0);
+  }
+
   
   if (portName == "eg duration") {
     // calculate midi frequency
@@ -133,14 +143,14 @@ float NoiseUnit::tick() {
 
   auto start = std::chrono::steady_clock::now();
 
-  //mixer1->setIn1(noise1->tick());
   mixer1->setIn1(saw1->tick());
+  mixer1->setIn2(square1->tick());
+  //mixer1->setIn1(noise1->tick());
   //mixer1->setIn1(phasor1->tick());
-  //mixer1->setIn2(square1->tick());
   //mixer1->setIn1(oneStepEG->tick());
   
   //mixer1->setIn1(adsr1->tick());
-  mixer1->setAmnt1(adsr1->tick());
+  //mixer1->setAmnt1(adsr1->tick());
   
   //float eg1val = eg1->tick();
   //mixer1->setAmnt1(eg1val);

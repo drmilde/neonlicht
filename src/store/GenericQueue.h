@@ -23,6 +23,7 @@ template <typename T> class GenericQueue
         pthread_mutex_init(&m_mutex, NULL);
         //pthread_cond_init(&m_condv, NULL);
     }
+    
     ~GenericQueue() {
         pthread_mutex_destroy(&m_mutex);
         //pthread_cond_destroy(&m_condv);

@@ -39,6 +39,10 @@ float MessageData::getF1() {
   return f1;
 }
 
+MessageData::Types MessageData::getType() { // does not change freshness !
+  return type;
+}
+
 // SETTER
 
 
@@ -60,6 +64,31 @@ bool MessageData::isFresh() {
 
 void MessageData::setMessage(std::string s) {
   message = s;
+  adaptMessageType();
+}
+
+
+void MessageData::adaptMessageType() {
+  setType(UNKNOWN);
+  
+  if (getMessage() == "/midi on") {
+    setType(MIDION);
+  }
+  if (getMessage() == "/midi off") {
+    setType(MIDIOFF);
+  }
+  if (getMessage() == "/control") {
+    setType(CONTROL);
+  }
+  if (getMessage() == "/pad on") {
+    setType(PADON);
+  }
+  if (getMessage() == "/pad off") {
+    setType(PADOFF);
+  }
+  if (getMessage() == "/slider") {
+    setType(SLIDER);
+  }  
 }
 
 void MessageData::setCode(int a1) {
@@ -77,4 +106,8 @@ void MessageData::setValue(int a3) {
 
 void MessageData::setF1(float f) {
   f1 = f;
+}
+
+void MessageData::setType(Types t) {
+  type = t;
 }

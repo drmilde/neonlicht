@@ -44,26 +44,36 @@ int Neonlicht::tick( void *outputBuffer, void *inputBuffer, unsigned int nBuffer
     CS.tick();
     MessageData* midiMessage = CS.getMidiData();
     
-    if (midiMessage != NULL) { // first the Mididata
+    if (midiMessage != NULL) { // first the midi data
+      
+      int type = midiMessage->getType();
       float key = midiMessage->getKey();
       float value = midiMessage->getValue()/127.0;
-      std::cout << "midi message: ," << value  << ", KEY =" << key << std::endl;
 
-      if (key == 76) { // notes send from fliehkraft
-	  SU->control("lfo rate", value);
-      }	
+      switch(type) {
+      case MessageData::Types::MIDIOFF: {
+	std::cout << "midi OFF message value=" << value  << ", KEY=" << key << std::endl;
+	break;
+      }
+      case MessageData::Types::MIDION: {
+	std::cout << "midi ON message: value=" << value  << ", KEY =" << key << std::endl;
 
-      if (key == 73) { // eg duration rate
-	SU->control("eg duration", value);
-      }	
+	SU->control("key", key);
+
+	break;
+      }
+      }
+      
             
     } else {      
       MessageData* controlMessage = CS.getControlData();
       
       if (controlMessage != NULL) { // now the control data
 	
+	int type = midiMessage->getType();
 	float key = controlMessage->getKey();
 	float value = controlMessage->getValue()/127.0;
+	
 	std::cout << "control message: ," << value  << ", KEY =" << key << std::endl;
 	
 	if (key == 74) { // cutoff

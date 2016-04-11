@@ -13,8 +13,11 @@ void OscActivator::callback(float value) {
   if (note == 0) {
     noteIdx = (noteIdx+1) % 16;
     std::cout << "sending note : " << noteIdx << std::endl;
-    
-    oscOut.sendMessage("/midi", 176, 76, littleMelody[noteIdx]-12, value);
+
+    // release previous note
+    oscOut.sendMessage("/midi off", 128, littleMelody[(noteIdx-1)%16]-12, 0,  value);
+    // press current note 
+    oscOut.sendMessage("/midi on", 144, littleMelody[noteIdx]-12, 64, value);
   }
 }
 

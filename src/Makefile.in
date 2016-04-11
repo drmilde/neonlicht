@@ -98,7 +98,8 @@ cmidiin_DEPENDENCIES =
 am__dirstamp = $(am__leading_dot)dirstamp
 am_fliehkraft_OBJECTS = sequencer/fliehkraft.$(OBJEXT) \
 	sequencer/Pulse.$(OBJEXT) sequencer/Activator.$(OBJEXT) \
-	sequencer/OscActivator.$(OBJEXT) OscOutConnector.$(OBJEXT)
+	sequencer/OscActivator.$(OBJEXT) OscOutConnector.$(OBJEXT) \
+	MidiConnector.$(OBJEXT)
 fliehkraft_OBJECTS = $(am_fliehkraft_OBJECTS)
 fliehkraft_LDADD = $(LDADD)
 fliehkraft_DEPENDENCIES =
@@ -351,7 +352,8 @@ ugentest_SOURCES = unit/UGen.cpp unit/Port.cpp ugentest.cpp WaveWriter.cpp \
 	unit/GatedConstantGen.cpp 
 
 fliehkraft_SOURCES = sequencer/fliehkraft.cpp sequencer/Pulse.cpp \
-	sequencer/Activator.cpp sequencer/OscActivator.cpp OscOutConnector.cpp
+	sequencer/Activator.cpp sequencer/OscActivator.cpp \
+	OscOutConnector.cpp MidiConnector.cpp
 
 all: all-am
 
