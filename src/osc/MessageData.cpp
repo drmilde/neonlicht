@@ -1,7 +1,6 @@
 #include "MessageData.h"
 
-// constructor
-
+using namespace osc;
 
 MessageData::MessageData(MessageData* md): MessageData (md->getMessage(), md->getCode(), md->getKey(), md->getValue(),md->getF1()) {
   // create copy of that

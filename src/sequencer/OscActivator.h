@@ -15,7 +15,7 @@ class OscActivator : public Activator {
   void callback(float value);
 
  private:
-  OscOutConnector oscOut;
+  osc::OscOutConnector oscOut;
   int note;
 
   //int littleMelody[8] = {53, 55, 57, 58, 60, 58, 57, 55};

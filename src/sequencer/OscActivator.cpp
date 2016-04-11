@@ -3,7 +3,7 @@
 
 OscActivator::OscActivator() {
   // do something useful here
-  oscOut = OscOutConnector("localhost", 7000);
+  oscOut = osc::OscOutConnector("localhost", 7000);
   note = 50;
 }
 

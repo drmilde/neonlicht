@@ -1,3 +1,6 @@
+#ifndef _MIDI_CONNECTOR_h_
+#define _MIDI_CONNECTOR_h_
+
 //*****************************************//
 //  cmidiin.cpp
 //  by Gary Scavone, 2003-2004.
@@ -25,23 +28,28 @@
 // OSC Bridge
 #include "OscOutConnector.h"
 
-class MidiConnector {
 
-public:
-  MidiConnector(int p);
-  MidiConnector();
-  ~MidiConnector();
+namespace osc {
+  class MidiConnector {
 
-  void sendMessage(std::string messageType, int code, int key, int value, float f1);
+  public:
+    MidiConnector(int p);
+    MidiConnector();
+    ~MidiConnector();
+
+    void sendMessage(std::string messageType, int code, int key, int value, float f1);
   
-private:
-  static void defaultCallback( double deltatime, std::vector< unsigned char > *message, void */*userData*/ );
-  int setup(RtMidiIn *midiin);
-  bool chooseMidiPort( RtMidiIn *rtmidi );
+  private:
+    static void defaultCallback( double deltatime, std::vector< unsigned char > *message, void */*userData*/ );
+    int setup(RtMidiIn *midiin);
+    bool chooseMidiPort( RtMidiIn *rtmidi );
 
-  RtMidiIn *midiin = 0;
-  int midiPort = 0;
+    RtMidiIn *midiin = 0;
+    int midiPort = 0;
 
-  // Connector to OSC
-  static OscOutConnector oscCon;
-};
+    // Connector to OSC
+    static OscOutConnector oscCon;
+  };
+}
+
+#endif

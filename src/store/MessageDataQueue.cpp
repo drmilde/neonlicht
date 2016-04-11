@@ -10,11 +10,11 @@ MessageDataQueue::MessageDataQueue() {
   // initialisze GenericQueue
 }
 
-void MessageDataQueue::add (MessageData* m) {
+void MessageDataQueue::add (osc::MessageData* m) {
   messageQueue.add(m);
 }
 
-MessageData* MessageDataQueue::get () {
+osc::MessageData* MessageDataQueue::get () {
   return messageQueue.remove();
 }
 

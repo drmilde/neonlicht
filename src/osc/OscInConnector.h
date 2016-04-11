@@ -1,3 +1,6 @@
+#ifndef _OSC_IN_CONNECTOR_h_
+#define _OSC_IN_CONNECTOR_h_
+
 #include <iostream>
 #include <cstring>
 #include <thread>
@@ -11,29 +14,32 @@
 
 #include "MessageData.h"
 
-class OscInConnector {
+namespace osc {
+  class OscInConnector {
 
- public:
+  public:
 
-  OscInConnector();
-  OscInConnector(int prt);
+    OscInConnector();
+    OscInConnector(int prt);
   
-  bool isFresh();
-  MessageData* getData();
-  std::thread startThread();
-  MessageData* MD = new MessageData("xxx",1,2,3,3.14f);
-  bool talk = true;
+    bool isFresh();
+    MessageData* getData();
+    std::thread startThread();
+    MessageData* MD = new MessageData("xxx",1,2,3,3.14f);
+    bool talk = true;
 
- public:
+  public:
     class MidiPacketListener;
   
- private:
-  static void listening();
-  std::mutex oscMutex;
-  bool fresh = false;
+  private:
+    static void listening();
+    std::mutex oscMutex;
+    bool fresh = false;
 
-  int PORT;
+    int PORT;
 
 
-};
+  };
+}
 
+#endif

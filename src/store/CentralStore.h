@@ -11,18 +11,18 @@ class CentralStore {
   CentralStore();
   void tick();
   void clear();
-  MessageData* getMidiData();
-  MessageData* getControlData();
+  osc::MessageData* getMidiData();
+  osc::MessageData* getControlData();
 
   // storing current status
   TickData tickData;
 
  private:
-  OscInConnector oscIn;
+  osc::OscInConnector oscIn;
   MessageDataQueue midiQueue;
   MessageDataQueue controlQueue;
 
-  MessageData* checkData(MessageData* data);
+  osc::MessageData* checkData(osc::MessageData* data);
 };
 
 #endif

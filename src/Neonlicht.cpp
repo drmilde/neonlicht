@@ -1,4 +1,3 @@
-
 #include "Neonlicht.h"
 
 
@@ -47,7 +46,7 @@ int Neonlicht::tick( void *outputBuffer, void *inputBuffer, unsigned int nBuffer
   CNT = 0;
   if (CNT == 0) {
     CS.tick();
-    MessageData* midiMessage = CS.getMidiData();
+    osc::MessageData* midiMessage = CS.getMidiData();
     
     if (midiMessage != NULL) { // first the midi data
       
@@ -56,11 +55,11 @@ int Neonlicht::tick( void *outputBuffer, void *inputBuffer, unsigned int nBuffer
       float value = midiMessage->getValue()/127.0;
 
       switch(type) {
-      case MessageData::Types::MIDIOFF: {
+      case osc::MessageData::Types::MIDIOFF: {
 	std::cout << "midi OFF message value=" << value  << ", KEY=" << key << std::endl;
 	break;
       }
-      case MessageData::Types::MIDION: {
+      case osc::MessageData::Types::MIDION: {
 	std::cout << "midi ON message: value=" << value  << ", KEY =" << key << std::endl;
 
 	SU->control("key", key);
@@ -71,7 +70,7 @@ int Neonlicht::tick( void *outputBuffer, void *inputBuffer, unsigned int nBuffer
       
             
     } else {      
-      MessageData* controlMessage = CS.getControlData();
+      osc::MessageData* controlMessage = CS.getControlData();
       
       if (controlMessage != NULL) { // now the control data
 	

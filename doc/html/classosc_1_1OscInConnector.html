@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.12"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Neonlicht: CentralStore Class Reference</title>
+<title>Neonlicht: osc::OscInConnector Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -81,41 +81,70 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>osc</b></li><li class="navelem"><a class="el" href="classosc_1_1OscInConnector.html">OscInConnector</a></li>  </ul>
+</div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="classCentralStore-members.html">List of all members</a>  </div>
+<a href="classosc_1_1OscInConnector-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">CentralStore Class Reference</div>  </div>
+<div class="title">osc::OscInConnector Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOscInConnector_1_1MidiPacketListener.html">MidiPacketListener</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ab809e0f4e90d4d8d1873a89f3da889b3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab809e0f4e90d4d8d1873a89f3da889b3"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>tick</b> ()</td></tr>
-<tr class="separator:ab809e0f4e90d4d8d1873a89f3da889b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a100ae6ad2506d4962d23966e23a1c78e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a100ae6ad2506d4962d23966e23a1c78e"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>clear</b> ()</td></tr>
-<tr class="separator:a100ae6ad2506d4962d23966e23a1c78e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a910470f5eec98b92b82a4cb2f1c5f386"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a910470f5eec98b92b82a4cb2f1c5f386"></a>
-<a class="el" href="classosc_1_1MessageData.html">osc::MessageData</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getMidiData</b> ()</td></tr>
-<tr class="separator:a910470f5eec98b92b82a4cb2f1c5f386"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3faaea58a012d25efaa710fa3d1942b7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3faaea58a012d25efaa710fa3d1942b7"></a>
-<a class="el" href="classosc_1_1MessageData.html">osc::MessageData</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getControlData</b> ()</td></tr>
-<tr class="separator:a3faaea58a012d25efaa710fa3d1942b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb8cca9cec941690ed0dcee6611c4553"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acb8cca9cec941690ed0dcee6611c4553"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>OscInConnector</b> (int prt)</td></tr>
+<tr class="separator:acb8cca9cec941690ed0dcee6611c4553"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6603048c9ba0e9356a8dd0f5ffc1055f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6603048c9ba0e9356a8dd0f5ffc1055f"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>isFresh</b> ()</td></tr>
+<tr class="separator:a6603048c9ba0e9356a8dd0f5ffc1055f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7130d46061b498d0f8648c0bd9c4146"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa7130d46061b498d0f8648c0bd9c4146"></a>
+<a class="el" href="classosc_1_1MessageData.html">MessageData</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getData</b> ()</td></tr>
+<tr class="separator:aa7130d46061b498d0f8648c0bd9c4146"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af546d19cf2adc1ed7c701a4804586cb9"><td class="memItemLeft" align="right" valign="top">std::thread&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosc_1_1OscInConnector.html#af546d19cf2adc1ed7c701a4804586cb9">startThread</a> ()</td></tr>
+<tr class="separator:af546d19cf2adc1ed7c701a4804586cb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a6f0c4050f0983924bbad8c631746f8b7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6f0c4050f0983924bbad8c631746f8b7"></a>
-<a class="el" href="structTickData.html">TickData</a>&#160;</td><td class="memItemRight" valign="bottom"><b>tickData</b></td></tr>
-<tr class="separator:a6f0c4050f0983924bbad8c631746f8b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fd59b88007b9942b275aaa1f6c7bbc1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1fd59b88007b9942b275aaa1f6c7bbc1"></a>
+<a class="el" href="classosc_1_1MessageData.html">MessageData</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>MD</b> = new <a class="el" href="classosc_1_1MessageData.html">MessageData</a>(&quot;xxx&quot;,1,2,3,3.14f)</td></tr>
+<tr class="separator:a1fd59b88007b9942b275aaa1f6c7bbc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a88a1532af47166b8e7c91da8d47662"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8a88a1532af47166b8e7c91da8d47662"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>talk</b> = true</td></tr>
+<tr class="separator:a8a88a1532af47166b8e7c91da8d47662"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="af546d19cf2adc1ed7c701a4804586cb9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::thread OscInConnector::startThread </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Scheint zu funktionieren, keine Ahnung warum :) </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>store/<a class="el" href="CentralStore_8h_source.html">CentralStore.h</a></li>
-<li>store/CentralStore.cpp</li>
+<li>osc/<a class="el" href="OscInConnector_8h_source.html">OscInConnector.h</a></li>
+<li>osc/OscInConnector.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

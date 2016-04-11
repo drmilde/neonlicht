@@ -10,12 +10,12 @@
 
 class MessageDataQueue {
  private:
-  GenericQueue<MessageData*> messageQueue;
+  GenericQueue<osc::MessageData*> messageQueue;
  
  public:
   MessageDataQueue();
-  void add(MessageData* m);
-  MessageData* get();
+  void add(osc::MessageData* m);
+  osc::MessageData* get();
   int size();
   void clear();
 };

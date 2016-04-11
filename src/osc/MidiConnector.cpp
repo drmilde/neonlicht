@@ -7,6 +7,7 @@
 
 #include "MidiConnector.h"
 
+using namespace osc;
 
 OscOutConnector MidiConnector::oscCon("localhost", 7000);
 

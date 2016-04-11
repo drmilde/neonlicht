@@ -1,5 +1,7 @@
 #include "OscInConnector.h"
 
+using namespace osc;
+
 class OscInConnector::MidiPacketListener : public osc::OscPacketListener {
 
 private:

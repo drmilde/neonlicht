@@ -1,5 +1,7 @@
 #include "OscOutConnector.h"
 
+using namespace osc;
+
 OscOutConnector::OscOutConnector() {
   OscOutConnector("localhost", 7000);
 }

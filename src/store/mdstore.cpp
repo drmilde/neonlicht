@@ -24,7 +24,7 @@ int main(int argc, char** argv)
   std::cout << "Jetzt das Auslesen\n";
   
   for (int i = 0; i < 50; i++) {
-    MessageData* data = CS.getMidiData();
+    osc::MessageData* data = CS.getMidiData();
     if (data != NULL) {
       std::cout << data->getValue() << ",";
     }
