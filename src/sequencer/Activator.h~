@@ -1,0 +1,7 @@
+#ifndef _ACTIVATOR_h_
+#define _ACTIVATOR_h_
+
+class Avtivator {
+};
+
+#endif

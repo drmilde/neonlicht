@@ -1,0 +1,17 @@
+#ifndef _OSC_ACTIVATOR_h_
+#define _OSC_ACTIVATOR_h_
+
+
+#include <iostream>
+
+#include "Activator.h"
+
+class OscActivator : public Activator {
+
+ public:
+  OscActivator();
+
+  void callback(float value);
+};
+
+#endif

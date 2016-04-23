@@ -1,0 +1,56 @@
+# whatever flags you want to pass to the C compiler & linker
+AM_CFLAGS = --pedantic -Wall -O3 -Wextra 
+#AM_LDFLAGS = -lm -lpthread -lstk -lasound -loscpack
+# die LD flags muessen nach dem Quellcode positioniert werden
+LDADD = -lm -lpthread -lstk -lasound -loscpack
+AM_CPPFLAGS = -std=c++11 -O3 -Wextra -D__LINUX_ALSA__ -I/usr/local/include/stk -I/usr/local/include/oscpack/ -L/usr/local/lib
+
+AUTOMAKE_OPTIONS = subdir-objects
+
+# this lists the binaries to produce, the (non-PHONY, binary) targets in
+# the previous manual Makefile
+#bin_PROGRAMS = first crtsine simple cmidiin oscsend oscreceive static store/gqueue
+#bin_PROGRAMS = store/mdqueue store/mdstore store/oscw
+bin_PROGRAMS =  store/mdstore kraftmaschine ugentest fliehkraft cmidiin
+
+#first_SOURCES = first.cpp utilities.cpp
+#crtsine_SOURCES = crtsine.cpp
+#simple_SOURCES = SimpleReceive.cpp
+cmidiin_SOURCES = cmidiin.cpp MidiConnector.cpp OscOutConnector.cpp
+#oscsend_SOURCES = oscsend.cpp OscOutConnector.cpp
+#oscreceive_SOURCES = oscreceive.cpp OscInConnector.cpp
+#static_SOURCES = teststatic.cpp TestStatic.cpp MessageData.cpp
+#store_gqueue_SOURCES = store/gqueue.cpp store/GenericThread.cpp
+
+#store_mdqueue_SOURCES = store/mdqueue.cpp store/MessageDataQueue.cpp MessageData.cpp OscInConnector.cpp
+#store_oscw_SOURCES = store/oscw.cpp store/OscWrapper.cpp OscInConnector.cpp MessageData.cpp
+
+store_mdstore_SOURCES = store/mdstore.cpp store/CentralStore.cpp \
+	store/MessageDataQueue.cpp MessageData.cpp OscInConnector.cpp
+
+kraftmaschine_SOURCES = kraftmaschine.cpp Neonlicht.cpp store/CentralStore.cpp \
+	store/MessageDataQueue.cpp MessageData.cpp OscInConnector.cpp \
+	WaveWriter.cpp unit/NoiseGen.cpp unit/UGen.cpp unit/Port.cpp unit/SoundUnit.cpp \
+	unit/Patch.cpp unit/IDGenerator.cpp unit/NoiseUnit.cpp \
+	unit/OnePoleLPFGen.cpp unit/TwoInputMixerGen.cpp unit/SawGen.cpp \
+	unit/SquareGen.cpp unit/Interpolation.cpp unit/EGUpDownGen.cpp \
+	unit/STKAdapterGen.cpp unit/STKOneZeroGen.cpp unit/STKTwoPoleGen.cpp \
+	unit/STKTwoZeroGen.cpp unit/STKBiQuadGen.cpp unit/STKOnePoleGen.cpp \
+	unit/WaveOutGen.cpp unit/AddTwoGen.cpp unit/MultiplyTwoGen.cpp \
+	unit/MultiplyGen.cpp unit/NumberGen.cpp unit/PhasorGen.cpp \
+	unit/EGOneStepGen.cpp unit/ADSRGen.cpp unit/GatedConstantGen.cpp 
+
+ugentest_SOURCES = unit/UGen.cpp unit/Port.cpp ugentest.cpp WaveWriter.cpp \
+	unit/SoundUnit.cpp unit/Patch.cpp unit/NoiseGen.cpp unit/IDGenerator.cpp \
+	unit/NoiseUnit.cpp unit/OnePoleLPFGen.cpp unit/TwoInputMixerGen.cpp \
+	unit/SawGen.cpp unit/SquareGen.cpp unit/Interpolation.cpp \
+	unit/EGUpDownGen.cpp unit/STKAdapterGen.cpp unit/STKOneZeroGen.cpp \
+	unit/STKTwoPoleGen.cpp unit/STKTwoZeroGen.cpp unit/STKBiQuadGen.cpp \
+	unit/STKOnePoleGen.cpp unit/WaveOutGen.cpp unit/AddTwoGen.cpp \
+	unit/MultiplyTwoGen.cpp unit/MultiplyGen.cpp unit/NumberGen.cpp \
+	unit/PhasorGen.cpp unit/EGOneStepGen.cpp unit/ADSRGen.cpp  \
+	unit/GatedConstantGen.cpp 
+
+fliehkraft_SOURCES = sequencer/fliehkraft.cpp sequencer/Pulse.cpp \
+	sequencer/Activator.cpp sequencer/OscActivator.cpp OscOutConnector.cpp
+

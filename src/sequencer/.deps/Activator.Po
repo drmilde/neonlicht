@@ -1,0 +1,6 @@
+sequencer/Activator.o: sequencer/Activator.cpp /usr/include/stdc-predef.h \
+ sequencer/Activator.h
+
+/usr/include/stdc-predef.h:
+
+sequencer/Activator.h:

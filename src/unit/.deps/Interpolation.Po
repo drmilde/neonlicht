@@ -1,0 +1,6 @@
+unit/Interpolation.o: unit/Interpolation.cpp /usr/include/stdc-predef.h \
+ unit/Interpolation.h
+
+/usr/include/stdc-predef.h:
+
+unit/Interpolation.h:

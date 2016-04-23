@@ -1,0 +1,11 @@
+
+
+class PhasorGen : public SawGen {
+  
+ public:
+  PhasorGen();
+
+  void control (std::string portName, float value);
+  float tick();
+  
+}
