@@ -7,6 +7,31 @@
 
 namespace unit {
 
+/**
+ * UGen is the base class for all Unit Generators.
+ * It provides the underlying interface of the UGens.
+ * Two methods have to be implemented by the UGens:
+ * 
+ * void control(std::string portName, float value) is used to set port values 
+ * of the UGen. The user has to dispatch the portName, no automatic dispatching
+ * is available (due to performance issues!)
+ * 
+ * float tick() is used to calculate the next output sample of the UGen.
+ * Here the actual signal processing takes places. The user has to take care
+ * of input and output of the UGen. 
+ *
+ * The default implementation of UGen provides three value ports 
+ * (amnt1, amnt2, amnt3), two in ports (in1 and in2) and two out ports
+ * (out1 and out2).
+ * For these ports appropiate getter and setter methods are provided.
+ * The user may implement more ports, if needed for the functionality
+ * of the UGen.
+ *
+ * @author jtm
+ * @since 04-2016
+ * @version 1.0
+ **/
+
   class UGen {
   public:
     UGen();
