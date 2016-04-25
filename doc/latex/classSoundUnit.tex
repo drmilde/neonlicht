@@ -1,0 +1,41 @@
+\hypertarget{classSoundUnit}{}\section{Sound\+Unit Class Reference}
+\label{classSoundUnit}\index{Sound\+Unit@{Sound\+Unit}}
+Inheritance diagram for Sound\+Unit\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classSoundUnit}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Sound\+Unit} (std\+::string name)\hypertarget{classSoundUnit_a3220665fe1e433d1b0d90fa328e71133}{}\label{classSoundUnit_a3220665fe1e433d1b0d90fa328e71133}
+
+\item 
+void {\bfseries add\+U\+Gen} (\hyperlink{classUGen}{U\+Gen} $\ast$u)\hypertarget{classSoundUnit_ab88bf7e7dfb77cf7e18587fd5a637755}{}\label{classSoundUnit_ab88bf7e7dfb77cf7e18587fd5a637755}
+
+\item 
+std\+::string {\bfseries get\+Name} ()\hypertarget{classSoundUnit_a4854dfb9b839ff33d061ed013fbf3ef9}{}\label{classSoundUnit_a4854dfb9b839ff33d061ed013fbf3ef9}
+
+\item 
+virtual void {\bfseries setup} ()=0\hypertarget{classSoundUnit_aedfa9b99f4555ed5df4ceffe001c1e63}{}\label{classSoundUnit_aedfa9b99f4555ed5df4ceffe001c1e63}
+
+\item 
+virtual void {\bfseries control} (std\+::string port\+Name, float value)=0\hypertarget{classSoundUnit_a0a74ef3d6c9343f1ee64a9a96bdbbe78}{}\label{classSoundUnit_a0a74ef3d6c9343f1ee64a9a96bdbbe78}
+
+\item 
+virtual float {\bfseries tick} ()=0\hypertarget{classSoundUnit_af1f6ccffb8d1919bd774b340c01bea68}{}\label{classSoundUnit_af1f6ccffb8d1919bd774b340c01bea68}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::map$<$ std\+::string, \hyperlink{classUGen}{U\+Gen} $\ast$ $>$ {\bfseries U\+G\+E\+NS}\hypertarget{classSoundUnit_aa7bb4be0804fdd7a68bd767795592da1}{}\label{classSoundUnit_aa7bb4be0804fdd7a68bd767795592da1}
+
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+unit/Sound\+Unit.\+h\item 
+unit/Sound\+Unit.\+cpp\end{DoxyCompactItemize}
