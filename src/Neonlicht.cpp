@@ -1,5 +1,9 @@
 #include "Neonlicht.h"
 
+
+/**
+ * 
+ **/
 Neonlicht::Neonlicht() {
   // default constructor
   setup();

@@ -13,6 +13,21 @@ using namespace stk;
 #include "unit/NoiseGen.h"
 #include "unit/NoiseUnit.h"
 
+/**
+ * Neonlicht eine Synthesizer-Engine auf Basis des STK
+ *
+ * Die Engine lädt sogenannte SoundUnits (SoundUnit) und steuert diese
+ * über die tick()-Methode.
+ * Die SoundUnit generiert den aktuellen Sample, den
+ * Neonlicht dann an das Audio-Subsystem weitergibt.
+ * Neonlicht wird über OSC (OscInConnector) gesteuert. Die Engine verarbeitet 
+ * dabei Midi-Messages (MessageData), die in OSC-Message mit festem Format
+ * umgewandelt werden (müssen).   
+ *
+ * @author JTM, @email email: milde@hs-fulda.de
+ * @date April 2016
+ *
+ **/
 class Neonlicht {
 
  public:
