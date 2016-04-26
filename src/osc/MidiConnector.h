@@ -49,6 +49,9 @@ namespace osc {
 
     // Connector to OSC
     static OscOutConnector oscCon;
+
+
+    static int KEYCOUNT;
   };
 }
 

@@ -19,6 +19,7 @@
 #include "WaveOutGen.h"
 #include "EGOneStepGen.h"
 #include "ADSRGen.h"
+#include "MidiInputGen.h"
 
 #include "STKOneZeroGen.h"
 #include "STKTwoPoleGen.h"
@@ -62,8 +63,9 @@ class NoiseUnit : public unit::SoundUnit {
 
   unit::WaveOutGen* waveOut;
   unit::ADSRGen* adsr1;
- 
-  
+
+  unit::MidiInputGen* midiInput1;
+   
 };
 
 

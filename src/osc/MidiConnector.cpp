@@ -10,6 +10,7 @@
 using namespace osc;
 
 OscOutConnector MidiConnector::oscCon("localhost", 7000);
+int MidiConnector::KEYCOUNT = 0;
 
 
 MidiConnector::MidiConnector(int p):midiPort(p) {
@@ -72,10 +73,12 @@ void MidiConnector::defaultCallback( double deltatime, std::vector< unsigned cha
   }
   case 144: {
     messageType = "/midi on";
+    KEYCOUNT++;
     break;
   }
   case 128: {
     messageType = "/midi off";
+    KEYCOUNT--;
     break;
   }
   case 153: {
@@ -92,7 +95,7 @@ void MidiConnector::defaultCallback( double deltatime, std::vector< unsigned cha
   }
   }
 
-  std::cout << messageType << " code=" << code << ", key=" << key << ", value/velocity=" << value << ", delta=" << f1 << std::endl;
+  std::cout << messageType << " code=" << code << ", key=" << key << ", value/velocity=" << value << ", delta=" << f1 << "cnt = " << KEYCOUNT << std::endl;
 
   MidiConnector::oscCon.sendMessage(messageType, code, key, value, f1);
 }

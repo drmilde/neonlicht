@@ -33,6 +33,8 @@ void NoiseUnit::setup() {
   stkOnePole = new unit::STKOnePoleGen();
 
   waveOut = new unit::WaveOutGen();
+
+  midiInput1 = new unit::MidiInputGen();
   
   mixer1->control("amnt1", 0.5);
   mixer1->control("amnt2", 0.5);
@@ -59,12 +61,16 @@ void NoiseUnit::processMidiMessage(int type, int key, float value) {
   switch(type) {
   case osc::MessageData::Types::MIDIOFF: {
     std::cout << "midi OFF message value=" << value  << ", KEY=" << key << std::endl;
+    
+    midiInput1->control("midi off", key);
     break;
   }
   case osc::MessageData::Types::MIDION: {
     std::cout << "midi ON message: value=" << value  << ", KEY =" << key << std::endl;
-    
-    control("key", key);
+
+    midiInput1->control("midi on", key);
+    midiInput1->control("velocity", value);    
+    control("key", key); // set frequency
     
     break;
   }
@@ -134,7 +140,7 @@ void NoiseUnit::control (std::string portName, float value) {
   }
 
   if (portName == "key") {
-    // calculate midi frequency
+    // calculate midi frequency    
     float frequency = 440 * pow(2.0,((int)(value) - 69.0)/12.0);
     saw1->control("frequency", frequency * 1.012f);
     square1->control("frequency", frequency);
@@ -206,6 +212,8 @@ float NoiseUnit::tick() {
 
   auto start = std::chrono::steady_clock::now();
 
+  midiInput1->tick(); // process midi input
+  
   mixer1->setIn1(saw1->tick());
   mixer1->setIn2(square1->tick());
   //mixer1->setIn1(cosine1->tick());
@@ -238,9 +246,10 @@ float NoiseUnit::tick() {
   //stkOnePole->setIn1(mixer1->tick());
   //mixer2->setIn1(stkOnePole->tick());
 
-  waveOut->setIn1(mixer1->tick());
-  mixer2->setIn1(waveOut->tick());
   
+  waveOut->setIn1(mixer1->tick());
+  mixer2->setAmnt1(midiInput1->getOut1()); // use gate to control final mixer
+  mixer2->setIn1(waveOut->tick());
 
   //mixer2->setIn2(noise1->tick());
   //mixer2->setAmnt2(eg1val * 0.2);

@@ -42,6 +42,7 @@ kraftmaschine_SOURCES = kraftmaschine.cpp Neonlicht.cpp \
 	unit/EGOneStepGen.cpp \
 	unit/EGUpDownGen.cpp \
 	unit/GatedConstantGen.cpp \
+	unit/MidiInputGen.cpp \
 	unit/MultiplyGen.cpp \
 	unit/MultiplyTwoGen.cpp \
 	unit/NoiseGen.cpp \
@@ -76,6 +77,7 @@ ugentest_SOURCES =  ugentest.cpp \
 	unit/EGOneStepGen.cpp \
 	unit/EGUpDownGen.cpp \
 	unit/GatedConstantGen.cpp \
+	unit/MidiInputGen.cpp \
 	unit/MultiplyGen.cpp \
 	unit/MultiplyTwoGen.cpp \
 	unit/NoiseGen.cpp \
