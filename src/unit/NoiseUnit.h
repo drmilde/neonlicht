@@ -11,6 +11,7 @@
 #include "NoiseGen.h"
 #include "SawGen.h"
 #include "PhasorGen.h"
+#include "CosineGen.h"
 #include "SquareGen.h"
 #include "OnePoleLPFGen.h"
 #include "TwoInputMixerGen.h"
@@ -45,6 +46,7 @@ class NoiseUnit : public unit::SoundUnit {
   unit::NoiseGen* noise2;
   unit::SawGen* saw1;
   unit::PhasorGen* phasor1;
+  unit::CosineGen* cosine1;
   unit::SquareGen* square1;
   unit::EGUpDownGen* eg1;
   unit::OnePoleLPFGen* onelpf;
@@ -60,7 +62,8 @@ class NoiseUnit : public unit::SoundUnit {
 
   unit::WaveOutGen* waveOut;
   unit::ADSRGen* adsr1;
-
+ 
+  
 };
 
 

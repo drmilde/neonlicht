@@ -10,7 +10,9 @@ void NoiseUnit::setup() {
   noise2 = new unit::NoiseGen("Noise Generator 2");
   saw1 = new unit::SawGen("Saw Generator 1");
   phasor1 = new unit::PhasorGen("Phasor Generator 1");
+  cosine1 = new unit::CosineGen("Cosine Generator 1");  
   square1 = new unit::SquareGen("Square Generator 1");
+  
   eg1 = new unit::EGUpDownGen("EG Up Down 1");
   onelpf = new unit::OnePoleLPFGen("One Pole LPF");
   mixer1 = new unit::TwoInputMixerGen("Two Input Mixer 1");
@@ -111,7 +113,7 @@ void NoiseUnit::processControlMessage(int type, int key, float value) {
 void NoiseUnit::control (std::string portName, float value) {
   if (portName == "cutoff") {
     onelpf->control("cutoff", value);
-    std::cout << "value : " << value << std::endl;
+    std::cout << "value : " << value << ":" << std::endl;
   }
 
   if (portName == "volume") {
@@ -126,6 +128,7 @@ void NoiseUnit::control (std::string portName, float value) {
     saw1->control("frequency", frequency * 1.012f);
     phasor1->control("frequency", frequency * 1.012f);
     square1->control("frequency", frequency);
+    cosine1->control("frequency", frequency);
 
     eg1->control("trigger", 1.0);
   }
@@ -135,6 +138,7 @@ void NoiseUnit::control (std::string portName, float value) {
     float frequency = 440 * pow(2.0,((int)(value) - 69.0)/12.0);
     saw1->control("frequency", frequency * 1.012f);
     square1->control("frequency", frequency);
+    cosine1->control("frequency", frequency);
 
     //eg1->control("trigger", 1.0);
   }
@@ -204,6 +208,7 @@ float NoiseUnit::tick() {
 
   mixer1->setIn1(saw1->tick());
   mixer1->setIn2(square1->tick());
+  //mixer1->setIn1(cosine1->tick());
   //mixer1->setIn1(noise1->tick());
   //mixer1->setIn1(phasor1->tick());
   //mixer1->setIn1(oneStepEG->tick());
@@ -244,12 +249,13 @@ float NoiseUnit::tick() {
 
   /*
   for (int i = 0; i < 1000; i++) {
+    cosine1->tick();
   }
   */
 
-  auto end = std::chrono::steady_clock::now();
-  auto diff = end - start;
-  long nanoS = std::chrono::duration_cast<std::chrono::nanoseconds>(diff).count();
+  //auto end = std::chrono::steady_clock::now();
+  //auto diff = end - start;
+  //long nanoS = std::chrono::duration_cast<std::chrono::nanoseconds>(diff).count();
   //std::cout << "nanos: " << nanoS << std::endl;
 										
   

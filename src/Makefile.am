@@ -29,6 +29,8 @@ kraftmaschine_SOURCES = kraftmaschine.cpp Neonlicht.cpp \
 	util/WaveWriter.cpp \
 	util/Interpolation.cpp \
 	util/IDGenerator.cpp \
+	util/CosineTable.cpp \
+	util/WaveTable.cpp \
 	configuration/ConfigurationManager.cpp \
 	osc/MessageData.cpp \
 	osc/OscInConnector.cpp \
@@ -36,6 +38,7 @@ kraftmaschine_SOURCES = kraftmaschine.cpp Neonlicht.cpp \
 	store/MessageDataQueue.cpp \
 	unit/ADSRGen.cpp \
 	unit/AddTwoGen.cpp \
+	unit/CosineGen.cpp \
 	unit/EGOneStepGen.cpp \
 	unit/EGUpDownGen.cpp \
 	unit/GatedConstantGen.cpp \
@@ -65,8 +68,11 @@ ugentest_SOURCES =  ugentest.cpp \
 	util/WaveWriter.cpp \
 	util/Interpolation.cpp \
 	util/IDGenerator.cpp \
+	util/CosineTable.cpp \
+	util/WaveTable.cpp \
 	unit/ADSRGen.cpp  \
 	unit/AddTwoGen.cpp \
+	unit/CosineGen.cpp \
 	unit/EGOneStepGen.cpp \
 	unit/EGUpDownGen.cpp \
 	unit/GatedConstantGen.cpp \
