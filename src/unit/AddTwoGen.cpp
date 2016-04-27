@@ -2,7 +2,7 @@
 
 using namespace unit;
 
-AddTwoGen::AddTwoGen() : AddTwoGen("Mr. White") {
+AddTwoGen::AddTwoGen() : AddTwoGen("Count Count") {
 }
 
 AddTwoGen::AddTwoGen(std::string name) : UGen(name, 3) {

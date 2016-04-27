@@ -26,11 +26,12 @@ store_mdstore_SOURCES = store/mdstore.cpp \
 
 
 kraftmaschine_SOURCES = kraftmaschine.cpp Neonlicht.cpp \
-	util/WaveWriter.cpp \
-	util/Interpolation.cpp \
-	util/IDGenerator.cpp \
 	util/CosineTable.cpp \
+	util/IDGenerator.cpp \
+	util/Interpolation.cpp \
+	util/KeyPressedControl.cpp \
 	util/WaveTable.cpp \
+	util/WaveWriter.cpp \
 	configuration/ConfigurationManager.cpp \
 	osc/MessageData.cpp \
 	osc/OscInConnector.cpp \
@@ -61,16 +62,18 @@ kraftmaschine_SOURCES = kraftmaschine.cpp Neonlicht.cpp \
 	unit/SawGen.cpp \
 	unit/SoundUnit.cpp \
 	unit/SquareGen.cpp \
+	unit/ThresholdGen.cpp \
 	unit/TwoInputMixerGen.cpp \
 	unit/UGen.cpp \
 	unit/WaveOutGen.cpp
 
 ugentest_SOURCES =  ugentest.cpp \
-	util/WaveWriter.cpp \
+	util/CosineTable.cpp \
 	util/Interpolation.cpp \
 	util/IDGenerator.cpp \
-	util/CosineTable.cpp \
+	util/KeyPressedControl.cpp \
 	util/WaveTable.cpp \
+	util/WaveWriter.cpp \
 	unit/ADSRGen.cpp  \
 	unit/AddTwoGen.cpp \
 	unit/CosineGen.cpp \
@@ -96,6 +99,7 @@ ugentest_SOURCES =  ugentest.cpp \
 	unit/SawGen.cpp \
 	unit/SoundUnit.cpp \
 	unit/SquareGen.cpp \
+	unit/ThresholdGen.cpp \
 	unit/TwoInputMixerGen.cpp \
 	unit/UGen.cpp \
 	unit/WaveOutGen.cpp 

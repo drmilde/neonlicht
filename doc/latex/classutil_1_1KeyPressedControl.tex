@@ -1,0 +1,49 @@
+\hypertarget{classutil_1_1KeyPressedControl}{}\section{util\+:\+:Key\+Pressed\+Control Class Reference}
+\label{classutil_1_1KeyPressedControl}\index{util\+::\+Key\+Pressed\+Control@{util\+::\+Key\+Pressed\+Control}}
+
+
+{\ttfamily \#include $<$Key\+Pressed\+Control.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries set\+Key\+Pressed} (int key)\hypertarget{classutil_1_1KeyPressedControl_a0e465e30442619260ad7633883dac0a2}{}\label{classutil_1_1KeyPressedControl_a0e465e30442619260ad7633883dac0a2}
+
+\item 
+void {\bfseries clear\+Key\+Pressed} (int key)\hypertarget{classutil_1_1KeyPressedControl_ab4e421ccffed2708a2379d02a5d29766}{}\label{classutil_1_1KeyPressedControl_ab4e421ccffed2708a2379d02a5d29766}
+
+\item 
+bool {\bfseries is\+Key\+Pressed} (int key)\hypertarget{classutil_1_1KeyPressedControl_a5ae3665ad89b7d30ce5640eeb129bbcf}{}\label{classutil_1_1KeyPressedControl_a5ae3665ad89b7d30ce5640eeb129bbcf}
+
+\item 
+void {\bfseries clear} ()\hypertarget{classutil_1_1KeyPressedControl_ad80ff7c3e12d9647a04cb8960333bb30}{}\label{classutil_1_1KeyPressedControl_ad80ff7c3e12d9647a04cb8960333bb30}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classutil_1_1KeyPressedControl}{Key\+Pressed\+Control} ist eine Hilfsklasse zur Zwischenspeicherung der gedrückten Tasten (keys). Zielsetzung ist es, festzustellen, ob zu jedem Tastendruck ({\bfseries note on}) ein korrespondierender Tastenhub ({\bfseries note off}) registriert wurde.
+
+
+\begin{DoxyItemize}
+\item set\+Key\+Pressed(int key) setzt den Wert für die Taste key auf true.
+\item is\+Key\+Pressed(int key) liefert den Wert die die Taste key.
+\item clear\+Key\+Pressed(int key) setzt den Wert für die Taste key zurück.
+\item clear() setzt alle Werte zurück.
+\end{DoxyItemize}
+
+\begin{DoxyAuthor}{Author}
+jtm 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+04-\/2016 
+\end{DoxySince}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+util/Key\+Pressed\+Control.\+h\item 
+util/Key\+Pressed\+Control.\+cpp\end{DoxyCompactItemize}

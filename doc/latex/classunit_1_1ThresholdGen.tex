@@ -1,0 +1,51 @@
+\hypertarget{classunit_1_1ThresholdGen}{}\section{unit\+:\+:Threshold\+Gen Class Reference}
+\label{classunit_1_1ThresholdGen}\index{unit\+::\+Threshold\+Gen@{unit\+::\+Threshold\+Gen}}
+
+
+{\ttfamily \#include $<$Threshold\+Gen.\+h$>$}
+
+Inheritance diagram for unit\+:\+:Threshold\+Gen\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classunit_1_1ThresholdGen}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Threshold\+Gen} (std\+::string name)\hypertarget{classunit_1_1ThresholdGen_ac4b7861be1523284fbd1158afa6da231}{}\label{classunit_1_1ThresholdGen_ac4b7861be1523284fbd1158afa6da231}
+
+\item 
+void {\bfseries control} (std\+::string port\+Name, float value)\hypertarget{classunit_1_1ThresholdGen_aafd3ea65bfc964598119efd3988068ee}{}\label{classunit_1_1ThresholdGen_aafd3ea65bfc964598119efd3988068ee}
+
+\item 
+float {\bfseries tick} ()\hypertarget{classunit_1_1ThresholdGen_a422ab3288c91db592849ca1328a6ee6b}{}\label{classunit_1_1ThresholdGen_a422ab3288c91db592849ca1328a6ee6b}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\hyperlink{classunit_1_1ThresholdGen}{Threshold\+Gen} testet, ob der Absolutwert des aktuellen Samplewertes größer ist als der gesetzte Schwellwert. Falls ja, liefert tick() 1.\+0 zurück, ansonsten 0.\+0. Der Schwellwert muss im Interval \mbox{[}0,1\mbox{]} liegen. Dies wird nicht geprüft.
+
+
+\begin{DoxyItemize}
+\item control(\char`\"{}in1\char`\"{}, value) setzt den akuellen {\bfseries Samplewert}.
+\item control(\char`\"{}threshold\char`\"{}, value) setzt den {\bfseries Schwellwert}.
+\end{DoxyItemize}
+
+\begin{DoxyAuthor}{Author}
+jtm 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+04-\/2016 
+\end{DoxySince}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+unit/Threshold\+Gen.\+h\item 
+unit/Threshold\+Gen.\+cpp\end{DoxyCompactItemize}
