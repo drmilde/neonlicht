@@ -92,14 +92,14 @@ am__installdirs = "$(DESTDIR)$(bindir)"
 PROGRAMS = $(bin_PROGRAMS)
 am__dirstamp = $(am__leading_dot)dirstamp
 am_cmidiin_OBJECTS = cmidiin.$(OBJEXT) osc/MidiConnector.$(OBJEXT) \
-	osc/OscOutConnector.$(OBJEXT)
+	osc/OscOutConnector.$(OBJEXT) util/KeyPressedControl.$(OBJEXT)
 cmidiin_OBJECTS = $(am_cmidiin_OBJECTS)
 cmidiin_LDADD = $(LDADD)
 cmidiin_DEPENDENCIES =
 am_fliehkraft_OBJECTS = sequencer/fliehkraft.$(OBJEXT) \
 	sequencer/Pulse.$(OBJEXT) sequencer/Activator.$(OBJEXT) \
 	sequencer/OscActivator.$(OBJEXT) osc/OscOutConnector.$(OBJEXT) \
-	osc/MidiConnector.$(OBJEXT)
+	osc/MidiConnector.$(OBJEXT) util/KeyPressedControl.$(OBJEXT)
 fliehkraft_OBJECTS = $(am_fliehkraft_OBJECTS)
 fliehkraft_LDADD = $(LDADD)
 fliehkraft_DEPENDENCIES =
@@ -115,7 +115,8 @@ am_kraftmaschine_OBJECTS = kraftmaschine.$(OBJEXT) Neonlicht.$(OBJEXT) \
 	unit/EGUpDownGen.$(OBJEXT) unit/GatedConstantGen.$(OBJEXT) \
 	unit/MidiInputGen.$(OBJEXT) unit/MultiplyGen.$(OBJEXT) \
 	unit/MultiplyTwoGen.$(OBJEXT) unit/NoiseGen.$(OBJEXT) \
-	unit/NoiseUnit.$(OBJEXT) unit/NumberGen.$(OBJEXT) \
+	unit/NoiseUnit.$(OBJEXT) unit/ArturiaMiniLabUnit.$(OBJEXT) \
+	unit/MyUnit.$(OBJEXT) unit/NumberGen.$(OBJEXT) \
 	unit/OnePoleLPFGen.$(OBJEXT) unit/Patch.$(OBJEXT) \
 	unit/PhasorGen.$(OBJEXT) unit/Port.$(OBJEXT) \
 	unit/STKAdapterGen.$(OBJEXT) unit/STKBiQuadGen.$(OBJEXT) \
@@ -143,6 +144,7 @@ am_ugentest_OBJECTS = ugentest.$(OBJEXT) util/CosineTable.$(OBJEXT) \
 	unit/GatedConstantGen.$(OBJEXT) unit/MidiInputGen.$(OBJEXT) \
 	unit/MultiplyGen.$(OBJEXT) unit/MultiplyTwoGen.$(OBJEXT) \
 	unit/NoiseGen.$(OBJEXT) unit/NoiseUnit.$(OBJEXT) \
+	unit/ArturiaMiniLabUnit.$(OBJEXT) unit/MyUnit.$(OBJEXT) \
 	unit/NumberGen.$(OBJEXT) unit/OnePoleLPFGen.$(OBJEXT) \
 	unit/Patch.$(OBJEXT) unit/PhasorGen.$(OBJEXT) \
 	unit/Port.$(OBJEXT) unit/STKAdapterGen.$(OBJEXT) \
@@ -215,13 +217,13 @@ am__define_uniq_tagged_files = \
 ETAGS = etags
 CTAGS = ctags
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
-ACLOCAL = ${SHELL} /home/milde/programming/synthesizer/neonlicht/missing aclocal-1.14
+ACLOCAL = ${SHELL} /home/pi/programming/synthesizer/clone/neonlicht/missing aclocal-1.14
 AMTAR = $${TAR-tar}
 AM_DEFAULT_VERBOSITY = 1
-AUTOCONF = ${SHELL} /home/milde/programming/synthesizer/neonlicht/missing autoconf
-AUTOHEADER = ${SHELL} /home/milde/programming/synthesizer/neonlicht/missing autoheader
-AUTOMAKE = ${SHELL} /home/milde/programming/synthesizer/neonlicht/missing automake-1.14
-AWK = gawk
+AUTOCONF = ${SHELL} /home/pi/programming/synthesizer/clone/neonlicht/missing autoconf
+AUTOHEADER = ${SHELL} /home/pi/programming/synthesizer/clone/neonlicht/missing autoheader
+AUTOMAKE = ${SHELL} /home/pi/programming/synthesizer/clone/neonlicht/missing automake-1.14
+AWK = mawk
 CC = gcc
 CCDEPMODE = depmode=gcc3
 CFLAGS = -g -O2
@@ -248,7 +250,7 @@ LDFLAGS =
 LIBOBJS = 
 LIBS = 
 LTLIBOBJS = 
-MAKEINFO = ${SHELL} /home/milde/programming/synthesizer/neonlicht/missing makeinfo
+MAKEINFO = ${SHELL} /home/pi/programming/synthesizer/clone/neonlicht/missing makeinfo
 MKDIR_P = /bin/mkdir -p
 OBJEXT = o
 PACKAGE = neonlicht
@@ -263,10 +265,10 @@ SET_MAKE =
 SHELL = /bin/bash
 STRIP = 
 VERSION = 0.0.1
-abs_builddir = /home/milde/programming/synthesizer/neonlicht/src
-abs_srcdir = /home/milde/programming/synthesizer/neonlicht/src
-abs_top_builddir = /home/milde/programming/synthesizer/neonlicht
-abs_top_srcdir = /home/milde/programming/synthesizer/neonlicht
+abs_builddir = /home/pi/programming/synthesizer/clone/neonlicht/src
+abs_srcdir = /home/pi/programming/synthesizer/clone/neonlicht/src
+abs_top_builddir = /home/pi/programming/synthesizer/clone/neonlicht
+abs_top_srcdir = /home/pi/programming/synthesizer/clone/neonlicht
 ac_ct_CC = gcc
 ac_ct_CXX = g++
 am__include = include
@@ -286,7 +288,7 @@ host_alias =
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
-install_sh = ${SHELL} /home/milde/programming/synthesizer/neonlicht/install-sh
+install_sh = ${SHELL} /home/pi/programming/synthesizer/clone/neonlicht/install-sh
 libdir = ${exec_prefix}/lib
 libexecdir = ${exec_prefix}/libexec
 localedir = ${datarootdir}/locale
@@ -350,6 +352,8 @@ kraftmaschine_SOURCES = kraftmaschine.cpp Neonlicht.cpp \
 	unit/MultiplyTwoGen.cpp \
 	unit/NoiseGen.cpp \
 	unit/NoiseUnit.cpp \
+	unit/ArturiaMiniLabUnit.cpp \
+	unit/MyUnit.cpp \
 	unit/NumberGen.cpp \
 	unit/OnePoleLPFGen.cpp \
 	unit/Patch.cpp \
@@ -387,6 +391,8 @@ ugentest_SOURCES = ugentest.cpp \
 	unit/MultiplyTwoGen.cpp \
 	unit/NoiseGen.cpp \
 	unit/NoiseUnit.cpp \
+	unit/ArturiaMiniLabUnit.cpp \
+	unit/MyUnit.cpp \
 	unit/NumberGen.cpp \
 	unit/OnePoleLPFGen.cpp \
 	unit/Patch.cpp \
@@ -411,11 +417,13 @@ fliehkraft_SOURCES = sequencer/fliehkraft.cpp \
 	sequencer/Activator.cpp \
 	sequencer/OscActivator.cpp \
 	osc/OscOutConnector.cpp \
-	osc/MidiConnector.cpp
+	osc/MidiConnector.cpp \
+	util/KeyPressedControl.cpp 
 
 cmidiin_SOURCES = cmidiin.cpp \
 	osc/MidiConnector.cpp \
-	osc/OscOutConnector.cpp
+	osc/OscOutConnector.cpp \
+	util/KeyPressedControl.cpp 
 
 all: all-am
 
@@ -503,6 +511,14 @@ osc/MidiConnector.$(OBJEXT): osc/$(am__dirstamp) \
 	osc/$(DEPDIR)/$(am__dirstamp)
 osc/OscOutConnector.$(OBJEXT): osc/$(am__dirstamp) \
 	osc/$(DEPDIR)/$(am__dirstamp)
+util/$(am__dirstamp):
+	@$(MKDIR_P) util
+	@: > util/$(am__dirstamp)
+util/$(DEPDIR)/$(am__dirstamp):
+	@$(MKDIR_P) util/$(DEPDIR)
+	@: > util/$(DEPDIR)/$(am__dirstamp)
+util/KeyPressedControl.$(OBJEXT): util/$(am__dirstamp) \
+	util/$(DEPDIR)/$(am__dirstamp)
 
 cmidiin$(EXEEXT): $(cmidiin_OBJECTS) $(cmidiin_DEPENDENCIES) $(EXTRA_cmidiin_DEPENDENCIES) 
 	@rm -f cmidiin$(EXEEXT)
@@ -525,19 +541,11 @@ sequencer/OscActivator.$(OBJEXT): sequencer/$(am__dirstamp) \
 fliehkraft$(EXEEXT): $(fliehkraft_OBJECTS) $(fliehkraft_DEPENDENCIES) $(EXTRA_fliehkraft_DEPENDENCIES) 
 	@rm -f fliehkraft$(EXEEXT)
 	$(AM_V_CXXLD)$(CXXLINK) $(fliehkraft_OBJECTS) $(fliehkraft_LDADD) $(LIBS)
-util/$(am__dirstamp):
-	@$(MKDIR_P) util
-	@: > util/$(am__dirstamp)
-util/$(DEPDIR)/$(am__dirstamp):
-	@$(MKDIR_P) util/$(DEPDIR)
-	@: > util/$(DEPDIR)/$(am__dirstamp)
 util/CosineTable.$(OBJEXT): util/$(am__dirstamp) \
 	util/$(DEPDIR)/$(am__dirstamp)
 util/IDGenerator.$(OBJEXT): util/$(am__dirstamp) \
 	util/$(DEPDIR)/$(am__dirstamp)
 util/Interpolation.$(OBJEXT): util/$(am__dirstamp) \
-	util/$(DEPDIR)/$(am__dirstamp)
-util/KeyPressedControl.$(OBJEXT): util/$(am__dirstamp) \
 	util/$(DEPDIR)/$(am__dirstamp)
 util/WaveTable.$(OBJEXT): util/$(am__dirstamp) \
 	util/$(DEPDIR)/$(am__dirstamp)
@@ -593,6 +601,10 @@ unit/MultiplyTwoGen.$(OBJEXT): unit/$(am__dirstamp) \
 unit/NoiseGen.$(OBJEXT): unit/$(am__dirstamp) \
 	unit/$(DEPDIR)/$(am__dirstamp)
 unit/NoiseUnit.$(OBJEXT): unit/$(am__dirstamp) \
+	unit/$(DEPDIR)/$(am__dirstamp)
+unit/ArturiaMiniLabUnit.$(OBJEXT): unit/$(am__dirstamp) \
+	unit/$(DEPDIR)/$(am__dirstamp)
+unit/MyUnit.$(OBJEXT): unit/$(am__dirstamp) \
 	unit/$(DEPDIR)/$(am__dirstamp)
 unit/NumberGen.$(OBJEXT): unit/$(am__dirstamp) \
 	unit/$(DEPDIR)/$(am__dirstamp)
@@ -675,6 +687,7 @@ include store/$(DEPDIR)/MessageDataQueue.Po
 include store/$(DEPDIR)/mdstore.Po
 include unit/$(DEPDIR)/ADSRGen.Po
 include unit/$(DEPDIR)/AddTwoGen.Po
+include unit/$(DEPDIR)/ArturiaMiniLabUnit.Po
 include unit/$(DEPDIR)/CosineGen.Po
 include unit/$(DEPDIR)/EGOneStepGen.Po
 include unit/$(DEPDIR)/EGUpDownGen.Po
@@ -682,6 +695,7 @@ include unit/$(DEPDIR)/GatedConstantGen.Po
 include unit/$(DEPDIR)/MidiInputGen.Po
 include unit/$(DEPDIR)/MultiplyGen.Po
 include unit/$(DEPDIR)/MultiplyTwoGen.Po
+include unit/$(DEPDIR)/MyUnit.Po
 include unit/$(DEPDIR)/NoiseGen.Po
 include unit/$(DEPDIR)/NoiseUnit.Po
 include unit/$(DEPDIR)/NumberGen.Po

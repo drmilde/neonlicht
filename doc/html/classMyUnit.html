@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.12"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Neonlicht: unit::SoundUnit Class Reference</title>
+<title>Neonlicht: MyUnit Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -81,61 +81,55 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><b>unit</b></li><li class="navelem"><a class="el" href="classunit_1_1SoundUnit.html">SoundUnit</a></li>  </ul>
-</div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pro-attribs">Protected Attributes</a> &#124;
-<a href="classunit_1_1SoundUnit-members.html">List of all members</a>  </div>
+<a href="classMyUnit-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">unit::SoundUnit Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+<div class="title">MyUnit Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-
-<p><code>#include &lt;<a class="el" href="SoundUnit_8h_source.html">SoundUnit.h</a>&gt;</code></p>
 <div class="dynheader">
-Inheritance diagram for unit::SoundUnit:</div>
+Inheritance diagram for MyUnit:</div>
 <div class="dyncontent">
  <div class="center">
-  <img src="classunit_1_1SoundUnit.png" usemap="#unit::SoundUnit_map" alt=""/>
-  <map id="unit::SoundUnit_map" name="unit::SoundUnit_map">
-<area href="classunit_1_1UGen.html" alt="unit::UGen" shape="rect" coords="63,0,180,24"/>
+  <img src="classMyUnit.png" usemap="#MyUnit_map" alt=""/>
+  <map id="MyUnit_map" name="MyUnit_map">
 <area href="classArturiaMiniLabUnit.html" alt="ArturiaMiniLabUnit" shape="rect" coords="0,112,117,136"/>
-<area href="classNoiseUnit.html" alt="NoiseUnit" shape="rect" coords="127,112,244,136"/>
-<area href="classMyUnit.html" alt="MyUnit" shape="rect" coords="0,168,117,192"/>
+<area href="classunit_1_1SoundUnit.html" alt="unit::SoundUnit" shape="rect" coords="0,56,117,80"/>
+<area href="classunit_1_1UGen.html" alt="unit::UGen" shape="rect" coords="0,0,117,24"/>
 </map>
  </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a3220665fe1e433d1b0d90fa328e71133"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3220665fe1e433d1b0d90fa328e71133"></a>
+<tr class="memitem:a953579dd3e7fd08821f52c957227b6dc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a953579dd3e7fd08821f52c957227b6dc"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>tick</b> ()</td></tr>
+<tr class="separator:a953579dd3e7fd08821f52c957227b6dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classArturiaMiniLabUnit"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classArturiaMiniLabUnit')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classArturiaMiniLabUnit.html">ArturiaMiniLabUnit</a></td></tr>
+<tr class="memitem:aeb63b33d9631976240fd38d36935b44c inherit pub_methods_classArturiaMiniLabUnit"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aeb63b33d9631976240fd38d36935b44c"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>ArturiaMiniLabUnit</b> (std::string name)</td></tr>
+<tr class="separator:aeb63b33d9631976240fd38d36935b44c inherit pub_methods_classArturiaMiniLabUnit"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7590bc31683c4dc12b0a1396c53c6b4 inherit pub_methods_classArturiaMiniLabUnit"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae7590bc31683c4dc12b0a1396c53c6b4"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setup</b> ()</td></tr>
+<tr class="separator:ae7590bc31683c4dc12b0a1396c53c6b4 inherit pub_methods_classArturiaMiniLabUnit"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0bb1d1b81bb3faf7ee141b941cf84457 inherit pub_methods_classArturiaMiniLabUnit"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0bb1d1b81bb3faf7ee141b941cf84457"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>processMidiMessage</b> (int type, int key, float value)</td></tr>
+<tr class="separator:a0bb1d1b81bb3faf7ee141b941cf84457 inherit pub_methods_classArturiaMiniLabUnit"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8f03d0e1bbe21f115f99c156c0f2d06 inherit pub_methods_classArturiaMiniLabUnit"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad8f03d0e1bbe21f115f99c156c0f2d06"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>processControlMessage</b> (int type, int key, float value)</td></tr>
+<tr class="separator:ad8f03d0e1bbe21f115f99c156c0f2d06 inherit pub_methods_classArturiaMiniLabUnit"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classunit_1_1SoundUnit"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classunit_1_1SoundUnit')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classunit_1_1SoundUnit.html">unit::SoundUnit</a></td></tr>
+<tr class="memitem:a3220665fe1e433d1b0d90fa328e71133 inherit pub_methods_classunit_1_1SoundUnit"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3220665fe1e433d1b0d90fa328e71133"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>SoundUnit</b> (std::string name)</td></tr>
-<tr class="separator:a3220665fe1e433d1b0d90fa328e71133"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3c4fb09e94703dd7f7d17ca5cb7bb561"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3c4fb09e94703dd7f7d17ca5cb7bb561"></a>
+<tr class="separator:a3220665fe1e433d1b0d90fa328e71133 inherit pub_methods_classunit_1_1SoundUnit"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c4fb09e94703dd7f7d17ca5cb7bb561 inherit pub_methods_classunit_1_1SoundUnit"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3c4fb09e94703dd7f7d17ca5cb7bb561"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>addUGen</b> (<a class="el" href="classunit_1_1UGen.html">unit::UGen</a> *u)</td></tr>
-<tr class="separator:a3c4fb09e94703dd7f7d17ca5cb7bb561"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4854dfb9b839ff33d061ed013fbf3ef9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4854dfb9b839ff33d061ed013fbf3ef9"></a>
+<tr class="separator:a3c4fb09e94703dd7f7d17ca5cb7bb561 inherit pub_methods_classunit_1_1SoundUnit"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4854dfb9b839ff33d061ed013fbf3ef9 inherit pub_methods_classunit_1_1SoundUnit"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4854dfb9b839ff33d061ed013fbf3ef9"></a>
 std::string&#160;</td><td class="memItemRight" valign="bottom"><b>getName</b> ()</td></tr>
-<tr class="separator:a4854dfb9b839ff33d061ed013fbf3ef9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aedfa9b99f4555ed5df4ceffe001c1e63"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aedfa9b99f4555ed5df4ceffe001c1e63"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setup</b> ()=0</td></tr>
-<tr class="separator:aedfa9b99f4555ed5df4ceffe001c1e63"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af1f6ccffb8d1919bd774b340c01bea68"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af1f6ccffb8d1919bd774b340c01bea68"></a>
-virtual float&#160;</td><td class="memItemRight" valign="bottom"><b>tick</b> ()=0</td></tr>
-<tr class="separator:af1f6ccffb8d1919bd774b340c01bea68"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1e73f915afac67a2103f8d79daf40ec3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1e73f915afac67a2103f8d79daf40ec3"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>processMidiMessage</b> (int type, int key, float value)=0</td></tr>
-<tr class="separator:a1e73f915afac67a2103f8d79daf40ec3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad20e07c321b9d206f0f9303bbdf2a67d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad20e07c321b9d206f0f9303bbdf2a67d"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>processControlMessage</b> (int type, int key, float value)=0</td></tr>
-<tr class="separator:ad20e07c321b9d206f0f9303bbdf2a67d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0a74ef3d6c9343f1ee64a9a96bdbbe78"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0a74ef3d6c9343f1ee64a9a96bdbbe78"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>control</b> (std::string portName, float value)=0</td></tr>
-<tr class="separator:a0a74ef3d6c9343f1ee64a9a96bdbbe78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:a4854dfb9b839ff33d061ed013fbf3ef9 inherit pub_methods_classunit_1_1SoundUnit"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classunit_1_1UGen"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classunit_1_1UGen')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classunit_1_1UGen.html">unit::UGen</a></td></tr>
 <tr class="memitem:af2d6d70e1340c9853a9a329cb2db164a inherit pub_methods_classunit_1_1UGen"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af2d6d70e1340c9853a9a329cb2db164a"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>UGen</b> (std::string name, int pn)</td></tr>
@@ -213,11 +207,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setOut2</b> (float va
 float&#160;</td><td class="memItemRight" valign="bottom"><b>getOut2</b> ()</td></tr>
 <tr class="separator:a37c67120e26ba5eef873e3ceb775eea0 inherit pub_methods_classunit_1_1UGen"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
-Protected Attributes</h2></td></tr>
-<tr class="memitem:a08f1485a5a06b0d458e99833f9207678"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a08f1485a5a06b0d458e99833f9207678"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pro_attribs_classunit_1_1SoundUnit"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classunit_1_1SoundUnit')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classunit_1_1SoundUnit.html">unit::SoundUnit</a></td></tr>
+<tr class="memitem:a08f1485a5a06b0d458e99833f9207678 inherit pro_attribs_classunit_1_1SoundUnit"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a08f1485a5a06b0d458e99833f9207678"></a>
 std::map&lt; std::string, <a class="el" href="classunit_1_1UGen.html">unit::UGen</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>UGENS</b></td></tr>
-<tr class="separator:a08f1485a5a06b0d458e99833f9207678"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:a08f1485a5a06b0d458e99833f9207678 inherit pro_attribs_classunit_1_1SoundUnit"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_classunit_1_1UGen"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classunit_1_1UGen')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classunit_1_1UGen.html">unit::UGen</a></td></tr>
 <tr class="memitem:af570ad383b680b2c79209b6ab28d010d inherit pro_attribs_classunit_1_1UGen"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af570ad383b680b2c79209b6ab28d010d"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><b>SAMPLING_FREQUENCY</b> = 44100</td></tr>
@@ -250,30 +245,9 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>NAME</b></td><
 std::string&#160;</td><td class="memItemRight" valign="bottom"><b>ID</b></td></tr>
 <tr class="separator:ab8d5acd179e175cc787ac43a49b68c29 inherit pro_attribs_classunit_1_1UGen"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><a class="el" href="classunit_1_1SoundUnit.html">SoundUnit</a> is an abstract class defining the interface of the sound unit, which represents the concept of a Sound Processing Unit (SPU). This SPU could be the implementation of a virtual analog synthesizer, a purely digital synthesizer, a digital audio effect or the brand new never heard of sound device you have always dreamt of.</p>
-<p><a class="el" href="classunit_1_1SoundUnit.html">SoundUnit</a> is derived from <a class="el" href="classunit_1_1UGen.html">unit::UGen</a>, therfore implementations of <a class="el" href="classunit_1_1SoundUnit.html">SoundUnit</a> can be recursively combined to create more complex <a class="el" href="classunit_1_1SoundUnit.html">unit::SoundUnit(s)</a> and <a class="el" href="classunit_1_1UGen.html">unit::UGen(s)</a>.</p>
-<p>In an SPU you would typically</p>
-<ul>
-<li>combine a set of Unit Generators (<a class="el" href="classunit_1_1UGen.html">unit::UGen</a>),</li>
-<li>define the routing bewtween the UGens</li>
-<li>define input, output and control ports</li>
-<li>map the control message to these ports</li>
-</ul>
-<p>SPUs will be registered in <a class="el" href="classNeonlicht.html">Neonlicht</a> and incoming Midi and Control messages are then dispatched to the SPU. The SPU is responsible for processing (or ignoring!) these messages.</p>
-<p>Anyway: the interface forces you to implement 5 methods:</p>
-<ul>
-<li>setup() is where you configure and initialize your SPU.</li>
-<li>float tick() is where the actual sound processing takes place</li>
-<li>processMidiMessage() is where you process the incoming midi data</li>
-<li>processControlMessage() is where you process the incoming control data</li>
-<li>control() is where you map messages to internal parameters of the SPU</li>
-</ul>
-<dl class="section author"><dt>Author</dt><dd>JTM </dd></dl>
-<dl class="section since"><dt>Since</dt><dd>April, 2016 </dd></dl>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
-<li>unit/<a class="el" href="SoundUnit_8h_source.html">SoundUnit.h</a></li>
-<li>unit/SoundUnit.cpp</li>
+<hr/>The documentation for this class was generated from the following files:<ul>
+<li>unit/<a class="el" href="MyUnit_8h_source.html">MyUnit.h</a></li>
+<li>unit/MyUnit.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

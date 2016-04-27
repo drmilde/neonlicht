@@ -11,7 +11,7 @@ using namespace osc;
 
 OscOutConnector MidiConnector::oscCon("localhost", 7000);
 int MidiConnector::KEYCOUNT = 0;
-
+util::KeyPressedControl MidiConnector::keyControl;
 
 MidiConnector::MidiConnector(int p):midiPort(p) {
   int result = setup(midiin);
@@ -73,12 +73,10 @@ void MidiConnector::defaultCallback( double deltatime, std::vector< unsigned cha
   }
   case 144: {
     messageType = "/midi on";
-    KEYCOUNT++;
     break;
   }
   case 128: {
     messageType = "/midi off";
-    KEYCOUNT--;
     break;
   }
   case 153: {
@@ -97,7 +95,40 @@ void MidiConnector::defaultCallback( double deltatime, std::vector< unsigned cha
 
   std::cout << messageType << " code=" << code << ", key=" << key << ", value/velocity=" << value << ", delta=" << f1 << "cnt = " << KEYCOUNT << std::endl;
 
-  MidiConnector::oscCon.sendMessage(messageType, code, key, value, f1);
+  usleep(5 * 1000); // ein bischen warten HACK HACK HACK -> die Queue funktioniert nicht richtig
+
+  // this whole blcok seems to be completly meaningless ... nedd to work on it !!!
+
+  // check for missing events
+  if (messageType == "/midi on") {
+    // only send midi on event if key has not been pressed -> only send midi on once
+    if (!keyControl.isKeyPressed(key)) {
+      keyControl.setKeyPressed(key);
+      MidiConnector::oscCon.sendMessage(messageType, code, key, value, f1);
+      KEYCOUNT++;
+    }
+  } else {
+    if (messageType == "/midi off") {
+      if (keyControl.isKeyPressed(key)) {
+	// ok, there has been a pairing midi on event => send out midi off event
+	MidiConnector::oscCon.sendMessage(messageType, code, key, value, f1);
+	keyControl.clearKeyPressed(key);
+	KEYCOUNT--;
+      } else {
+	// do not send midi off ! no matching midi on
+      }
+    } else {
+      // any other message type send right away
+      MidiConnector::oscCon.sendMessage(messageType, code, key, value, f1);
+    }
+  }
+  // something is lost, more note off than note on,
+  //clear everything and start all over --> 
+  if (KEYCOUNT < 0) { 
+    keyControl.clear();
+    KEYCOUNT = 0;
+  }
+  
 }
 
 void MidiConnector::sendMessage(std::string messageType, int code, int key, int value, float f1) {

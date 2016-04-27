@@ -6,5 +6,6 @@ var searchData=
   ['midiinputgen',['MidiInputGen',['../classunit_1_1MidiInputGen.html',1,'unit']]],
   ['midipacketlistener',['MidiPacketListener',['../classOscInConnector_1_1MidiPacketListener.html',1,'osc::OscInConnector']]],
   ['multiplygen',['MultiplyGen',['../classunit_1_1MultiplyGen.html',1,'unit']]],
-  ['multiplytwogen',['MultiplyTwoGen',['../classunit_1_1MultiplyTwoGen.html',1,'unit']]]
+  ['multiplytwogen',['MultiplyTwoGen',['../classunit_1_1MultiplyTwoGen.html',1,'unit']]],
+  ['myunit',['MyUnit',['../classMyUnit.html',1,'']]]
 ];

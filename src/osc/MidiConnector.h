@@ -15,11 +15,17 @@
 
 #include <iostream>
 #include <cstdlib>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string>
+#include <unistd.h>
 #include "RtMidi.h"
 
 // tranmitting to via osc
+#include "util/KeyPressedControl.h"
 #include "osc/OscOutboundPacketStream.h"
 #include "ip/UdpSocket.h"
+
 
 #define ADDRESS "127.0.0.1"
 #define PORT 7000
@@ -49,9 +55,8 @@ namespace osc {
 
     // Connector to OSC
     static OscOutConnector oscCon;
-
-
     static int KEYCOUNT;
+    static util::KeyPressedControl keyControl;
   };
 }
 

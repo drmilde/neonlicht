@@ -14,7 +14,8 @@ Neonlicht::~Neonlicht() {
 }
 
 // global member (for testing purposes only)
-NoiseUnit nu1 = NoiseUnit();
+//NoiseUnit nu1 = NoiseUnit();
+MyUnit nu1 = MyUnit();
 
 // This tick() function handles sample computation only.  It will be
 // called automatically when the system needs a new buffer of audio

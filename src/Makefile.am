@@ -48,6 +48,8 @@ kraftmaschine_SOURCES = kraftmaschine.cpp Neonlicht.cpp \
 	unit/MultiplyTwoGen.cpp \
 	unit/NoiseGen.cpp \
 	unit/NoiseUnit.cpp \
+	unit/ArturiaMiniLabUnit.cpp \
+	unit/MyUnit.cpp \
 	unit/NumberGen.cpp \
 	unit/OnePoleLPFGen.cpp \
 	unit/Patch.cpp \
@@ -85,6 +87,8 @@ ugentest_SOURCES =  ugentest.cpp \
 	unit/MultiplyTwoGen.cpp \
 	unit/NoiseGen.cpp \
 	unit/NoiseUnit.cpp \
+	unit/ArturiaMiniLabUnit.cpp \
+	unit/MyUnit.cpp \
 	unit/NumberGen.cpp \
 	unit/OnePoleLPFGen.cpp \
 	unit/Patch.cpp \
@@ -109,8 +113,10 @@ fliehkraft_SOURCES = sequencer/fliehkraft.cpp \
 	sequencer/Activator.cpp \
 	sequencer/OscActivator.cpp \
 	osc/OscOutConnector.cpp \
-	osc/MidiConnector.cpp
+	osc/MidiConnector.cpp \
+	util/KeyPressedControl.cpp 
 
 cmidiin_SOURCES = cmidiin.cpp \
 	osc/MidiConnector.cpp \
-	osc/OscOutConnector.cpp
+	osc/OscOutConnector.cpp \
+	util/KeyPressedControl.cpp 

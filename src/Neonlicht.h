@@ -59,8 +59,10 @@ using namespace stk;
 // Neonlicht includes
 #include "store/CentralStore.h"
 #include "configuration/ConfigurationManager.h"
-#include "unit/NoiseGen.h"
+
+// Unist to be used, testing only
 #include "unit/NoiseUnit.h"
+#include "unit/MyUnit.h"
 
 /**
  * Neonlicht eine Synthesizer-Engine auf Basis des STK
