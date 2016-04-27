@@ -12,9 +12,9 @@ WaveOutGen::WaveOutGen(std::string name) : UGen (name, 0) {
 
 void WaveOutGen::control(std::string portName, float value) {
   // no external control here
-  if (portName == "amnt1") { // type := 1 => record, type := 0 => stop
+  if (portName == "record") { // type := 1 => record, type := 0 => stop
     int type = Interpolation::discrete(value, 0.0, 1.0, 1);
-    if (type == 1) {
+    if (type >= 1) {
       if (!isOpen) { // only open once !
 	waveWriter.open(fname);
 	doRecord = true;

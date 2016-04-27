@@ -1,5 +1,12 @@
 #include "Neonlicht.h"
 
+// redefine static variables, I still do not why ?
+CentralStore Neonlicht::CS;
+int Neonlicht::CNT = 0;
+
+// global member (for testing purposes only)
+//NoiseUnit nu1 = NoiseUnit();
+MyUnit nu1 = MyUnit();
 
 /**
  * 
@@ -12,10 +19,6 @@ Neonlicht::Neonlicht() {
 Neonlicht::~Neonlicht() {
   // default destructor
 }
-
-// global member (for testing purposes only)
-//NoiseUnit nu1 = NoiseUnit();
-MyUnit nu1 = MyUnit();
 
 // This tick() function handles sample computation only.  It will be
 // called automatically when the system needs a new buffer of audio
@@ -150,8 +153,7 @@ void Neonlicht::stop() {
 }
 
 void Neonlicht::configure() {
-  // configuration of oscilator
-  sine.setFrequency(440.0);
+  // configuration of the SoundUnit(s)
 }
 
 
@@ -167,6 +169,3 @@ long Neonlicht::getStreamLatency() {
   return -1;
 }
 
-// redefine static variables, I still do not why ?
-CentralStore Neonlicht::CS;
-int Neonlicht::CNT = 0;

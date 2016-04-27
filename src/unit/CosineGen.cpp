@@ -11,10 +11,16 @@ CosineGen::CosineGen(std::string name) : SawGen(name) {
   cosine = new CosineTable();
 }
 
+void CosineGen::control(std::string portName, float value) {
+  if (portName == "frequency") {
+    SawGen::control(portName, value);
+  }
+}
+
 
 float CosineGen::tick() {
   // calculate the values
-  // could as well use a phaoer here to provide the normed index
+  // could as well use a phasor here to provide the normed index
 
   setOut1(cosine->getNormedIdx(SawGen::tick()+1.0)/2.0);
   

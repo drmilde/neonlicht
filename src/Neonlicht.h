@@ -51,10 +51,7 @@
 /* }}} */
 
 #include <math.h>
-
-#include "SineWave.h"
 #include "RtAudio.h"
-using namespace stk;
 
 // Neonlicht includes
 #include "store/CentralStore.h"
@@ -79,6 +76,9 @@ using namespace stk;
  * @date April 2016
  *
  **/
+
+using namespace stk;
+
 class Neonlicht {
 
  public:
@@ -101,9 +101,6 @@ class Neonlicht {
 
  private:
   void setup();
-
-  // test tone generator
-  SineWave sine;
   
   // for RTAudio
   RtAudio dac;

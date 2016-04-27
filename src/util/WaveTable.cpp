@@ -16,7 +16,7 @@ float WaveTable::get(int idx) {
 
 float WaveTable::getNormedIdx(float value) {
   int idx = (int)(Interpolation::map (value, 0.0, 1.0, 0, TABLE_SIZE));
-  return (table[idx%TABLE_SIZE] + table[(idx-1)%TABLE_SIZE]) / 2;
+  return (table[idx%TABLE_SIZE]);
 }
   
    
