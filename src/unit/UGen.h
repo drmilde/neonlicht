@@ -73,6 +73,8 @@ namespace unit {
     float getIn1();
     void setIn2(float value);
     float getIn2();
+    void setIn3(float value);
+    float getIn3();
 
     void setOut1(float value);
     float getOut1();
@@ -89,6 +91,7 @@ namespace unit {
 
     float in1;
     float in2;
+    float in3;
 
     float out1;
     float out2;

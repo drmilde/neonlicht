@@ -95,6 +95,9 @@ void UGen::control (std::string portName, float value) {
   if (portName == "in2") {
     setIn2(value);
   }
+  if (portName == "in3") {
+    setIn3(value);
+  }
   if (portName == "out1") {
     setOut1(value);
   }
@@ -104,6 +107,7 @@ void UGen::control (std::string portName, float value) {
 }
 
 // default ports value getter/setter
+// fast access routines
 
 void UGen::setAmnt1(float value) {
   amnt1 = value;
@@ -141,8 +145,16 @@ void UGen::setIn2(float value) {
   in2 = value;
 }
 
+void UGen::setIn3(float value) {
+  in3 = value;
+}
+
 float UGen::getIn2() {
   return in2;
+}
+
+float UGen::getIn3() {
+  return in3;
 }
 
 void UGen::setOut1(float value) {

@@ -50,6 +50,7 @@ kraftmaschine_SOURCES = kraftmaschine.cpp Neonlicht.cpp \
 	unit/MidiInputGen.cpp \
 	unit/MultiplyGen.cpp \
 	unit/MultiplyTwoGen.cpp \
+	unit/MultiSwitch5Gen.cpp \
 	unit/NoiseGen.cpp \
 	unit/NumberGen.cpp \
 	unit/OnePoleLPFGen.cpp \
@@ -91,6 +92,7 @@ ugentest_SOURCES =  ugentest.cpp \
 	unit/MidiInputGen.cpp \
 	unit/MultiplyGen.cpp \
 	unit/MultiplyTwoGen.cpp \
+	unit/MultiSwitch5Gen.cpp \
 	unit/NoiseGen.cpp \
 	unit/NumberGen.cpp \
 	unit/OnePoleLPFGen.cpp \
