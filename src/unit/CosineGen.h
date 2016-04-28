@@ -12,6 +12,8 @@ namespace unit {
     CosineGen(std::string name);
     float tick();
     void control(std::string portName, float value);
+    void setFrequency(float value);
+    float getFrequency();
     
   private:
     CosineTable* cosine;

@@ -34,7 +34,6 @@ int Neonlicht::tick( void *outputBuffer, void *inputBuffer, unsigned int nBuffer
   
   for ( unsigned int i=0; i<nBufferFrames; i++ ) {     
     *samples++ = SU->tick();
-    //*samples++ = 0.0;
   }
 
   if (status == 1) {

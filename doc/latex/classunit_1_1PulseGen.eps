@@ -173,10 +173,10 @@
 
 boxfont setfont
 1 boundaspect scale
+(unit::PulseGen) cw
 (unit::CosineGen) cw
 (unit::SawGen) cw
 (unit::UGen) cw
-(unit::PulseGen) cw
 /boxwidth boxwidth marginwidth 2 mul add def
 /xspacing boxwidth distx add def
 /yspacing boxheight disty add def
@@ -188,13 +188,17 @@ boundx scalefactor div boundy scalefactor div scale
 
 % ----- classes -----
 
+ (unit::PulseGen) 0.000000 0.000000 box
  (unit::CosineGen) 0.000000 1.000000 box
  (unit::SawGen) 0.000000 2.000000 box
  (unit::UGen) 0.000000 3.000000 box
- (unit::PulseGen) 0.000000 0.000000 box
 
 % ----- relations -----
 
+solid
+0 0.000000 0.000000 out
+solid
+1 0.000000 1.000000 in
 solid
 0 0.000000 1.000000 out
 solid
@@ -203,7 +207,3 @@ solid
 0 0.000000 2.000000 out
 solid
 1 0.000000 3.000000 in
-solid
-1 0.000000 0.250000 out
-solid
-0 0.000000 0.750000 in

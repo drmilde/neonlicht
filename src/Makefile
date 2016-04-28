@@ -120,13 +120,13 @@ am_kraftmaschine_OBJECTS = kraftmaschine.$(OBJEXT) Neonlicht.$(OBJEXT) \
 	unit/MyUnit.$(OBJEXT) unit/NumberGen.$(OBJEXT) \
 	unit/OnePoleLPFGen.$(OBJEXT) unit/Patch.$(OBJEXT) \
 	unit/PhasorGen.$(OBJEXT) unit/Port.$(OBJEXT) \
-	unit/STKAdapterGen.$(OBJEXT) unit/STKBiQuadGen.$(OBJEXT) \
-	unit/STKOnePoleGen.$(OBJEXT) unit/STKOneZeroGen.$(OBJEXT) \
-	unit/STKTwoPoleGen.$(OBJEXT) unit/STKTwoZeroGen.$(OBJEXT) \
-	unit/SawGen.$(OBJEXT) unit/SoundUnit.$(OBJEXT) \
-	unit/SquareGen.$(OBJEXT) unit/ThresholdGen.$(OBJEXT) \
-	unit/TwoInputMixerGen.$(OBJEXT) unit/UGen.$(OBJEXT) \
-	unit/WaveOutGen.$(OBJEXT)
+	unit/PulseGen.$(OBJEXT) unit/STKAdapterGen.$(OBJEXT) \
+	unit/STKBiQuadGen.$(OBJEXT) unit/STKOnePoleGen.$(OBJEXT) \
+	unit/STKOneZeroGen.$(OBJEXT) unit/STKTwoPoleGen.$(OBJEXT) \
+	unit/STKTwoZeroGen.$(OBJEXT) unit/SawGen.$(OBJEXT) \
+	unit/SoundUnit.$(OBJEXT) unit/SquareGen.$(OBJEXT) \
+	unit/ThresholdGen.$(OBJEXT) unit/TwoInputMixerGen.$(OBJEXT) \
+	unit/UGen.$(OBJEXT) unit/WaveOutGen.$(OBJEXT)
 kraftmaschine_OBJECTS = $(am_kraftmaschine_OBJECTS)
 kraftmaschine_LDADD = $(LDADD)
 kraftmaschine_DEPENDENCIES =
@@ -149,13 +149,13 @@ am_ugentest_OBJECTS = ugentest.$(OBJEXT) util/CosineTable.$(OBJEXT) \
 	unit/MyUnit.$(OBJEXT) unit/NumberGen.$(OBJEXT) \
 	unit/OnePoleLPFGen.$(OBJEXT) unit/Patch.$(OBJEXT) \
 	unit/PhasorGen.$(OBJEXT) unit/Port.$(OBJEXT) \
-	unit/STKAdapterGen.$(OBJEXT) unit/STKBiQuadGen.$(OBJEXT) \
-	unit/STKOnePoleGen.$(OBJEXT) unit/STKOneZeroGen.$(OBJEXT) \
-	unit/STKTwoPoleGen.$(OBJEXT) unit/STKTwoZeroGen.$(OBJEXT) \
-	unit/SawGen.$(OBJEXT) unit/SoundUnit.$(OBJEXT) \
-	unit/SquareGen.$(OBJEXT) unit/ThresholdGen.$(OBJEXT) \
-	unit/TwoInputMixerGen.$(OBJEXT) unit/UGen.$(OBJEXT) \
-	unit/WaveOutGen.$(OBJEXT)
+	unit/PulseGen.$(OBJEXT) unit/STKAdapterGen.$(OBJEXT) \
+	unit/STKBiQuadGen.$(OBJEXT) unit/STKOnePoleGen.$(OBJEXT) \
+	unit/STKOneZeroGen.$(OBJEXT) unit/STKTwoPoleGen.$(OBJEXT) \
+	unit/STKTwoZeroGen.$(OBJEXT) unit/SawGen.$(OBJEXT) \
+	unit/SoundUnit.$(OBJEXT) unit/SquareGen.$(OBJEXT) \
+	unit/ThresholdGen.$(OBJEXT) unit/TwoInputMixerGen.$(OBJEXT) \
+	unit/UGen.$(OBJEXT) unit/WaveOutGen.$(OBJEXT)
 ugentest_OBJECTS = $(am_ugentest_OBJECTS)
 ugentest_LDADD = $(LDADD)
 ugentest_DEPENDENCIES =
@@ -219,13 +219,13 @@ am__define_uniq_tagged_files = \
 ETAGS = etags
 CTAGS = ctags
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
-ACLOCAL = ${SHELL} /home/milde/programming/synthesizer/neonlicht/missing aclocal-1.14
+ACLOCAL = ${SHELL} /home/pi/programming/synthesizer/clone/neonlicht/missing aclocal-1.14
 AMTAR = $${TAR-tar}
 AM_DEFAULT_VERBOSITY = 1
-AUTOCONF = ${SHELL} /home/milde/programming/synthesizer/neonlicht/missing autoconf
-AUTOHEADER = ${SHELL} /home/milde/programming/synthesizer/neonlicht/missing autoheader
-AUTOMAKE = ${SHELL} /home/milde/programming/synthesizer/neonlicht/missing automake-1.14
-AWK = gawk
+AUTOCONF = ${SHELL} /home/pi/programming/synthesizer/clone/neonlicht/missing autoconf
+AUTOHEADER = ${SHELL} /home/pi/programming/synthesizer/clone/neonlicht/missing autoheader
+AUTOMAKE = ${SHELL} /home/pi/programming/synthesizer/clone/neonlicht/missing automake-1.14
+AWK = mawk
 CC = gcc
 CCDEPMODE = depmode=gcc3
 CFLAGS = -g -O2
@@ -252,7 +252,7 @@ LDFLAGS =
 LIBOBJS = 
 LIBS = 
 LTLIBOBJS = 
-MAKEINFO = ${SHELL} /home/milde/programming/synthesizer/neonlicht/missing makeinfo
+MAKEINFO = ${SHELL} /home/pi/programming/synthesizer/clone/neonlicht/missing makeinfo
 MKDIR_P = /bin/mkdir -p
 OBJEXT = o
 PACKAGE = neonlicht
@@ -267,10 +267,10 @@ SET_MAKE =
 SHELL = /bin/bash
 STRIP = 
 VERSION = 0.0.1
-abs_builddir = /home/milde/programming/synthesizer/neonlicht/src
-abs_srcdir = /home/milde/programming/synthesizer/neonlicht/src
-abs_top_builddir = /home/milde/programming/synthesizer/neonlicht
-abs_top_srcdir = /home/milde/programming/synthesizer/neonlicht
+abs_builddir = /home/pi/programming/synthesizer/clone/neonlicht/src
+abs_srcdir = /home/pi/programming/synthesizer/clone/neonlicht/src
+abs_top_builddir = /home/pi/programming/synthesizer/clone/neonlicht
+abs_top_srcdir = /home/pi/programming/synthesizer/clone/neonlicht
 ac_ct_CC = gcc
 ac_ct_CXX = g++
 am__include = include
@@ -290,7 +290,7 @@ host_alias =
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
-install_sh = ${SHELL} /home/milde/programming/synthesizer/neonlicht/install-sh
+install_sh = ${SHELL} /home/pi/programming/synthesizer/clone/neonlicht/install-sh
 libdir = ${exec_prefix}/lib
 libexecdir = ${exec_prefix}/libexec
 localedir = ${datarootdir}/locale
@@ -362,6 +362,7 @@ kraftmaschine_SOURCES = kraftmaschine.cpp Neonlicht.cpp \
 	unit/Patch.cpp \
 	unit/PhasorGen.cpp \
 	unit/Port.cpp \
+	unit/PulseGen.cpp \
 	unit/STKAdapterGen.cpp \
 	unit/STKBiQuadGen.cpp \
 	unit/STKOnePoleGen.cpp \
@@ -402,6 +403,7 @@ ugentest_SOURCES = ugentest.cpp \
 	unit/Patch.cpp \
 	unit/PhasorGen.cpp \
 	unit/Port.cpp \
+	unit/PulseGen.cpp \
 	unit/STKAdapterGen.cpp \
 	unit/STKBiQuadGen.cpp \
 	unit/STKOnePoleGen.cpp \
@@ -622,6 +624,8 @@ unit/PhasorGen.$(OBJEXT): unit/$(am__dirstamp) \
 	unit/$(DEPDIR)/$(am__dirstamp)
 unit/Port.$(OBJEXT): unit/$(am__dirstamp) \
 	unit/$(DEPDIR)/$(am__dirstamp)
+unit/PulseGen.$(OBJEXT): unit/$(am__dirstamp) \
+	unit/$(DEPDIR)/$(am__dirstamp)
 unit/STKAdapterGen.$(OBJEXT): unit/$(am__dirstamp) \
 	unit/$(DEPDIR)/$(am__dirstamp)
 unit/STKBiQuadGen.$(OBJEXT): unit/$(am__dirstamp) \
@@ -709,6 +713,7 @@ include unit/$(DEPDIR)/OnePoleLPFGen.Po
 include unit/$(DEPDIR)/Patch.Po
 include unit/$(DEPDIR)/PhasorGen.Po
 include unit/$(DEPDIR)/Port.Po
+include unit/$(DEPDIR)/PulseGen.Po
 include unit/$(DEPDIR)/STKAdapterGen.Po
 include unit/$(DEPDIR)/STKBiQuadGen.Po
 include unit/$(DEPDIR)/STKOnePoleGen.Po

@@ -11,21 +11,28 @@ SawGen::SawGen(std::string name) : UGen(name, 1) {
   outPort = Port("out", PortType::OUTPUT);
   addPort(outPort);
 
-  frequency = 440.0f;
+  setFrequency(440.0);
 
   stepy = (2.0 / SAMPLING_FREQUENCY);
-  stepx = (1 / SAMPLING_FREQUENCY) * frequency;
   currentx = 0.0;
   currenty = -1.0;
 }
 
-
 // overrides control() in UGen
 void SawGen::control(std::string portName, float value) {
   if (portName == "frequency") {
-    frequency = value;
-    stepx = (1 / SAMPLING_FREQUENCY) * frequency;
+    setFrequency(value);
   }
+}
+
+// fast access to the input ports
+void SawGen::setFrequency(float value) {
+  frequency = fabs(value);
+  stepx = (1 / SAMPLING_FREQUENCY) * frequency;
+}
+
+float SawGen::getFrequency() {
+  return frequency;
 }
 
 

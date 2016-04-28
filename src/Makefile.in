@@ -120,13 +120,13 @@ am_kraftmaschine_OBJECTS = kraftmaschine.$(OBJEXT) Neonlicht.$(OBJEXT) \
 	unit/MyUnit.$(OBJEXT) unit/NumberGen.$(OBJEXT) \
 	unit/OnePoleLPFGen.$(OBJEXT) unit/Patch.$(OBJEXT) \
 	unit/PhasorGen.$(OBJEXT) unit/Port.$(OBJEXT) \
-	unit/STKAdapterGen.$(OBJEXT) unit/STKBiQuadGen.$(OBJEXT) \
-	unit/STKOnePoleGen.$(OBJEXT) unit/STKOneZeroGen.$(OBJEXT) \
-	unit/STKTwoPoleGen.$(OBJEXT) unit/STKTwoZeroGen.$(OBJEXT) \
-	unit/SawGen.$(OBJEXT) unit/SoundUnit.$(OBJEXT) \
-	unit/SquareGen.$(OBJEXT) unit/ThresholdGen.$(OBJEXT) \
-	unit/TwoInputMixerGen.$(OBJEXT) unit/UGen.$(OBJEXT) \
-	unit/WaveOutGen.$(OBJEXT)
+	unit/PulseGen.$(OBJEXT) unit/STKAdapterGen.$(OBJEXT) \
+	unit/STKBiQuadGen.$(OBJEXT) unit/STKOnePoleGen.$(OBJEXT) \
+	unit/STKOneZeroGen.$(OBJEXT) unit/STKTwoPoleGen.$(OBJEXT) \
+	unit/STKTwoZeroGen.$(OBJEXT) unit/SawGen.$(OBJEXT) \
+	unit/SoundUnit.$(OBJEXT) unit/SquareGen.$(OBJEXT) \
+	unit/ThresholdGen.$(OBJEXT) unit/TwoInputMixerGen.$(OBJEXT) \
+	unit/UGen.$(OBJEXT) unit/WaveOutGen.$(OBJEXT)
 kraftmaschine_OBJECTS = $(am_kraftmaschine_OBJECTS)
 kraftmaschine_LDADD = $(LDADD)
 kraftmaschine_DEPENDENCIES =
@@ -149,13 +149,13 @@ am_ugentest_OBJECTS = ugentest.$(OBJEXT) util/CosineTable.$(OBJEXT) \
 	unit/MyUnit.$(OBJEXT) unit/NumberGen.$(OBJEXT) \
 	unit/OnePoleLPFGen.$(OBJEXT) unit/Patch.$(OBJEXT) \
 	unit/PhasorGen.$(OBJEXT) unit/Port.$(OBJEXT) \
-	unit/STKAdapterGen.$(OBJEXT) unit/STKBiQuadGen.$(OBJEXT) \
-	unit/STKOnePoleGen.$(OBJEXT) unit/STKOneZeroGen.$(OBJEXT) \
-	unit/STKTwoPoleGen.$(OBJEXT) unit/STKTwoZeroGen.$(OBJEXT) \
-	unit/SawGen.$(OBJEXT) unit/SoundUnit.$(OBJEXT) \
-	unit/SquareGen.$(OBJEXT) unit/ThresholdGen.$(OBJEXT) \
-	unit/TwoInputMixerGen.$(OBJEXT) unit/UGen.$(OBJEXT) \
-	unit/WaveOutGen.$(OBJEXT)
+	unit/PulseGen.$(OBJEXT) unit/STKAdapterGen.$(OBJEXT) \
+	unit/STKBiQuadGen.$(OBJEXT) unit/STKOnePoleGen.$(OBJEXT) \
+	unit/STKOneZeroGen.$(OBJEXT) unit/STKTwoPoleGen.$(OBJEXT) \
+	unit/STKTwoZeroGen.$(OBJEXT) unit/SawGen.$(OBJEXT) \
+	unit/SoundUnit.$(OBJEXT) unit/SquareGen.$(OBJEXT) \
+	unit/ThresholdGen.$(OBJEXT) unit/TwoInputMixerGen.$(OBJEXT) \
+	unit/UGen.$(OBJEXT) unit/WaveOutGen.$(OBJEXT)
 ugentest_OBJECTS = $(am_ugentest_OBJECTS)
 ugentest_LDADD = $(LDADD)
 ugentest_DEPENDENCIES =
@@ -362,6 +362,7 @@ kraftmaschine_SOURCES = kraftmaschine.cpp Neonlicht.cpp \
 	unit/Patch.cpp \
 	unit/PhasorGen.cpp \
 	unit/Port.cpp \
+	unit/PulseGen.cpp \
 	unit/STKAdapterGen.cpp \
 	unit/STKBiQuadGen.cpp \
 	unit/STKOnePoleGen.cpp \
@@ -402,6 +403,7 @@ ugentest_SOURCES = ugentest.cpp \
 	unit/Patch.cpp \
 	unit/PhasorGen.cpp \
 	unit/Port.cpp \
+	unit/PulseGen.cpp \
 	unit/STKAdapterGen.cpp \
 	unit/STKBiQuadGen.cpp \
 	unit/STKOnePoleGen.cpp \
@@ -622,6 +624,8 @@ unit/PhasorGen.$(OBJEXT): unit/$(am__dirstamp) \
 	unit/$(DEPDIR)/$(am__dirstamp)
 unit/Port.$(OBJEXT): unit/$(am__dirstamp) \
 	unit/$(DEPDIR)/$(am__dirstamp)
+unit/PulseGen.$(OBJEXT): unit/$(am__dirstamp) \
+	unit/$(DEPDIR)/$(am__dirstamp)
 unit/STKAdapterGen.$(OBJEXT): unit/$(am__dirstamp) \
 	unit/$(DEPDIR)/$(am__dirstamp)
 unit/STKBiQuadGen.$(OBJEXT): unit/$(am__dirstamp) \
@@ -709,6 +713,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@unit/$(DEPDIR)/Patch.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@unit/$(DEPDIR)/PhasorGen.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@unit/$(DEPDIR)/Port.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@unit/$(DEPDIR)/PulseGen.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@unit/$(DEPDIR)/STKAdapterGen.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@unit/$(DEPDIR)/STKBiQuadGen.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@unit/$(DEPDIR)/STKOnePoleGen.Po@am__quote@

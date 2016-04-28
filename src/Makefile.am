@@ -56,6 +56,7 @@ kraftmaschine_SOURCES = kraftmaschine.cpp Neonlicht.cpp \
 	unit/Patch.cpp \
 	unit/PhasorGen.cpp \
 	unit/Port.cpp \
+	unit/PulseGen.cpp \
 	unit/STKAdapterGen.cpp \
 	unit/STKBiQuadGen.cpp \
 	unit/STKOnePoleGen.cpp \
@@ -96,6 +97,7 @@ ugentest_SOURCES =  ugentest.cpp \
 	unit/Patch.cpp \
 	unit/PhasorGen.cpp \
 	unit/Port.cpp \
+	unit/PulseGen.cpp \
 	unit/STKAdapterGen.cpp \
 	unit/STKBiQuadGen.cpp \
 	unit/STKOnePoleGen.cpp \

@@ -13,16 +13,24 @@ CosineGen::CosineGen(std::string name) : SawGen(name) {
 
 void CosineGen::control(std::string portName, float value) {
   if (portName == "frequency") {
-    SawGen::control(portName, value);
+    setFrequency(value);
   }
 }
 
+// fast access to the input ports
+void CosineGen::setFrequency(float value) {
+    SawGen::setFrequency(value);
+}
+
+float CosineGen::getFrequency() {
+    SawGen::getFrequency();
+}
 
 float CosineGen::tick() {
   // calculate the values
   // could as well use a phasor here to provide the normed index
 
-  setOut1(cosine->getNormedIdx(SawGen::tick()+1.0)/2.0);
+  setOut1(cosine->getNormedIdx( (SawGen::tick()+1.0)/2.0) );
   
   // return current tick() value
   return getOut1();
