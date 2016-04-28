@@ -8,13 +8,22 @@
 namespace unit {
 
 /**
- * ThresholdGen testet, ob der Absolutwert des aktuellen Samplewertes
- * größer ist als der gesetzte Schwellwert.
- * Falls ja, liefert tick() 1.0 zurück, ansonsten 0.0.
- * Der Schwellwert muss im Interval [0,1] liegen. Dies wird nicht
+ * ThresholdGen testet, ob der aktuelle Samplewert (gespeichert in **in1**)
+ *
+ * - größer ist als der Absolutwert des gesetzten Schwellwerts, 
+ * falls ja, liefert tick() **1.0** zurück, 
+ *
+ * - ansonsten ob der Samplewert kleiner als der der negative Absolutwert
+ * des gesetzten Schwellwerts ist,  
+ * falls ja, liefert tick() - **1.0** zurück, 
+ *
+ * - ansonsten **0.0**.
+ *
+ * Der Schwellwert sollte im Interval [-1,1] liegen. Dies wird nicht
  * geprüft.
  *
- * - control("in1", value) setzt den akuellen **Samplewert**.
+ * Control-Interface
+ * 
  * - control("threshold", value) setzt den **Schwellwert**.
  *
  * @author jtm

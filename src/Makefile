@@ -111,13 +111,13 @@ am_kraftmaschine_OBJECTS = kraftmaschine.$(OBJEXT) Neonlicht.$(OBJEXT) \
 	configuration/ConfigurationManager.$(OBJEXT) \
 	osc/MessageData.$(OBJEXT) osc/OscInConnector.$(OBJEXT) \
 	store/CentralStore.$(OBJEXT) store/MessageDataQueue.$(OBJEXT) \
-	unit/ADSRGen.$(OBJEXT) unit/AddTwoGen.$(OBJEXT) \
-	unit/CosineGen.$(OBJEXT) unit/EGOneStepGen.$(OBJEXT) \
-	unit/EGUpDownGen.$(OBJEXT) unit/GatedConstantGen.$(OBJEXT) \
-	unit/MidiInputGen.$(OBJEXT) unit/MultiplyGen.$(OBJEXT) \
-	unit/MultiplyTwoGen.$(OBJEXT) unit/NoiseGen.$(OBJEXT) \
-	unit/NoiseUnit.$(OBJEXT) unit/ArturiaMiniLabUnit.$(OBJEXT) \
-	unit/MyUnit.$(OBJEXT) unit/NumberGen.$(OBJEXT) \
+	spu/NoiseUnit.$(OBJEXT) spu/ArturiaMiniLabUnit.$(OBJEXT) \
+	spu/MyUnit.$(OBJEXT) unit/ADSRGen.$(OBJEXT) \
+	unit/AddTwoGen.$(OBJEXT) unit/CosineGen.$(OBJEXT) \
+	unit/EGOneStepGen.$(OBJEXT) unit/EGUpDownGen.$(OBJEXT) \
+	unit/GatedConstantGen.$(OBJEXT) unit/MidiInputGen.$(OBJEXT) \
+	unit/MultiplyGen.$(OBJEXT) unit/MultiplyTwoGen.$(OBJEXT) \
+	unit/NoiseGen.$(OBJEXT) unit/NumberGen.$(OBJEXT) \
 	unit/OnePoleLPFGen.$(OBJEXT) unit/Patch.$(OBJEXT) \
 	unit/PhasorGen.$(OBJEXT) unit/Port.$(OBJEXT) \
 	unit/PulseGen.$(OBJEXT) unit/STKAdapterGen.$(OBJEXT) \
@@ -140,13 +140,13 @@ am_ugentest_OBJECTS = ugentest.$(OBJEXT) util/CosineTable.$(OBJEXT) \
 	util/Interpolation.$(OBJEXT) util/IDGenerator.$(OBJEXT) \
 	util/KeyPressedControl.$(OBJEXT) util/MidiUtil.$(OBJEXT) \
 	util/WaveTable.$(OBJEXT) util/WaveWriter.$(OBJEXT) \
-	unit/ADSRGen.$(OBJEXT) unit/AddTwoGen.$(OBJEXT) \
-	unit/CosineGen.$(OBJEXT) unit/EGOneStepGen.$(OBJEXT) \
-	unit/EGUpDownGen.$(OBJEXT) unit/GatedConstantGen.$(OBJEXT) \
-	unit/MidiInputGen.$(OBJEXT) unit/MultiplyGen.$(OBJEXT) \
-	unit/MultiplyTwoGen.$(OBJEXT) unit/NoiseGen.$(OBJEXT) \
-	unit/NoiseUnit.$(OBJEXT) unit/ArturiaMiniLabUnit.$(OBJEXT) \
-	unit/MyUnit.$(OBJEXT) unit/NumberGen.$(OBJEXT) \
+	spu/NoiseUnit.$(OBJEXT) spu/ArturiaMiniLabUnit.$(OBJEXT) \
+	spu/MyUnit.$(OBJEXT) unit/ADSRGen.$(OBJEXT) \
+	unit/AddTwoGen.$(OBJEXT) unit/CosineGen.$(OBJEXT) \
+	unit/EGOneStepGen.$(OBJEXT) unit/EGUpDownGen.$(OBJEXT) \
+	unit/GatedConstantGen.$(OBJEXT) unit/MidiInputGen.$(OBJEXT) \
+	unit/MultiplyGen.$(OBJEXT) unit/MultiplyTwoGen.$(OBJEXT) \
+	unit/NoiseGen.$(OBJEXT) unit/NumberGen.$(OBJEXT) \
 	unit/OnePoleLPFGen.$(OBJEXT) unit/Patch.$(OBJEXT) \
 	unit/PhasorGen.$(OBJEXT) unit/Port.$(OBJEXT) \
 	unit/PulseGen.$(OBJEXT) unit/STKAdapterGen.$(OBJEXT) \
@@ -344,6 +344,9 @@ kraftmaschine_SOURCES = kraftmaschine.cpp Neonlicht.cpp \
 	osc/OscInConnector.cpp \
 	store/CentralStore.cpp \
 	store/MessageDataQueue.cpp \
+	spu/NoiseUnit.cpp \
+	spu/ArturiaMiniLabUnit.cpp \
+	spu/MyUnit.cpp \
 	unit/ADSRGen.cpp \
 	unit/AddTwoGen.cpp \
 	unit/CosineGen.cpp \
@@ -354,9 +357,6 @@ kraftmaschine_SOURCES = kraftmaschine.cpp Neonlicht.cpp \
 	unit/MultiplyGen.cpp \
 	unit/MultiplyTwoGen.cpp \
 	unit/NoiseGen.cpp \
-	unit/NoiseUnit.cpp \
-	unit/ArturiaMiniLabUnit.cpp \
-	unit/MyUnit.cpp \
 	unit/NumberGen.cpp \
 	unit/OnePoleLPFGen.cpp \
 	unit/Patch.cpp \
@@ -385,6 +385,9 @@ ugentest_SOURCES = ugentest.cpp \
 	util/MidiUtil.cpp \
 	util/WaveTable.cpp \
 	util/WaveWriter.cpp \
+	spu/NoiseUnit.cpp \
+	spu/ArturiaMiniLabUnit.cpp \
+	spu/MyUnit.cpp \
 	unit/ADSRGen.cpp  \
 	unit/AddTwoGen.cpp \
 	unit/CosineGen.cpp \
@@ -395,9 +398,6 @@ ugentest_SOURCES = ugentest.cpp \
 	unit/MultiplyGen.cpp \
 	unit/MultiplyTwoGen.cpp \
 	unit/NoiseGen.cpp \
-	unit/NoiseUnit.cpp \
-	unit/ArturiaMiniLabUnit.cpp \
-	unit/MyUnit.cpp \
 	unit/NumberGen.cpp \
 	unit/OnePoleLPFGen.cpp \
 	unit/Patch.cpp \
@@ -582,6 +582,18 @@ store/CentralStore.$(OBJEXT): store/$(am__dirstamp) \
 	store/$(DEPDIR)/$(am__dirstamp)
 store/MessageDataQueue.$(OBJEXT): store/$(am__dirstamp) \
 	store/$(DEPDIR)/$(am__dirstamp)
+spu/$(am__dirstamp):
+	@$(MKDIR_P) spu
+	@: > spu/$(am__dirstamp)
+spu/$(DEPDIR)/$(am__dirstamp):
+	@$(MKDIR_P) spu/$(DEPDIR)
+	@: > spu/$(DEPDIR)/$(am__dirstamp)
+spu/NoiseUnit.$(OBJEXT): spu/$(am__dirstamp) \
+	spu/$(DEPDIR)/$(am__dirstamp)
+spu/ArturiaMiniLabUnit.$(OBJEXT): spu/$(am__dirstamp) \
+	spu/$(DEPDIR)/$(am__dirstamp)
+spu/MyUnit.$(OBJEXT): spu/$(am__dirstamp) \
+	spu/$(DEPDIR)/$(am__dirstamp)
 unit/$(am__dirstamp):
 	@$(MKDIR_P) unit
 	@: > unit/$(am__dirstamp)
@@ -607,12 +619,6 @@ unit/MultiplyGen.$(OBJEXT): unit/$(am__dirstamp) \
 unit/MultiplyTwoGen.$(OBJEXT): unit/$(am__dirstamp) \
 	unit/$(DEPDIR)/$(am__dirstamp)
 unit/NoiseGen.$(OBJEXT): unit/$(am__dirstamp) \
-	unit/$(DEPDIR)/$(am__dirstamp)
-unit/NoiseUnit.$(OBJEXT): unit/$(am__dirstamp) \
-	unit/$(DEPDIR)/$(am__dirstamp)
-unit/ArturiaMiniLabUnit.$(OBJEXT): unit/$(am__dirstamp) \
-	unit/$(DEPDIR)/$(am__dirstamp)
-unit/MyUnit.$(OBJEXT): unit/$(am__dirstamp) \
 	unit/$(DEPDIR)/$(am__dirstamp)
 unit/NumberGen.$(OBJEXT): unit/$(am__dirstamp) \
 	unit/$(DEPDIR)/$(am__dirstamp)
@@ -672,6 +678,7 @@ mostlyclean-compile:
 	-rm -f configuration/*.$(OBJEXT)
 	-rm -f osc/*.$(OBJEXT)
 	-rm -f sequencer/*.$(OBJEXT)
+	-rm -f spu/*.$(OBJEXT)
 	-rm -f store/*.$(OBJEXT)
 	-rm -f unit/*.$(OBJEXT)
 	-rm -f util/*.$(OBJEXT)
@@ -692,12 +699,14 @@ include sequencer/$(DEPDIR)/Activator.Po
 include sequencer/$(DEPDIR)/OscActivator.Po
 include sequencer/$(DEPDIR)/Pulse.Po
 include sequencer/$(DEPDIR)/fliehkraft.Po
+include spu/$(DEPDIR)/ArturiaMiniLabUnit.Po
+include spu/$(DEPDIR)/MyUnit.Po
+include spu/$(DEPDIR)/NoiseUnit.Po
 include store/$(DEPDIR)/CentralStore.Po
 include store/$(DEPDIR)/MessageDataQueue.Po
 include store/$(DEPDIR)/mdstore.Po
 include unit/$(DEPDIR)/ADSRGen.Po
 include unit/$(DEPDIR)/AddTwoGen.Po
-include unit/$(DEPDIR)/ArturiaMiniLabUnit.Po
 include unit/$(DEPDIR)/CosineGen.Po
 include unit/$(DEPDIR)/EGOneStepGen.Po
 include unit/$(DEPDIR)/EGUpDownGen.Po
@@ -705,9 +714,7 @@ include unit/$(DEPDIR)/GatedConstantGen.Po
 include unit/$(DEPDIR)/MidiInputGen.Po
 include unit/$(DEPDIR)/MultiplyGen.Po
 include unit/$(DEPDIR)/MultiplyTwoGen.Po
-include unit/$(DEPDIR)/MyUnit.Po
 include unit/$(DEPDIR)/NoiseGen.Po
-include unit/$(DEPDIR)/NoiseUnit.Po
 include unit/$(DEPDIR)/NumberGen.Po
 include unit/$(DEPDIR)/OnePoleLPFGen.Po
 include unit/$(DEPDIR)/Patch.Po
@@ -872,6 +879,8 @@ distclean-generic:
 	-rm -f osc/$(am__dirstamp)
 	-rm -f sequencer/$(DEPDIR)/$(am__dirstamp)
 	-rm -f sequencer/$(am__dirstamp)
+	-rm -f spu/$(DEPDIR)/$(am__dirstamp)
+	-rm -f spu/$(am__dirstamp)
 	-rm -f store/$(DEPDIR)/$(am__dirstamp)
 	-rm -f store/$(am__dirstamp)
 	-rm -f unit/$(DEPDIR)/$(am__dirstamp)
@@ -887,7 +896,7 @@ clean: clean-am
 clean-am: clean-binPROGRAMS clean-generic mostlyclean-am
 
 distclean: distclean-am
-	-rm -rf ./$(DEPDIR) configuration/$(DEPDIR) osc/$(DEPDIR) sequencer/$(DEPDIR) store/$(DEPDIR) unit/$(DEPDIR) util/$(DEPDIR)
+	-rm -rf ./$(DEPDIR) configuration/$(DEPDIR) osc/$(DEPDIR) sequencer/$(DEPDIR) spu/$(DEPDIR) store/$(DEPDIR) unit/$(DEPDIR) util/$(DEPDIR)
 	-rm -f Makefile
 distclean-am: clean-am distclean-compile distclean-generic \
 	distclean-tags
@@ -933,7 +942,7 @@ install-ps-am:
 installcheck-am:
 
 maintainer-clean: maintainer-clean-am
-	-rm -rf ./$(DEPDIR) configuration/$(DEPDIR) osc/$(DEPDIR) sequencer/$(DEPDIR) store/$(DEPDIR) unit/$(DEPDIR) util/$(DEPDIR)
+	-rm -rf ./$(DEPDIR) configuration/$(DEPDIR) osc/$(DEPDIR) sequencer/$(DEPDIR) spu/$(DEPDIR) store/$(DEPDIR) unit/$(DEPDIR) util/$(DEPDIR)
 	-rm -f Makefile
 maintainer-clean-am: distclean-am maintainer-clean-generic
 

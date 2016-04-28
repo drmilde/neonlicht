@@ -58,8 +58,8 @@
 #include "configuration/ConfigurationManager.h"
 
 // Unist to be used, testing only
-#include "unit/NoiseUnit.h"
-#include "unit/MyUnit.h"
+#include "spu/NoiseUnit.h"
+#include "spu/MyUnit.h"
 
 /**
  * Neonlicht eine Synthesizer-Engine auf Basis des STK

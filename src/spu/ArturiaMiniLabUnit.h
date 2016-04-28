@@ -4,7 +4,15 @@
 #include <string>
 
 #include "osc/MessageData.h"
-#include "SoundUnit.h"
+#include "unit/SoundUnit.h"
+
+/**
+ * ArturiaMiniLabUnit 
+ *
+ * @author jtm
+ * @since 04-2016
+ * @version 1.0
+ **/
 
 class ArturiaMiniLabUnit : public unit::SoundUnit {
 

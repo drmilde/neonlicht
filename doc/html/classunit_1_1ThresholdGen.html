@@ -229,9 +229,15 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>ID</b></td></t
 <tr class="separator:ab8d5acd179e175cc787ac43a49b68c29 inherit pro_attribs_classunit_1_1UGen"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><a class="el" href="classunit_1_1ThresholdGen.html">ThresholdGen</a> testet, ob der Absolutwert des aktuellen Samplewertes größer ist als der gesetzte Schwellwert. Falls ja, liefert tick() 1.0 zurück, ansonsten 0.0. Der Schwellwert muss im Interval [0,1] liegen. Dies wird nicht geprüft.</p>
+<div class="textblock"><p><a class="el" href="classunit_1_1ThresholdGen.html">ThresholdGen</a> testet, ob der aktuelle Samplewert (gespeichert in <b>in1</b>)</p>
 <ul>
-<li>control("in1", value) setzt den akuellen <b>Samplewert</b>.</li>
+<li>größer ist als der Absolutwert des gesetzten Schwellwerts, falls ja, liefert tick() <b>1.0</b> zurück,</li>
+<li>ansonsten ob der Samplewert kleiner als der der negative Absolutwert des gesetzten Schwellwerts ist, falls ja, liefert tick() - <b>1.0</b> zurück,</li>
+<li>ansonsten <b>0.0</b>.</li>
+</ul>
+<p>Der Schwellwert sollte im Interval [-1,1] liegen. Dies wird nicht geprüft.</p>
+<p>Control-Interface</p>
+<ul>
 <li>control("threshold", value) setzt den <b>Schwellwert</b>.</li>
 </ul>
 <dl class="section author"><dt>Author</dt><dd>jtm </dd></dl>

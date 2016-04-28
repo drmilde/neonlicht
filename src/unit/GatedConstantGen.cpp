@@ -11,11 +11,11 @@ GatedConstantGen::GatedConstantGen(std::string name) : UGen(name, 1) {
 }
 
 void GatedConstantGen::control(std::string portName, float value) {
-  if (portName == "amnt1") { // value to be sent
+  if (portName == "value") { // value to be sent
     setAmnt1(value);
   }
   
-  if (portName == "amnt2") {// gate value, if value >= 1, value will be sent, else 0.0;
+  if (portName == "gate") {// gate value, if value >= 1, value will be sent, else 0.0;
     setAmnt2(value);
     isGated = (getAmnt2() < 1);
   }

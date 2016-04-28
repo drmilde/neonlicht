@@ -5,6 +5,26 @@
 #include "UGen.h"
 
 namespace unit {
+
+  /**
+   * GatedConstantGen erzeugt einen konstanten Wert in Abhängigkeit von
+   * dem gesetzten gate-Wert.
+   
+   * - Ist der gate-Wert größer oder gleich 1, liefert tick() den Wert von 
+   * **amnt1**, 
+   * - andernfalls **0**. 
+   * - Der gate-wert wird in **amnt2** gespeichert.
+   *
+   * Control-Interface
+   * 
+   * - control("value", value) setzt den zu erzeugenden konstanten Wert
+   * - control("gate", value) setzt den gate-Wert. 
+   *
+   * @author jtm
+   * @since 04-2016
+   * @version 1.0
+   **/
+
   class GatedConstantGen : public UGen {
 
   public:

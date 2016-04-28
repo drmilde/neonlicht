@@ -15,7 +15,6 @@ void ThresholdGen::control(std::string portName, float value) {
   if (portName == "threshold") {
     setAmnt1(fabs(value));
   }
-  std::cout << "threshold = " << getAmnt1() << std::endl;
 }
 
 

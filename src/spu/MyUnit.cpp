@@ -21,7 +21,7 @@ void MyUnit::control(std::string portName, float value) {
     pulse1->control("pwm", value);
   }
   if (portName == "param 3") {
-    lfo1->control("frequency", value*5.0);
+    lfo1->control("frequency", value*250.0);
   }
   if (portName == "pad 15") {
     waveOut->control("record", 1);
@@ -35,7 +35,7 @@ void MyUnit::control(std::string portName, float value) {
 float MyUnit::tick() {
   float lval = (lfo1->tick());
   
-  pulse1->setPulseWidth(lval);
-  pulse1->setFrequency(frequency * lval * 1.1f);
+  //pulse1->setPulseWidth(lval);
+  pulse1->setFrequency(frequency * (1 + (lval * 0.1f)));
   return pulse1->tick();
 }

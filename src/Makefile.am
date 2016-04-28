@@ -38,6 +38,9 @@ kraftmaschine_SOURCES = kraftmaschine.cpp Neonlicht.cpp \
 	osc/OscInConnector.cpp \
 	store/CentralStore.cpp \
 	store/MessageDataQueue.cpp \
+	spu/NoiseUnit.cpp \
+	spu/ArturiaMiniLabUnit.cpp \
+	spu/MyUnit.cpp \
 	unit/ADSRGen.cpp \
 	unit/AddTwoGen.cpp \
 	unit/CosineGen.cpp \
@@ -48,9 +51,6 @@ kraftmaschine_SOURCES = kraftmaschine.cpp Neonlicht.cpp \
 	unit/MultiplyGen.cpp \
 	unit/MultiplyTwoGen.cpp \
 	unit/NoiseGen.cpp \
-	unit/NoiseUnit.cpp \
-	unit/ArturiaMiniLabUnit.cpp \
-	unit/MyUnit.cpp \
 	unit/NumberGen.cpp \
 	unit/OnePoleLPFGen.cpp \
 	unit/Patch.cpp \
@@ -79,6 +79,9 @@ ugentest_SOURCES =  ugentest.cpp \
 	util/MidiUtil.cpp \
 	util/WaveTable.cpp \
 	util/WaveWriter.cpp \
+	spu/NoiseUnit.cpp \
+	spu/ArturiaMiniLabUnit.cpp \
+	spu/MyUnit.cpp \
 	unit/ADSRGen.cpp  \
 	unit/AddTwoGen.cpp \
 	unit/CosineGen.cpp \
@@ -89,9 +92,6 @@ ugentest_SOURCES =  ugentest.cpp \
 	unit/MultiplyGen.cpp \
 	unit/MultiplyTwoGen.cpp \
 	unit/NoiseGen.cpp \
-	unit/NoiseUnit.cpp \
-	unit/ArturiaMiniLabUnit.cpp \
-	unit/MyUnit.cpp \
 	unit/NumberGen.cpp \
 	unit/OnePoleLPFGen.cpp \
 	unit/Patch.cpp \

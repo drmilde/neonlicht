@@ -26,11 +26,21 @@ float {\bfseries tick} ()\hypertarget{classunit_1_1ThresholdGen_a422ab3288c91db5
 
 
 \subsection{Detailed Description}
-\hyperlink{classunit_1_1ThresholdGen}{Threshold\+Gen} testet, ob der Absolutwert des aktuellen Samplewertes größer ist als der gesetzte Schwellwert. Falls ja, liefert tick() 1.\+0 zurück, ansonsten 0.\+0. Der Schwellwert muss im Interval \mbox{[}0,1\mbox{]} liegen. Dies wird nicht geprüft.
+\hyperlink{classunit_1_1ThresholdGen}{Threshold\+Gen} testet, ob der aktuelle Samplewert (gespeichert in {\bfseries in1})
 
 
 \begin{DoxyItemize}
-\item control(\char`\"{}in1\char`\"{}, value) setzt den akuellen {\bfseries Samplewert}.
+\item größer ist als der Absolutwert des gesetzten Schwellwerts, falls ja, liefert tick() {\bfseries 1.\+0} zurück,
+\item ansonsten ob der Samplewert kleiner als der der negative Absolutwert des gesetzten Schwellwerts ist, falls ja, liefert tick() -\/ {\bfseries 1.\+0} zurück,
+\item ansonsten {\bfseries 0.\+0}.
+\end{DoxyItemize}
+
+Der Schwellwert sollte im Interval \mbox{[}-\/1,1\mbox{]} liegen. Dies wird nicht geprüft.
+
+Control-\/\+Interface
+
+
+\begin{DoxyItemize}
 \item control(\char`\"{}threshold\char`\"{}, value) setzt den {\bfseries Schwellwert}.
 \end{DoxyItemize}
 

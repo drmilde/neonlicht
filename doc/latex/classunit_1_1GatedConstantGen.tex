@@ -1,5 +1,9 @@
 \hypertarget{classunit_1_1GatedConstantGen}{}\section{unit\+:\+:Gated\+Constant\+Gen Class Reference}
 \label{classunit_1_1GatedConstantGen}\index{unit\+::\+Gated\+Constant\+Gen@{unit\+::\+Gated\+Constant\+Gen}}
+
+
+{\ttfamily \#include $<$Gated\+Constant\+Gen.\+h$>$}
+
 Inheritance diagram for unit\+:\+:Gated\+Constant\+Gen\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -19,6 +23,35 @@ float {\bfseries tick} ()\hypertarget{classunit_1_1GatedConstantGen_aafff659359f
 
 \end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\hyperlink{classunit_1_1GatedConstantGen}{Gated\+Constant\+Gen} erzeugt einen konstanten Wert in Abhängigkeit von dem gesetzten gate-\/\+Wert.
+
+
+\begin{DoxyItemize}
+\item Ist der gate-\/\+Wert größer oder gleich 1, liefert tick() den Wert von {\bfseries amnt1},
+\item andernfalls {\bfseries 0}.
+\item Der gate-\/wert wird in {\bfseries amnt2} gespeichert.
+\end{DoxyItemize}
+
+Control-\/\+Interface
+
+
+\begin{DoxyItemize}
+\item control(\char`\"{}value\char`\"{}, value) setzt den zu erzeugenden konstanten Wert
+\item control(\char`\"{}gate\char`\"{}, value) setzt den gate-\/\+Wert.
+\end{DoxyItemize}
+
+\begin{DoxyAuthor}{Author}
+jtm 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+04-\/2016 
+\end{DoxySince}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
