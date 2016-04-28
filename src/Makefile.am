@@ -53,6 +53,7 @@ kraftmaschine_SOURCES = kraftmaschine.cpp Neonlicht.cpp \
 	unit/MultiSwitch5Gen.cpp \
 	unit/NoiseGen.cpp \
 	unit/NumberGen.cpp \
+	unit/OscillatorGen.cpp \
 	unit/OnePoleLPFGen.cpp \
 	unit/Patch.cpp \
 	unit/PhasorGen.cpp \
@@ -95,6 +96,7 @@ ugentest_SOURCES =  ugentest.cpp \
 	unit/MultiSwitch5Gen.cpp \
 	unit/NoiseGen.cpp \
 	unit/NumberGen.cpp \
+	unit/OscillatorGen.cpp \
 	unit/OnePoleLPFGen.cpp \
 	unit/Patch.cpp \
 	unit/PhasorGen.cpp \

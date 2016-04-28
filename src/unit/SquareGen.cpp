@@ -5,7 +5,7 @@ using namespace unit;
 SquareGen::SquareGen() : SquareGen("Mr. White") {
 }
 
-SquareGen::SquareGen(std::string name) : UGen(name, 1) {
+SquareGen::SquareGen(std::string name) : OscillatorGen(name) {
   // do something sensible here
   // add the ports
   outPort = Port("out", PortType::OUTPUT);

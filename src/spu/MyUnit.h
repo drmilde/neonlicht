@@ -3,6 +3,7 @@
 
 #include "ArturiaMiniLabUnit.h"
 
+#include "unit/NumberGen.h"
 #include "unit/CosineGen.h"
 #include "unit/PulseGen.h"
 #include "unit/WaveOutGen.h"
@@ -16,13 +17,12 @@ class MyUnit : public ArturiaMiniLabUnit {
  private:
 
   // UGens used
+  unit::NumberGen* frequency;
   unit::PulseGen* pulse1;
   unit::WaveOutGen* waveOut;
 
   unit::CosineGen* lfo1;
 
-  // current frequency of this unit
-  float frequency;
 
 };
 

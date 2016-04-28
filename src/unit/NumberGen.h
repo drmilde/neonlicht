@@ -13,6 +13,10 @@ namespace unit {
   
     void control(std::string portName, float value);  
     float tick(); // overrides standard implementation
+    std::string getName();
+
+  private:
+    std::string name;
   
   };
 }

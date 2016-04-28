@@ -53,6 +53,9 @@ namespace unit {
   
     int getPortIndex(std::string id);
 
+    //setter
+    void setName(std::string name);
+
     // getter
     std::string getName();
     std::string getID();

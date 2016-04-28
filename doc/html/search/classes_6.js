@@ -8,5 +8,6 @@ var searchData=
   ['midiutil',['MidiUtil',['../classutil_1_1MidiUtil.html',1,'util']]],
   ['multiplygen',['MultiplyGen',['../classunit_1_1MultiplyGen.html',1,'unit']]],
   ['multiplytwogen',['MultiplyTwoGen',['../classunit_1_1MultiplyTwoGen.html',1,'unit']]],
+  ['multiswitch5gen',['MultiSwitch5Gen',['../classunit_1_1MultiSwitch5Gen.html',1,'unit']]],
   ['myunit',['MyUnit',['../classMyUnit.html',1,'']]]
 ];

@@ -3,10 +3,10 @@
 
 #include <stdlib.h>    
 #include <math.h>
-#include "UGen.h"
+#include "OscillatorGen.h"
 
 namespace unit {
-  class SawGen: public UGen {
+  class SawGen: public OscillatorGen {
     
   public:
     SawGen();

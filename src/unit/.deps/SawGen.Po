@@ -29,8 +29,8 @@ unit/SawGen.o: unit/SawGen.cpp /usr/include/stdc-predef.h unit/SawGen.h \
  /usr/include/arm-linux-gnueabihf/bits/nan.h \
  /usr/include/arm-linux-gnueabihf/bits/mathdef.h \
  /usr/include/arm-linux-gnueabihf/bits/mathcalls.h \
- /usr/include/arm-linux-gnueabihf/bits/mathinline.h unit/UGen.h \
- /usr/include/c++/4.9/string \
+ /usr/include/arm-linux-gnueabihf/bits/mathinline.h unit/OscillatorGen.h \
+ unit/UGen.h /usr/include/c++/4.9/string \
  /usr/include/arm-linux-gnueabihf/c++/4.9/bits/c++config.h \
  /usr/include/arm-linux-gnueabihf/c++/4.9/bits/os_defines.h \
  /usr/include/arm-linux-gnueabihf/c++/4.9/bits/cpu_defines.h \
@@ -190,6 +190,8 @@ unit/SawGen.h:
 /usr/include/arm-linux-gnueabihf/bits/mathcalls.h:
 
 /usr/include/arm-linux-gnueabihf/bits/mathinline.h:
+
+unit/OscillatorGen.h:
 
 unit/UGen.h:
 

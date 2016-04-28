@@ -10,7 +10,7 @@ UGen::UGen():UGen("MAXM", 0) {
 }
 
 UGen::UGen(std::string name, int pn) {
-  NAME = name;
+  setName(name);
   ID = NAME + IDG.nextID();
   numberPorts = pn;
   ports = new Port[numberPorts];
@@ -177,6 +177,11 @@ float UGen::getOut2() {
 
 
 // Name and ID
+
+void UGen::setName(std::string name) {
+  NAME = name;
+}
+
 
 std::string UGen::getName() {
   return NAME;

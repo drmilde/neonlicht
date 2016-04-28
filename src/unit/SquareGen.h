@@ -3,10 +3,10 @@
 
 
 #include <stdlib.h>    
-#include "UGen.h"
+#include "OscillatorGen.h"
 
 namespace unit {
-  class SquareGen: public UGen {
+  class SquareGen: public OscillatorGen {
 
   public:
     SquareGen();

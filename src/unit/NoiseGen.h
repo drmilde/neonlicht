@@ -3,10 +3,10 @@
 
 
 #include <stdlib.h>    
-#include "UGen.h"
+#include "OscillatorGen.h"
 
 namespace unit {
-  class NoiseGen: public UGen {
+  class NoiseGen: public OscillatorGen {
 
   public:
     NoiseGen();

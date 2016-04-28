@@ -21,8 +21,8 @@ unit/NoiseGen.o: unit/NoiseGen.cpp /usr/include/stdc-predef.h \
  /usr/include/arm-linux-gnueabihf/bits/pthreadtypes.h \
  /usr/include/alloca.h \
  /usr/include/arm-linux-gnueabihf/bits/stdlib-bsearch.h \
- /usr/include/arm-linux-gnueabihf/bits/stdlib-float.h unit/UGen.h \
- /usr/include/c++/4.9/string \
+ /usr/include/arm-linux-gnueabihf/bits/stdlib-float.h \
+ unit/OscillatorGen.h unit/UGen.h /usr/include/c++/4.9/string \
  /usr/include/arm-linux-gnueabihf/c++/4.9/bits/c++config.h \
  /usr/include/arm-linux-gnueabihf/c++/4.9/bits/os_defines.h \
  /usr/include/arm-linux-gnueabihf/c++/4.9/bits/cpu_defines.h \
@@ -164,6 +164,8 @@ unit/NoiseGen.h:
 /usr/include/arm-linux-gnueabihf/bits/stdlib-bsearch.h:
 
 /usr/include/arm-linux-gnueabihf/bits/stdlib-float.h:
+
+unit/OscillatorGen.h:
 
 unit/UGen.h:
 

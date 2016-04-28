@@ -5,7 +5,7 @@ using namespace unit;
 SawGen::SawGen() : SawGen("Comme ci, Comme ca") {
 }
 
-SawGen::SawGen(std::string name) : UGen(name, 1) {
+SawGen::SawGen(std::string name) : OscillatorGen(name) {
   // do something sensible here
   // add the ports
   outPort = Port("out", PortType::OUTPUT);

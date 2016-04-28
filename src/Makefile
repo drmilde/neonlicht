@@ -118,16 +118,16 @@ am_kraftmaschine_OBJECTS = kraftmaschine.$(OBJEXT) Neonlicht.$(OBJEXT) \
 	unit/GatedConstantGen.$(OBJEXT) unit/MidiInputGen.$(OBJEXT) \
 	unit/MultiplyGen.$(OBJEXT) unit/MultiplyTwoGen.$(OBJEXT) \
 	unit/MultiSwitch5Gen.$(OBJEXT) unit/NoiseGen.$(OBJEXT) \
-	unit/NumberGen.$(OBJEXT) unit/OnePoleLPFGen.$(OBJEXT) \
-	unit/Patch.$(OBJEXT) unit/PhasorGen.$(OBJEXT) \
-	unit/Port.$(OBJEXT) unit/PulseGen.$(OBJEXT) \
-	unit/STKAdapterGen.$(OBJEXT) unit/STKBiQuadGen.$(OBJEXT) \
-	unit/STKOnePoleGen.$(OBJEXT) unit/STKOneZeroGen.$(OBJEXT) \
-	unit/STKTwoPoleGen.$(OBJEXT) unit/STKTwoZeroGen.$(OBJEXT) \
-	unit/SawGen.$(OBJEXT) unit/SoundUnit.$(OBJEXT) \
-	unit/SquareGen.$(OBJEXT) unit/ThresholdGen.$(OBJEXT) \
-	unit/TwoInputMixerGen.$(OBJEXT) unit/UGen.$(OBJEXT) \
-	unit/WaveOutGen.$(OBJEXT)
+	unit/NumberGen.$(OBJEXT) unit/OscillatorGen.$(OBJEXT) \
+	unit/OnePoleLPFGen.$(OBJEXT) unit/Patch.$(OBJEXT) \
+	unit/PhasorGen.$(OBJEXT) unit/Port.$(OBJEXT) \
+	unit/PulseGen.$(OBJEXT) unit/STKAdapterGen.$(OBJEXT) \
+	unit/STKBiQuadGen.$(OBJEXT) unit/STKOnePoleGen.$(OBJEXT) \
+	unit/STKOneZeroGen.$(OBJEXT) unit/STKTwoPoleGen.$(OBJEXT) \
+	unit/STKTwoZeroGen.$(OBJEXT) unit/SawGen.$(OBJEXT) \
+	unit/SoundUnit.$(OBJEXT) unit/SquareGen.$(OBJEXT) \
+	unit/ThresholdGen.$(OBJEXT) unit/TwoInputMixerGen.$(OBJEXT) \
+	unit/UGen.$(OBJEXT) unit/WaveOutGen.$(OBJEXT)
 kraftmaschine_OBJECTS = $(am_kraftmaschine_OBJECTS)
 kraftmaschine_LDADD = $(LDADD)
 kraftmaschine_DEPENDENCIES =
@@ -148,16 +148,16 @@ am_ugentest_OBJECTS = ugentest.$(OBJEXT) util/CosineTable.$(OBJEXT) \
 	unit/GatedConstantGen.$(OBJEXT) unit/MidiInputGen.$(OBJEXT) \
 	unit/MultiplyGen.$(OBJEXT) unit/MultiplyTwoGen.$(OBJEXT) \
 	unit/MultiSwitch5Gen.$(OBJEXT) unit/NoiseGen.$(OBJEXT) \
-	unit/NumberGen.$(OBJEXT) unit/OnePoleLPFGen.$(OBJEXT) \
-	unit/Patch.$(OBJEXT) unit/PhasorGen.$(OBJEXT) \
-	unit/Port.$(OBJEXT) unit/PulseGen.$(OBJEXT) \
-	unit/STKAdapterGen.$(OBJEXT) unit/STKBiQuadGen.$(OBJEXT) \
-	unit/STKOnePoleGen.$(OBJEXT) unit/STKOneZeroGen.$(OBJEXT) \
-	unit/STKTwoPoleGen.$(OBJEXT) unit/STKTwoZeroGen.$(OBJEXT) \
-	unit/SawGen.$(OBJEXT) unit/SoundUnit.$(OBJEXT) \
-	unit/SquareGen.$(OBJEXT) unit/ThresholdGen.$(OBJEXT) \
-	unit/TwoInputMixerGen.$(OBJEXT) unit/UGen.$(OBJEXT) \
-	unit/WaveOutGen.$(OBJEXT)
+	unit/NumberGen.$(OBJEXT) unit/OscillatorGen.$(OBJEXT) \
+	unit/OnePoleLPFGen.$(OBJEXT) unit/Patch.$(OBJEXT) \
+	unit/PhasorGen.$(OBJEXT) unit/Port.$(OBJEXT) \
+	unit/PulseGen.$(OBJEXT) unit/STKAdapterGen.$(OBJEXT) \
+	unit/STKBiQuadGen.$(OBJEXT) unit/STKOnePoleGen.$(OBJEXT) \
+	unit/STKOneZeroGen.$(OBJEXT) unit/STKTwoPoleGen.$(OBJEXT) \
+	unit/STKTwoZeroGen.$(OBJEXT) unit/SawGen.$(OBJEXT) \
+	unit/SoundUnit.$(OBJEXT) unit/SquareGen.$(OBJEXT) \
+	unit/ThresholdGen.$(OBJEXT) unit/TwoInputMixerGen.$(OBJEXT) \
+	unit/UGen.$(OBJEXT) unit/WaveOutGen.$(OBJEXT)
 ugentest_OBJECTS = $(am_ugentest_OBJECTS)
 ugentest_LDADD = $(LDADD)
 ugentest_DEPENDENCIES =
@@ -361,6 +361,7 @@ kraftmaschine_SOURCES = kraftmaschine.cpp Neonlicht.cpp \
 	unit/MultiSwitch5Gen.cpp \
 	unit/NoiseGen.cpp \
 	unit/NumberGen.cpp \
+	unit/OscillatorGen.cpp \
 	unit/OnePoleLPFGen.cpp \
 	unit/Patch.cpp \
 	unit/PhasorGen.cpp \
@@ -403,6 +404,7 @@ ugentest_SOURCES = ugentest.cpp \
 	unit/MultiSwitch5Gen.cpp \
 	unit/NoiseGen.cpp \
 	unit/NumberGen.cpp \
+	unit/OscillatorGen.cpp \
 	unit/OnePoleLPFGen.cpp \
 	unit/Patch.cpp \
 	unit/PhasorGen.cpp \
@@ -628,6 +630,8 @@ unit/NoiseGen.$(OBJEXT): unit/$(am__dirstamp) \
 	unit/$(DEPDIR)/$(am__dirstamp)
 unit/NumberGen.$(OBJEXT): unit/$(am__dirstamp) \
 	unit/$(DEPDIR)/$(am__dirstamp)
+unit/OscillatorGen.$(OBJEXT): unit/$(am__dirstamp) \
+	unit/$(DEPDIR)/$(am__dirstamp)
 unit/OnePoleLPFGen.$(OBJEXT): unit/$(am__dirstamp) \
 	unit/$(DEPDIR)/$(am__dirstamp)
 unit/Patch.$(OBJEXT): unit/$(am__dirstamp) \
@@ -724,6 +728,7 @@ include unit/$(DEPDIR)/MultiplyTwoGen.Po
 include unit/$(DEPDIR)/NoiseGen.Po
 include unit/$(DEPDIR)/NumberGen.Po
 include unit/$(DEPDIR)/OnePoleLPFGen.Po
+include unit/$(DEPDIR)/OscillatorGen.Po
 include unit/$(DEPDIR)/Patch.Po
 include unit/$(DEPDIR)/PhasorGen.Po
 include unit/$(DEPDIR)/Port.Po

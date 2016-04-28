@@ -13,10 +13,10 @@ NumberGen::NumberGen(std::string name) : UGen(name, 3) {
 // overrides control() in UGen
 void NumberGen::control(std::string portName, float value) {
   // stores value in amnt1
-  if (portName == "amnt1") {
+  if (portName != "") {
+    UGen::setName(portName);
     setAmnt1(value);
   }
-
 }
 
 

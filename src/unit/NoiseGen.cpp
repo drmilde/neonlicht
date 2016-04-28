@@ -5,7 +5,7 @@ using namespace unit;
 NoiseGen::NoiseGen() : NoiseGen("Mr. White") {
 }
 
-NoiseGen::NoiseGen(std::string name) : UGen(name, 1) {
+NoiseGen::NoiseGen(std::string name) : OscillatorGen(name) {
   // do something sensible here
   // add the ports
   outPort = Port("out", PortType::OUTPUT);
