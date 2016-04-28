@@ -30,6 +30,7 @@ kraftmaschine_SOURCES = kraftmaschine.cpp Neonlicht.cpp \
 	util/IDGenerator.cpp \
 	util/Interpolation.cpp \
 	util/KeyPressedControl.cpp \
+	util/MidiUtil.cpp \
 	util/WaveTable.cpp \
 	util/WaveWriter.cpp \
 	configuration/ConfigurationManager.cpp \
@@ -74,6 +75,7 @@ ugentest_SOURCES =  ugentest.cpp \
 	util/Interpolation.cpp \
 	util/IDGenerator.cpp \
 	util/KeyPressedControl.cpp \
+	util/MidiUtil.cpp \
 	util/WaveTable.cpp \
 	util/WaveWriter.cpp \
 	unit/ADSRGen.cpp  \

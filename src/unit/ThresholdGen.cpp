@@ -12,11 +12,8 @@ ThresholdGen::ThresholdGen(std::string name) : UGen(name, 0) {
 
 // overrides control() in UGen
 void ThresholdGen::control(std::string portName, float value) {
-  if (portName == "in1") {
-    setIn1(value);
-  }
   if (portName == "threshold") {
-    setAmnt1(value);
+    setAmnt1(fabs(value));
   }
 }
 
@@ -25,7 +22,8 @@ void ThresholdGen::control(std::string portName, float value) {
 float ThresholdGen::tick() {
   // if fabs(in1) > amnt1 => 1.0, else 0.0 
   
-  setOut1( (fabs(getIn1() > getAmnt1())? 1.0: 0.0 ) ) ;
+  setOut1( (getIn1() > getAmnt1()? 1.0: 0.0 ) ) ;
+  setOut1( (getIn1() < -getAmnt1()? -1.0: 0.0 ) ) ;
 		      
   // return current tick() value
   return getOut1();

@@ -106,7 +106,8 @@ fliehkraft_DEPENDENCIES =
 am_kraftmaschine_OBJECTS = kraftmaschine.$(OBJEXT) Neonlicht.$(OBJEXT) \
 	util/CosineTable.$(OBJEXT) util/IDGenerator.$(OBJEXT) \
 	util/Interpolation.$(OBJEXT) util/KeyPressedControl.$(OBJEXT) \
-	util/WaveTable.$(OBJEXT) util/WaveWriter.$(OBJEXT) \
+	util/MidiUtil.$(OBJEXT) util/WaveTable.$(OBJEXT) \
+	util/WaveWriter.$(OBJEXT) \
 	configuration/ConfigurationManager.$(OBJEXT) \
 	osc/MessageData.$(OBJEXT) osc/OscInConnector.$(OBJEXT) \
 	store/CentralStore.$(OBJEXT) store/MessageDataQueue.$(OBJEXT) \
@@ -137,23 +138,24 @@ store_mdstore_LDADD = $(LDADD)
 store_mdstore_DEPENDENCIES =
 am_ugentest_OBJECTS = ugentest.$(OBJEXT) util/CosineTable.$(OBJEXT) \
 	util/Interpolation.$(OBJEXT) util/IDGenerator.$(OBJEXT) \
-	util/KeyPressedControl.$(OBJEXT) util/WaveTable.$(OBJEXT) \
-	util/WaveWriter.$(OBJEXT) unit/ADSRGen.$(OBJEXT) \
-	unit/AddTwoGen.$(OBJEXT) unit/CosineGen.$(OBJEXT) \
-	unit/EGOneStepGen.$(OBJEXT) unit/EGUpDownGen.$(OBJEXT) \
-	unit/GatedConstantGen.$(OBJEXT) unit/MidiInputGen.$(OBJEXT) \
-	unit/MultiplyGen.$(OBJEXT) unit/MultiplyTwoGen.$(OBJEXT) \
-	unit/NoiseGen.$(OBJEXT) unit/NoiseUnit.$(OBJEXT) \
-	unit/ArturiaMiniLabUnit.$(OBJEXT) unit/MyUnit.$(OBJEXT) \
-	unit/NumberGen.$(OBJEXT) unit/OnePoleLPFGen.$(OBJEXT) \
-	unit/Patch.$(OBJEXT) unit/PhasorGen.$(OBJEXT) \
-	unit/Port.$(OBJEXT) unit/STKAdapterGen.$(OBJEXT) \
-	unit/STKBiQuadGen.$(OBJEXT) unit/STKOnePoleGen.$(OBJEXT) \
-	unit/STKOneZeroGen.$(OBJEXT) unit/STKTwoPoleGen.$(OBJEXT) \
-	unit/STKTwoZeroGen.$(OBJEXT) unit/SawGen.$(OBJEXT) \
-	unit/SoundUnit.$(OBJEXT) unit/SquareGen.$(OBJEXT) \
-	unit/ThresholdGen.$(OBJEXT) unit/TwoInputMixerGen.$(OBJEXT) \
-	unit/UGen.$(OBJEXT) unit/WaveOutGen.$(OBJEXT)
+	util/KeyPressedControl.$(OBJEXT) util/MidiUtil.$(OBJEXT) \
+	util/WaveTable.$(OBJEXT) util/WaveWriter.$(OBJEXT) \
+	unit/ADSRGen.$(OBJEXT) unit/AddTwoGen.$(OBJEXT) \
+	unit/CosineGen.$(OBJEXT) unit/EGOneStepGen.$(OBJEXT) \
+	unit/EGUpDownGen.$(OBJEXT) unit/GatedConstantGen.$(OBJEXT) \
+	unit/MidiInputGen.$(OBJEXT) unit/MultiplyGen.$(OBJEXT) \
+	unit/MultiplyTwoGen.$(OBJEXT) unit/NoiseGen.$(OBJEXT) \
+	unit/NoiseUnit.$(OBJEXT) unit/ArturiaMiniLabUnit.$(OBJEXT) \
+	unit/MyUnit.$(OBJEXT) unit/NumberGen.$(OBJEXT) \
+	unit/OnePoleLPFGen.$(OBJEXT) unit/Patch.$(OBJEXT) \
+	unit/PhasorGen.$(OBJEXT) unit/Port.$(OBJEXT) \
+	unit/STKAdapterGen.$(OBJEXT) unit/STKBiQuadGen.$(OBJEXT) \
+	unit/STKOnePoleGen.$(OBJEXT) unit/STKOneZeroGen.$(OBJEXT) \
+	unit/STKTwoPoleGen.$(OBJEXT) unit/STKTwoZeroGen.$(OBJEXT) \
+	unit/SawGen.$(OBJEXT) unit/SoundUnit.$(OBJEXT) \
+	unit/SquareGen.$(OBJEXT) unit/ThresholdGen.$(OBJEXT) \
+	unit/TwoInputMixerGen.$(OBJEXT) unit/UGen.$(OBJEXT) \
+	unit/WaveOutGen.$(OBJEXT)
 ugentest_OBJECTS = $(am_ugentest_OBJECTS)
 ugentest_LDADD = $(LDADD)
 ugentest_DEPENDENCIES =
@@ -334,6 +336,7 @@ kraftmaschine_SOURCES = kraftmaschine.cpp Neonlicht.cpp \
 	util/IDGenerator.cpp \
 	util/Interpolation.cpp \
 	util/KeyPressedControl.cpp \
+	util/MidiUtil.cpp \
 	util/WaveTable.cpp \
 	util/WaveWriter.cpp \
 	configuration/ConfigurationManager.cpp \
@@ -378,6 +381,7 @@ ugentest_SOURCES = ugentest.cpp \
 	util/Interpolation.cpp \
 	util/IDGenerator.cpp \
 	util/KeyPressedControl.cpp \
+	util/MidiUtil.cpp \
 	util/WaveTable.cpp \
 	util/WaveWriter.cpp \
 	unit/ADSRGen.cpp  \
@@ -546,6 +550,8 @@ util/CosineTable.$(OBJEXT): util/$(am__dirstamp) \
 util/IDGenerator.$(OBJEXT): util/$(am__dirstamp) \
 	util/$(DEPDIR)/$(am__dirstamp)
 util/Interpolation.$(OBJEXT): util/$(am__dirstamp) \
+	util/$(DEPDIR)/$(am__dirstamp)
+util/MidiUtil.$(OBJEXT): util/$(am__dirstamp) \
 	util/$(DEPDIR)/$(am__dirstamp)
 util/WaveTable.$(OBJEXT): util/$(am__dirstamp) \
 	util/$(DEPDIR)/$(am__dirstamp)
@@ -720,6 +726,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@util/$(DEPDIR)/IDGenerator.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@util/$(DEPDIR)/Interpolation.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@util/$(DEPDIR)/KeyPressedControl.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@util/$(DEPDIR)/MidiUtil.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@util/$(DEPDIR)/WaveTable.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@util/$(DEPDIR)/WaveWriter.Po@am__quote@
 

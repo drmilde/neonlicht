@@ -106,7 +106,8 @@ fliehkraft_DEPENDENCIES =
 am_kraftmaschine_OBJECTS = kraftmaschine.$(OBJEXT) Neonlicht.$(OBJEXT) \
 	util/CosineTable.$(OBJEXT) util/IDGenerator.$(OBJEXT) \
 	util/Interpolation.$(OBJEXT) util/KeyPressedControl.$(OBJEXT) \
-	util/WaveTable.$(OBJEXT) util/WaveWriter.$(OBJEXT) \
+	util/MidiUtil.$(OBJEXT) util/WaveTable.$(OBJEXT) \
+	util/WaveWriter.$(OBJEXT) \
 	configuration/ConfigurationManager.$(OBJEXT) \
 	osc/MessageData.$(OBJEXT) osc/OscInConnector.$(OBJEXT) \
 	store/CentralStore.$(OBJEXT) store/MessageDataQueue.$(OBJEXT) \
@@ -137,23 +138,24 @@ store_mdstore_LDADD = $(LDADD)
 store_mdstore_DEPENDENCIES =
 am_ugentest_OBJECTS = ugentest.$(OBJEXT) util/CosineTable.$(OBJEXT) \
 	util/Interpolation.$(OBJEXT) util/IDGenerator.$(OBJEXT) \
-	util/KeyPressedControl.$(OBJEXT) util/WaveTable.$(OBJEXT) \
-	util/WaveWriter.$(OBJEXT) unit/ADSRGen.$(OBJEXT) \
-	unit/AddTwoGen.$(OBJEXT) unit/CosineGen.$(OBJEXT) \
-	unit/EGOneStepGen.$(OBJEXT) unit/EGUpDownGen.$(OBJEXT) \
-	unit/GatedConstantGen.$(OBJEXT) unit/MidiInputGen.$(OBJEXT) \
-	unit/MultiplyGen.$(OBJEXT) unit/MultiplyTwoGen.$(OBJEXT) \
-	unit/NoiseGen.$(OBJEXT) unit/NoiseUnit.$(OBJEXT) \
-	unit/ArturiaMiniLabUnit.$(OBJEXT) unit/MyUnit.$(OBJEXT) \
-	unit/NumberGen.$(OBJEXT) unit/OnePoleLPFGen.$(OBJEXT) \
-	unit/Patch.$(OBJEXT) unit/PhasorGen.$(OBJEXT) \
-	unit/Port.$(OBJEXT) unit/STKAdapterGen.$(OBJEXT) \
-	unit/STKBiQuadGen.$(OBJEXT) unit/STKOnePoleGen.$(OBJEXT) \
-	unit/STKOneZeroGen.$(OBJEXT) unit/STKTwoPoleGen.$(OBJEXT) \
-	unit/STKTwoZeroGen.$(OBJEXT) unit/SawGen.$(OBJEXT) \
-	unit/SoundUnit.$(OBJEXT) unit/SquareGen.$(OBJEXT) \
-	unit/ThresholdGen.$(OBJEXT) unit/TwoInputMixerGen.$(OBJEXT) \
-	unit/UGen.$(OBJEXT) unit/WaveOutGen.$(OBJEXT)
+	util/KeyPressedControl.$(OBJEXT) util/MidiUtil.$(OBJEXT) \
+	util/WaveTable.$(OBJEXT) util/WaveWriter.$(OBJEXT) \
+	unit/ADSRGen.$(OBJEXT) unit/AddTwoGen.$(OBJEXT) \
+	unit/CosineGen.$(OBJEXT) unit/EGOneStepGen.$(OBJEXT) \
+	unit/EGUpDownGen.$(OBJEXT) unit/GatedConstantGen.$(OBJEXT) \
+	unit/MidiInputGen.$(OBJEXT) unit/MultiplyGen.$(OBJEXT) \
+	unit/MultiplyTwoGen.$(OBJEXT) unit/NoiseGen.$(OBJEXT) \
+	unit/NoiseUnit.$(OBJEXT) unit/ArturiaMiniLabUnit.$(OBJEXT) \
+	unit/MyUnit.$(OBJEXT) unit/NumberGen.$(OBJEXT) \
+	unit/OnePoleLPFGen.$(OBJEXT) unit/Patch.$(OBJEXT) \
+	unit/PhasorGen.$(OBJEXT) unit/Port.$(OBJEXT) \
+	unit/STKAdapterGen.$(OBJEXT) unit/STKBiQuadGen.$(OBJEXT) \
+	unit/STKOnePoleGen.$(OBJEXT) unit/STKOneZeroGen.$(OBJEXT) \
+	unit/STKTwoPoleGen.$(OBJEXT) unit/STKTwoZeroGen.$(OBJEXT) \
+	unit/SawGen.$(OBJEXT) unit/SoundUnit.$(OBJEXT) \
+	unit/SquareGen.$(OBJEXT) unit/ThresholdGen.$(OBJEXT) \
+	unit/TwoInputMixerGen.$(OBJEXT) unit/UGen.$(OBJEXT) \
+	unit/WaveOutGen.$(OBJEXT)
 ugentest_OBJECTS = $(am_ugentest_OBJECTS)
 ugentest_LDADD = $(LDADD)
 ugentest_DEPENDENCIES =
@@ -217,13 +219,13 @@ am__define_uniq_tagged_files = \
 ETAGS = etags
 CTAGS = ctags
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
-ACLOCAL = ${SHELL} /home/pi/programming/synthesizer/clone/neonlicht/missing aclocal-1.14
+ACLOCAL = ${SHELL} /home/milde/programming/synthesizer/neonlicht/missing aclocal-1.14
 AMTAR = $${TAR-tar}
 AM_DEFAULT_VERBOSITY = 1
-AUTOCONF = ${SHELL} /home/pi/programming/synthesizer/clone/neonlicht/missing autoconf
-AUTOHEADER = ${SHELL} /home/pi/programming/synthesizer/clone/neonlicht/missing autoheader
-AUTOMAKE = ${SHELL} /home/pi/programming/synthesizer/clone/neonlicht/missing automake-1.14
-AWK = mawk
+AUTOCONF = ${SHELL} /home/milde/programming/synthesizer/neonlicht/missing autoconf
+AUTOHEADER = ${SHELL} /home/milde/programming/synthesizer/neonlicht/missing autoheader
+AUTOMAKE = ${SHELL} /home/milde/programming/synthesizer/neonlicht/missing automake-1.14
+AWK = gawk
 CC = gcc
 CCDEPMODE = depmode=gcc3
 CFLAGS = -g -O2
@@ -250,7 +252,7 @@ LDFLAGS =
 LIBOBJS = 
 LIBS = 
 LTLIBOBJS = 
-MAKEINFO = ${SHELL} /home/pi/programming/synthesizer/clone/neonlicht/missing makeinfo
+MAKEINFO = ${SHELL} /home/milde/programming/synthesizer/neonlicht/missing makeinfo
 MKDIR_P = /bin/mkdir -p
 OBJEXT = o
 PACKAGE = neonlicht
@@ -265,10 +267,10 @@ SET_MAKE =
 SHELL = /bin/bash
 STRIP = 
 VERSION = 0.0.1
-abs_builddir = /home/pi/programming/synthesizer/clone/neonlicht/src
-abs_srcdir = /home/pi/programming/synthesizer/clone/neonlicht/src
-abs_top_builddir = /home/pi/programming/synthesizer/clone/neonlicht
-abs_top_srcdir = /home/pi/programming/synthesizer/clone/neonlicht
+abs_builddir = /home/milde/programming/synthesizer/neonlicht/src
+abs_srcdir = /home/milde/programming/synthesizer/neonlicht/src
+abs_top_builddir = /home/milde/programming/synthesizer/neonlicht
+abs_top_srcdir = /home/milde/programming/synthesizer/neonlicht
 ac_ct_CC = gcc
 ac_ct_CXX = g++
 am__include = include
@@ -288,7 +290,7 @@ host_alias =
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
-install_sh = ${SHELL} /home/pi/programming/synthesizer/clone/neonlicht/install-sh
+install_sh = ${SHELL} /home/milde/programming/synthesizer/neonlicht/install-sh
 libdir = ${exec_prefix}/lib
 libexecdir = ${exec_prefix}/libexec
 localedir = ${datarootdir}/locale
@@ -334,6 +336,7 @@ kraftmaschine_SOURCES = kraftmaschine.cpp Neonlicht.cpp \
 	util/IDGenerator.cpp \
 	util/Interpolation.cpp \
 	util/KeyPressedControl.cpp \
+	util/MidiUtil.cpp \
 	util/WaveTable.cpp \
 	util/WaveWriter.cpp \
 	configuration/ConfigurationManager.cpp \
@@ -378,6 +381,7 @@ ugentest_SOURCES = ugentest.cpp \
 	util/Interpolation.cpp \
 	util/IDGenerator.cpp \
 	util/KeyPressedControl.cpp \
+	util/MidiUtil.cpp \
 	util/WaveTable.cpp \
 	util/WaveWriter.cpp \
 	unit/ADSRGen.cpp  \
@@ -546,6 +550,8 @@ util/CosineTable.$(OBJEXT): util/$(am__dirstamp) \
 util/IDGenerator.$(OBJEXT): util/$(am__dirstamp) \
 	util/$(DEPDIR)/$(am__dirstamp)
 util/Interpolation.$(OBJEXT): util/$(am__dirstamp) \
+	util/$(DEPDIR)/$(am__dirstamp)
+util/MidiUtil.$(OBJEXT): util/$(am__dirstamp) \
 	util/$(DEPDIR)/$(am__dirstamp)
 util/WaveTable.$(OBJEXT): util/$(am__dirstamp) \
 	util/$(DEPDIR)/$(am__dirstamp)
@@ -720,6 +726,7 @@ include util/$(DEPDIR)/CosineTable.Po
 include util/$(DEPDIR)/IDGenerator.Po
 include util/$(DEPDIR)/Interpolation.Po
 include util/$(DEPDIR)/KeyPressedControl.Po
+include util/$(DEPDIR)/MidiUtil.Po
 include util/$(DEPDIR)/WaveTable.Po
 include util/$(DEPDIR)/WaveWriter.Po
 
