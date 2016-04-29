@@ -59,7 +59,7 @@
 
 // Unist to be used, testing only
 #include "spu/NoiseUnit.h"
-#include "spu/MyUnit.h"
+#include "spu/WorkshopSPU.h"
 
 /**
  * Neonlicht eine Synthesizer-Engine auf Basis des STK

@@ -3,10 +3,10 @@
 
 
 #include <stdlib.h>    
-#include "OscillatorGen.h"
+#include "PulseGen.h"
 
 namespace unit {
-  class SquareGen: public OscillatorGen {
+  class SquareGen: public PulseGen {
 
   public:
     SquareGen();
@@ -14,17 +14,8 @@ namespace unit {
   
     void control(std::string portName, float value);  
     float tick(); // override standard implementation
+    void setFrequency(float value);
 
-  private:
-    Port outPort;
-  
-    float frequency;
-
-    float currentx;
-    float currenty;
-    float stepx;
-
-  
   };
 }
 

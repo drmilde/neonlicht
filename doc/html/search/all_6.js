@@ -7,8 +7,8 @@ var searchData=
   ['midiinputgen',['MidiInputGen',['../classunit_1_1MidiInputGen.html',1,'unit']]],
   ['midipacketlistener',['MidiPacketListener',['../classOscInConnector_1_1MidiPacketListener.html',1,'osc::OscInConnector']]],
   ['midiutil',['MidiUtil',['../classutil_1_1MidiUtil.html',1,'util']]],
+  ['multioscillatorspu',['MultiOscillatorSPU',['../classMultiOscillatorSPU.html',1,'']]],
   ['multiplygen',['MultiplyGen',['../classunit_1_1MultiplyGen.html',1,'unit']]],
   ['multiplytwogen',['MultiplyTwoGen',['../classunit_1_1MultiplyTwoGen.html',1,'unit']]],
-  ['multiswitch5gen',['MultiSwitch5Gen',['../classunit_1_1MultiSwitch5Gen.html',1,'unit']]],
-  ['myunit',['MyUnit',['../classMyUnit.html',1,'']]]
+  ['multiswitch5gen',['MultiSwitch5Gen',['../classunit_1_1MultiSwitch5Gen.html',1,'unit']]]
 ];

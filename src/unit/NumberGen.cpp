@@ -2,7 +2,7 @@
 
 using namespace unit;
 
-NumberGen::NumberGen() : NumberGen("Mr. White") {
+NumberGen::NumberGen() : NumberGen("Short Circuit") {
 }
 
 NumberGen::NumberGen(std::string name) : UGen(name, 3) {
@@ -15,8 +15,12 @@ void NumberGen::control(std::string portName, float value) {
   // stores value in amnt1
   if (portName != "") {
     UGen::setName(portName);
-    setAmnt1(value);
+    setValue(value);
   }
+}
+
+void NumberGen::setValue(float value) {
+  setAmnt1(value);
 }
 
 

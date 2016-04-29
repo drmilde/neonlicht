@@ -6,7 +6,7 @@ int Neonlicht::CNT = 0;
 
 // global member (for testing purposes only)
 //NoiseUnit nu1 = NoiseUnit();
-MyUnit nu1 = MyUnit();
+WorkshopSPU nu1 = WorkshopSPU();
 
 /**
  * 

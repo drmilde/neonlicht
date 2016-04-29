@@ -1,16 +1,16 @@
-#ifndef _MY_UNIT_h_
-#define _MY_UNIT_h_
+#ifndef _WORKSHOP_SPU_h_
+#define _WORKSHOP_SPU_h_
 
 #include "ArturiaMiniLabUnit.h"
 
+#include "spu/MultiOscillatorSPU.h"
 #include "unit/NumberGen.h"
 #include "unit/CosineGen.h"
-#include "unit/PulseGen.h"
 #include "unit/WaveOutGen.h"
 
-class MyUnit : public ArturiaMiniLabUnit {
+class WorkshopSPU : public ArturiaMiniLabUnit {
  public:
-  MyUnit();
+  WorkshopSPU();
   float tick();
   void control(std::string portName, float value);
 
@@ -18,11 +18,12 @@ class MyUnit : public ArturiaMiniLabUnit {
 
   // UGens used
   unit::NumberGen* frequency;
-  unit::PulseGen* pulse1;
+  unit::NumberGen* pwm;
+  unit::NumberGen* select;
+  MultiOscillatorSPU* mosc;
+
+  unit::CosineGen* lfo;
   unit::WaveOutGen* waveOut;
-
-  unit::CosineGen* lfo1;
-
 
 };
 

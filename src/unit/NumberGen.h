@@ -13,7 +13,9 @@ namespace unit {
   
     void control(std::string portName, float value);  
     float tick(); // overrides standard implementation
-    std::string getName();
+
+    // fast access function
+    void setValue(float value);
 
   private:
     std::string name;

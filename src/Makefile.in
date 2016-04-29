@@ -112,23 +112,24 @@ am_kraftmaschine_OBJECTS = kraftmaschine.$(OBJEXT) Neonlicht.$(OBJEXT) \
 	osc/MessageData.$(OBJEXT) osc/OscInConnector.$(OBJEXT) \
 	store/CentralStore.$(OBJEXT) store/MessageDataQueue.$(OBJEXT) \
 	spu/NoiseUnit.$(OBJEXT) spu/ArturiaMiniLabUnit.$(OBJEXT) \
-	spu/MyUnit.$(OBJEXT) unit/ADSRGen.$(OBJEXT) \
-	unit/AddTwoGen.$(OBJEXT) unit/CosineGen.$(OBJEXT) \
-	unit/EGOneStepGen.$(OBJEXT) unit/EGUpDownGen.$(OBJEXT) \
-	unit/EnvelopeGen.$(OBJEXT) unit/GatedConstantGen.$(OBJEXT) \
-	unit/InvertGen.$(OBJEXT) unit/MidiInputGen.$(OBJEXT) \
-	unit/MultiplyGen.$(OBJEXT) unit/MultiplyTwoGen.$(OBJEXT) \
-	unit/MultiSwitch5Gen.$(OBJEXT) unit/NoiseGen.$(OBJEXT) \
-	unit/NumberGen.$(OBJEXT) unit/OscillatorGen.$(OBJEXT) \
-	unit/OnePoleLPFGen.$(OBJEXT) unit/Patch.$(OBJEXT) \
-	unit/PhasorGen.$(OBJEXT) unit/Port.$(OBJEXT) \
-	unit/PulseGen.$(OBJEXT) unit/STKAdapterGen.$(OBJEXT) \
-	unit/STKBiQuadGen.$(OBJEXT) unit/STKOnePoleGen.$(OBJEXT) \
-	unit/STKOneZeroGen.$(OBJEXT) unit/STKTwoPoleGen.$(OBJEXT) \
-	unit/STKTwoZeroGen.$(OBJEXT) unit/SawGen.$(OBJEXT) \
-	unit/SoundUnit.$(OBJEXT) unit/SquareGen.$(OBJEXT) \
-	unit/ThresholdGen.$(OBJEXT) unit/TwoInputMixerGen.$(OBJEXT) \
-	unit/UGen.$(OBJEXT) unit/WaveOutGen.$(OBJEXT)
+	spu/WorkshopSPU.$(OBJEXT) spu/MultiOscillatorSPU.$(OBJEXT) \
+	unit/ADSRGen.$(OBJEXT) unit/AddTwoGen.$(OBJEXT) \
+	unit/CosineGen.$(OBJEXT) unit/EGOneStepGen.$(OBJEXT) \
+	unit/EGUpDownGen.$(OBJEXT) unit/EnvelopeGen.$(OBJEXT) \
+	unit/GatedConstantGen.$(OBJEXT) unit/InvertGen.$(OBJEXT) \
+	unit/MidiInputGen.$(OBJEXT) unit/MultiplyGen.$(OBJEXT) \
+	unit/MultiplyTwoGen.$(OBJEXT) unit/MultiSwitch5Gen.$(OBJEXT) \
+	unit/NoiseGen.$(OBJEXT) unit/NumberGen.$(OBJEXT) \
+	unit/OscillatorGen.$(OBJEXT) unit/OnePoleLPFGen.$(OBJEXT) \
+	unit/Patch.$(OBJEXT) unit/PhasorGen.$(OBJEXT) \
+	unit/Port.$(OBJEXT) unit/PulseGen.$(OBJEXT) \
+	unit/STKAdapterGen.$(OBJEXT) unit/STKBiQuadGen.$(OBJEXT) \
+	unit/STKOnePoleGen.$(OBJEXT) unit/STKOneZeroGen.$(OBJEXT) \
+	unit/STKTwoPoleGen.$(OBJEXT) unit/STKTwoZeroGen.$(OBJEXT) \
+	unit/SawGen.$(OBJEXT) unit/SoundUnit.$(OBJEXT) \
+	unit/SquareGen.$(OBJEXT) unit/ThresholdGen.$(OBJEXT) \
+	unit/TwoInputMixerGen.$(OBJEXT) unit/UGen.$(OBJEXT) \
+	unit/WaveOutGen.$(OBJEXT)
 kraftmaschine_OBJECTS = $(am_kraftmaschine_OBJECTS)
 kraftmaschine_LDADD = $(LDADD)
 kraftmaschine_DEPENDENCIES =
@@ -143,23 +144,24 @@ am_ugentest_OBJECTS = ugentest.$(OBJEXT) util/CosineTable.$(OBJEXT) \
 	util/KeyPressedControl.$(OBJEXT) util/MidiUtil.$(OBJEXT) \
 	util/WaveTable.$(OBJEXT) util/WaveWriter.$(OBJEXT) \
 	spu/NoiseUnit.$(OBJEXT) spu/ArturiaMiniLabUnit.$(OBJEXT) \
-	spu/MyUnit.$(OBJEXT) unit/ADSRGen.$(OBJEXT) \
-	unit/AddTwoGen.$(OBJEXT) unit/CosineGen.$(OBJEXT) \
-	unit/EGOneStepGen.$(OBJEXT) unit/EGUpDownGen.$(OBJEXT) \
-	unit/EnvelopeGen.$(OBJEXT) unit/GatedConstantGen.$(OBJEXT) \
-	unit/InvertGen.$(OBJEXT) unit/MidiInputGen.$(OBJEXT) \
-	unit/MultiplyGen.$(OBJEXT) unit/MultiplyTwoGen.$(OBJEXT) \
-	unit/MultiSwitch5Gen.$(OBJEXT) unit/NoiseGen.$(OBJEXT) \
-	unit/NumberGen.$(OBJEXT) unit/OscillatorGen.$(OBJEXT) \
-	unit/OnePoleLPFGen.$(OBJEXT) unit/Patch.$(OBJEXT) \
-	unit/PhasorGen.$(OBJEXT) unit/Port.$(OBJEXT) \
-	unit/PulseGen.$(OBJEXT) unit/STKAdapterGen.$(OBJEXT) \
-	unit/STKBiQuadGen.$(OBJEXT) unit/STKOnePoleGen.$(OBJEXT) \
-	unit/STKOneZeroGen.$(OBJEXT) unit/STKTwoPoleGen.$(OBJEXT) \
-	unit/STKTwoZeroGen.$(OBJEXT) unit/SawGen.$(OBJEXT) \
-	unit/SoundUnit.$(OBJEXT) unit/SquareGen.$(OBJEXT) \
-	unit/ThresholdGen.$(OBJEXT) unit/TwoInputMixerGen.$(OBJEXT) \
-	unit/UGen.$(OBJEXT) unit/WaveOutGen.$(OBJEXT)
+	spu/WorkshopSPU.$(OBJEXT) spu/MultiOscillatorSPU.$(OBJEXT) \
+	unit/ADSRGen.$(OBJEXT) unit/AddTwoGen.$(OBJEXT) \
+	unit/CosineGen.$(OBJEXT) unit/EGOneStepGen.$(OBJEXT) \
+	unit/EGUpDownGen.$(OBJEXT) unit/EnvelopeGen.$(OBJEXT) \
+	unit/GatedConstantGen.$(OBJEXT) unit/InvertGen.$(OBJEXT) \
+	unit/MidiInputGen.$(OBJEXT) unit/MultiplyGen.$(OBJEXT) \
+	unit/MultiplyTwoGen.$(OBJEXT) unit/MultiSwitch5Gen.$(OBJEXT) \
+	unit/NoiseGen.$(OBJEXT) unit/NumberGen.$(OBJEXT) \
+	unit/OscillatorGen.$(OBJEXT) unit/OnePoleLPFGen.$(OBJEXT) \
+	unit/Patch.$(OBJEXT) unit/PhasorGen.$(OBJEXT) \
+	unit/Port.$(OBJEXT) unit/PulseGen.$(OBJEXT) \
+	unit/STKAdapterGen.$(OBJEXT) unit/STKBiQuadGen.$(OBJEXT) \
+	unit/STKOnePoleGen.$(OBJEXT) unit/STKOneZeroGen.$(OBJEXT) \
+	unit/STKTwoPoleGen.$(OBJEXT) unit/STKTwoZeroGen.$(OBJEXT) \
+	unit/SawGen.$(OBJEXT) unit/SoundUnit.$(OBJEXT) \
+	unit/SquareGen.$(OBJEXT) unit/ThresholdGen.$(OBJEXT) \
+	unit/TwoInputMixerGen.$(OBJEXT) unit/UGen.$(OBJEXT) \
+	unit/WaveOutGen.$(OBJEXT)
 ugentest_OBJECTS = $(am_ugentest_OBJECTS)
 ugentest_LDADD = $(LDADD)
 ugentest_DEPENDENCIES =
@@ -350,7 +352,8 @@ kraftmaschine_SOURCES = kraftmaschine.cpp Neonlicht.cpp \
 	store/MessageDataQueue.cpp \
 	spu/NoiseUnit.cpp \
 	spu/ArturiaMiniLabUnit.cpp \
-	spu/MyUnit.cpp \
+	spu/WorkshopSPU.cpp \
+	spu/MultiOscillatorSPU.cpp \
 	unit/ADSRGen.cpp \
 	unit/AddTwoGen.cpp \
 	unit/CosineGen.cpp \
@@ -395,7 +398,8 @@ ugentest_SOURCES = ugentest.cpp \
 	util/WaveWriter.cpp \
 	spu/NoiseUnit.cpp \
 	spu/ArturiaMiniLabUnit.cpp \
-	spu/MyUnit.cpp \
+	spu/WorkshopSPU.cpp \
+	spu/MultiOscillatorSPU.cpp \
 	unit/ADSRGen.cpp  \
 	unit/AddTwoGen.cpp \
 	unit/CosineGen.cpp \
@@ -604,7 +608,9 @@ spu/NoiseUnit.$(OBJEXT): spu/$(am__dirstamp) \
 	spu/$(DEPDIR)/$(am__dirstamp)
 spu/ArturiaMiniLabUnit.$(OBJEXT): spu/$(am__dirstamp) \
 	spu/$(DEPDIR)/$(am__dirstamp)
-spu/MyUnit.$(OBJEXT): spu/$(am__dirstamp) \
+spu/WorkshopSPU.$(OBJEXT): spu/$(am__dirstamp) \
+	spu/$(DEPDIR)/$(am__dirstamp)
+spu/MultiOscillatorSPU.$(OBJEXT): spu/$(am__dirstamp) \
 	spu/$(DEPDIR)/$(am__dirstamp)
 unit/$(am__dirstamp):
 	@$(MKDIR_P) unit
@@ -720,8 +726,9 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@sequencer/$(DEPDIR)/Pulse.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@sequencer/$(DEPDIR)/fliehkraft.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@spu/$(DEPDIR)/ArturiaMiniLabUnit.Po@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@spu/$(DEPDIR)/MyUnit.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@spu/$(DEPDIR)/MultiOscillatorSPU.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@spu/$(DEPDIR)/NoiseUnit.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@spu/$(DEPDIR)/WorkshopSPU.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@store/$(DEPDIR)/CentralStore.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@store/$(DEPDIR)/MessageDataQueue.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@store/$(DEPDIR)/mdstore.Po@am__quote@

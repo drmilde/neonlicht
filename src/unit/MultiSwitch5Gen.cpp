@@ -20,6 +20,14 @@ void MultiSwitch5Gen::setSelect(float value) {
   select = ((int)value % 5); // restrict select values to [0,1,2,3,4]
 }
 
+void MultiSwitch5Gen::setIn4(float value) {
+  in4 = value;
+}
+
+void MultiSwitch5Gen::setIn5(float value) {
+  in5 = value;
+}
+
 float MultiSwitch5Gen::getIn4() {
   return in4;
 }

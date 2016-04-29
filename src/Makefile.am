@@ -40,7 +40,8 @@ kraftmaschine_SOURCES = kraftmaschine.cpp Neonlicht.cpp \
 	store/MessageDataQueue.cpp \
 	spu/NoiseUnit.cpp \
 	spu/ArturiaMiniLabUnit.cpp \
-	spu/MyUnit.cpp \
+	spu/WorkshopSPU.cpp \
+	spu/MultiOscillatorSPU.cpp \
 	unit/ADSRGen.cpp \
 	unit/AddTwoGen.cpp \
 	unit/CosineGen.cpp \
@@ -85,7 +86,8 @@ ugentest_SOURCES =  ugentest.cpp \
 	util/WaveWriter.cpp \
 	spu/NoiseUnit.cpp \
 	spu/ArturiaMiniLabUnit.cpp \
-	spu/MyUnit.cpp \
+	spu/WorkshopSPU.cpp \
+	spu/MultiOscillatorSPU.cpp \
 	unit/ADSRGen.cpp  \
 	unit/AddTwoGen.cpp \
 	unit/CosineGen.cpp \
