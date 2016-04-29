@@ -5,7 +5,7 @@ using namespace unit;
 EGOneStepGen::EGOneStepGen() : EGOneStepGen("Madness") {
 }
 
-EGOneStepGen::EGOneStepGen(std::string name) : UGen(name, 4) {
+EGOneStepGen::EGOneStepGen(std::string name) : EnvelopeGen(name) {
   duration = 0.1;
   startLevel = 0.0;
   endLevel = 1.0;

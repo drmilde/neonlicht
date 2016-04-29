@@ -115,7 +115,8 @@ am_kraftmaschine_OBJECTS = kraftmaschine.$(OBJEXT) Neonlicht.$(OBJEXT) \
 	spu/MyUnit.$(OBJEXT) unit/ADSRGen.$(OBJEXT) \
 	unit/AddTwoGen.$(OBJEXT) unit/CosineGen.$(OBJEXT) \
 	unit/EGOneStepGen.$(OBJEXT) unit/EGUpDownGen.$(OBJEXT) \
-	unit/GatedConstantGen.$(OBJEXT) unit/MidiInputGen.$(OBJEXT) \
+	unit/EnvelopeGen.$(OBJEXT) unit/GatedConstantGen.$(OBJEXT) \
+	unit/InvertGen.$(OBJEXT) unit/MidiInputGen.$(OBJEXT) \
 	unit/MultiplyGen.$(OBJEXT) unit/MultiplyTwoGen.$(OBJEXT) \
 	unit/MultiSwitch5Gen.$(OBJEXT) unit/NoiseGen.$(OBJEXT) \
 	unit/NumberGen.$(OBJEXT) unit/OscillatorGen.$(OBJEXT) \
@@ -145,7 +146,8 @@ am_ugentest_OBJECTS = ugentest.$(OBJEXT) util/CosineTable.$(OBJEXT) \
 	spu/MyUnit.$(OBJEXT) unit/ADSRGen.$(OBJEXT) \
 	unit/AddTwoGen.$(OBJEXT) unit/CosineGen.$(OBJEXT) \
 	unit/EGOneStepGen.$(OBJEXT) unit/EGUpDownGen.$(OBJEXT) \
-	unit/GatedConstantGen.$(OBJEXT) unit/MidiInputGen.$(OBJEXT) \
+	unit/EnvelopeGen.$(OBJEXT) unit/GatedConstantGen.$(OBJEXT) \
+	unit/InvertGen.$(OBJEXT) unit/MidiInputGen.$(OBJEXT) \
 	unit/MultiplyGen.$(OBJEXT) unit/MultiplyTwoGen.$(OBJEXT) \
 	unit/MultiSwitch5Gen.$(OBJEXT) unit/NoiseGen.$(OBJEXT) \
 	unit/NumberGen.$(OBJEXT) unit/OscillatorGen.$(OBJEXT) \
@@ -221,13 +223,13 @@ am__define_uniq_tagged_files = \
 ETAGS = etags
 CTAGS = ctags
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
-ACLOCAL = ${SHELL} /home/pi/programming/synthesizer/clone/neonlicht/missing aclocal-1.14
+ACLOCAL = ${SHELL} /home/milde/programming/synthesizer/neonlicht/missing aclocal-1.14
 AMTAR = $${TAR-tar}
 AM_DEFAULT_VERBOSITY = 1
-AUTOCONF = ${SHELL} /home/pi/programming/synthesizer/clone/neonlicht/missing autoconf
-AUTOHEADER = ${SHELL} /home/pi/programming/synthesizer/clone/neonlicht/missing autoheader
-AUTOMAKE = ${SHELL} /home/pi/programming/synthesizer/clone/neonlicht/missing automake-1.14
-AWK = mawk
+AUTOCONF = ${SHELL} /home/milde/programming/synthesizer/neonlicht/missing autoconf
+AUTOHEADER = ${SHELL} /home/milde/programming/synthesizer/neonlicht/missing autoheader
+AUTOMAKE = ${SHELL} /home/milde/programming/synthesizer/neonlicht/missing automake-1.14
+AWK = gawk
 CC = gcc
 CCDEPMODE = depmode=gcc3
 CFLAGS = -g -O2
@@ -254,7 +256,7 @@ LDFLAGS =
 LIBOBJS = 
 LIBS = 
 LTLIBOBJS = 
-MAKEINFO = ${SHELL} /home/pi/programming/synthesizer/clone/neonlicht/missing makeinfo
+MAKEINFO = ${SHELL} /home/milde/programming/synthesizer/neonlicht/missing makeinfo
 MKDIR_P = /bin/mkdir -p
 OBJEXT = o
 PACKAGE = neonlicht
@@ -269,10 +271,10 @@ SET_MAKE =
 SHELL = /bin/bash
 STRIP = 
 VERSION = 0.0.1
-abs_builddir = /home/pi/programming/synthesizer/clone/neonlicht/src
-abs_srcdir = /home/pi/programming/synthesizer/clone/neonlicht/src
-abs_top_builddir = /home/pi/programming/synthesizer/clone/neonlicht
-abs_top_srcdir = /home/pi/programming/synthesizer/clone/neonlicht
+abs_builddir = /home/milde/programming/synthesizer/neonlicht/src
+abs_srcdir = /home/milde/programming/synthesizer/neonlicht/src
+abs_top_builddir = /home/milde/programming/synthesizer/neonlicht
+abs_top_srcdir = /home/milde/programming/synthesizer/neonlicht
 ac_ct_CC = gcc
 ac_ct_CXX = g++
 am__include = include
@@ -292,7 +294,7 @@ host_alias =
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
-install_sh = ${SHELL} /home/pi/programming/synthesizer/clone/neonlicht/install-sh
+install_sh = ${SHELL} /home/milde/programming/synthesizer/neonlicht/install-sh
 libdir = ${exec_prefix}/lib
 libexecdir = ${exec_prefix}/libexec
 localedir = ${datarootdir}/locale
@@ -354,7 +356,9 @@ kraftmaschine_SOURCES = kraftmaschine.cpp Neonlicht.cpp \
 	unit/CosineGen.cpp \
 	unit/EGOneStepGen.cpp \
 	unit/EGUpDownGen.cpp \
+	unit/EnvelopeGen.cpp \
 	unit/GatedConstantGen.cpp \
+	unit/InvertGen.cpp \
 	unit/MidiInputGen.cpp \
 	unit/MultiplyGen.cpp \
 	unit/MultiplyTwoGen.cpp \
@@ -397,7 +401,9 @@ ugentest_SOURCES = ugentest.cpp \
 	unit/CosineGen.cpp \
 	unit/EGOneStepGen.cpp \
 	unit/EGUpDownGen.cpp \
+	unit/EnvelopeGen.cpp \
 	unit/GatedConstantGen.cpp \
+	unit/InvertGen.cpp \
 	unit/MidiInputGen.cpp \
 	unit/MultiplyGen.cpp \
 	unit/MultiplyTwoGen.cpp \
@@ -616,7 +622,11 @@ unit/EGOneStepGen.$(OBJEXT): unit/$(am__dirstamp) \
 	unit/$(DEPDIR)/$(am__dirstamp)
 unit/EGUpDownGen.$(OBJEXT): unit/$(am__dirstamp) \
 	unit/$(DEPDIR)/$(am__dirstamp)
+unit/EnvelopeGen.$(OBJEXT): unit/$(am__dirstamp) \
+	unit/$(DEPDIR)/$(am__dirstamp)
 unit/GatedConstantGen.$(OBJEXT): unit/$(am__dirstamp) \
+	unit/$(DEPDIR)/$(am__dirstamp)
+unit/InvertGen.$(OBJEXT): unit/$(am__dirstamp) \
 	unit/$(DEPDIR)/$(am__dirstamp)
 unit/MidiInputGen.$(OBJEXT): unit/$(am__dirstamp) \
 	unit/$(DEPDIR)/$(am__dirstamp)
@@ -720,7 +730,9 @@ include unit/$(DEPDIR)/AddTwoGen.Po
 include unit/$(DEPDIR)/CosineGen.Po
 include unit/$(DEPDIR)/EGOneStepGen.Po
 include unit/$(DEPDIR)/EGUpDownGen.Po
+include unit/$(DEPDIR)/EnvelopeGen.Po
 include unit/$(DEPDIR)/GatedConstantGen.Po
+include unit/$(DEPDIR)/InvertGen.Po
 include unit/$(DEPDIR)/MidiInputGen.Po
 include unit/$(DEPDIR)/MultiSwitch5Gen.Po
 include unit/$(DEPDIR)/MultiplyGen.Po

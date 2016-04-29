@@ -115,7 +115,8 @@ am_kraftmaschine_OBJECTS = kraftmaschine.$(OBJEXT) Neonlicht.$(OBJEXT) \
 	spu/MyUnit.$(OBJEXT) unit/ADSRGen.$(OBJEXT) \
 	unit/AddTwoGen.$(OBJEXT) unit/CosineGen.$(OBJEXT) \
 	unit/EGOneStepGen.$(OBJEXT) unit/EGUpDownGen.$(OBJEXT) \
-	unit/GatedConstantGen.$(OBJEXT) unit/MidiInputGen.$(OBJEXT) \
+	unit/EnvelopeGen.$(OBJEXT) unit/GatedConstantGen.$(OBJEXT) \
+	unit/InvertGen.$(OBJEXT) unit/MidiInputGen.$(OBJEXT) \
 	unit/MultiplyGen.$(OBJEXT) unit/MultiplyTwoGen.$(OBJEXT) \
 	unit/MultiSwitch5Gen.$(OBJEXT) unit/NoiseGen.$(OBJEXT) \
 	unit/NumberGen.$(OBJEXT) unit/OscillatorGen.$(OBJEXT) \
@@ -145,7 +146,8 @@ am_ugentest_OBJECTS = ugentest.$(OBJEXT) util/CosineTable.$(OBJEXT) \
 	spu/MyUnit.$(OBJEXT) unit/ADSRGen.$(OBJEXT) \
 	unit/AddTwoGen.$(OBJEXT) unit/CosineGen.$(OBJEXT) \
 	unit/EGOneStepGen.$(OBJEXT) unit/EGUpDownGen.$(OBJEXT) \
-	unit/GatedConstantGen.$(OBJEXT) unit/MidiInputGen.$(OBJEXT) \
+	unit/EnvelopeGen.$(OBJEXT) unit/GatedConstantGen.$(OBJEXT) \
+	unit/InvertGen.$(OBJEXT) unit/MidiInputGen.$(OBJEXT) \
 	unit/MultiplyGen.$(OBJEXT) unit/MultiplyTwoGen.$(OBJEXT) \
 	unit/MultiSwitch5Gen.$(OBJEXT) unit/NoiseGen.$(OBJEXT) \
 	unit/NumberGen.$(OBJEXT) unit/OscillatorGen.$(OBJEXT) \
@@ -354,7 +356,9 @@ kraftmaschine_SOURCES = kraftmaschine.cpp Neonlicht.cpp \
 	unit/CosineGen.cpp \
 	unit/EGOneStepGen.cpp \
 	unit/EGUpDownGen.cpp \
+	unit/EnvelopeGen.cpp \
 	unit/GatedConstantGen.cpp \
+	unit/InvertGen.cpp \
 	unit/MidiInputGen.cpp \
 	unit/MultiplyGen.cpp \
 	unit/MultiplyTwoGen.cpp \
@@ -397,7 +401,9 @@ ugentest_SOURCES = ugentest.cpp \
 	unit/CosineGen.cpp \
 	unit/EGOneStepGen.cpp \
 	unit/EGUpDownGen.cpp \
+	unit/EnvelopeGen.cpp \
 	unit/GatedConstantGen.cpp \
+	unit/InvertGen.cpp \
 	unit/MidiInputGen.cpp \
 	unit/MultiplyGen.cpp \
 	unit/MultiplyTwoGen.cpp \
@@ -616,7 +622,11 @@ unit/EGOneStepGen.$(OBJEXT): unit/$(am__dirstamp) \
 	unit/$(DEPDIR)/$(am__dirstamp)
 unit/EGUpDownGen.$(OBJEXT): unit/$(am__dirstamp) \
 	unit/$(DEPDIR)/$(am__dirstamp)
+unit/EnvelopeGen.$(OBJEXT): unit/$(am__dirstamp) \
+	unit/$(DEPDIR)/$(am__dirstamp)
 unit/GatedConstantGen.$(OBJEXT): unit/$(am__dirstamp) \
+	unit/$(DEPDIR)/$(am__dirstamp)
+unit/InvertGen.$(OBJEXT): unit/$(am__dirstamp) \
 	unit/$(DEPDIR)/$(am__dirstamp)
 unit/MidiInputGen.$(OBJEXT): unit/$(am__dirstamp) \
 	unit/$(DEPDIR)/$(am__dirstamp)
@@ -720,7 +730,9 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@unit/$(DEPDIR)/CosineGen.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@unit/$(DEPDIR)/EGOneStepGen.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@unit/$(DEPDIR)/EGUpDownGen.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@unit/$(DEPDIR)/EnvelopeGen.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@unit/$(DEPDIR)/GatedConstantGen.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@unit/$(DEPDIR)/InvertGen.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@unit/$(DEPDIR)/MidiInputGen.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@unit/$(DEPDIR)/MultiSwitch5Gen.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@unit/$(DEPDIR)/MultiplyGen.Po@am__quote@

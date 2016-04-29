@@ -3,11 +3,11 @@
 
 
 #include <stdlib.h>    
-#include "UGen.h"
+#include "EnvelopeGen.h"
 #include "util/Interpolation.h"
 
 namespace unit {
-  class EGUpDownGen: public UGen {
+  class EGUpDownGen: public EnvelopeGen {
 
   public:
     EGUpDownGen();

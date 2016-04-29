@@ -2,12 +2,12 @@
 #define _ADRS_GEN_h_
 
 #include <stdlib.h>
-#include "UGen.h"
+#include "EnvelopeGen.h"
 #include "EGOneStepGen.h"
 #include "GatedConstantGen.h"
 
 namespace unit {
-  class ADSRGen : public UGen {
+  class ADSRGen : public EnvelopeGen {
 
     enum States {ATTACK, DECAY, SUSTAIN, RELEASE, IDLE};
 

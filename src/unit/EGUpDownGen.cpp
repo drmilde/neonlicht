@@ -5,7 +5,7 @@ using namespace unit;
 EGUpDownGen::EGUpDownGen() : EGUpDownGen("Tom Hanks") {
 }
 
-EGUpDownGen::EGUpDownGen(std::string name) : UGen(name, 3) {
+EGUpDownGen::EGUpDownGen(std::string name) : EnvelopeGen(name) {
   // add the ports
   durationPort = Port("duration", PortType::VALUE);  
   triggerPort = Port("trigger", PortType::VALUE);  

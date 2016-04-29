@@ -5,7 +5,7 @@ using namespace unit;
 ADSRGen::ADSRGen() : ADSRGen("") {
 }
 
-ADSRGen::ADSRGen(std::string name) : UGen(name,1) {
+ADSRGen::ADSRGen(std::string name) : EnvelopeGen(name) {
 
   attack = 0.1;
   decay = 0.3;
