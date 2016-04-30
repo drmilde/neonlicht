@@ -5,7 +5,7 @@ AM_CFLAGS = --pedantic -Wall -O3 -Wextra -fPIC
 # die LD flags muessen nach dem Quellcode positioniert werden
 LDADD = -L$(abs_top_builddir)/src/configuration/config4cpp/lib \
 	-L/usr/local/lib \
-	-lm -lpthread -lstk -lasound -loscpack -lconfig4cpp
+	-lm -lpthread -lstk -lasound -loscpack -lconfig4cpp -lncurses
 
 AM_CPPFLAGS = -std=c++11 -O3 -Wextra -D__LINUX_ALSA__ \
 	-I$(abs_top_builddir)/src/configuration/config4cpp/include \
@@ -139,4 +139,6 @@ fliehkraft_SOURCES = sequencer/fliehkraft.cpp \
 cmidiin_SOURCES = cmidiin.cpp \
 	osc/MidiConnector.cpp \
 	osc/OscOutConnector.cpp \
+	gui/GUI.cpp \
+	gui/WorkshopGUI.cpp \
 	util/KeyPressedControl.cpp 

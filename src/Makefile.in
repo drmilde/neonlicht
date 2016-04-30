@@ -92,7 +92,8 @@ am__installdirs = "$(DESTDIR)$(bindir)"
 PROGRAMS = $(bin_PROGRAMS)
 am__dirstamp = $(am__leading_dot)dirstamp
 am_cmidiin_OBJECTS = cmidiin.$(OBJEXT) osc/MidiConnector.$(OBJEXT) \
-	osc/OscOutConnector.$(OBJEXT) util/KeyPressedControl.$(OBJEXT)
+	osc/OscOutConnector.$(OBJEXT) gui/GUI.$(OBJEXT) \
+	gui/WorkshopGUI.$(OBJEXT) util/KeyPressedControl.$(OBJEXT)
 cmidiin_OBJECTS = $(am_cmidiin_OBJECTS)
 cmidiin_LDADD = $(LDADD)
 cmidiin_DEPENDENCIES =
@@ -326,7 +327,7 @@ AM_CFLAGS = --pedantic -Wall -O3 -Wextra -fPIC
 # die LD flags muessen nach dem Quellcode positioniert werden
 LDADD = -L$(abs_top_builddir)/src/configuration/config4cpp/lib \
 	-L/usr/local/lib \
-	-lm -lpthread -lstk -lasound -loscpack -lconfig4cpp
+	-lm -lpthread -lstk -lasound -loscpack -lconfig4cpp -lncurses
 
 AM_CPPFLAGS = -std=c++11 -O3 -Wextra -D__LINUX_ALSA__ \
 	-I$(abs_top_builddir)/src/configuration/config4cpp/include \
@@ -453,6 +454,8 @@ fliehkraft_SOURCES = sequencer/fliehkraft.cpp \
 cmidiin_SOURCES = cmidiin.cpp \
 	osc/MidiConnector.cpp \
 	osc/OscOutConnector.cpp \
+	gui/GUI.cpp \
+	gui/WorkshopGUI.cpp \
 	util/KeyPressedControl.cpp 
 
 all: all-am
@@ -541,6 +544,15 @@ osc/MidiConnector.$(OBJEXT): osc/$(am__dirstamp) \
 	osc/$(DEPDIR)/$(am__dirstamp)
 osc/OscOutConnector.$(OBJEXT): osc/$(am__dirstamp) \
 	osc/$(DEPDIR)/$(am__dirstamp)
+gui/$(am__dirstamp):
+	@$(MKDIR_P) gui
+	@: > gui/$(am__dirstamp)
+gui/$(DEPDIR)/$(am__dirstamp):
+	@$(MKDIR_P) gui/$(DEPDIR)
+	@: > gui/$(DEPDIR)/$(am__dirstamp)
+gui/GUI.$(OBJEXT): gui/$(am__dirstamp) gui/$(DEPDIR)/$(am__dirstamp)
+gui/WorkshopGUI.$(OBJEXT): gui/$(am__dirstamp) \
+	gui/$(DEPDIR)/$(am__dirstamp)
 util/$(am__dirstamp):
 	@$(MKDIR_P) util
 	@: > util/$(am__dirstamp)
@@ -716,6 +728,7 @@ ugentest$(EXEEXT): $(ugentest_OBJECTS) $(ugentest_DEPENDENCIES) $(EXTRA_ugentest
 mostlyclean-compile:
 	-rm -f *.$(OBJEXT)
 	-rm -f configuration/*.$(OBJEXT)
+	-rm -f gui/*.$(OBJEXT)
 	-rm -f osc/*.$(OBJEXT)
 	-rm -f sequencer/*.$(OBJEXT)
 	-rm -f spu/*.$(OBJEXT)
@@ -731,6 +744,8 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/kraftmaschine.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/ugentest.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@configuration/$(DEPDIR)/ConfigurationManager.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@gui/$(DEPDIR)/GUI.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@gui/$(DEPDIR)/WorkshopGUI.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@osc/$(DEPDIR)/MessageData.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@osc/$(DEPDIR)/MidiConnector.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@osc/$(DEPDIR)/OscInConnector.Po@am__quote@
@@ -923,6 +938,8 @@ distclean-generic:
 	-test . = "$(srcdir)" || test -z "$(CONFIG_CLEAN_VPATH_FILES)" || rm -f $(CONFIG_CLEAN_VPATH_FILES)
 	-rm -f configuration/$(DEPDIR)/$(am__dirstamp)
 	-rm -f configuration/$(am__dirstamp)
+	-rm -f gui/$(DEPDIR)/$(am__dirstamp)
+	-rm -f gui/$(am__dirstamp)
 	-rm -f osc/$(DEPDIR)/$(am__dirstamp)
 	-rm -f osc/$(am__dirstamp)
 	-rm -f sequencer/$(DEPDIR)/$(am__dirstamp)
@@ -944,7 +961,7 @@ clean: clean-am
 clean-am: clean-binPROGRAMS clean-generic mostlyclean-am
 
 distclean: distclean-am
-	-rm -rf ./$(DEPDIR) configuration/$(DEPDIR) osc/$(DEPDIR) sequencer/$(DEPDIR) spu/$(DEPDIR) store/$(DEPDIR) unit/$(DEPDIR) util/$(DEPDIR)
+	-rm -rf ./$(DEPDIR) configuration/$(DEPDIR) gui/$(DEPDIR) osc/$(DEPDIR) sequencer/$(DEPDIR) spu/$(DEPDIR) store/$(DEPDIR) unit/$(DEPDIR) util/$(DEPDIR)
 	-rm -f Makefile
 distclean-am: clean-am distclean-compile distclean-generic \
 	distclean-tags
@@ -990,7 +1007,7 @@ install-ps-am:
 installcheck-am:
 
 maintainer-clean: maintainer-clean-am
-	-rm -rf ./$(DEPDIR) configuration/$(DEPDIR) osc/$(DEPDIR) sequencer/$(DEPDIR) spu/$(DEPDIR) store/$(DEPDIR) unit/$(DEPDIR) util/$(DEPDIR)
+	-rm -rf ./$(DEPDIR) configuration/$(DEPDIR) gui/$(DEPDIR) osc/$(DEPDIR) sequencer/$(DEPDIR) spu/$(DEPDIR) store/$(DEPDIR) unit/$(DEPDIR) util/$(DEPDIR)
 	-rm -f Makefile
 maintainer-clean-am: distclean-am maintainer-clean-generic
 

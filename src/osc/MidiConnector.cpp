@@ -93,6 +93,9 @@ void MidiConnector::defaultCallback( double deltatime, std::vector< unsigned cha
   }
   }
 
+  // display GUI/Message
+
+  
   std::cout << messageType << " code=" << code << ", key=" << key << ", value/velocity=" << value << ", delta=" << f1 << "cnt = " << KEYCOUNT << std::endl;
 
   usleep(5 * 1000); // ein bischen warten HACK HACK HACK -> die Queue funktioniert nicht richtig
