@@ -42,6 +42,7 @@ kraftmaschine_SOURCES = kraftmaschine.cpp Neonlicht.cpp \
 	spu/ArturiaMiniLabUnit.cpp \
 	spu/WorkshopSPU.cpp \
 	spu/VCOModSPU.cpp \
+	spu/ADSRWorkshopSPU.cpp \
 	spu/MultiOscillatorSPU.cpp \
 	spu/LFOWorkshopSPU.cpp \
 	unit/ADSRGen.cpp \
@@ -90,6 +91,7 @@ ugentest_SOURCES =  ugentest.cpp \
 	spu/ArturiaMiniLabUnit.cpp \
 	spu/WorkshopSPU.cpp \
 	spu/VCOModSPU.cpp \
+	spu/ADSRWorkshopSPU.cpp \
 	spu/MultiOscillatorSPU.cpp \
 	spu/LFOWorkshopSPU.cpp \
 	unit/ADSRGen.cpp  \

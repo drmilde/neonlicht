@@ -5,7 +5,7 @@
 %%For: 
 %Magnification: 1.00
 %%Orientation: Portrait
-%%BoundingBox: 0 0 500 266.666667
+%%BoundingBox: 0 0 500 186.567164
 %%Pages: 0
 %%BeginSetup
 %%EndSetup
@@ -19,13 +19,13 @@
 /marginwidth 10 def
 /distx 20 def
 /disty 40 def
-/boundaspect 1.875000 def  % aspect ratio of the BoundingBox (width/height)
+/boundaspect 2.680000 def  % aspect ratio of the BoundingBox (width/height)
 /boundx 500 def
 /boundy boundx boundaspect div def
 /xspacing 0 def
 /yspacing 0 def
 /rows 5 def
-/cols 3 def
+/cols 4 def
 /scalefactor 0 def
 /boxfont /Times-Roman findfont fontheight scalefont def
 
@@ -176,6 +176,7 @@ boxfont setfont
 (ArturiaMiniLabUnit) cw
 (unit::SoundUnit) cw
 (unit::UGen) cw
+(ADSRWorkshopSPU) cw
 (MultiOscillatorSPU) cw
 (VCOModSPU) cw
 (WorkshopSPU) cw
@@ -191,35 +192,38 @@ boundx scalefactor div boundy scalefactor div scale
 
 % ----- classes -----
 
- (ArturiaMiniLabUnit) 1.000000 2.000000 box
- (unit::SoundUnit) 1.000000 3.000000 box
- (unit::UGen) 1.000000 4.000000 box
- (MultiOscillatorSPU) 0.000000 1.000000 box
- (VCOModSPU) 1.000000 1.000000 box
- (WorkshopSPU) 2.000000 1.000000 box
- (LFOWorkshopSPU) 0.000000 0.000000 box
+ (ArturiaMiniLabUnit) 1.500000 2.000000 box
+ (unit::SoundUnit) 1.500000 3.000000 box
+ (unit::UGen) 1.500000 4.000000 box
+ (ADSRWorkshopSPU) 0.000000 1.000000 box
+ (MultiOscillatorSPU) 1.000000 1.000000 box
+ (VCOModSPU) 2.000000 1.000000 box
+ (WorkshopSPU) 3.000000 1.000000 box
+ (LFOWorkshopSPU) 1.000000 0.000000 box
 
 % ----- relations -----
 
 solid
-0 1.000000 2.000000 out
+0 1.500000 2.000000 out
 solid
-1 1.000000 3.000000 in
+1 1.500000 3.000000 in
 solid
-0 1.000000 3.000000 out
+0 1.500000 3.000000 out
 solid
-1 1.000000 4.000000 in
+1 1.500000 4.000000 in
 solid
-1 1.000000 1.250000 out
+1 1.500000 1.250000 out
 solid
-0.000000 2.000000 2.000000 conn
+0.000000 3.000000 2.000000 conn
 solid
 0 0.000000 1.750000 in
 solid
-1 0.000000 0.250000 out
-solid
 0 1.000000 1.750000 in
+solid
+1 1.000000 0.250000 out
 solid
 0 2.000000 1.750000 in
 solid
-0 0.000000 0.750000 in
+0 3.000000 1.750000 in
+solid
+0 1.000000 0.750000 in

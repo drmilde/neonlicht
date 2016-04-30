@@ -12,7 +12,7 @@ WorkshopSPU::WorkshopSPU() : ArturiaMiniLabUnit("The German Workshop") {
   lfo->control("select triangle", 1.0);
 
   midiin = new unit::MidiInputGen("midiin");
-  adsr = new unit::ADSRGen("adsr");
+  adsr = new ADSRWorkshopSPU("adsr");
 }
 
 void WorkshopSPU::control(std::string portName, float value) {
@@ -54,6 +54,22 @@ void WorkshopSPU::control(std::string portName, float value) {
   if (portName == "pad 16") {
     lfo->control("select square", 1.0);
   }
+
+  // adsr
+  if (portName == "attack") {
+    adsr->control("attack", value);
+  }
+  if (portName == "decay") {
+    adsr->control("decay", value);
+  }
+  if (portName == "sustain") {
+    adsr->control("sustain", value);
+  }
+  if (portName == "release") {
+    adsr->control("attack", value);
+  }
+
+
 }
 
 

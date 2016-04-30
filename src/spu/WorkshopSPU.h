@@ -5,10 +5,10 @@
 
 #include "spu/MultiOscillatorSPU.h"
 #include "spu/LFOWorkshopSPU.h"
+#include "spu/ADSRWorkshopSPU.h"
 
 #include "unit/NumberGen.h"
 #include "unit/MidiInputGen.h"
-#include "unit/ADSRGen.h"
 #include "unit/WaveOutGen.h"
 #include "util/MidiUtil.h"
 
@@ -23,11 +23,11 @@ class WorkshopSPU : public ArturiaMiniLabUnit {
   // UGens used
   unit::NumberGen* lfoAmnt;
   unit::MidiInputGen* midiin;
-  unit::ADSRGen* adsr;
 
   // SPU building blocks of Workshop
   MultiOscillatorSPU* vco;
   LFOWorkshopSPU* lfo;
+  ADSRWorkshopSPU* adsr;
 
   unit::WaveOutGen* waveOut;
 

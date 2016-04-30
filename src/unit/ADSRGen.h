@@ -21,6 +21,11 @@ namespace unit {
     void setTrigger();    
     void setGate(float value);
 
+    void setAttack(float value);
+    void setDecay(float value);
+    void setSustain(float value);
+    void setRelease(float value);
+
 
   private:
     void reset();
@@ -29,10 +34,6 @@ namespace unit {
     bool isTriggered;
     bool gate;
 
-    float attack; // in seconds
-    float decay; // in seconds
-    float sustain; // value, usually in [0,1]
-    float release; // in seconds
     float lastval;
 
     EGOneStepGen* AttackGen;

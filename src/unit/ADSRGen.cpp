@@ -7,35 +7,21 @@ ADSRGen::ADSRGen() : ADSRGen("") {
 
 ADSRGen::ADSRGen(std::string name) : EnvelopeGen(name) {
 
-  attack = 0.1;
-  decay = 0.3;
-  sustain = 0.5;
-  release = 0.5;
   lastval = 0.0;
   
   AttackGen = new EGOneStepGen("Attack");
-  AttackGen->setDuration(attack);
-  AttackGen->setStartLevel(0.0);
-  AttackGen->setEndLevel(1.0);
-
-  DecayGen = new EGOneStepGen("Decay");
-  DecayGen->setDuration(decay);
-  DecayGen->setStartLevel(1.0);
-  DecayGen->setEndLevel(sustain);
-
+  DecayGen = new EGOneStepGen("Decay");  
   SustainGen = new GatedConstantGen();
-  SustainGen->control("value", sustain);
-  SustainGen->control("gate", 1.0); // send value
-
-
   ReleaseGen = new EGOneStepGen("Release");
-  ReleaseGen->setDuration(release);
-  ReleaseGen->setStartLevel(sustain);
-  ReleaseGen->setEndLevel(0.0);
 
+  setAttack(0.1);
+  setDecay(0.3);
+  setSustain(0.5);
+  setRelease(0.5);
   
   reset();
 }
+
 
 void ADSRGen::control(std::string portName, float value) {
   if (portName == "trigger") {
@@ -44,6 +30,22 @@ void ADSRGen::control(std::string portName, float value) {
 
   if (portName == "gate") {
     setGate(value);
+  }
+
+  if (portName == "attack") {
+    setAttack(value);
+  }
+
+  if (portName == "decay") {
+    setDecay(value);
+  }
+
+  if (portName == "sustain") {
+    setSustain(value);
+  }
+
+  if (portName == "release") {
+    setRelease(value);
   }
 }
 
@@ -57,6 +59,28 @@ void ADSRGen::setGate(float value) {
   gate = (value >= 1);
 }
 
+void ADSRGen::setAttack(float value) {
+  AttackGen->setDuration(value);
+  AttackGen->setStartLevel(0.0);
+  AttackGen->setEndLevel(1.0);
+}
+
+void ADSRGen::setDecay(float value) {
+  DecayGen->setDuration(value);
+  DecayGen->setStartLevel(1.0);
+  DecayGen->setEndLevel(SustainGen->tick());
+}
+
+void ADSRGen::setSustain(float value) {
+  SustainGen->control("value", value);
+  SustainGen->control("gate", 1.0); // send value
+
+}
+void ADSRGen::setRelease(float value) {
+  ReleaseGen->setDuration(value);
+  ReleaseGen->setStartLevel(SustainGen->tick());
+  ReleaseGen->setEndLevel(0.0);
+}
 
 void ADSRGen::reset() {
   state = IDLE;
