@@ -19,14 +19,14 @@ class MultiOscillatorSPU : public ArturiaMiniLabUnit {
   float tick();
   void control(std::string portName, float value);
 
-  // fast acces function
+  // fast access function
   void setFrequencyMod(float value);
   void setPulseWidthMod(float value);
 
-
  private:
   void setOscillatorFreq(float value);
-    
+  void selectOscillator (float value);
+
   // UGens used
   unit::NumberGen* frequency;
   unit::NumberGen* frequencyMod;
@@ -41,6 +41,7 @@ class MultiOscillatorSPU : public ArturiaMiniLabUnit {
   unit::SquareGen* square;
 
   unit::MultiSwitch5Gen* oscillatorSwitch;
+
 };
 
 

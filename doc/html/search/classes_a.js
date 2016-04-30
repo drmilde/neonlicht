@@ -1,12 +1,8 @@
 var searchData=
 [
-  ['sawgen',['SawGen',['../classunit_1_1SawGen.html',1,'unit']]],
-  ['soundunit',['SoundUnit',['../classunit_1_1SoundUnit.html',1,'unit']]],
-  ['squaregen',['SquareGen',['../classunit_1_1SquareGen.html',1,'unit']]],
-  ['stkadaptergen',['STKAdapterGen',['../classunit_1_1STKAdapterGen.html',1,'unit']]],
-  ['stkbiquadgen',['STKBiQuadGen',['../classunit_1_1STKBiQuadGen.html',1,'unit']]],
-  ['stkonepolegen',['STKOnePoleGen',['../classunit_1_1STKOnePoleGen.html',1,'unit']]],
-  ['stkonezerogen',['STKOneZeroGen',['../classunit_1_1STKOneZeroGen.html',1,'unit']]],
-  ['stktwopolegen',['STKTwoPoleGen',['../classunit_1_1STKTwoPoleGen.html',1,'unit']]],
-  ['stktwozerogen',['STKTwoZeroGen',['../classunit_1_1STKTwoZeroGen.html',1,'unit']]]
+  ['patch',['Patch',['../classPatch.html',1,'']]],
+  ['phasorgen',['PhasorGen',['../classunit_1_1PhasorGen.html',1,'unit']]],
+  ['port',['Port',['../classPort.html',1,'']]],
+  ['pulse',['Pulse',['../classPulse.html',1,'']]],
+  ['pulsegen',['PulseGen',['../classunit_1_1PulseGen.html',1,'unit']]]
 ];

@@ -15,8 +15,12 @@ namespace unit {
     ADSRGen();
     ADSRGen(std::string name);
     void control(std::string portName, float value);
-
     float tick();
+
+    // fast access functuions
+    void setTrigger();    
+    void setGate(float value);
+
 
   private:
     void reset();

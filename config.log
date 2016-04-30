@@ -275,7 +275,7 @@ configure:4718: gcc -o conftest -g -O2   conftest.c  >&5
 conftest.c:48:6: warning: conflicting types for built-in function 'sqrt'
  char sqrt ();
       ^
-/tmp/ccQy5GeT.o: In function `main':
+/tmp/ccYvcEj8.o: In function `main':
 /home/pi/programming/synthesizer/clone/neonlicht/conftest.c:59: undefined reference to `sqrt'
 collect2: error: ld returned 1 exit status
 configure:4718: $? = 1

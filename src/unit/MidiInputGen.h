@@ -16,6 +16,12 @@ namespace unit {
     float tick(); // override standard implementation
     void control(std::string portName, float value);
 
+    // fast access functions
+    float getKey();
+    float getVelocity();
+    float getGate();
+    float getTrigger();
+
   private:
     int midiOnCount = 0;
     int triggerCount = 0;

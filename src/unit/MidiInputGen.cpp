@@ -29,9 +29,27 @@ void MidiInputGen::control (std::string portName, float value) {
   if (portName == "reset") { // reset, if hanging midi events
     midiOnCount = 0;
     triggerCount = 0;
-  }
-  
+  }  
 }
+
+// fast acess functions
+float MidiInputGen::getKey() {
+  return getAmnt1(); // key
+}
+
+float MidiInputGen::getVelocity() {
+  return getAmnt2(); // key  
+}
+
+float MidiInputGen::getGate() {
+  return getOut1();
+}
+
+float MidiInputGen::getTrigger() {
+  return getOut2();
+}
+
+
 
 
 // overrides tick() in UGen

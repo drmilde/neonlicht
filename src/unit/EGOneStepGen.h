@@ -17,6 +17,8 @@ namespace unit {
     void control(std::string portName, float value);
     bool finished();
 
+    // fast access function
+    void setTrigger();
     void setDuration (float seconds);
     void setStartLevel (float level);
     void setEndLevel (float level);

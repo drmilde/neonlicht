@@ -13,6 +13,22 @@ EGOneStepGen::EGOneStepGen(std::string name) : EnvelopeGen(name) {
   reset();
 }
 
+void EGOneStepGen::control (std::string portName, float value) {
+  // external control to start the EG step
+  // to be used inside more complex UGens
+
+  if (portName == "trigger") {
+    setTrigger();
+    //std::cout << NAME << ": EG one step is triggered" << std::endl;
+  }
+}
+
+// fast access functions
+void EGOneStepGen::setTrigger() {
+  reset();
+  hasStarted = true;
+}
+
 bool EGOneStepGen::finished() {
   return isReady;
 }
@@ -37,17 +53,6 @@ void EGOneStepGen::reset() {
   currentx = 0;
   isReady = false;
   hasStarted = false;
-}
-
-void EGOneStepGen::control (std::string portName, float value) {
-  // external control to start the EG step
-  // to be used inside more complex UGens
-
-  if (portName == "trigger") {
-    reset();
-    hasStarted = true;
-    std::cout << NAME << ": EG one step is triggered" << std::endl;
-  }
 }
 
 

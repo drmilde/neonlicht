@@ -1,38 +1,77 @@
 #include "WorkshopSPU.h"
 
-
 WorkshopSPU::WorkshopSPU() : ArturiaMiniLabUnit("The German Workshop") {
   // do something useful here
+  lfoAmnt = new unit::NumberGen("lfo amnt");
+  lfoAmnt->control("lfo amnt", 0.1);
+ 
+  vco = new MultiOscillatorSPU("multi osc 0");
 
-  frequency = new unit::NumberGen("frequency");
-  select = new unit::NumberGen("select");
-  select->control("select OSC", 0);
+  lfo = new LFOWorkshopSPU("lfo 0");
+  lfo->control("frequency", 5.0);
+  lfo->control("select triangle", 1.0);
 
-  mosc = new MultiOscillatorSPU("multi osc 0");
-
-  lfo = new unit::CosineGen("lfo 1");
-  lfo->control("frequency", 2.0);
-  
+  midiin = new unit::MidiInputGen("midiin");
+  adsr = new unit::ADSRGen("adsr");
 }
 
 void WorkshopSPU::control(std::string portName, float value) {
+
+  // process keys
+  if (portName == "midi on") {
+    midiin->control("midi on", value);
+    vco->control("frequency", util::MidiUtil::midi2frequency(int(value)));
+  }
+  if (portName == "midi off") {
+    midiin->control("midi off", value);
+  }
+  if (portName == "velocity") {
+    midiin->control("velocity", value);
+  }
+  
+  // control parameters of the SPUs
   if (portName == "param 1") {
-    mosc->control("frequency", value);
+    vco->control("frequency", value * 880.0);
   }
   if (portName == "param 2") {
-    mosc->control("pwm", value);
+    vco->control("pwm", value);
   }
-  if (portName == "param 3") {
+  if (portName == "lfo rate") {
+    lfo->control("frequency", value * 10.0);
+  }
+  if (portName == "lfo amnt") {
+    lfoAmnt->control("lfoamnt", value);
+  }
+  if (portName == "pad 13") { // AAAARGH, midi hangs
+    midiin->control("reset", 1);
+  }
+  if (portName == "pad 14") { // flip through the oscillators of vco
+    vco->control("next osc", value);
   }
   if (portName == "pad 15") {
-    mosc->control("next osc", value);
+    lfo->control("select triangle", 1.0);
   }
   if (portName == "pad 16") {
+    lfo->control("select square", 1.0);
   }
 }
 
 
 float WorkshopSPU::tick() {
-  mosc->setPulseWidthMod(lfo->tick() * 1.2);
-  return mosc->tick();
+  midiin->tick(); // midi input
+
+  if (midiin->getTrigger() > 0) {
+    adsr->setTrigger(); // start the adsr
+  }
+
+  if (midiin->getGate() > 0) {
+    //vco->setPulseWidthMod(lfo->tick() * 1.2);
+    vco->setFrequencyMod(1.0 + (lfo->tick() * lfoAmnt->tick())); // berechne und setzt modulierte Frequenz
+  }
+  
+  setOut1(vco->tick()); // speichere den aktuellen sample wert
+  
+  adsr->setGate(midiin->getGate()); // set gate in adsr
+
+  return getOut1()*adsr->tick(); 
 }

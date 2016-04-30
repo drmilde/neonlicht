@@ -10,7 +10,7 @@ ADSRGen::ADSRGen(std::string name) : EnvelopeGen(name) {
   attack = 0.1;
   decay = 0.3;
   sustain = 0.5;
-  release = 0.2;
+  release = 0.5;
   lastval = 0.0;
   
   AttackGen = new EGOneStepGen("Attack");
@@ -24,10 +24,11 @@ ADSRGen::ADSRGen(std::string name) : EnvelopeGen(name) {
   DecayGen->setEndLevel(sustain);
 
   SustainGen = new GatedConstantGen();
-  SustainGen->control("amnt1", sustain);
-  SustainGen->control("amnt2", 1.0); // send value
+  SustainGen->control("value", sustain);
+  SustainGen->control("gate", 1.0); // send value
 
-  ReleaseGen = new EGOneStepGen("Sustain");
+
+  ReleaseGen = new EGOneStepGen("Release");
   ReleaseGen->setDuration(release);
   ReleaseGen->setStartLevel(sustain);
   ReleaseGen->setEndLevel(0.0);
@@ -38,14 +39,24 @@ ADSRGen::ADSRGen(std::string name) : EnvelopeGen(name) {
 
 void ADSRGen::control(std::string portName, float value) {
   if (portName == "trigger") {
-    reset();
-    isTriggered = true;
+    setTrigger();
   }
 
   if (portName == "gate") {
-    gate = (value >= 1);
+    setGate(value);
   }
 }
+
+// fast access functions
+void ADSRGen::setTrigger() {
+  reset();
+  isTriggered = true;
+}
+
+void ADSRGen::setGate(float value) {
+  gate = (value >= 1);
+}
+
 
 void ADSRGen::reset() {
   state = IDLE;
@@ -57,60 +68,51 @@ void ADSRGen::reset() {
   ReleaseGen->reset();
 }
 
+// berechne den aktuellen sample wert
+
 float ADSRGen::tick() {
   // step through the states of the ADSR
 
+  if ( (state == ATTACK) || (state == DECAY) || (state == SUSTAIN) ) { // ADSR is running
+    if (!gate) { // key has been released
+      state = RELEASE;
+      ReleaseGen->setTrigger(); // trigger the ReleaseGen
+    }
+  }
+  
   switch (state) {
   case IDLE: { // waiting for trigger
     setOut1(lastval);
     
     if (isTriggered) { // ADSR trigger is set, switch to ATTACK
       isTriggered = false; // process trigger impulse
-      AttackGen->control("trigger", 1.0); // trigger the AttackGen      
+      AttackGen->setTrigger(); // trigger the AttackGen
       
       state = ATTACK;
     }
     break;
   }
-  case ATTACK: {
-    if (!gate) { // key has been released
-      state = RELEASE;
-      ReleaseGen->control("trigger", 1.0); // trigger the ReleaseGen
-    } else {
-      
-      // process attack interpolation
-      setOut1(AttackGen->tick());
-      if (AttackGen->finished()) { // ready with attack phase? then switch to DECAY;
-	state = DECAY;
-	DecayGen->control("trigger", 1.0); // trigger the DecayGen
-      }
-    }    
+  case ATTACK: {      
+    // process attack interpolation
+    setOut1(AttackGen->tick());
+    if (AttackGen->finished()) { // ready with attack phase? then switch to DECAY;
+      state = DECAY;
+      DecayGen->setTrigger(); // trigger the DecayGen
+    }
     break;
   }
-  case DECAY: {
-    if (!gate) { // key has been released
-      state = RELEASE;
-      ReleaseGen->control("trigger", 1.0); // trigger the ReleaseGen
-    } else {
-      
-      // process decay interpolation
-      setOut1(DecayGen->tick());
-      if (DecayGen->finished()) { // ready with attack phase? then switch to SUSTAIN;
-	state = SUSTAIN;
-	SustainGen->control("amnt2", 1.0); // send sustain value
-      }
-      
+  case DECAY: {      
+    // process decay interpolation
+    setOut1(DecayGen->tick());
+    if (DecayGen->finished()) { // ready with attack phase? then switch to SUSTAIN;
+      state = SUSTAIN;
+      SustainGen->control("amnt2", 1.0); // send sustain value      
     }
     break;
   }
   case SUSTAIN: {
-    if (!gate) { // key has been released
-      state = RELEASE;
-      ReleaseGen->control("trigger", 1.0); // trigger the ReleaseGen
-    } else {
-      // process sustain hold      
-      setOut1(SustainGen->tick()); // send out value, as long as ADSR gate is 1 (key is pressed
-    }
+    // process sustain hold
+    setOut1(SustainGen->tick()); // send out value, as long as ADSR gate is 1 (key is pressed
     break;
   }
   case RELEASE: {
@@ -121,7 +123,7 @@ float ADSRGen::tick() {
     }
     
     if (isTriggered) { // (another) key has been pressed
-      // do something her, I dont really know what exactly :)
+      // do something here, I dont really know what exactly :)
     }
     
     break;

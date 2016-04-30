@@ -35,6 +35,8 @@ MultiOscillatorSPU::MultiOscillatorSPU(std::string name) : ArturiaMiniLabUnit(na
   oscillatorSwitch = new unit::MultiSwitch5Gen();
 }
 
+// private routines
+
 void MultiOscillatorSPU::setOscillatorFreq(float value) {
   pulse->setFrequency(value);
   saw->setFrequency(value);
@@ -42,29 +44,34 @@ void MultiOscillatorSPU::setOscillatorFreq(float value) {
   square->setFrequency(value);  
 }
 
+void MultiOscillatorSPU::selectOscillator (float value) {
+  select->control("selectOsc", ((int)(value)%5));
+  oscillatorSwitch->setSelect(select->tick());
+}
+
+// control interface, slow !
+
 void MultiOscillatorSPU::control(std::string portName, float value) {
   if (portName == "frequency") {
-    frequency->control("frequency", value*880.0);
+    frequency->control("frequency", value);
     setOscillatorFreq(frequency->tick());
   }
   if (portName == "pwm") {
     pulseWidth->control("pwm", value);
     pulse->setPulseWidth(pulseWidth->tick());
   }
-  if (portName == "param 3") {
-  }
-  if (portName == "param 4") {
-  }
   if (portName == "next osc") {
     if (value == 1) {
-      select->control("selectOsc", ((int)(select->tick() + 1)%5));
-      oscillatorSwitch->setSelect(select->tick());
+      selectOscillator(select->tick() + 1);
     }
   }
-  if (portName == "pad 16") {
-  }
+  if (portName == "select osc") {
+    selectOscillator(value);
+  }  
 }
 
+
+// fast access functions
 
 void MultiOscillatorSPU::setPulseWidthMod(float value) {
     pulseWidthMod->setValue(value);
@@ -74,6 +81,8 @@ void MultiOscillatorSPU::setFrequencyMod(float value) {
   frequencyMod->setValue(value);
 }
 
+
+// calculate the sample/output value
 
 float MultiOscillatorSPU::tick() {
 
