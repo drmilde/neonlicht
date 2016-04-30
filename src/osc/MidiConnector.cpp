@@ -9,9 +9,12 @@
 
 using namespace osc;
 
+// static varables
 OscOutConnector MidiConnector::oscCon("localhost", 7000);
 int MidiConnector::KEYCOUNT = 0;
 util::KeyPressedControl MidiConnector::keyControl;
+GUI* MidiConnector::gui = new WorkshopGUI();
+
 
 MidiConnector::MidiConnector(int p):midiPort(p) {
   int result = setup(midiin);
@@ -33,6 +36,7 @@ MidiConnector::MidiConnector():MidiConnector(1) {
 
 
 MidiConnector::~MidiConnector() {
+  delete gui;
   delete midiin;
 }
 
@@ -93,10 +97,17 @@ void MidiConnector::defaultCallback( double deltatime, std::vector< unsigned cha
   }
   }
 
-  // display GUI/Message
-
-  
-  std::cout << messageType << " code=" << code << ", key=" << key << ", value/velocity=" << value << ", delta=" << f1 << "cnt = " << KEYCOUNT << std::endl;
+  // display GUI/Message  
+  if (gui != NULL) {
+    if (messageType == "/control") {
+      gui->setValue(GUIMapping::mapMiniLab2Workshop(key, value), value);
+      gui->redraw();
+    }
+  } else {
+    std::cout << messageType << " code=" << code;
+    std::cout << ", key=" << key << ", value/velocity=" << value;
+    std::cout << ", delta=" << f1 << "cnt = " << KEYCOUNT << std::endl;
+  }
 
   usleep(5 * 1000); // ein bischen warten HACK HACK HACK -> die Queue funktioniert nicht richtig
 

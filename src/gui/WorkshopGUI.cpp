@@ -1,6 +1,6 @@
 #include "WorkshopGUI.h"
 
-WorkshopGUI::WorkshopGUI() : WorkshopGUI("") {
+WorkshopGUI::WorkshopGUI() : WorkshopGUI("Simply Beautiful") {
 }
 
 WorkshopGUI::WorkshopGUI(std::string name) {
@@ -19,7 +19,7 @@ WorkshopGUI::WorkshopGUI(std::string name) {
   start_color();                    
 
   /* redraw the interface */
-  //redraw();
+  redraw();
 }
 
 
@@ -94,8 +94,11 @@ void WorkshopGUI::setValue(std::string name, float value) {
   if (name == "lfo rate") {
     lfoRate = (int)value;
   }
-  if (name == "lfo wave") {
-    lfoWave = (int)value;
+  if (name == "lfo wave triangle") {
+    lfoWave = 1;
+  }
+  if (name == "lfo wave square") {
+    lfoWave = 0;
   }
 
   if (name == "sustain") {
@@ -118,8 +121,6 @@ void WorkshopGUI::setValue(std::string name, float value) {
 void WorkshopGUI::drawVCO(int x, int y, int fval, int wave, int pwmval) {
   vcoWin = subwin(mainwin, 7, 30, y, x);
 
-  char buffer [33];
-
   if ( has_colors() && COLOR_PAIRS >= 2 ) {       
     box(vcoWin, 0, 0);
     
@@ -128,7 +129,7 @@ void WorkshopGUI::drawVCO(int x, int y, int fval, int wave, int pwmval) {
 
     mvwaddstr(vcoWin, 1, 1, "VCO");
     
-    sprintf(buffer,"%d",fval);
+    sprintf(buffer,"%d ",fval);
     mvwaddstr(vcoWin, 3, 2, buffer);    
     mvwaddstr(vcoWin, 5, 2, "FREQ");
     
@@ -137,12 +138,14 @@ void WorkshopGUI::drawVCO(int x, int y, int fval, int wave, int pwmval) {
     mvwaddstr(vcoWin, 5, 12, "WAVE");
     if (wave == 0) {
       mvwaddstr(vcoWin, 3, 12, "*");
+      mvwaddstr(vcoWin, 4, 12, " ");
     }
     if (wave == 1) {
       mvwaddstr(vcoWin, 4, 12, "*");
+      mvwaddstr(vcoWin, 3, 12, " ");
     }
 
-    sprintf(buffer,"%d",pwmval);
+    sprintf(buffer,"%d ",pwmval);
     mvwaddstr(vcoWin, 3, 22, buffer);    
     mvwaddstr(vcoWin, 5, 22, "PWM");
 
@@ -156,7 +159,6 @@ void WorkshopGUI::drawVCO(int x, int y, int fval, int wave, int pwmval) {
 void WorkshopGUI::drawVCF(int x, int y, int cuttoff, int res) {
   vcfWin = subwin(mainwin, 7, 18, y, x);
 
-  char buffer [33];
 
   if ( has_colors() && COLOR_PAIRS >= 2 ) {       
     box(vcfWin, 0, 0);
@@ -166,11 +168,11 @@ void WorkshopGUI::drawVCF(int x, int y, int cuttoff, int res) {
 
     mvwaddstr(vcfWin, 1, 1, "VCF");
     
-    sprintf(buffer,"%d",cuttoff);
+    sprintf(buffer,"%d ",cuttoff);
     mvwaddstr(vcfWin, 3, 2, buffer);    
     mvwaddstr(vcfWin, 5, 2, "CUTOFF");
 
-    sprintf(buffer,"%d",res);
+    sprintf(buffer,"%d ",res);
     mvwaddstr(vcfWin, 3, 12, buffer);    
     mvwaddstr(vcfWin, 5, 12, "RES");
     
@@ -201,9 +203,11 @@ void WorkshopGUI::drawVCA(int x, int y, int mode) {
 
     if (mode == 0) {
       mvwaddstr(vcaWin, 3, 3, "*");
+      mvwaddstr(vcaWin, 4, 3, " ");
     }
     if (mode == 1) {
       mvwaddstr(vcaWin, 4, 3, "*");
+      mvwaddstr(vcaWin, 3, 3, " ");
     }
 
 
@@ -232,12 +236,14 @@ void WorkshopGUI::drawVCOMod(int x, int y, int source, int amount, int dest) {
     mvwaddstr(vcoMod, 5, 2, "SOURCE");
     if (source == 0) {
       mvwaddstr(vcoMod, 3, 2, "*");
+      mvwaddstr(vcoMod, 4, 2, " ");
     }
     if (source == 1) {
       mvwaddstr(vcoMod, 4, 2, "*");
+      mvwaddstr(vcoMod, 3, 2, " ");
     }
 
-    sprintf(buffer,"%d",amount);
+    sprintf(buffer,"%d ",amount);
     mvwaddstr(vcoMod, 3, 12, buffer);    
     mvwaddstr(vcoMod, 5, 12, "AMOUNT");
 
@@ -247,9 +253,11 @@ void WorkshopGUI::drawVCOMod(int x, int y, int source, int amount, int dest) {
     mvwaddstr(vcoMod, 5, 22, "DEST");
     if (dest == 0) {
       mvwaddstr(vcoMod, 3, 22, "*");
+      mvwaddstr(vcoMod, 4, 22, " ");
     }
     if (dest == 1) {
       mvwaddstr(vcoMod, 4, 22, "*");
+      mvwaddstr(vcoMod, 3, 22, " ");
     }
 
     wbkgd(vcoMod,COLOR_PAIR(2));
@@ -277,12 +285,14 @@ void WorkshopGUI::drawVCFMod(int x, int y, int source, int amount, int polarity)
     mvwaddstr(vcfMod, 5, 2, "SOURCE");
     if (source == 0) {
       mvwaddstr(vcfMod, 3, 2, "*");
+      mvwaddstr(vcfMod, 4, 2, " ");
     }
     if (source == 1) {
       mvwaddstr(vcfMod, 4, 2, "*");
+      mvwaddstr(vcfMod, 3, 2, " ");
     }
 
-    sprintf(buffer,"%d",amount);
+    sprintf(buffer,"%d ",amount);
     mvwaddstr(vcfMod, 3, 12, buffer);    
     mvwaddstr(vcfMod, 5, 12, "AMOUNT");
 
@@ -292,9 +302,11 @@ void WorkshopGUI::drawVCFMod(int x, int y, int source, int amount, int polarity)
     mvwaddstr(vcfMod, 5, 19, "POLARITY");
     if (polarity == 0) {
       mvwaddstr(vcfMod, 3, 21, "*");
+      mvwaddstr(vcfMod, 4, 21, " ");
     }
     if (polarity == 1) {
       mvwaddstr(vcfMod, 4, 21, "*");
+      mvwaddstr(vcfMod, 3, 21, " ");
     }
 
     wbkgd(vcfMod,COLOR_PAIR(2));
@@ -306,8 +318,6 @@ void WorkshopGUI::drawVCFMod(int x, int y, int source, int amount, int polarity)
 void WorkshopGUI::drawLFO(int x, int y, int rate, int wave) {
   lfo = subwin(mainwin, 7, 30, y, x);
 
-  char buffer [33];
-
   if ( has_colors() && COLOR_PAIRS >= 2 ) {       
     box(lfo, 0, 0);
     
@@ -316,7 +326,7 @@ void WorkshopGUI::drawLFO(int x, int y, int rate, int wave) {
 
     mvwaddstr(lfo, 1, 1, "LFO");
 
-    sprintf(buffer,"%d",rate);
+    sprintf(buffer,"%d ",rate);
     mvwaddstr(lfo, 3, 2, buffer);    
     mvwaddstr(lfo, 5, 2, "RATE");
 
@@ -326,9 +336,11 @@ void WorkshopGUI::drawLFO(int x, int y, int rate, int wave) {
     mvwaddstr(lfo, 5, 18, "WAVE");
     if (wave == 0) {
       mvwaddstr(lfo, 3, 18, "*");
+      mvwaddstr(lfo, 4, 18, " ");
     }
     if (wave == 1) {
       mvwaddstr(lfo, 4, 18, "*");
+      mvwaddstr(lfo, 3, 18, " ");
     }
 
     wbkgd(lfo,COLOR_PAIR(2));
@@ -339,8 +351,6 @@ void WorkshopGUI::drawLFO(int x, int y, int rate, int wave) {
 
 void WorkshopGUI::drawEnvelope(int x, int y, int sustain, int attack, int decay) {
   envelope = subwin(mainwin, 7, 28, y, x);
-
-  char buffer [33];
 
   if ( has_colors() && COLOR_PAIRS >= 2 ) {       
     box(envelope, 0, 0);
@@ -356,16 +366,18 @@ void WorkshopGUI::drawEnvelope(int x, int y, int sustain, int attack, int decay)
     mvwaddstr(envelope, 5, 2, "SUSTAIN");
     if (sustain == 0) {
       mvwaddstr(envelope, 3, 2, "*");
+      mvwaddstr(envelope, 4, 2, " ");
     }
     if (sustain == 1) {
       mvwaddstr(envelope, 4, 2, "*");
+      mvwaddstr(envelope, 3, 2, " ");
     }
 
-    sprintf(buffer,"%d",attack);
+    sprintf(buffer,"%d ",attack);
     mvwaddstr(envelope, 3, 12, buffer);    
     mvwaddstr(envelope, 5, 12, "ATTACK");
 
-    sprintf(buffer,"%d",decay);
+    sprintf(buffer,"%d ",decay);
     mvwaddstr(envelope, 3, 22, buffer);    
     mvwaddstr(envelope, 5, 22, "DECAY");
     
@@ -378,8 +390,6 @@ void WorkshopGUI::drawEnvelope(int x, int y, int sustain, int attack, int decay)
 
 void WorkshopGUI::drawGlideKnob(int x, int y, int glide) {
   glideKnob = subwin(mainwin, 4, 9, y, x);
-
-  char buffer [33];
 
   if ( has_colors() && COLOR_PAIRS >= 2 ) {       
     box(glideKnob, 0, 0);

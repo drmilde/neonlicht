@@ -93,14 +93,17 @@ PROGRAMS = $(bin_PROGRAMS)
 am__dirstamp = $(am__leading_dot)dirstamp
 am_cmidiin_OBJECTS = cmidiin.$(OBJEXT) osc/MidiConnector.$(OBJEXT) \
 	osc/OscOutConnector.$(OBJEXT) gui/GUI.$(OBJEXT) \
-	gui/WorkshopGUI.$(OBJEXT) util/KeyPressedControl.$(OBJEXT)
+	gui/GUIMapping.$(OBJEXT) gui/WorkshopGUI.$(OBJEXT) \
+	util/KeyPressedControl.$(OBJEXT)
 cmidiin_OBJECTS = $(am_cmidiin_OBJECTS)
 cmidiin_LDADD = $(LDADD)
 cmidiin_DEPENDENCIES =
 am_fliehkraft_OBJECTS = sequencer/fliehkraft.$(OBJEXT) \
 	sequencer/Pulse.$(OBJEXT) sequencer/Activator.$(OBJEXT) \
 	sequencer/OscActivator.$(OBJEXT) osc/OscOutConnector.$(OBJEXT) \
-	osc/MidiConnector.$(OBJEXT) util/KeyPressedControl.$(OBJEXT)
+	osc/MidiConnector.$(OBJEXT) gui/GUI.$(OBJEXT) \
+	gui/GUIMapping.$(OBJEXT) gui/WorkshopGUI.$(OBJEXT) \
+	util/KeyPressedControl.$(OBJEXT)
 fliehkraft_OBJECTS = $(am_fliehkraft_OBJECTS)
 fliehkraft_LDADD = $(LDADD)
 fliehkraft_DEPENDENCIES =
@@ -449,12 +452,16 @@ fliehkraft_SOURCES = sequencer/fliehkraft.cpp \
 	sequencer/OscActivator.cpp \
 	osc/OscOutConnector.cpp \
 	osc/MidiConnector.cpp \
+	gui/GUI.cpp \
+	gui/GUIMapping.cpp \
+	gui/WorkshopGUI.cpp \
 	util/KeyPressedControl.cpp 
 
 cmidiin_SOURCES = cmidiin.cpp \
 	osc/MidiConnector.cpp \
 	osc/OscOutConnector.cpp \
 	gui/GUI.cpp \
+	gui/GUIMapping.cpp \
 	gui/WorkshopGUI.cpp \
 	util/KeyPressedControl.cpp 
 
@@ -551,6 +558,8 @@ gui/$(DEPDIR)/$(am__dirstamp):
 	@$(MKDIR_P) gui/$(DEPDIR)
 	@: > gui/$(DEPDIR)/$(am__dirstamp)
 gui/GUI.$(OBJEXT): gui/$(am__dirstamp) gui/$(DEPDIR)/$(am__dirstamp)
+gui/GUIMapping.$(OBJEXT): gui/$(am__dirstamp) \
+	gui/$(DEPDIR)/$(am__dirstamp)
 gui/WorkshopGUI.$(OBJEXT): gui/$(am__dirstamp) \
 	gui/$(DEPDIR)/$(am__dirstamp)
 util/$(am__dirstamp):
@@ -745,6 +754,7 @@ include ./$(DEPDIR)/kraftmaschine.Po
 include ./$(DEPDIR)/ugentest.Po
 include configuration/$(DEPDIR)/ConfigurationManager.Po
 include gui/$(DEPDIR)/GUI.Po
+include gui/$(DEPDIR)/GUIMapping.Po
 include gui/$(DEPDIR)/WorkshopGUI.Po
 include osc/$(DEPDIR)/MessageData.Po
 include osc/$(DEPDIR)/MidiConnector.Po

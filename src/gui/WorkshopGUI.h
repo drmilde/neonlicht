@@ -9,7 +9,7 @@
 
 #include "GUI.h"
 
-class WorkshopGUI :GUI {
+class WorkshopGUI : public GUI {
 
  public:
   WorkshopGUI();
@@ -36,7 +36,9 @@ class WorkshopGUI :GUI {
   WINDOW * glideKnob;
 
 
-  // internal value, defining staus of GUI
+  char buffer [4];
+  
+  // internal value, defining status of GUI
 
   int freq;
   int wave;

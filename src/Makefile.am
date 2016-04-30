@@ -134,11 +134,15 @@ fliehkraft_SOURCES = sequencer/fliehkraft.cpp \
 	sequencer/OscActivator.cpp \
 	osc/OscOutConnector.cpp \
 	osc/MidiConnector.cpp \
+	gui/GUI.cpp \
+	gui/GUIMapping.cpp \
+	gui/WorkshopGUI.cpp \
 	util/KeyPressedControl.cpp 
 
 cmidiin_SOURCES = cmidiin.cpp \
 	osc/MidiConnector.cpp \
 	osc/OscOutConnector.cpp \
 	gui/GUI.cpp \
+	gui/GUIMapping.cpp \
 	gui/WorkshopGUI.cpp \
 	util/KeyPressedControl.cpp 

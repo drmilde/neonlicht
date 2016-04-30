@@ -25,6 +25,8 @@
 #include "util/KeyPressedControl.h"
 #include "osc/OscOutboundPacketStream.h"
 #include "ip/UdpSocket.h"
+#include "gui/GUI.h"
+#include "gui/WorkshopGUI.h"
 
 
 #define ADDRESS "127.0.0.1"
@@ -33,6 +35,7 @@
 
 // OSC Bridge
 #include "OscOutConnector.h"
+#include "gui/GUIMapping.h"
 
 
 namespace osc {
@@ -57,6 +60,7 @@ namespace osc {
     static OscOutConnector oscCon;
     static int KEYCOUNT;
     static util::KeyPressedControl keyControl;
+    static GUI* gui;
   };
 }
 

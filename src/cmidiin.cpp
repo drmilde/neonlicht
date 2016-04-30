@@ -21,7 +21,7 @@ int main( int argc, char ** /*argv[]*/ )
   // start listening on midi port 1 (Arturia Minilab in my case)
   osc::MidiConnector mc1 = osc::MidiConnector(1);
 
-  std::cout << "\nCLASS: Reading MIDI input ... press <enter> to quit.\n";
+  //std::cout << "\nCLASS: Reading MIDI input ... press <enter> to quit.\n";
   char input;
   std::cin.get(input);
       
