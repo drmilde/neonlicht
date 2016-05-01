@@ -74,8 +74,11 @@ void ADSRGen::setDecay(float value) {
 void ADSRGen::setSustain(float value) {
   SustainGen->control("value", value);
   SustainGen->control("gate", 1.0); // send value
-
+  // adjust descay end and sustain start accordingly
+  DecayGen->setEndLevel(SustainGen->tick());
+  ReleaseGen->setStartLevel(SustainGen->tick());
 }
+
 void ADSRGen::setRelease(float value) {
   ReleaseGen->setDuration(value);
   ReleaseGen->setStartLevel(SustainGen->tick());
