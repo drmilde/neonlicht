@@ -1,0 +1,36 @@
+Einheit Microsekunden
+							Microsekunden
+ohne Messung (reine Dauer der Zeitnehmung)		0.5
+
+mixer							5
+eg1 (not operational, just call)			2.7
+saw1							2.1
+square1							2.3
+onelpf -> tick()					2.3
+
+mixer1->setPortValue("in1", saw1->tick());		3.4
+mixer1->setPortValue("in2", square1->tick());		3.4
+
+onelpf->setPortValue("in", mixer1->tick());		6.0
+
+mixer2->setPortValue("in1", onelpf->tick());		6.35
+mixer2->setPortValue("in2", noise1->tick());		3.7
+
+// Ohne setPort()/getPort() in saw->tick()
+saw1->tick() MIT 2 port operationen			2.1 	2.1 - 0.5 = 1.6 
+saw1->tick()						0.024	also ein Faktor von 66.67!!
+mixer1->setPortValue("in1", saw1->tick());		2.4	kein messbarer Unterschied !
+mixer1->setPortValue("in1", 0.0);			2.4	kein messbarer Unterschied !
+
+
+Fazit:	weg mit den Portoperation !!!!
+noise1->tick();						0.121
+saw1->tick()						0.0314
+mixer1->tick()						0.447
+square1->tick()						0.0281
+onelpf->tick()						0.0389
+eg1->tick()						0.053
+cosine1->tick()						0.100
+phasor1->tick()						0.052
+
+komplette aktuelle unit					0.156	= 30 mal schneller !! Yeah
