@@ -19,12 +19,13 @@ void EGOneStepGen::control (std::string portName, float value) {
 
   if (portName == "trigger") {
     setTrigger();
-    //std::cout << NAME << ": EG one step is triggered" << std::endl;
   }
 }
 
 // fast access functions
 void EGOneStepGen::setTrigger() {
+  std::cout << NAME << ": EG one step is triggered" << std::endl;
+  
   reset();
   hasStarted = true;
 }
@@ -61,7 +62,7 @@ float EGOneStepGen::tick() {
   // calculate the values
   setOut1(0.0);
 
-  if ((hasStarted) && (!isReady)) {
+  if ((hasStarted) && (!finished())) {
     setOut1(Interpolation::map(currentx, 0, samples, startLevel, endLevel));
     currentx++;
     isReady = (currentx >= samples);

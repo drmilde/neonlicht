@@ -4,7 +4,8 @@
 #include "ArturiaMiniLabUnit.h"
 
 #include "unit/NumberGen.h"
-#include "unit/ADSRGen.h"
+//#include "unit/ADSRGen.h"
+#include "unit/ADSR-NewGen.h"
 
 class ADSRWorkshopSPU : public ArturiaMiniLabUnit {
  public:
@@ -27,7 +28,7 @@ class ADSRWorkshopSPU : public ArturiaMiniLabUnit {
   unit::NumberGen* release;
   unit::NumberGen* useSustain;
 
-  unit::ADSRGen* adsr;  
+  unit::ADSR_NewGen* adsr;  
 };
 
 

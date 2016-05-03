@@ -119,22 +119,23 @@ am_kraftmaschine_OBJECTS = kraftmaschine.$(OBJEXT) Neonlicht.$(OBJEXT) \
 	spu/WorkshopSPU.$(OBJEXT) spu/VCOModSPU.$(OBJEXT) \
 	spu/ADSRWorkshopSPU.$(OBJEXT) spu/MultiOscillatorSPU.$(OBJEXT) \
 	spu/LFOWorkshopSPU.$(OBJEXT) unit/ADSRGen.$(OBJEXT) \
-	unit/AddTwoGen.$(OBJEXT) unit/CosineGen.$(OBJEXT) \
-	unit/EGOneStepGen.$(OBJEXT) unit/EGUpDownGen.$(OBJEXT) \
-	unit/EnvelopeGen.$(OBJEXT) unit/GatedConstantGen.$(OBJEXT) \
-	unit/InvertGen.$(OBJEXT) unit/MidiInputGen.$(OBJEXT) \
-	unit/MultiplyGen.$(OBJEXT) unit/MultiplyTwoGen.$(OBJEXT) \
-	unit/MultiSwitch5Gen.$(OBJEXT) unit/NoiseGen.$(OBJEXT) \
-	unit/NumberGen.$(OBJEXT) unit/OscillatorGen.$(OBJEXT) \
-	unit/OnePoleLPFGen.$(OBJEXT) unit/Patch.$(OBJEXT) \
-	unit/PhasorGen.$(OBJEXT) unit/Port.$(OBJEXT) \
-	unit/PulseGen.$(OBJEXT) unit/STKAdapterGen.$(OBJEXT) \
-	unit/STKBiQuadGen.$(OBJEXT) unit/STKOnePoleGen.$(OBJEXT) \
-	unit/STKOneZeroGen.$(OBJEXT) unit/STKTwoPoleGen.$(OBJEXT) \
-	unit/STKTwoZeroGen.$(OBJEXT) unit/SawGen.$(OBJEXT) \
-	unit/SoundUnit.$(OBJEXT) unit/SquareGen.$(OBJEXT) \
-	unit/ThresholdGen.$(OBJEXT) unit/TwoInputMixerGen.$(OBJEXT) \
-	unit/UGen.$(OBJEXT) unit/WaveOutGen.$(OBJEXT)
+	unit/ADSR-NewGen.$(OBJEXT) unit/AddTwoGen.$(OBJEXT) \
+	unit/CosineGen.$(OBJEXT) unit/EGOneStepGen.$(OBJEXT) \
+	unit/EGUpDownGen.$(OBJEXT) unit/EnvelopeGen.$(OBJEXT) \
+	unit/GatedConstantGen.$(OBJEXT) unit/InvertGen.$(OBJEXT) \
+	unit/MidiInputGen.$(OBJEXT) unit/MultiplyGen.$(OBJEXT) \
+	unit/MultiplyTwoGen.$(OBJEXT) unit/MultiSwitch5Gen.$(OBJEXT) \
+	unit/NoiseGen.$(OBJEXT) unit/NumberGen.$(OBJEXT) \
+	unit/OscillatorGen.$(OBJEXT) unit/OnePoleLPFGen.$(OBJEXT) \
+	unit/Patch.$(OBJEXT) unit/PhasorGen.$(OBJEXT) \
+	unit/Port.$(OBJEXT) unit/PulseGen.$(OBJEXT) \
+	unit/STKAdapterGen.$(OBJEXT) unit/STKBiQuadGen.$(OBJEXT) \
+	unit/STKOnePoleGen.$(OBJEXT) unit/STKOneZeroGen.$(OBJEXT) \
+	unit/STKTwoPoleGen.$(OBJEXT) unit/STKTwoZeroGen.$(OBJEXT) \
+	unit/SawGen.$(OBJEXT) unit/SoundUnit.$(OBJEXT) \
+	unit/SquareGen.$(OBJEXT) unit/ThresholdGen.$(OBJEXT) \
+	unit/TwoInputMixerGen.$(OBJEXT) unit/UGen.$(OBJEXT) \
+	unit/WaveOutGen.$(OBJEXT)
 kraftmaschine_OBJECTS = $(am_kraftmaschine_OBJECTS)
 kraftmaschine_LDADD = $(LDADD)
 kraftmaschine_DEPENDENCIES =
@@ -152,22 +153,23 @@ am_ugentest_OBJECTS = ugentest.$(OBJEXT) util/CosineTable.$(OBJEXT) \
 	spu/WorkshopSPU.$(OBJEXT) spu/VCOModSPU.$(OBJEXT) \
 	spu/ADSRWorkshopSPU.$(OBJEXT) spu/MultiOscillatorSPU.$(OBJEXT) \
 	spu/LFOWorkshopSPU.$(OBJEXT) unit/ADSRGen.$(OBJEXT) \
-	unit/AddTwoGen.$(OBJEXT) unit/CosineGen.$(OBJEXT) \
-	unit/EGOneStepGen.$(OBJEXT) unit/EGUpDownGen.$(OBJEXT) \
-	unit/EnvelopeGen.$(OBJEXT) unit/GatedConstantGen.$(OBJEXT) \
-	unit/InvertGen.$(OBJEXT) unit/MidiInputGen.$(OBJEXT) \
-	unit/MultiplyGen.$(OBJEXT) unit/MultiplyTwoGen.$(OBJEXT) \
-	unit/MultiSwitch5Gen.$(OBJEXT) unit/NoiseGen.$(OBJEXT) \
-	unit/NumberGen.$(OBJEXT) unit/OscillatorGen.$(OBJEXT) \
-	unit/OnePoleLPFGen.$(OBJEXT) unit/Patch.$(OBJEXT) \
-	unit/PhasorGen.$(OBJEXT) unit/Port.$(OBJEXT) \
-	unit/PulseGen.$(OBJEXT) unit/STKAdapterGen.$(OBJEXT) \
-	unit/STKBiQuadGen.$(OBJEXT) unit/STKOnePoleGen.$(OBJEXT) \
-	unit/STKOneZeroGen.$(OBJEXT) unit/STKTwoPoleGen.$(OBJEXT) \
-	unit/STKTwoZeroGen.$(OBJEXT) unit/SawGen.$(OBJEXT) \
-	unit/SoundUnit.$(OBJEXT) unit/SquareGen.$(OBJEXT) \
-	unit/ThresholdGen.$(OBJEXT) unit/TwoInputMixerGen.$(OBJEXT) \
-	unit/UGen.$(OBJEXT) unit/WaveOutGen.$(OBJEXT)
+	unit/ADSR-NewGen.$(OBJEXT) unit/AddTwoGen.$(OBJEXT) \
+	unit/CosineGen.$(OBJEXT) unit/EGOneStepGen.$(OBJEXT) \
+	unit/EGUpDownGen.$(OBJEXT) unit/EnvelopeGen.$(OBJEXT) \
+	unit/GatedConstantGen.$(OBJEXT) unit/InvertGen.$(OBJEXT) \
+	unit/MidiInputGen.$(OBJEXT) unit/MultiplyGen.$(OBJEXT) \
+	unit/MultiplyTwoGen.$(OBJEXT) unit/MultiSwitch5Gen.$(OBJEXT) \
+	unit/NoiseGen.$(OBJEXT) unit/NumberGen.$(OBJEXT) \
+	unit/OscillatorGen.$(OBJEXT) unit/OnePoleLPFGen.$(OBJEXT) \
+	unit/Patch.$(OBJEXT) unit/PhasorGen.$(OBJEXT) \
+	unit/Port.$(OBJEXT) unit/PulseGen.$(OBJEXT) \
+	unit/STKAdapterGen.$(OBJEXT) unit/STKBiQuadGen.$(OBJEXT) \
+	unit/STKOnePoleGen.$(OBJEXT) unit/STKOneZeroGen.$(OBJEXT) \
+	unit/STKTwoPoleGen.$(OBJEXT) unit/STKTwoZeroGen.$(OBJEXT) \
+	unit/SawGen.$(OBJEXT) unit/SoundUnit.$(OBJEXT) \
+	unit/SquareGen.$(OBJEXT) unit/ThresholdGen.$(OBJEXT) \
+	unit/TwoInputMixerGen.$(OBJEXT) unit/UGen.$(OBJEXT) \
+	unit/WaveOutGen.$(OBJEXT)
 ugentest_OBJECTS = $(am_ugentest_OBJECTS)
 ugentest_LDADD = $(LDADD)
 ugentest_DEPENDENCIES =
@@ -364,6 +366,7 @@ kraftmaschine_SOURCES = kraftmaschine.cpp Neonlicht.cpp \
 	spu/MultiOscillatorSPU.cpp \
 	spu/LFOWorkshopSPU.cpp \
 	unit/ADSRGen.cpp \
+	unit/ADSR-NewGen.cpp \
 	unit/AddTwoGen.cpp \
 	unit/CosineGen.cpp \
 	unit/EGOneStepGen.cpp \
@@ -413,6 +416,7 @@ ugentest_SOURCES = ugentest.cpp \
 	spu/MultiOscillatorSPU.cpp \
 	spu/LFOWorkshopSPU.cpp \
 	unit/ADSRGen.cpp  \
+	unit/ADSR-NewGen.cpp \
 	unit/AddTwoGen.cpp \
 	unit/CosineGen.cpp \
 	unit/EGOneStepGen.cpp \
@@ -655,6 +659,8 @@ unit/$(DEPDIR)/$(am__dirstamp):
 	@: > unit/$(DEPDIR)/$(am__dirstamp)
 unit/ADSRGen.$(OBJEXT): unit/$(am__dirstamp) \
 	unit/$(DEPDIR)/$(am__dirstamp)
+unit/ADSR-NewGen.$(OBJEXT): unit/$(am__dirstamp) \
+	unit/$(DEPDIR)/$(am__dirstamp)
 unit/AddTwoGen.$(OBJEXT): unit/$(am__dirstamp) \
 	unit/$(DEPDIR)/$(am__dirstamp)
 unit/CosineGen.$(OBJEXT): unit/$(am__dirstamp) \
@@ -774,6 +780,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@store/$(DEPDIR)/CentralStore.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@store/$(DEPDIR)/MessageDataQueue.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@store/$(DEPDIR)/mdstore.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@unit/$(DEPDIR)/ADSR-NewGen.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@unit/$(DEPDIR)/ADSRGen.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@unit/$(DEPDIR)/AddTwoGen.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@unit/$(DEPDIR)/CosineGen.Po@am__quote@

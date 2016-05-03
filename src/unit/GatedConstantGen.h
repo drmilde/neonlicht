@@ -34,6 +34,10 @@ namespace unit {
     void control(std::string portName, float value);
     float tick();
 
+    void setLevel(float value);
+    void setGate(float value);
+
+
   private:
     bool isGated;
   

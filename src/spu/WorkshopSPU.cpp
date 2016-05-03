@@ -3,12 +3,12 @@
 WorkshopSPU::WorkshopSPU() : ArturiaMiniLabUnit("The German Workshop") {
   // do something useful here
   lfoAmnt = new unit::NumberGen("lfo amnt");
-  lfoAmnt->control("lfo amnt", 0.1);
+  lfoAmnt->control("lfo amnt", 0.0);
  
   vco = new MultiOscillatorSPU("multi osc 0");
 
   lfo = new LFOWorkshopSPU("lfo 0");
-  lfo->control("frequency", 5.0);
+  lfo->control("frequency", 0.0);
   lfo->control("select triangle", 1.0);
 
   midiin = new unit::MidiInputGen("midiin");

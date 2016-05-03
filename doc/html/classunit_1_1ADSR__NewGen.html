@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.12"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Neonlicht: unit::EnvelopeGen Class Reference</title>
+<title>Neonlicht: unit::ADSR_NewGen Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -83,36 +83,61 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>unit</b></li><li class="navelem"><a class="el" href="classunit_1_1EnvelopeGen.html">EnvelopeGen</a></li>  </ul>
+<li class="navelem"><b>unit</b></li><li class="navelem"><a class="el" href="classunit_1_1ADSR__NewGen.html">ADSR_NewGen</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="classunit_1_1EnvelopeGen-members.html">List of all members</a>  </div>
+<a href="classunit_1_1ADSR__NewGen-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">unit::EnvelopeGen Class Reference</div>  </div>
+<div class="title">unit::ADSR_NewGen Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="dynheader">
-Inheritance diagram for unit::EnvelopeGen:</div>
+Inheritance diagram for unit::ADSR_NewGen:</div>
 <div class="dyncontent">
  <div class="center">
-  <img src="classunit_1_1EnvelopeGen.png" usemap="#unit::EnvelopeGen_map" alt=""/>
-  <map id="unit::EnvelopeGen_map" name="unit::EnvelopeGen_map">
-<area href="classunit_1_1UGen.html" alt="unit::UGen" shape="rect" coords="205,0,332,24"/>
-<area href="classunit_1_1ADSR__NewGen.html" alt="unit::ADSR_NewGen" shape="rect" coords="0,112,127,136"/>
-<area href="classunit_1_1ADSRGen.html" alt="unit::ADSRGen" shape="rect" coords="137,112,264,136"/>
-<area href="classunit_1_1EGOneStepGen.html" alt="unit::EGOneStepGen" shape="rect" coords="274,112,401,136"/>
-<area href="classunit_1_1EGUpDownGen.html" alt="unit::EGUpDownGen" shape="rect" coords="411,112,538,136"/>
+  <img src="classunit_1_1ADSR__NewGen.png" usemap="#unit::ADSR_5FNewGen_map" alt=""/>
+  <map id="unit::ADSR_5FNewGen_map" name="unit::ADSR_NewGen_map">
+<area href="classunit_1_1EnvelopeGen.html" alt="unit::EnvelopeGen" shape="rect" coords="0,56,127,80"/>
+<area href="classunit_1_1UGen.html" alt="unit::UGen" shape="rect" coords="0,0,127,24"/>
 </map>
  </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a2925f305c08e3316c3b1cbdabea03bde"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2925f305c08e3316c3b1cbdabea03bde"></a>
+<tr class="memitem:ac8dbe9f3fab627d291ed34996e97d73e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac8dbe9f3fab627d291ed34996e97d73e"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>ADSR_NewGen</b> (std::string name)</td></tr>
+<tr class="separator:ac8dbe9f3fab627d291ed34996e97d73e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5d3a6e3e2be04a470eeb30767e11a58"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae5d3a6e3e2be04a470eeb30767e11a58"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>control</b> (std::string portName, float value)</td></tr>
+<tr class="separator:ae5d3a6e3e2be04a470eeb30767e11a58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ec42e7edded490dbe69cbe93883b168"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9ec42e7edded490dbe69cbe93883b168"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>tick</b> ()</td></tr>
+<tr class="separator:a9ec42e7edded490dbe69cbe93883b168"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3002642e550abcfe4be667d027670a9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af3002642e550abcfe4be667d027670a9"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setTrigger</b> ()</td></tr>
+<tr class="separator:af3002642e550abcfe4be667d027670a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a222a12be57cca522ece84deac512c330"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a222a12be57cca522ece84deac512c330"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setGate</b> (float value)</td></tr>
+<tr class="separator:a222a12be57cca522ece84deac512c330"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa725e7a7c15ac05c643f3a9df9542c66"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa725e7a7c15ac05c643f3a9df9542c66"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setAttack</b> (float value)</td></tr>
+<tr class="separator:aa725e7a7c15ac05c643f3a9df9542c66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa43684929b80892b7d91ec75303fd00c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa43684929b80892b7d91ec75303fd00c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setDecay</b> (float value)</td></tr>
+<tr class="separator:aa43684929b80892b7d91ec75303fd00c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91036e95f48e88f71973dced76097563"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a91036e95f48e88f71973dced76097563"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setSustain</b> (float value)</td></tr>
+<tr class="separator:a91036e95f48e88f71973dced76097563"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7e268918cef20f67514df7356f0fb15"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af7e268918cef20f67514df7356f0fb15"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setRelease</b> (float value)</td></tr>
+<tr class="separator:af7e268918cef20f67514df7356f0fb15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classunit_1_1EnvelopeGen"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classunit_1_1EnvelopeGen')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classunit_1_1EnvelopeGen.html">unit::EnvelopeGen</a></td></tr>
+<tr class="memitem:a2925f305c08e3316c3b1cbdabea03bde inherit pub_methods_classunit_1_1EnvelopeGen"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2925f305c08e3316c3b1cbdabea03bde"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>EnvelopeGen</b> (std::string name)</td></tr>
-<tr class="separator:a2925f305c08e3316c3b1cbdabea03bde"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:a2925f305c08e3316c3b1cbdabea03bde inherit pub_methods_classunit_1_1EnvelopeGen"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classunit_1_1UGen"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classunit_1_1UGen')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classunit_1_1UGen.html">unit::UGen</a></td></tr>
 <tr class="memitem:af2d6d70e1340c9853a9a329cb2db164a inherit pub_methods_classunit_1_1UGen"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af2d6d70e1340c9853a9a329cb2db164a"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>UGen</b> (std::string name, int pn)</td></tr>
@@ -150,12 +175,6 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>getName</b> ()
 <tr class="memitem:a500ba300703167f4daa52b51841edf24 inherit pub_methods_classunit_1_1UGen"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a500ba300703167f4daa52b51841edf24"></a>
 std::string&#160;</td><td class="memItemRight" valign="bottom"><b>getID</b> ()</td></tr>
 <tr class="separator:a500ba300703167f4daa52b51841edf24 inherit pub_methods_classunit_1_1UGen"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a456a55e23a073bc77135525be38ad0eb inherit pub_methods_classunit_1_1UGen"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a456a55e23a073bc77135525be38ad0eb"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>control</b> (std::string portName, float value)</td></tr>
-<tr class="separator:a456a55e23a073bc77135525be38ad0eb inherit pub_methods_classunit_1_1UGen"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7fe124a01b35094197816cb8aa033c55 inherit pub_methods_classunit_1_1UGen"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7fe124a01b35094197816cb8aa033c55"></a>
-virtual float&#160;</td><td class="memItemRight" valign="bottom"><b>tick</b> ()</td></tr>
-<tr class="separator:a7fe124a01b35094197816cb8aa033c55 inherit pub_methods_classunit_1_1UGen"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5063e6854f054cf7870abf1fdcbf8e30 inherit pub_methods_classunit_1_1UGen"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5063e6854f054cf7870abf1fdcbf8e30"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setAmnt1</b> (float value)</td></tr>
 <tr class="separator:a5063e6854f054cf7870abf1fdcbf8e30 inherit pub_methods_classunit_1_1UGen"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -243,8 +262,8 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>ID</b></td></t
 <tr class="separator:ab8d5acd179e175cc787ac43a49b68c29 inherit pro_attribs_classunit_1_1UGen"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>unit/<a class="el" href="EnvelopeGen_8h_source.html">EnvelopeGen.h</a></li>
-<li>unit/EnvelopeGen.cpp</li>
+<li>unit/<a class="el" href="ADSR-NewGen_8h_source.html">ADSR-NewGen.h</a></li>
+<li>unit/ADSR-NewGen.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

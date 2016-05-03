@@ -32,7 +32,7 @@ void MidiInputGen::control (std::string portName, float value) {
   }  
 }
 
-// fast acess functions
+// fast access functions
 float MidiInputGen::getKey() {
   return getAmnt1(); // key
 }

@@ -20,30 +20,22 @@ ADSRWorkshopSPU::ADSRWorkshopSPU(std::string name) : ArturiaMiniLabUnit(name) {
   release->setValue(1.0);
 
   // create adsr
-  adsr = new unit::ADSRGen("adsr");
-  adsr->setAttack(attack->tick());
+  adsr = new unit::ADSR_NewGen("adsr");
+  //adsr->setAttack(attack->tick());
 }
 
 
 void ADSRWorkshopSPU::control(std::string portName, float value) {
   if (portName == "attack") {
-    attack->setValue(value);
-    adsr->setAttack(attack->tick());
   }
   
   if (portName == "decay") {
-    decay->setValue(value);
-    adsr->setDecay(decay->tick());
   }
   
   if (portName == "sustain") {
-    sustain->setValue(value);
-    adsr->setSustain(sustain->tick());
   }
   
   if (portName == "release") {
-    release->setValue(value);
-    adsr->setRelease(release->tick());
   }
 }
 

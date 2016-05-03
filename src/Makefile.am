@@ -46,6 +46,7 @@ kraftmaschine_SOURCES = kraftmaschine.cpp Neonlicht.cpp \
 	spu/MultiOscillatorSPU.cpp \
 	spu/LFOWorkshopSPU.cpp \
 	unit/ADSRGen.cpp \
+	unit/ADSR-NewGen.cpp \
 	unit/AddTwoGen.cpp \
 	unit/CosineGen.cpp \
 	unit/EGOneStepGen.cpp \
@@ -95,6 +96,7 @@ ugentest_SOURCES =  ugentest.cpp \
 	spu/MultiOscillatorSPU.cpp \
 	spu/LFOWorkshopSPU.cpp \
 	unit/ADSRGen.cpp  \
+	unit/ADSR-NewGen.cpp \
 	unit/AddTwoGen.cpp \
 	unit/CosineGen.cpp \
 	unit/EGOneStepGen.cpp \
