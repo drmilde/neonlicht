@@ -31,6 +31,13 @@ ADSR_NewGen::ADSR_NewGen(std::string name) : EnvelopeGen(name) {
 
 }
 
+ADSR_NewGen::~ADSR_NewGen() {
+  delete AttackGen;
+  delete DecayGen;
+  delete SustainGen;
+  delete ReleaseGen;
+}
+
 void ADSR_NewGen::control(std::string portName, float value) {
 }
 

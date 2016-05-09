@@ -14,10 +14,12 @@ namespace unit {
   public:
     ADSR_NewGen();
     ADSR_NewGen(std::string name);
+    virtual ~ADSR_NewGen();
+
     void control(std::string portName, float value);
     float tick();
 
-    // fast access functuions
+    // fast access functions
     void setTrigger();    
     void setGate(float value);
 

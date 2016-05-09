@@ -15,6 +15,14 @@ WorkshopSPU::WorkshopSPU() : ArturiaMiniLabUnit("The German Workshop") {
   adsr = new ADSRWorkshopSPU("adsr");
 }
 
+WorkshopSPU::~WorkshopSPU() {
+  delete lfoAmnt;
+  delete lfo;
+  delete vco;
+  delete midiin;
+  delete adsr;
+}
+
 void WorkshopSPU::control(std::string portName, float value) {
 
   // process keys

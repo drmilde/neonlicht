@@ -15,6 +15,7 @@
 class WorkshopSPU : public ArturiaMiniLabUnit {
  public:
   WorkshopSPU();
+  virtual ~WorkshopSPU();
   float tick();
   void control(std::string portName, float value);
 
