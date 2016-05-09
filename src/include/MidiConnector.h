@@ -22,11 +22,11 @@
 #include "RtMidi.h"
 
 // tranmitting to via osc
-#include "util/KeyPressedControl.h"
+#include "KeyPressedControl.h"
 #include "osc/OscOutboundPacketStream.h"
 #include "ip/UdpSocket.h"
-#include "gui/GUI.h"
-#include "gui/WorkshopGUI.h"
+#include "GUI.h"
+#include "WorkshopGUI.h"
 
 
 #define ADDRESS "127.0.0.1"
@@ -35,7 +35,7 @@
 
 // OSC Bridge
 #include "OscOutConnector.h"
-#include "gui/GUIMapping.h"
+#include "GUIMapping.h"
 
 
 namespace osc {

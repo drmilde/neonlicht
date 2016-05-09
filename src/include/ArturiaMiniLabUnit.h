@@ -3,8 +3,8 @@
 
 #include <string>
 
-#include "osc/MessageData.h"
-#include "unit/SoundUnit.h"
+#include "MessageData.h"
+#include "SoundUnit.h"
 
 /**
  * ArturiaMiniLabUnit 

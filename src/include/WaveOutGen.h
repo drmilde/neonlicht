@@ -3,8 +3,8 @@
 
 #include <stdlib.h>    
 #include "UGen.h"
-#include "util/Interpolation.h"
-#include "util/WaveWriter.h"
+#include "Interpolation.h"
+#include "WaveWriter.h"
 
 namespace unit {
   class WaveOutGen: public UGen {

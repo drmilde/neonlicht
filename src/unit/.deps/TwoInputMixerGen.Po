@@ -1,5 +1,6 @@
 unit/TwoInputMixerGen.o: unit/TwoInputMixerGen.cpp \
- /usr/include/stdc-predef.h unit/TwoInputMixerGen.h \
+ /usr/include/stdc-predef.h \
+ /home/milde/programming/synthesizer/neonlicht/src/include/TwoInputMixerGen.h \
  /usr/include/c++/4.8/iostream \
  /usr/include/x86_64-linux-gnu/c++/4.8/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/4.8/bits/os_defines.h \
@@ -102,12 +103,15 @@ unit/TwoInputMixerGen.o: unit/TwoInputMixerGen.cpp \
  /usr/include/c++/4.8/bits/locale_facets.tcc \
  /usr/include/c++/4.8/bits/basic_ios.tcc \
  /usr/include/c++/4.8/bits/ostream.tcc /usr/include/c++/4.8/istream \
- /usr/include/c++/4.8/bits/istream.tcc unit/UGen.h unit/Port.h \
- unit/PortType.h util/IDGenerator.h
+ /usr/include/c++/4.8/bits/istream.tcc \
+ /home/milde/programming/synthesizer/neonlicht/src/include/UGen.h \
+ /home/milde/programming/synthesizer/neonlicht/src/include/Port.h \
+ /home/milde/programming/synthesizer/neonlicht/src/include/PortType.h \
+ /home/milde/programming/synthesizer/neonlicht/src/include/IDGenerator.h
 
 /usr/include/stdc-predef.h:
 
-unit/TwoInputMixerGen.h:
+/home/milde/programming/synthesizer/neonlicht/src/include/TwoInputMixerGen.h:
 
 /usr/include/c++/4.8/iostream:
 
@@ -371,10 +375,10 @@ unit/TwoInputMixerGen.h:
 
 /usr/include/c++/4.8/bits/istream.tcc:
 
-unit/UGen.h:
+/home/milde/programming/synthesizer/neonlicht/src/include/UGen.h:
 
-unit/Port.h:
+/home/milde/programming/synthesizer/neonlicht/src/include/Port.h:
 
-unit/PortType.h:
+/home/milde/programming/synthesizer/neonlicht/src/include/PortType.h:
 
-util/IDGenerator.h:
+/home/milde/programming/synthesizer/neonlicht/src/include/IDGenerator.h:

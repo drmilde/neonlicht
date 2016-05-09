@@ -5,7 +5,7 @@
 #include <iostream>
 
 #include "Activator.h"
-#include "osc/OscOutConnector.h"
+#include "OscOutConnector.h"
 
 class OscActivator : public Activator {
 

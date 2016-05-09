@@ -1,4 +1,5 @@
-unit/Patch.o: unit/Patch.cpp /usr/include/stdc-predef.h unit/Patch.h \
+unit/Patch.o: unit/Patch.cpp /usr/include/stdc-predef.h \
+ /home/milde/programming/synthesizer/neonlicht/src/include/Patch.h \
  /usr/include/c++/4.8/string \
  /usr/include/x86_64-linux-gnu/c++/4.8/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/4.8/bits/os_defines.h \
@@ -92,7 +93,7 @@ unit/Patch.o: unit/Patch.cpp /usr/include/stdc-predef.h unit/Patch.h \
 
 /usr/include/stdc-predef.h:
 
-unit/Patch.h:
+/home/milde/programming/synthesizer/neonlicht/src/include/Patch.h:
 
 /usr/include/c++/4.8/string:
 

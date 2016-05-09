@@ -1,6 +1,6 @@
 sequencer/Activator.o: sequencer/Activator.cpp /usr/include/stdc-predef.h \
- sequencer/Activator.h
+ /home/milde/programming/synthesizer/neonlicht/src/include/Activator.h
 
 /usr/include/stdc-predef.h:
 
-sequencer/Activator.h:
+/home/milde/programming/synthesizer/neonlicht/src/include/Activator.h:

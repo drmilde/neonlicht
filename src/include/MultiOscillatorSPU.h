@@ -3,13 +3,13 @@
 
 #include "ArturiaMiniLabUnit.h"
 
-#include "unit/NumberGen.h"
-#include "unit/PulseGen.h"
-#include "unit/SawGen.h"
-#include "unit/SquareGen.h"
-#include "unit/CosineGen.h"
-#include "unit/NoiseGen.h"
-#include "unit/MultiSwitch5Gen.h"
+#include "NumberGen.h"
+#include "PulseGen.h"
+#include "SawGen.h"
+#include "SquareGen.h"
+#include "CosineGen.h"
+#include "NoiseGen.h"
+#include "MultiSwitch5Gen.h"
 
 class MultiOscillatorSPU : public ArturiaMiniLabUnit {
  public:

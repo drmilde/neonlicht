@@ -335,6 +335,7 @@ LDADD = -L$(abs_top_builddir)/src/configuration/config4cpp/lib \
 	-lm -lpthread -lstk -lasound -loscpack -lconfig4cpp -lncurses
 
 AM_CPPFLAGS = -std=c++11 -O3 -Wextra -D__LINUX_ALSA__ \
+	-I$(abs_top_builddir)/src/include \
 	-I$(abs_top_builddir)/src/configuration/config4cpp/include \
 	-I/usr/local/include/stk -I/usr/local/include/oscpack/
 

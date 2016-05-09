@@ -1,24 +1,24 @@
-#ifndef _STK_ONE_ZERO_GEN_h_
-#define _STK_ONE_ZERO_GEN_h_
+#ifndef _STK_ONE_POLE_GEN_h_
+#define _STK_ONE_POLE_GEN_h_
 
 #include "STKAdapterGen.h"
 #include <iostream>    
 #include <stdlib.h>
-#include "util/Interpolation.h"
+#include "Interpolation.h"
 
 // include from STK
-#include "OneZero.h"
+#include "OnePole.h"
 
 namespace unit {
-  class STKOneZeroGen : public STKAdapterGen {
+  class STKOnePoleGen : public STKAdapterGen {
 
   public:
-    STKOneZeroGen();
+    STKOnePoleGen();
     void control (std::string portName, float value);
     float tick();
 
   private:
-    stk::OneZero stkOneZero;
+    stk::OnePole stkOnePole;
   
   };
 }

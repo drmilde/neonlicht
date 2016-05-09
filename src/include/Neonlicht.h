@@ -54,12 +54,12 @@
 #include "RtAudio.h"
 
 // Neonlicht includes
-#include "store/CentralStore.h"
-#include "configuration/ConfigurationManager.h"
+#include "CentralStore.h"
+#include "ConfigurationManager.h"
 
 // Unist to be used, testing only
-#include "spu/NoiseUnit.h"
-#include "spu/WorkshopSPU.h"
+#include "NoiseUnit.h"
+#include "WorkshopSPU.h"
 
 /**
  * Neonlicht eine Synthesizer-Engine auf Basis des STK

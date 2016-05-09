@@ -12,7 +12,7 @@
 
 #include <iostream>
 #include <cstdlib>
-#include "osc/MidiConnector.h"
+#include "MidiConnector.h"
 
 /// MAIN function
 

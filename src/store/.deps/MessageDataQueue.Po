@@ -91,12 +91,14 @@ store/MessageDataQueue.o: store/MessageDataQueue.cpp \
  /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
  /usr/include/x86_64-linux-gnu/bits/environments.h \
  /usr/include/x86_64-linux-gnu/bits/confname.h /usr/include/getopt.h \
- /usr/include/x86_64-linux-gnu/bits/unistd.h store/MessageDataQueue.h \
- store/GenericQueue.h /usr/include/c++/4.8/list \
- /usr/include/c++/4.8/bits/stl_list.h /usr/include/c++/4.8/bits/list.tcc \
- osc/MessageData.h /usr/include/c++/4.8/iostream \
- /usr/include/c++/4.8/ostream /usr/include/c++/4.8/ios \
- /usr/include/c++/4.8/bits/ios_base.h \
+ /usr/include/x86_64-linux-gnu/bits/unistd.h \
+ /home/milde/programming/synthesizer/neonlicht/src/include/MessageDataQueue.h \
+ /home/milde/programming/synthesizer/neonlicht/src/include/GenericQueue.h \
+ /usr/include/c++/4.8/list /usr/include/c++/4.8/bits/stl_list.h \
+ /usr/include/c++/4.8/bits/list.tcc \
+ /home/milde/programming/synthesizer/neonlicht/src/include/MessageData.h \
+ /usr/include/c++/4.8/iostream /usr/include/c++/4.8/ostream \
+ /usr/include/c++/4.8/ios /usr/include/c++/4.8/bits/ios_base.h \
  /usr/include/c++/4.8/bits/locale_classes.h \
  /usr/include/c++/4.8/bits/locale_classes.tcc \
  /usr/include/c++/4.8/streambuf /usr/include/c++/4.8/bits/streambuf.tcc \
@@ -347,9 +349,9 @@ store/MessageDataQueue.o: store/MessageDataQueue.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/unistd.h:
 
-store/MessageDataQueue.h:
+/home/milde/programming/synthesizer/neonlicht/src/include/MessageDataQueue.h:
 
-store/GenericQueue.h:
+/home/milde/programming/synthesizer/neonlicht/src/include/GenericQueue.h:
 
 /usr/include/c++/4.8/list:
 
@@ -357,7 +359,7 @@ store/GenericQueue.h:
 
 /usr/include/c++/4.8/bits/list.tcc:
 
-osc/MessageData.h:
+/home/milde/programming/synthesizer/neonlicht/src/include/MessageData.h:
 
 /usr/include/c++/4.8/iostream:
 

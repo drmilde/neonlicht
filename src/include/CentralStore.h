@@ -2,7 +2,7 @@
 #define _CENTRAL_STORE_h_
 
 #include "MessageDataQueue.h"
-#include "osc/OscInConnector.h"
+#include "OscInConnector.h"
 #include "TickData.h"
 
 class CentralStore {

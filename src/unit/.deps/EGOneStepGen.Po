@@ -1,5 +1,6 @@
 unit/EGOneStepGen.o: unit/EGOneStepGen.cpp /usr/include/stdc-predef.h \
- unit/EGOneStepGen.h /usr/include/c++/4.8/iostream \
+ /home/milde/programming/synthesizer/neonlicht/src/include/EGOneStepGen.h \
+ /usr/include/c++/4.8/iostream \
  /usr/include/x86_64-linux-gnu/c++/4.8/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/4.8/bits/os_defines.h \
  /usr/include/features.h /usr/include/x86_64-linux-gnu/sys/cdefs.h \
@@ -101,8 +102,13 @@ unit/EGOneStepGen.o: unit/EGOneStepGen.cpp /usr/include/stdc-predef.h \
  /usr/include/c++/4.8/bits/locale_facets.tcc \
  /usr/include/c++/4.8/bits/basic_ios.tcc \
  /usr/include/c++/4.8/bits/ostream.tcc /usr/include/c++/4.8/istream \
- /usr/include/c++/4.8/bits/istream.tcc unit/EnvelopeGen.h unit/UGen.h \
- unit/Port.h unit/PortType.h util/IDGenerator.h util/Interpolation.h \
+ /usr/include/c++/4.8/bits/istream.tcc \
+ /home/milde/programming/synthesizer/neonlicht/src/include/EnvelopeGen.h \
+ /home/milde/programming/synthesizer/neonlicht/src/include/UGen.h \
+ /home/milde/programming/synthesizer/neonlicht/src/include/Port.h \
+ /home/milde/programming/synthesizer/neonlicht/src/include/PortType.h \
+ /home/milde/programming/synthesizer/neonlicht/src/include/IDGenerator.h \
+ /home/milde/programming/synthesizer/neonlicht/src/include/Interpolation.h \
  /usr/include/math.h /usr/include/x86_64-linux-gnu/bits/huge_val.h \
  /usr/include/x86_64-linux-gnu/bits/huge_valf.h \
  /usr/include/x86_64-linux-gnu/bits/huge_vall.h \
@@ -114,7 +120,7 @@ unit/EGOneStepGen.o: unit/EGOneStepGen.cpp /usr/include/stdc-predef.h \
 
 /usr/include/stdc-predef.h:
 
-unit/EGOneStepGen.h:
+/home/milde/programming/synthesizer/neonlicht/src/include/EGOneStepGen.h:
 
 /usr/include/c++/4.8/iostream:
 
@@ -378,17 +384,17 @@ unit/EGOneStepGen.h:
 
 /usr/include/c++/4.8/bits/istream.tcc:
 
-unit/EnvelopeGen.h:
+/home/milde/programming/synthesizer/neonlicht/src/include/EnvelopeGen.h:
 
-unit/UGen.h:
+/home/milde/programming/synthesizer/neonlicht/src/include/UGen.h:
 
-unit/Port.h:
+/home/milde/programming/synthesizer/neonlicht/src/include/Port.h:
 
-unit/PortType.h:
+/home/milde/programming/synthesizer/neonlicht/src/include/PortType.h:
 
-util/IDGenerator.h:
+/home/milde/programming/synthesizer/neonlicht/src/include/IDGenerator.h:
 
-util/Interpolation.h:
+/home/milde/programming/synthesizer/neonlicht/src/include/Interpolation.h:
 
 /usr/include/math.h:
 

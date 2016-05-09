@@ -1,19 +1,19 @@
-#ifndef _STK_TWO_ZERO_GEN_h_
-#define _STK_TWO_ZERO_GEN_h_
+#ifndef _STK_BI_QUAD_GEN_h_
+#define _STK_BI_QUAD_GEN_h_
 
 #include "STKAdapterGen.h"
 #include <iostream>    
 #include <stdlib.h>
-#include "util/Interpolation.h"
+#include "Interpolation.h"
 
 // include from STK
-#include "TwoZero.h"
+#include "BiQuad.h"
 
 namespace unit {
-  class STKTwoZeroGen : public STKAdapterGen {
+  class STKBiQuadGen : public STKAdapterGen {
 
   public:
-    STKTwoZeroGen();
+    STKBiQuadGen();
     void control (std::string portName, float value);
     float tick();
 
@@ -21,7 +21,8 @@ namespace unit {
     void updateSettings();
     float frequency;
     float radius;
-    stk::TwoZero stkTwoZero;
+    float type;
+    stk::BiQuad stkBiQuad;
   
   };
 }

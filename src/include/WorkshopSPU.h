@@ -3,14 +3,14 @@
 
 #include "ArturiaMiniLabUnit.h"
 
-#include "spu/MultiOscillatorSPU.h"
-#include "spu/LFOWorkshopSPU.h"
-#include "spu/ADSRWorkshopSPU.h"
+#include "MultiOscillatorSPU.h"
+#include "LFOWorkshopSPU.h"
+#include "ADSRWorkshopSPU.h"
 
-#include "unit/NumberGen.h"
-#include "unit/MidiInputGen.h"
-#include "unit/WaveOutGen.h"
-#include "util/MidiUtil.h"
+#include "NumberGen.h"
+#include "MidiInputGen.h"
+#include "WaveOutGen.h"
+#include "MidiUtil.h"
 
 class WorkshopSPU : public ArturiaMiniLabUnit {
  public:

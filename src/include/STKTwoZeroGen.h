@@ -1,19 +1,19 @@
-#ifndef _STK_TWO_POLE_GEN_h_
-#define _STK_TWO_POLE_GEN_h_
+#ifndef _STK_TWO_ZERO_GEN_h_
+#define _STK_TWO_ZERO_GEN_h_
 
 #include "STKAdapterGen.h"
 #include <iostream>    
 #include <stdlib.h>
-#include "util/Interpolation.h"
+#include "Interpolation.h"
 
 // include from STK
-#include "TwoPole.h"
+#include "TwoZero.h"
 
 namespace unit {
-  class STKTwoPoleGen : public STKAdapterGen {
+  class STKTwoZeroGen : public STKAdapterGen {
 
   public:
-    STKTwoPoleGen();
+    STKTwoZeroGen();
     void control (std::string portName, float value);
     float tick();
 
@@ -21,7 +21,7 @@ namespace unit {
     void updateSettings();
     float frequency;
     float radius;
-    stk::TwoPole stkTwoPole;
+    stk::TwoZero stkTwoZero;
   
   };
 }

@@ -1,5 +1,6 @@
 unit/WaveOutGen.o: unit/WaveOutGen.cpp /usr/include/stdc-predef.h \
- unit/WaveOutGen.h /usr/include/stdlib.h /usr/include/features.h \
+ /home/milde/programming/synthesizer/neonlicht/src/include/WaveOutGen.h \
+ /usr/include/stdlib.h /usr/include/features.h \
  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
@@ -22,7 +23,8 @@ unit/WaveOutGen.o: unit/WaveOutGen.cpp /usr/include/stdc-predef.h \
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h /usr/include/alloca.h \
  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
- /usr/include/x86_64-linux-gnu/bits/stdlib.h unit/UGen.h \
+ /usr/include/x86_64-linux-gnu/bits/stdlib.h \
+ /home/milde/programming/synthesizer/neonlicht/src/include/UGen.h \
  /usr/include/c++/4.8/string \
  /usr/include/x86_64-linux-gnu/c++/4.8/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/4.8/bits/os_defines.h \
@@ -88,10 +90,12 @@ unit/WaveOutGen.o: unit/WaveOutGen.cpp /usr/include/stdc-predef.h \
  /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
  /usr/include/c++/4.8/bits/functional_hash.h \
  /usr/include/c++/4.8/bits/hash_bytes.h \
- /usr/include/c++/4.8/bits/basic_string.tcc unit/Port.h unit/PortType.h \
- util/IDGenerator.h /usr/include/c++/4.8/iostream \
- /usr/include/c++/4.8/ostream /usr/include/c++/4.8/ios \
- /usr/include/c++/4.8/bits/ios_base.h \
+ /usr/include/c++/4.8/bits/basic_string.tcc \
+ /home/milde/programming/synthesizer/neonlicht/src/include/Port.h \
+ /home/milde/programming/synthesizer/neonlicht/src/include/PortType.h \
+ /home/milde/programming/synthesizer/neonlicht/src/include/IDGenerator.h \
+ /usr/include/c++/4.8/iostream /usr/include/c++/4.8/ostream \
+ /usr/include/c++/4.8/ios /usr/include/c++/4.8/bits/ios_base.h \
  /usr/include/c++/4.8/bits/locale_classes.h \
  /usr/include/c++/4.8/bits/locale_classes.tcc \
  /usr/include/c++/4.8/streambuf /usr/include/c++/4.8/bits/streambuf.tcc \
@@ -104,7 +108,8 @@ unit/WaveOutGen.o: unit/WaveOutGen.cpp /usr/include/stdc-predef.h \
  /usr/include/c++/4.8/bits/locale_facets.tcc \
  /usr/include/c++/4.8/bits/basic_ios.tcc \
  /usr/include/c++/4.8/bits/ostream.tcc /usr/include/c++/4.8/istream \
- /usr/include/c++/4.8/bits/istream.tcc util/Interpolation.h \
+ /usr/include/c++/4.8/bits/istream.tcc \
+ /home/milde/programming/synthesizer/neonlicht/src/include/Interpolation.h \
  /usr/include/math.h /usr/include/x86_64-linux-gnu/bits/huge_val.h \
  /usr/include/x86_64-linux-gnu/bits/huge_valf.h \
  /usr/include/x86_64-linux-gnu/bits/huge_vall.h \
@@ -112,7 +117,8 @@ unit/WaveOutGen.o: unit/WaveOutGen.cpp /usr/include/stdc-predef.h \
  /usr/include/x86_64-linux-gnu/bits/nan.h \
  /usr/include/x86_64-linux-gnu/bits/mathdef.h \
  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
- /usr/include/x86_64-linux-gnu/bits/mathinline.h util/WaveWriter.h \
+ /usr/include/x86_64-linux-gnu/bits/mathinline.h \
+ /home/milde/programming/synthesizer/neonlicht/src/include/WaveWriter.h \
  /usr/local/include/stk/RtWvIn.h /usr/local/include/stk/WvIn.h \
  /usr/local/include/stk/Stk.h /usr/include/c++/4.8/cstring \
  /usr/include/string.h /usr/include/x86_64-linux-gnu/bits/string3.h \
@@ -130,7 +136,7 @@ unit/WaveOutGen.o: unit/WaveOutGen.cpp /usr/include/stdc-predef.h \
 
 /usr/include/stdc-predef.h:
 
-unit/WaveOutGen.h:
+/home/milde/programming/synthesizer/neonlicht/src/include/WaveOutGen.h:
 
 /usr/include/stdlib.h:
 
@@ -190,7 +196,7 @@ unit/WaveOutGen.h:
 
 /usr/include/x86_64-linux-gnu/bits/stdlib.h:
 
-unit/UGen.h:
+/home/milde/programming/synthesizer/neonlicht/src/include/UGen.h:
 
 /usr/include/c++/4.8/string:
 
@@ -356,11 +362,11 @@ unit/UGen.h:
 
 /usr/include/c++/4.8/bits/basic_string.tcc:
 
-unit/Port.h:
+/home/milde/programming/synthesizer/neonlicht/src/include/Port.h:
 
-unit/PortType.h:
+/home/milde/programming/synthesizer/neonlicht/src/include/PortType.h:
 
-util/IDGenerator.h:
+/home/milde/programming/synthesizer/neonlicht/src/include/IDGenerator.h:
 
 /usr/include/c++/4.8/iostream:
 
@@ -402,7 +408,7 @@ util/IDGenerator.h:
 
 /usr/include/c++/4.8/bits/istream.tcc:
 
-util/Interpolation.h:
+/home/milde/programming/synthesizer/neonlicht/src/include/Interpolation.h:
 
 /usr/include/math.h:
 
@@ -422,7 +428,7 @@ util/Interpolation.h:
 
 /usr/include/x86_64-linux-gnu/bits/mathinline.h:
 
-util/WaveWriter.h:
+/home/milde/programming/synthesizer/neonlicht/src/include/WaveWriter.h:
 
 /usr/local/include/stk/RtWvIn.h:
 

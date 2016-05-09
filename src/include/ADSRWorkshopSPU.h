@@ -3,9 +3,9 @@
 
 #include "ArturiaMiniLabUnit.h"
 
-#include "unit/NumberGen.h"
+#include "NumberGen.h"
 //#include "unit/ADSRGen.h"
-#include "unit/ADSR-NewGen.h"
+#include "ADSR-NewGen.h"
 
 class ADSRWorkshopSPU : public ArturiaMiniLabUnit {
  public:

@@ -1,7 +1,7 @@
 #include <iostream>
 
-#include "unit/UGen.h"
-#include "unit/NoiseGen.h"
+#include "UGen.h"
+#include "NoiseGen.h"
 
 
 int main()

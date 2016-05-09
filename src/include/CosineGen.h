@@ -2,7 +2,7 @@
 #define _COSINE_GEN_h_
 
 #include "SawGen.h"
-#include "util/CosineTable.h"
+#include "CosineTable.h"
 
 namespace unit {
   class CosineGen : public SawGen {

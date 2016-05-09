@@ -4,7 +4,7 @@
 
 #include <stdlib.h>    
 #include "EnvelopeGen.h"
-#include "util/Interpolation.h"
+#include "Interpolation.h"
 
 namespace unit {
   class EGUpDownGen: public EnvelopeGen {

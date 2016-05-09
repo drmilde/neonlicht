@@ -1,6 +1,8 @@
 unit/PhasorGen.o: unit/PhasorGen.cpp /usr/include/stdc-predef.h \
- unit/PhasorGen.h unit/SawGen.h /usr/include/stdlib.h \
- /usr/include/features.h /usr/include/x86_64-linux-gnu/sys/cdefs.h \
+ /home/milde/programming/synthesizer/neonlicht/src/include/PhasorGen.h \
+ /home/milde/programming/synthesizer/neonlicht/src/include/SawGen.h \
+ /usr/include/stdlib.h /usr/include/features.h \
+ /usr/include/x86_64-linux-gnu/sys/cdefs.h \
  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
@@ -30,8 +32,10 @@ unit/PhasorGen.o: unit/PhasorGen.cpp /usr/include/stdc-predef.h \
  /usr/include/x86_64-linux-gnu/bits/nan.h \
  /usr/include/x86_64-linux-gnu/bits/mathdef.h \
  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
- /usr/include/x86_64-linux-gnu/bits/mathinline.h unit/OscillatorGen.h \
- unit/UGen.h /usr/include/c++/4.8/string \
+ /usr/include/x86_64-linux-gnu/bits/mathinline.h \
+ /home/milde/programming/synthesizer/neonlicht/src/include/OscillatorGen.h \
+ /home/milde/programming/synthesizer/neonlicht/src/include/UGen.h \
+ /usr/include/c++/4.8/string \
  /usr/include/x86_64-linux-gnu/c++/4.8/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/4.8/bits/os_defines.h \
  /usr/include/x86_64-linux-gnu/c++/4.8/bits/cpu_defines.h \
@@ -96,10 +100,12 @@ unit/PhasorGen.o: unit/PhasorGen.cpp /usr/include/stdc-predef.h \
  /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
  /usr/include/c++/4.8/bits/functional_hash.h \
  /usr/include/c++/4.8/bits/hash_bytes.h \
- /usr/include/c++/4.8/bits/basic_string.tcc unit/Port.h unit/PortType.h \
- util/IDGenerator.h /usr/include/c++/4.8/iostream \
- /usr/include/c++/4.8/ostream /usr/include/c++/4.8/ios \
- /usr/include/c++/4.8/bits/ios_base.h \
+ /usr/include/c++/4.8/bits/basic_string.tcc \
+ /home/milde/programming/synthesizer/neonlicht/src/include/Port.h \
+ /home/milde/programming/synthesizer/neonlicht/src/include/PortType.h \
+ /home/milde/programming/synthesizer/neonlicht/src/include/IDGenerator.h \
+ /usr/include/c++/4.8/iostream /usr/include/c++/4.8/ostream \
+ /usr/include/c++/4.8/ios /usr/include/c++/4.8/bits/ios_base.h \
  /usr/include/c++/4.8/bits/locale_classes.h \
  /usr/include/c++/4.8/bits/locale_classes.tcc \
  /usr/include/c++/4.8/streambuf /usr/include/c++/4.8/bits/streambuf.tcc \
@@ -116,9 +122,9 @@ unit/PhasorGen.o: unit/PhasorGen.cpp /usr/include/stdc-predef.h \
 
 /usr/include/stdc-predef.h:
 
-unit/PhasorGen.h:
+/home/milde/programming/synthesizer/neonlicht/src/include/PhasorGen.h:
 
-unit/SawGen.h:
+/home/milde/programming/synthesizer/neonlicht/src/include/SawGen.h:
 
 /usr/include/stdlib.h:
 
@@ -196,9 +202,9 @@ unit/SawGen.h:
 
 /usr/include/x86_64-linux-gnu/bits/mathinline.h:
 
-unit/OscillatorGen.h:
+/home/milde/programming/synthesizer/neonlicht/src/include/OscillatorGen.h:
 
-unit/UGen.h:
+/home/milde/programming/synthesizer/neonlicht/src/include/UGen.h:
 
 /usr/include/c++/4.8/string:
 
@@ -364,11 +370,11 @@ unit/UGen.h:
 
 /usr/include/c++/4.8/bits/basic_string.tcc:
 
-unit/Port.h:
+/home/milde/programming/synthesizer/neonlicht/src/include/Port.h:
 
-unit/PortType.h:
+/home/milde/programming/synthesizer/neonlicht/src/include/PortType.h:
 
-util/IDGenerator.h:
+/home/milde/programming/synthesizer/neonlicht/src/include/IDGenerator.h:
 
 /usr/include/c++/4.8/iostream:
 

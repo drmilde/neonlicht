@@ -3,7 +3,7 @@
 
 #include "ArturiaMiniLabUnit.h"
 
-#include "unit/NumberGen.h"
+#include "NumberGen.h"
 
 class VCOModSPU : public ArturiaMiniLabUnit {
  public:

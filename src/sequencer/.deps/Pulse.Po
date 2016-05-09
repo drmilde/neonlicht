@@ -1,5 +1,6 @@
 sequencer/Pulse.o: sequencer/Pulse.cpp /usr/include/stdc-predef.h \
- sequencer/Pulse.h /usr/include/c++/4.8/iostream \
+ /home/milde/programming/synthesizer/neonlicht/src/include/Pulse.h \
+ /usr/include/c++/4.8/iostream \
  /usr/include/x86_64-linux-gnu/c++/4.8/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/4.8/bits/os_defines.h \
  /usr/include/features.h /usr/include/x86_64-linux-gnu/sys/cdefs.h \
@@ -132,11 +133,12 @@ sequencer/Pulse.o: sequencer/Pulse.cpp /usr/include/stdc-predef.h \
  /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
  /usr/include/x86_64-linux-gnu/bits/environments.h \
  /usr/include/x86_64-linux-gnu/bits/confname.h /usr/include/getopt.h \
- /usr/include/x86_64-linux-gnu/bits/unistd.h sequencer/Activator.h
+ /usr/include/x86_64-linux-gnu/bits/unistd.h \
+ /home/milde/programming/synthesizer/neonlicht/src/include/Activator.h
 
 /usr/include/stdc-predef.h:
 
-sequencer/Pulse.h:
+/home/milde/programming/synthesizer/neonlicht/src/include/Pulse.h:
 
 /usr/include/c++/4.8/iostream:
 
@@ -482,4 +484,4 @@ sequencer/Pulse.h:
 
 /usr/include/x86_64-linux-gnu/bits/unistd.h:
 
-sequencer/Activator.h:
+/home/milde/programming/synthesizer/neonlicht/src/include/Activator.h:

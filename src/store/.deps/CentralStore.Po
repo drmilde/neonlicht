@@ -1,6 +1,8 @@
 store/CentralStore.o: store/CentralStore.cpp /usr/include/stdc-predef.h \
- store/CentralStore.h store/MessageDataQueue.h /usr/include/stdio.h \
- /usr/include/features.h /usr/include/x86_64-linux-gnu/sys/cdefs.h \
+ /home/milde/programming/synthesizer/neonlicht/src/include/CentralStore.h \
+ /home/milde/programming/synthesizer/neonlicht/src/include/MessageDataQueue.h \
+ /usr/include/stdio.h /usr/include/features.h \
+ /usr/include/x86_64-linux-gnu/sys/cdefs.h \
  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
@@ -87,9 +89,11 @@ store/CentralStore.o: store/CentralStore.cpp /usr/include/stdc-predef.h \
  /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
  /usr/include/c++/4.8/bits/functional_hash.h \
  /usr/include/c++/4.8/bits/hash_bytes.h \
- /usr/include/c++/4.8/bits/basic_string.tcc store/GenericQueue.h \
+ /usr/include/c++/4.8/bits/basic_string.tcc \
+ /home/milde/programming/synthesizer/neonlicht/src/include/GenericQueue.h \
  /usr/include/c++/4.8/list /usr/include/c++/4.8/bits/stl_list.h \
- /usr/include/c++/4.8/bits/list.tcc osc/MessageData.h \
+ /usr/include/c++/4.8/bits/list.tcc \
+ /home/milde/programming/synthesizer/neonlicht/src/include/MessageData.h \
  /usr/include/c++/4.8/iostream /usr/include/c++/4.8/ostream \
  /usr/include/c++/4.8/ios /usr/include/c++/4.8/bits/ios_base.h \
  /usr/include/c++/4.8/bits/locale_classes.h \
@@ -108,7 +112,8 @@ store/CentralStore.o: store/CentralStore.cpp /usr/include/stdc-predef.h \
  /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
  /usr/include/x86_64-linux-gnu/bits/environments.h \
  /usr/include/x86_64-linux-gnu/bits/confname.h /usr/include/getopt.h \
- /usr/include/x86_64-linux-gnu/bits/unistd.h osc/OscInConnector.h \
+ /usr/include/x86_64-linux-gnu/bits/unistd.h \
+ /home/milde/programming/synthesizer/neonlicht/src/include/OscInConnector.h \
  /usr/include/c++/4.8/cstring /usr/include/string.h \
  /usr/include/x86_64-linux-gnu/bits/string3.h /usr/include/c++/4.8/thread \
  /usr/include/c++/4.8/chrono /usr/include/c++/4.8/ratio \
@@ -141,11 +146,12 @@ store/CentralStore.o: store/CentralStore.cpp /usr/include/stdc-predef.h \
  /usr/local/include/oscpack/osc/../ip/PacketListener.h \
  /usr/local/include/oscpack/ip/UdpSocket.h \
  /usr/local/include/oscpack/ip/NetworkingUtils.h \
- /usr/local/include/oscpack/ip/IpEndpointName.h osc/MessageData.h \
- store/TickData.h util/utilities.h /usr/local/include/stk/Instrmnt.h \
- /usr/local/include/stk/Stk.h /usr/include/c++/4.8/sstream \
- /usr/include/c++/4.8/bits/sstream.tcc /usr/include/c++/4.8/vector \
- /usr/include/c++/4.8/bits/stl_vector.h \
+ /usr/local/include/oscpack/ip/IpEndpointName.h \
+ /home/milde/programming/synthesizer/neonlicht/src/include/TickData.h \
+ /home/milde/programming/synthesizer/neonlicht/src/include/utilities.h \
+ /usr/local/include/stk/Instrmnt.h /usr/local/include/stk/Stk.h \
+ /usr/include/c++/4.8/sstream /usr/include/c++/4.8/bits/sstream.tcc \
+ /usr/include/c++/4.8/vector /usr/include/c++/4.8/bits/stl_vector.h \
  /usr/include/c++/4.8/bits/stl_bvector.h \
  /usr/include/c++/4.8/bits/vector.tcc /usr/local/include/stk/FileWvOut.h \
  /usr/local/include/stk/WvOut.h /usr/local/include/stk/FileWrite.h \
@@ -182,9 +188,9 @@ store/CentralStore.o: store/CentralStore.cpp /usr/include/stdc-predef.h \
 
 /usr/include/stdc-predef.h:
 
-store/CentralStore.h:
+/home/milde/programming/synthesizer/neonlicht/src/include/CentralStore.h:
 
-store/MessageDataQueue.h:
+/home/milde/programming/synthesizer/neonlicht/src/include/MessageDataQueue.h:
 
 /usr/include/stdio.h:
 
@@ -408,7 +414,7 @@ store/MessageDataQueue.h:
 
 /usr/include/c++/4.8/bits/basic_string.tcc:
 
-store/GenericQueue.h:
+/home/milde/programming/synthesizer/neonlicht/src/include/GenericQueue.h:
 
 /usr/include/c++/4.8/list:
 
@@ -416,7 +422,7 @@ store/GenericQueue.h:
 
 /usr/include/c++/4.8/bits/list.tcc:
 
-osc/MessageData.h:
+/home/milde/programming/synthesizer/neonlicht/src/include/MessageData.h:
 
 /usr/include/c++/4.8/iostream:
 
@@ -470,7 +476,7 @@ osc/MessageData.h:
 
 /usr/include/x86_64-linux-gnu/bits/unistd.h:
 
-osc/OscInConnector.h:
+/home/milde/programming/synthesizer/neonlicht/src/include/OscInConnector.h:
 
 /usr/include/c++/4.8/cstring:
 
@@ -560,11 +566,9 @@ osc/OscInConnector.h:
 
 /usr/local/include/oscpack/ip/IpEndpointName.h:
 
-osc/MessageData.h:
+/home/milde/programming/synthesizer/neonlicht/src/include/TickData.h:
 
-store/TickData.h:
-
-util/utilities.h:
+/home/milde/programming/synthesizer/neonlicht/src/include/utilities.h:
 
 /usr/local/include/stk/Instrmnt.h:
 
