@@ -1,0 +1,49 @@
+(require 'package) ;; You might already have this line
+(add-to-list 'package-archives
+             '("melpa" . "https://melpa.org/packages/"))
+(when (< emacs-major-version 24)
+  ;; For important compatibility libraries like cl-lib
+  (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/")))
+(package-initialize) ;; You might already have this line
+
+;(add-to-list 'package-archives '("melpa", "http://melpa.org/packages"))
+;(add-to-list 'package-archives
+;            '("melpa-stable" . "https://stable.melpa.org/packages/") t)
+
+; auto complete
+(require 'auto-complete)
+(require 'auto-complete-config)
+(ac-config-default)
+
+; yasnippets
+(require 'yasnippet)
+(yas-global-mode 1)
+
+; auto-complete c headers
+(defun my:ac-c-header-init ()
+  (require 'auto-complete-c-headers)
+  (add-to-list 'ac-sources 'ac-source-c-headers)
+  (add-to-list 'achead:include-directories '"/usr/include/c++/4.8")
+)
+
+(add-hook 'c++-mode-hook 'my:ac-c-header-init)
+(add-hook 'c-mode-hook 'my:ac-c-header-init)
+
+
+;; semantic parsing
+(semantic-mode 1)
+(defun my:add-semenatic-to-autocomplete() 
+  (add-to-list 'ac-sources 'ac-source-semantic)
+)
+(add-hook 'c-mode-common-hook 'my:add-semenatic-to-autocomplete)
+
+(global-ede-mode 1)
+
+(ede-cpp-root-project "neonlicht" :file "~milde/programming/synthesizer/neonlicht/src/Neonlicht.cpp"
+    :include-path '( "/src" "/src/unit" "/src/spu" "/src/osc" "/src/util" "/src/store" "/src/configuration" "/src/sequencer" )
+;    :system-include-path '( "/usr/include/c++/3.2.2/" )
+;    :compile-command "make compile"
+;    :spp-table '( ("MOOSE" . "")
+;                  ("CONST" . "const") ) 
+)
+
