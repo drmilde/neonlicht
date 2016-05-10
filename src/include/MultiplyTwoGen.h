@@ -5,6 +5,15 @@
 #include "UGen.h"
 
 namespace unit {
+  /**
+   * MultiplyTwoGen multiplies the two standard input ports in1 and in2.
+   *
+   * 
+   * @author jtm,
+   * email: @email milde@hs-fulda.de
+   * @since 04-2016
+   * @version 1.0
+   **/
   class MultiplyTwoGen: public UGen {
 
   public:

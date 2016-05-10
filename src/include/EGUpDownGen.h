@@ -7,6 +7,14 @@
 #include "Interpolation.h"
 
 namespace unit {
+  /**
+   * EGUpDownGen generates a simple symetrical up/down envelope.
+   * 
+   * @author jtm,
+   * email: @email milde@hs-fulda.de
+   * @since 04-2016
+   * @version 1.0
+   **/
   class EGUpDownGen: public EnvelopeGen {
 
   public:

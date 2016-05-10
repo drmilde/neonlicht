@@ -8,6 +8,15 @@
 #include <config4cpp/Configuration.h>
 using namespace config4cpp;
 
+/**
+ * ConfigurationManager loads the current configuration from a file
+ * and stores central (hardware) configuration details of the application.
+ * 
+ *
+ * @author jtm
+ * @since 04-2016
+ * @version 1.0
+ **/
 class ConfigurationManager {
 
  public:

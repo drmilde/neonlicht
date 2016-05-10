@@ -7,6 +7,14 @@
 #include "Interpolation.h"
 
 namespace unit {
+  /**
+   * EGOneStepGen is providing a linear interpolation based on the current 
+   * time step.
+   *
+   * @author jtm
+   * @since 04-2016
+   * @version 1.0
+   **/
   class EGOneStepGen: public EnvelopeGen {
 
   public:

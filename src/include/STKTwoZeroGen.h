@@ -10,6 +10,15 @@
 #include "TwoZero.h"
 
 namespace unit {
+  /**
+   * STKTwoZeroGen is an adapter to the Twozero filter of the STK.
+   * 
+   * 
+   * @author jtm,
+   * email: @email milde@hs-fulda.de
+   * @since 04-2016
+   * @version 1.0
+   **/
   class STKTwoZeroGen : public STKAdapterGen {
 
   public:

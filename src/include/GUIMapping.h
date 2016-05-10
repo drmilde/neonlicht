@@ -6,6 +6,16 @@
 #include <string>
 #include <iostream>
 
+/**
+ * GUIMapping maps the part of the Arturia Minilab 
+ * key, knob, pad and slider codes to control strings
+ * used in the ncurses version of the Workshop WorkshopGUI. 
+ * 
+ * @author jtm,
+ * email: @email milde@hs-fulda.de
+ * @since 04-2016
+ * @version 1.0
+ **/
 class GUIMapping {
  public:
   GUIMapping();

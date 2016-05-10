@@ -44,8 +44,6 @@ void Pulse::setActivator(Activator* a) {
   AV = a;
 }
 
-
-
 void Pulse::run() {
   long lastV = 0;
   

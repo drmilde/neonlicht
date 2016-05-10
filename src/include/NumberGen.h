@@ -4,6 +4,15 @@
 #include <stdlib.h>    
 #include "UGen.h"
 
+
+/**
+ * NumberGen is storing a single numerial value.
+ *
+ * @author jtm
+ * @since 04-2016
+ * @version 1.0
+ **/
+
 namespace unit {
   class NumberGen: public UGen {
 
@@ -16,10 +25,6 @@ namespace unit {
 
     // fast access function
     void setValue(float value);
-
-  private:
-    std::string name;
-  
   };
 }
 

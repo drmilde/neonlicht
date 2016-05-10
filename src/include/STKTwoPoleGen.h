@@ -10,6 +10,15 @@
 #include "TwoPole.h"
 
 namespace unit {
+  /**
+   * STKTwoPoleGen is an adapter to the TwoPole filter of the STK.
+   * 
+   * 
+   * @author jtm,
+   * email: @email milde@hs-fulda.de
+   * @since 04-2016
+   * @version 1.0
+   **/
   class STKTwoPoleGen : public STKAdapterGen {
 
   public:

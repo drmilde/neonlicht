@@ -12,6 +12,17 @@
 using ns = std::chrono::nanoseconds;
 using get_time = std::chrono::steady_clock;
 
+/**
+ * Pulse generates a beat and sends the pulses to an Activator.
+ * The pulse is quantized to a zweiundreissigstel
+ * (thirty second note/demisemiquaver).
+ * 
+ * 
+ * @author jtm,
+ * email: @email milde@hs-fulda.de
+ * @since 04-2016
+ * @version 1.0
+ **/
 class Pulse {
 
  public: 

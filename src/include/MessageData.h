@@ -4,6 +4,16 @@
 #include <iostream>
 
 namespace osc {
+  /**
+   * MessageData encapsulates the data of a osc midi message.
+   * It stores the message, key, value (velocity), an
+   * optional float, and the message type.
+   * 
+   * @author jtm,
+   * email: @email milde@hs-fulda.de
+   * @since 04-2016
+   * @version 1.0
+   **/
   class MessageData {
 
   

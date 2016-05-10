@@ -4,6 +4,14 @@
 #include <iostream>
 #include <math.h>
 
+/**
+ * Interpolation provides a number of helper function to 
+ * easily calculate the linear interpolation of a value.
+ * 
+ * @author jtm
+ * @since 04-2016
+ * @version 1.0
+ **/
 class Interpolation {
 
  public:

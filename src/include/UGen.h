@@ -65,6 +65,7 @@ namespace unit {
     virtual float tick();
 
     // default ports getter/setter
+    // fast acces functions
     void setAmnt1(float value);
     float getAmnt1();
     void setAmnt2(float value);

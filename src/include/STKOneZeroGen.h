@@ -10,6 +10,15 @@
 #include "OneZero.h"
 
 namespace unit {
+  /**
+   * STKOneZeroGen is an adapter to the OneZero filter of the STK.
+   * 
+   * 
+   * @author jtm,
+   * email: @email milde@hs-fulda.de
+   * @since 04-2016
+   * @version 1.0
+   **/
   class STKOneZeroGen : public STKAdapterGen {
 
   public:

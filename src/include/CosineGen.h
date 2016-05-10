@@ -5,6 +5,18 @@
 #include "CosineTable.h"
 
 namespace unit {
+  /**
+   * CosineGen is generating a cosine wave form based on a cosine 
+   * wave table. 
+   * 
+   * The saw wave form is transformed into a ramp [0,1] and used as
+   * a normalized index into the wave table.
+   * 
+   * @author jtm,
+   * email: @email milde@hs-fulda.de
+   * @since 04-2016
+   * @version 1.0
+   **/
   class CosineGen : public SawGen {
     
   public:

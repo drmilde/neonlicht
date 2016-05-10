@@ -10,6 +10,15 @@
 #include "OnePole.h"
 
 namespace unit {
+  /**
+   * STKOnePoleGen is an adapter to the OnePole filter of the STK.
+   * 
+   * 
+   * @author jtm,
+   * email: @email milde@hs-fulda.de
+   * @since 04-2016
+   * @version 1.0
+   **/
   class STKOnePoleGen : public STKAdapterGen {
 
   public:

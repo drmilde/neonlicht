@@ -11,6 +11,18 @@
 #include "NoiseGen.h"
 #include "MultiSwitch5Gen.h"
 
+/**
+ * MultiOscillatorSPU provides a selectable multi oscillator
+ * providing all of the available oscillators.
+ *
+ * Currently (9.5.2016) these are: PulseGen, SawGen, CosineGen, 
+ * SquareGen, and NoiseGen. 
+ * 
+ * @author jtm,
+ * email: @email milde@hs-fulda.de
+ * @since 04-2016
+ * @version 1.0
+ **/
 class MultiOscillatorSPU : public ArturiaMiniLabUnit {
  public:
   

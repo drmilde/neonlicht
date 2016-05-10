@@ -7,13 +7,19 @@
 #include "SoundUnit.h"
 
 /**
- * ArturiaMiniLabUnit 
+ * ArturiaMiniLabUnit provides an adapter to the 
+ * Arturia MiniLab controller. 
+ * All keys, knobs, pads and sliders are mapped to control calls.
  *
- * @author jtm
+ * The Unit will later be replaced by a generic hardware abstraction
+ * unit, that loads the mapping information from a configuraiton
+ * file. 
+ *
+ * @author jtm,
+ * email: @email milde@hs-fulda.de
  * @since 04-2016
  * @version 1.0
  **/
-
 class ArturiaMiniLabUnit : public unit::SoundUnit {
 
  public:
