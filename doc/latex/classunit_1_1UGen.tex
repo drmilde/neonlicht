@@ -144,9 +144,11 @@ std\+::string {\bfseries ID}\hypertarget{classunit_1_1UGen_ab8d5acd179e175cc787a
 \subsection{Detailed Description}
 \hyperlink{classunit_1_1UGen}{U\+Gen} is the base class for all Unit Generators. It provides the underlying interface of the U\+Gens. Two methods have to be implemented by the U\+Gens\+:
 
-void control(std\+::string port\+Name, float value) is used to set port values of the \hyperlink{classunit_1_1UGen}{U\+Gen}. The user has to dispatch the port\+Name, no automatic dispatching is available (due to performance issues!)
 
-float tick() is used to calculate the next output sample of the \hyperlink{classunit_1_1UGen}{U\+Gen}. Here the actual signal processing takes places. The user has to take care of input and output of the \hyperlink{classunit_1_1UGen}{U\+Gen}.
+\begin{DoxyItemize}
+\item void control(std\+::string port\+Name, float value) is used to set port values of the \hyperlink{classunit_1_1UGen}{U\+Gen}. The user has to dispatch the port\+Name, no automatic dispatching is available (due to performance issues!)
+\item float tick() is used to calculate the next output sample of the \hyperlink{classunit_1_1UGen}{U\+Gen}. Here the actual signal processing takes places. The user has to take care of input and output of the \hyperlink{classunit_1_1UGen}{U\+Gen}.
+\end{DoxyItemize}
 
 The default implementation of \hyperlink{classunit_1_1UGen}{U\+Gen} provides three value ports (amnt1, amnt2, amnt3), two in ports (in1 and in2) and two out ports (out1 and out2). For these ports appropiate getter and setter methods are provided. The user may implement more ports, if needed for the functionality of the \hyperlink{classunit_1_1UGen}{U\+Gen}.
 

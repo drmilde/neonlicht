@@ -14,11 +14,11 @@ namespace unit {
  * It provides the underlying interface of the UGens.
  * Two methods have to be implemented by the UGens:
  * 
- * void control(std::string portName, float value) is used to set port values 
+ * - void control(std::string portName, float value) is used to set port values 
  * of the UGen. The user has to dispatch the portName, no automatic dispatching
  * is available (due to performance issues!)
  * 
- * float tick() is used to calculate the next output sample of the UGen.
+ * - float tick() is used to calculate the next output sample of the UGen.
  * Here the actual signal processing takes places. The user has to take care
  * of input and output of the UGen. 
  *

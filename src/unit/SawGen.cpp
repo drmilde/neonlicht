@@ -47,7 +47,7 @@ float SawGen::tick() {
   
   if (currentx > 1.0) {
     currentx -= 1.0;
-    currenty = -1.0;
+    currenty = -1.0; // ?? wrong y value !!!
   }
 		      
   // return current tick() value

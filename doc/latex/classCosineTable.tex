@@ -1,5 +1,9 @@
 \hypertarget{classCosineTable}{}\section{Cosine\+Table Class Reference}
 \label{classCosineTable}\index{Cosine\+Table@{Cosine\+Table}}
+
+
+{\ttfamily \#include $<$Cosine\+Table.\+h$>$}
+
 Inheritance diagram for Cosine\+Table\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -13,6 +17,30 @@ void {\bfseries init} ()\hypertarget{classCosineTable_aa44f664688eca2ff8de26b2ee
 
 \end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\hyperlink{classCosineTable}{Cosine\+Table} stores the cosine values for x in \mbox{[}0, 2$\ast$pi\mbox{]}.
+
+Currently no interpolation between values is calculated. The table size is defined for the base class \hyperlink{classWaveTable}{Wave\+Table}.
+
+Access to the values is provided through
+
+
+\begin{DoxyItemize}
+\item {\bfseries get(int idx)}\+: a cyclic integer index, or through
+\item {\bfseries get\+Normed\+Idx(float idx)}\+: a cyclic normalized float index in the range \mbox{[}0,1\mbox{]}.
+\end{DoxyItemize}
+
+\begin{DoxyAuthor}{Author}
+jtm, email\+:  \href{mailto:milde@hs-fulda.de}{\tt milde@hs-\/fulda.\+de} 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+04-\/2016 
+\end{DoxySince}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

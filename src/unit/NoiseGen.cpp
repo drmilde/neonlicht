@@ -13,8 +13,10 @@ NoiseGen::NoiseGen(std::string name) : OscillatorGen(name) {
 }
 
 void NoiseGen::control(std::string portName, float value) {
+  // no control interface
 }
 
+// no fast access functions
 
 // overrides tick() in UGen
 float NoiseGen::tick() {

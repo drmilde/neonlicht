@@ -1,5 +1,9 @@
 \hypertarget{classunit_1_1MidiInputGen}{}\section{unit\+:\+:Midi\+Input\+Gen Class Reference}
 \label{classunit_1_1MidiInputGen}\index{unit\+::\+Midi\+Input\+Gen@{unit\+::\+Midi\+Input\+Gen}}
+
+
+{\ttfamily \#include $<$Midi\+Input\+Gen.\+h$>$}
+
 Inheritance diagram for unit\+:\+:Midi\+Input\+Gen\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -31,6 +35,51 @@ float {\bfseries get\+Trigger} ()\hypertarget{classunit_1_1MidiInputGen_a4db32a6
 
 \end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\hyperlink{classunit_1_1MidiInputGen}{Midi\+Input\+Gen} processes the incoming midi messages and generates the gate and the trigger signals.
+
+Use a \hyperlink{classunit_1_1MidiInputGen}{Midi\+Input\+Gen} as the first \hyperlink{classunit_1_1UGen}{U\+Gen} in a \hyperlink{classunit_1_1SoundUnit}{Sound\+Unit} in order to get the current status of midi input. More specifically\+: use the gate and trigger value to control the sound synthesis.
+
+
+\begin{DoxyItemize}
+\item {\bfseries tick()} is providing the current {\bfseries gate} value.
+\item the trigger is kept up (1.\+0) for exactly one tick() call.
+\item the gate is kept up (1.\+0) for as long as there are more {\bfseries midi on} than {\bfseries midi off} events
+\item the {\bfseries gate} is stored in {\bfseries out1}.
+\item the {\bfseries trigger} is stored in {\bfseries out2}.
+\end{DoxyItemize}
+
+Control-\/\+Interface
+
+
+\begin{DoxyItemize}
+\item control(\char`\"{}midi on\char`\"{}, value) processes {\bfseries midi on} event. {\bfseries value} should hold the key.
+\item control(\char`\"{}midi off\char`\"{}, value) processes {\bfseries midi off} event. {\bfseries value} should hold the key.
+\item control(\char`\"{}velocity\char`\"{}, value) sets the {\bfseries velocity} of the current key.
+\item control(\char`\"{}reset\char`\"{}, value) resets the counts, trigger is 0, gate is 0.
+\end{DoxyItemize}
+
+Fast access functions
+
+
+\begin{DoxyItemize}
+\item {\bfseries get\+Key()}\+: returns the current key.
+\item {\bfseries get\+Velocity()}\+: returns the current velocity.
+\item {\bfseries get\+Trigger()}\+: returns the current trigger value.
+\item {\bfseries get\+Gate()}\+: returns the current gate value.
+\end{DoxyItemize}
+
+\begin{DoxyAuthor}{Author}
+jtm, email\+:  \href{mailto:milde@hs-fulda.de}{\tt milde@hs-\/fulda.\+de} 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+04-\/2016 
+\end{DoxySince}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

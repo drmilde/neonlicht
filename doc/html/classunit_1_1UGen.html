@@ -254,8 +254,10 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>ID</b></td></t
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classunit_1_1UGen.html">UGen</a> is the base class for all Unit Generators. It provides the underlying interface of the UGens. Two methods have to be implemented by the UGens:</p>
-<p>void control(std::string portName, float value) is used to set port values of the <a class="el" href="classunit_1_1UGen.html">UGen</a>. The user has to dispatch the portName, no automatic dispatching is available (due to performance issues!)</p>
-<p>float tick() is used to calculate the next output sample of the <a class="el" href="classunit_1_1UGen.html">UGen</a>. Here the actual signal processing takes places. The user has to take care of input and output of the <a class="el" href="classunit_1_1UGen.html">UGen</a>.</p>
+<ul>
+<li>void control(std::string portName, float value) is used to set port values of the <a class="el" href="classunit_1_1UGen.html">UGen</a>. The user has to dispatch the portName, no automatic dispatching is available (due to performance issues!)</li>
+<li>float tick() is used to calculate the next output sample of the <a class="el" href="classunit_1_1UGen.html">UGen</a>. Here the actual signal processing takes places. The user has to take care of input and output of the <a class="el" href="classunit_1_1UGen.html">UGen</a>.</li>
+</ul>
 <p>The default implementation of <a class="el" href="classunit_1_1UGen.html">UGen</a> provides three value ports (amnt1, amnt2, amnt3), two in ports (in1 and in2) and two out ports (out1 and out2). For these ports appropiate getter and setter methods are provided. The user may implement more ports, if needed for the functionality of the <a class="el" href="classunit_1_1UGen.html">UGen</a>.</p>
 <dl class="section author"><dt>Author</dt><dd>jtm </dd></dl>
 <dl class="section since"><dt>Since</dt><dd>04-2016 </dd></dl>

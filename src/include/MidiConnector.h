@@ -1,18 +1,6 @@
 #ifndef _MIDI_CONNECTOR_h_
 #define _MIDI_CONNECTOR_h_
 
-//*****************************************//
-//  cmidiin.cpp
-//  by Gary Scavone, 2003-2004.
-//
-//  Simple program to test MIDI input and
-//  use of a user callback function.
-//
-//  stepwise transformation into C++ class
-//  JTM April, 2016
-//
-//*****************************************//
-
 #include <iostream>
 #include <cstdlib>
 #include <stdio.h>
@@ -39,6 +27,20 @@
 
 
 namespace osc {
+  /**
+   * MidiConnector tries to connect to a given port number and reads the incoming 
+   * midi messages from a connected USB midi device.
+   *
+   * The port number depends onto the current hardware configuration of your system. 
+   *
+   * All incoming midi messages are processed, categorized and 
+   * transmitted as OSC-messages.
+   *
+   * @author jtm,
+   * email: @email milde@hs-fulda.de
+   * @since 04-2016
+   * @version 1.0
+   **/
   class MidiConnector {
 
   public:

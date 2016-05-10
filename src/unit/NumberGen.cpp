@@ -21,15 +21,14 @@ void NumberGen::control(std::string portName, float value) {
 
 void NumberGen::setValue(float value) {
   setAmnt1(value);
+  setOut1(getAmnt1());
 }
 
 
 // overrides tick() in UGen
 float NumberGen::tick() {
-  // calculate the arithmetic mean of the two input values
-  
-  setOut1(getAmnt1());
-		      
+  // returns the value of amnt1
+  		      
   // return current tick() value
-  return getOut1();
+  return getAmnt1();
 }

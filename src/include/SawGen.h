@@ -6,6 +6,18 @@
 #include "OscillatorGen.h"
 
 namespace unit {
+  /**
+   * SawGen generates a saw wave based on a simple linear interpolation.
+   *
+   * The implementation is not very effective and needs to be
+   * redone. It also contains an implementation error.
+   * It should use a wave table.
+   * 
+   * @author jtm,
+   * email: @email milde@hs-fulda.de
+   * @since 04-2016
+   * @version 1.0
+   **/
   class SawGen: public OscillatorGen {
     
   public:
