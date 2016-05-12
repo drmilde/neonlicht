@@ -38,13 +38,6 @@ namespace unit {
     float tick(); // override standard implementation
     void control(std::string portName, float value);
 
-  private:
-    Port amntPort1;
-    Port amntPort2;
-    Port inPort1;
-    Port inPort2;
-    Port outPort;
-   
   
   };
 }
