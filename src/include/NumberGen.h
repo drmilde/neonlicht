@@ -15,7 +15,7 @@
 
 namespace unit {
   /**
-   * NumberGen stores a value
+   * NumberGen stores a value.
    *
    * - **tick()** is providing the stored value.
    *

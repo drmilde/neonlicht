@@ -1,5 +1,9 @@
 \hypertarget{classunit_1_1NumberGen}{}\section{unit\+:\+:Number\+Gen Class Reference}
 \label{classunit_1_1NumberGen}\index{unit\+::\+Number\+Gen@{unit\+::\+Number\+Gen}}
+
+
+{\ttfamily \#include $<$Number\+Gen.\+h$>$}
+
 Inheritance diagram for unit\+:\+:Number\+Gen\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -22,6 +26,32 @@ void {\bfseries set\+Value} (float value)\hypertarget{classunit_1_1NumberGen_ad5
 
 \end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\hyperlink{classunit_1_1NumberGen}{Number\+Gen} stores a value.
+
+
+\begin{DoxyItemize}
+\item {\bfseries tick()} is providing the stored value.
+\end{DoxyItemize}
+
+Control-\/\+Interface -\/$\ast$$\ast$control(\char`\"{}non empty string\char`\"{}, value)$\ast$$\ast$\+: stores the value in amnt1. The port\+Name has to be a non empty string, otherwise the value will not be stored.
+
+Fast access functions
+\begin{DoxyItemize}
+\item {\bfseries set\+Value(float value)}\+: stores the value in amnt1 (and in out1).
+\end{DoxyItemize}
+
+\begin{DoxyAuthor}{Author}
+jtm, email\+:  \href{mailto:milde@hs-fulda.de}{\tt milde@hs-\/fulda.\+de} 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+04-\/2016 
+\end{DoxySince}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
