@@ -1,6 +1,6 @@
 sequencer/OscActivator.o: sequencer/OscActivator.cpp \
  /usr/include/stdc-predef.h \
- /home/milde/programming/synthesizer/neonlicht/src/include/OscActivator.h \
+ /home/milde/programming/neonlicht/neonlicht/src/include/OscActivator.h \
  /usr/include/c++/4.8/iostream \
  /usr/include/x86_64-linux-gnu/c++/4.8/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/4.8/bits/os_defines.h \
@@ -104,8 +104,8 @@ sequencer/OscActivator.o: sequencer/OscActivator.cpp \
  /usr/include/c++/4.8/bits/basic_ios.tcc \
  /usr/include/c++/4.8/bits/ostream.tcc /usr/include/c++/4.8/istream \
  /usr/include/c++/4.8/bits/istream.tcc \
- /home/milde/programming/synthesizer/neonlicht/src/include/Activator.h \
- /home/milde/programming/synthesizer/neonlicht/src/include/OscOutConnector.h \
+ /home/milde/programming/neonlicht/neonlicht/src/include/Activator.h \
+ /home/milde/programming/neonlicht/neonlicht/src/include/OscOutConnector.h \
  /usr/include/c++/4.8/cstring /usr/include/string.h \
  /usr/include/x86_64-linux-gnu/bits/string3.h \
  /usr/local/include/oscpack/osc/OscOutboundPacketStream.h \
@@ -118,7 +118,7 @@ sequencer/OscActivator.o: sequencer/OscActivator.cpp \
 
 /usr/include/stdc-predef.h:
 
-/home/milde/programming/synthesizer/neonlicht/src/include/OscActivator.h:
+/home/milde/programming/neonlicht/neonlicht/src/include/OscActivator.h:
 
 /usr/include/c++/4.8/iostream:
 
@@ -382,9 +382,9 @@ sequencer/OscActivator.o: sequencer/OscActivator.cpp \
 
 /usr/include/c++/4.8/bits/istream.tcc:
 
-/home/milde/programming/synthesizer/neonlicht/src/include/Activator.h:
+/home/milde/programming/neonlicht/neonlicht/src/include/Activator.h:
 
-/home/milde/programming/synthesizer/neonlicht/src/include/OscOutConnector.h:
+/home/milde/programming/neonlicht/neonlicht/src/include/OscOutConnector.h:
 
 /usr/include/c++/4.8/cstring:
 

@@ -102,7 +102,7 @@ sequencer/fliehkraft.o: sequencer/fliehkraft.cpp \
  /usr/include/c++/4.8/bits/basic_ios.tcc \
  /usr/include/c++/4.8/bits/ostream.tcc /usr/include/c++/4.8/istream \
  /usr/include/c++/4.8/bits/istream.tcc \
- /home/milde/programming/synthesizer/neonlicht/src/include/Pulse.h \
+ /home/milde/programming/neonlicht/neonlicht/src/include/Pulse.h \
  /usr/include/c++/4.8/thread /usr/include/c++/4.8/chrono \
  /usr/include/c++/4.8/ratio /usr/include/c++/4.8/limits \
  /usr/include/c++/4.8/ctime /usr/include/c++/4.8/functional \
@@ -134,9 +134,9 @@ sequencer/fliehkraft.o: sequencer/fliehkraft.cpp \
  /usr/include/x86_64-linux-gnu/bits/environments.h \
  /usr/include/x86_64-linux-gnu/bits/confname.h /usr/include/getopt.h \
  /usr/include/x86_64-linux-gnu/bits/unistd.h \
- /home/milde/programming/synthesizer/neonlicht/src/include/Activator.h \
- /home/milde/programming/synthesizer/neonlicht/src/include/OscActivator.h \
- /home/milde/programming/synthesizer/neonlicht/src/include/OscOutConnector.h \
+ /home/milde/programming/neonlicht/neonlicht/src/include/Activator.h \
+ /home/milde/programming/neonlicht/neonlicht/src/include/OscActivator.h \
+ /home/milde/programming/neonlicht/neonlicht/src/include/OscOutConnector.h \
  /usr/include/c++/4.8/cstring /usr/include/string.h \
  /usr/include/x86_64-linux-gnu/bits/string3.h \
  /usr/local/include/oscpack/osc/OscOutboundPacketStream.h \
@@ -411,7 +411,7 @@ sequencer/fliehkraft.o: sequencer/fliehkraft.cpp \
 
 /usr/include/c++/4.8/bits/istream.tcc:
 
-/home/milde/programming/synthesizer/neonlicht/src/include/Pulse.h:
+/home/milde/programming/neonlicht/neonlicht/src/include/Pulse.h:
 
 /usr/include/c++/4.8/thread:
 
@@ -495,11 +495,11 @@ sequencer/fliehkraft.o: sequencer/fliehkraft.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/unistd.h:
 
-/home/milde/programming/synthesizer/neonlicht/src/include/Activator.h:
+/home/milde/programming/neonlicht/neonlicht/src/include/Activator.h:
 
-/home/milde/programming/synthesizer/neonlicht/src/include/OscActivator.h:
+/home/milde/programming/neonlicht/neonlicht/src/include/OscActivator.h:
 
-/home/milde/programming/synthesizer/neonlicht/src/include/OscOutConnector.h:
+/home/milde/programming/neonlicht/neonlicht/src/include/OscOutConnector.h:
 
 /usr/include/c++/4.8/cstring:
 

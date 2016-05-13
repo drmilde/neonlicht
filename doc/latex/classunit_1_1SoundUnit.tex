@@ -1,10 +1,11 @@
-\hypertarget{classunit_1_1SoundUnit}{}\section{unit\+:\+:Sound\+Unit Class Reference}
-\label{classunit_1_1SoundUnit}\index{unit\+::\+Sound\+Unit@{unit\+::\+Sound\+Unit}}
+\hypertarget{classunit_1_1SoundUnit}{\section{unit\-:\-:Sound\-Unit Class Reference}
+\label{classunit_1_1SoundUnit}\index{unit\-::\-Sound\-Unit@{unit\-::\-Sound\-Unit}}
+}
 
 
-{\ttfamily \#include $<$Sound\+Unit.\+h$>$}
+{\ttfamily \#include $<$Sound\-Unit.\-h$>$}
 
-Inheritance diagram for unit\+:\+:Sound\+Unit\+:\begin{figure}[H]
+Inheritance diagram for unit\-:\-:Sound\-Unit\-:\begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[height=5.000000cm]{classunit_1_1SoundUnit}
@@ -13,75 +14,76 @@ Inheritance diagram for unit\+:\+:Sound\+Unit\+:\begin{figure}[H]
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-{\bfseries Sound\+Unit} (std\+::string name)\hypertarget{classunit_1_1SoundUnit_a3220665fe1e433d1b0d90fa328e71133}{}\label{classunit_1_1SoundUnit_a3220665fe1e433d1b0d90fa328e71133}
+\hypertarget{classunit_1_1SoundUnit_a3220665fe1e433d1b0d90fa328e71133}{{\bfseries Sound\-Unit} (std\-::string name)}\label{classunit_1_1SoundUnit_a3220665fe1e433d1b0d90fa328e71133}
 
 \item 
-void {\bfseries add\+U\+Gen} (\hyperlink{classunit_1_1UGen}{unit\+::\+U\+Gen} $\ast$u)\hypertarget{classunit_1_1SoundUnit_a3c4fb09e94703dd7f7d17ca5cb7bb561}{}\label{classunit_1_1SoundUnit_a3c4fb09e94703dd7f7d17ca5cb7bb561}
+\hypertarget{classunit_1_1SoundUnit_a3c4fb09e94703dd7f7d17ca5cb7bb561}{void {\bfseries add\-U\-Gen} (\hyperlink{classunit_1_1UGen}{unit\-::\-U\-Gen} $\ast$u)}\label{classunit_1_1SoundUnit_a3c4fb09e94703dd7f7d17ca5cb7bb561}
 
 \item 
-std\+::string {\bfseries get\+Name} ()\hypertarget{classunit_1_1SoundUnit_a4854dfb9b839ff33d061ed013fbf3ef9}{}\label{classunit_1_1SoundUnit_a4854dfb9b839ff33d061ed013fbf3ef9}
+\hypertarget{classunit_1_1SoundUnit_a4854dfb9b839ff33d061ed013fbf3ef9}{std\-::string {\bfseries get\-Name} ()}\label{classunit_1_1SoundUnit_a4854dfb9b839ff33d061ed013fbf3ef9}
 
 \item 
-virtual void {\bfseries setup} ()=0\hypertarget{classunit_1_1SoundUnit_aedfa9b99f4555ed5df4ceffe001c1e63}{}\label{classunit_1_1SoundUnit_aedfa9b99f4555ed5df4ceffe001c1e63}
+\hypertarget{classunit_1_1SoundUnit_aedfa9b99f4555ed5df4ceffe001c1e63}{virtual void {\bfseries setup} ()=0}\label{classunit_1_1SoundUnit_aedfa9b99f4555ed5df4ceffe001c1e63}
 
 \item 
-virtual float {\bfseries tick} ()=0\hypertarget{classunit_1_1SoundUnit_af1f6ccffb8d1919bd774b340c01bea68}{}\label{classunit_1_1SoundUnit_af1f6ccffb8d1919bd774b340c01bea68}
+\hypertarget{classunit_1_1SoundUnit_af1f6ccffb8d1919bd774b340c01bea68}{virtual float {\bfseries tick} ()=0}\label{classunit_1_1SoundUnit_af1f6ccffb8d1919bd774b340c01bea68}
 
 \item 
-virtual void {\bfseries process\+Midi\+Message} (int type, int key, float value)=0\hypertarget{classunit_1_1SoundUnit_a1e73f915afac67a2103f8d79daf40ec3}{}\label{classunit_1_1SoundUnit_a1e73f915afac67a2103f8d79daf40ec3}
+\hypertarget{classunit_1_1SoundUnit_a1e73f915afac67a2103f8d79daf40ec3}{virtual void {\bfseries process\-Midi\-Message} (int type, int key, float value)=0}\label{classunit_1_1SoundUnit_a1e73f915afac67a2103f8d79daf40ec3}
 
 \item 
-virtual void {\bfseries process\+Control\+Message} (int type, int key, float value)=0\hypertarget{classunit_1_1SoundUnit_ad20e07c321b9d206f0f9303bbdf2a67d}{}\label{classunit_1_1SoundUnit_ad20e07c321b9d206f0f9303bbdf2a67d}
+\hypertarget{classunit_1_1SoundUnit_ad20e07c321b9d206f0f9303bbdf2a67d}{virtual void {\bfseries process\-Control\-Message} (int type, int key, float value)=0}\label{classunit_1_1SoundUnit_ad20e07c321b9d206f0f9303bbdf2a67d}
 
 \item 
-virtual void {\bfseries control} (std\+::string port\+Name, float value)=0\hypertarget{classunit_1_1SoundUnit_a0a74ef3d6c9343f1ee64a9a96bdbbe78}{}\label{classunit_1_1SoundUnit_a0a74ef3d6c9343f1ee64a9a96bdbbe78}
+\hypertarget{classunit_1_1SoundUnit_a0a74ef3d6c9343f1ee64a9a96bdbbe78}{virtual void {\bfseries control} (std\-::string port\-Name, float value)=0}\label{classunit_1_1SoundUnit_a0a74ef3d6c9343f1ee64a9a96bdbbe78}
 
 \end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
-std\+::map$<$ std\+::string, \hyperlink{classunit_1_1UGen}{unit\+::\+U\+Gen} $\ast$ $>$ {\bfseries U\+G\+E\+NS}\hypertarget{classunit_1_1SoundUnit_a08f1485a5a06b0d458e99833f9207678}{}\label{classunit_1_1SoundUnit_a08f1485a5a06b0d458e99833f9207678}
+\hypertarget{classunit_1_1SoundUnit_a08f1485a5a06b0d458e99833f9207678}{std\-::map$<$ std\-::string, \\*
+\hyperlink{classunit_1_1UGen}{unit\-::\-U\-Gen} $\ast$ $>$ {\bfseries U\-G\-E\-N\-S}}\label{classunit_1_1SoundUnit_a08f1485a5a06b0d458e99833f9207678}
 
 \end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
-\hyperlink{classunit_1_1SoundUnit}{Sound\+Unit} is an abstract class defining the interface of the sound unit, which represents the concept of a Sound Processing Unit (S\+PU). This S\+PU could be the implementation of a virtual analog synthesizer, a purely digital synthesizer, a digital audio effect or the brand new never heard of sound device you have always dreamt of.
+\hyperlink{classunit_1_1SoundUnit}{Sound\-Unit} is an abstract class defining the interface of the sound unit, which represents the concept of a Sound Processing Unit (S\-P\-U). This S\-P\-U could be the implementation of a virtual analog synthesizer, a purely digital synthesizer, a digital audio effect or the brand new never heard of sound device you have always dreamt of.
 
-\hyperlink{classunit_1_1SoundUnit}{Sound\+Unit} is derived from \hyperlink{classunit_1_1UGen}{unit\+::\+U\+Gen}, therfore implementations of \hyperlink{classunit_1_1SoundUnit}{Sound\+Unit} can be recursively combined to create more complex \hyperlink{classunit_1_1SoundUnit}{unit\+::\+Sound\+Unit(s)} and \hyperlink{classunit_1_1UGen}{unit\+::\+U\+Gen(s)}.
+\hyperlink{classunit_1_1SoundUnit}{Sound\-Unit} is derived from \hyperlink{classunit_1_1UGen}{unit\-::\-U\-Gen}, therfore implementations of \hyperlink{classunit_1_1SoundUnit}{Sound\-Unit} can be recursively combined to create more complex \hyperlink{classunit_1_1SoundUnit}{unit\-::\-Sound\-Unit(s)} and \hyperlink{classunit_1_1UGen}{unit\-::\-U\-Gen(s)}.
 
-In an S\+PU you would typically
+In an S\-P\-U you would typically
 
 
 \begin{DoxyItemize}
-\item combine a set of Unit Generators (\hyperlink{classunit_1_1UGen}{unit\+::\+U\+Gen}),
-\item define the routing bewtween the U\+Gens
+\item combine a set of Unit Generators (\hyperlink{classunit_1_1UGen}{unit\-::\-U\-Gen}),
+\item define the routing bewtween the U\-Gens
 \item define input, output and control ports
 \item map the control message to these ports
 \end{DoxyItemize}
 
-S\+P\+Us will be registered in \hyperlink{classNeonlicht}{Neonlicht} and incoming Midi and Control messages are then dispatched to the S\+PU. The S\+PU is responsible for processing (or ignoring!) these messages.
+S\-P\-Us will be registered in \hyperlink{classNeonlicht}{Neonlicht} and incoming Midi and Control messages are then dispatched to the S\-P\-U. The S\-P\-U is responsible for processing (or ignoring!) these messages.
 
-Anyway\+: the interface forces you to implement 5 methods\+:
+Anyway\-: the interface forces you to implement 5 methods\-:
 
 
 \begin{DoxyItemize}
-\item setup() is where you configure and initialize your S\+PU.
+\item setup() is where you configure and initialize your S\-P\-U.
 \item float tick() is where the actual sound processing takes place
-\item process\+Midi\+Message() is where you process the incoming midi data
-\item process\+Control\+Message() is where you process the incoming control data
-\item control() is where you map messages to internal parameters of the S\+PU
+\item process\-Midi\-Message() is where you process the incoming midi data
+\item process\-Control\-Message() is where you process the incoming control data
+\item control() is where you map messages to internal parameters of the S\-P\-U
 \end{DoxyItemize}
 
 \begin{DoxyAuthor}{Author}
-J\+TM 
+J\-T\-M 
 \end{DoxyAuthor}
 \begin{DoxySince}{Since}
 April, 2016 
 \end{DoxySince}
 
 
-The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
 \item 
-include/Sound\+Unit.\+h\item 
-unit/Sound\+Unit.\+cpp\end{DoxyCompactItemize}
+include/Sound\-Unit.\-h\item 
+unit/Sound\-Unit.\-cpp\end{DoxyCompactItemize}

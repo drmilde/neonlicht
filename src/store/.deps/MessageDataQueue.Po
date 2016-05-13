@@ -92,11 +92,11 @@ store/MessageDataQueue.o: store/MessageDataQueue.cpp \
  /usr/include/x86_64-linux-gnu/bits/environments.h \
  /usr/include/x86_64-linux-gnu/bits/confname.h /usr/include/getopt.h \
  /usr/include/x86_64-linux-gnu/bits/unistd.h \
- /home/milde/programming/synthesizer/neonlicht/src/include/MessageDataQueue.h \
- /home/milde/programming/synthesizer/neonlicht/src/include/GenericQueue.h \
+ /home/milde/programming/neonlicht/neonlicht/src/include/MessageDataQueue.h \
+ /home/milde/programming/neonlicht/neonlicht/src/include/GenericQueue.h \
  /usr/include/c++/4.8/list /usr/include/c++/4.8/bits/stl_list.h \
  /usr/include/c++/4.8/bits/list.tcc \
- /home/milde/programming/synthesizer/neonlicht/src/include/MessageData.h \
+ /home/milde/programming/neonlicht/neonlicht/src/include/MessageData.h \
  /usr/include/c++/4.8/iostream /usr/include/c++/4.8/ostream \
  /usr/include/c++/4.8/ios /usr/include/c++/4.8/bits/ios_base.h \
  /usr/include/c++/4.8/bits/locale_classes.h \
@@ -349,9 +349,9 @@ store/MessageDataQueue.o: store/MessageDataQueue.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/unistd.h:
 
-/home/milde/programming/synthesizer/neonlicht/src/include/MessageDataQueue.h:
+/home/milde/programming/neonlicht/neonlicht/src/include/MessageDataQueue.h:
 
-/home/milde/programming/synthesizer/neonlicht/src/include/GenericQueue.h:
+/home/milde/programming/neonlicht/neonlicht/src/include/GenericQueue.h:
 
 /usr/include/c++/4.8/list:
 
@@ -359,7 +359,7 @@ store/MessageDataQueue.o: store/MessageDataQueue.cpp \
 
 /usr/include/c++/4.8/bits/list.tcc:
 
-/home/milde/programming/synthesizer/neonlicht/src/include/MessageData.h:
+/home/milde/programming/neonlicht/neonlicht/src/include/MessageData.h:
 
 /usr/include/c++/4.8/iostream:
 

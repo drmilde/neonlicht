@@ -1,5 +1,5 @@
 unit/EGOneStepGen.o: unit/EGOneStepGen.cpp /usr/include/stdc-predef.h \
- /home/milde/programming/synthesizer/neonlicht/src/include/EGOneStepGen.h \
+ /home/milde/programming/neonlicht/neonlicht/src/include/EGOneStepGen.h \
  /usr/include/c++/4.8/iostream \
  /usr/include/x86_64-linux-gnu/c++/4.8/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/4.8/bits/os_defines.h \
@@ -103,12 +103,12 @@ unit/EGOneStepGen.o: unit/EGOneStepGen.cpp /usr/include/stdc-predef.h \
  /usr/include/c++/4.8/bits/basic_ios.tcc \
  /usr/include/c++/4.8/bits/ostream.tcc /usr/include/c++/4.8/istream \
  /usr/include/c++/4.8/bits/istream.tcc \
- /home/milde/programming/synthesizer/neonlicht/src/include/EnvelopeGen.h \
- /home/milde/programming/synthesizer/neonlicht/src/include/UGen.h \
- /home/milde/programming/synthesizer/neonlicht/src/include/Port.h \
- /home/milde/programming/synthesizer/neonlicht/src/include/PortType.h \
- /home/milde/programming/synthesizer/neonlicht/src/include/IDGenerator.h \
- /home/milde/programming/synthesizer/neonlicht/src/include/Interpolation.h \
+ /home/milde/programming/neonlicht/neonlicht/src/include/EnvelopeGen.h \
+ /home/milde/programming/neonlicht/neonlicht/src/include/UGen.h \
+ /home/milde/programming/neonlicht/neonlicht/src/include/Port.h \
+ /home/milde/programming/neonlicht/neonlicht/src/include/PortType.h \
+ /home/milde/programming/neonlicht/neonlicht/src/include/IDGenerator.h \
+ /home/milde/programming/neonlicht/neonlicht/src/include/Interpolation.h \
  /usr/include/math.h /usr/include/x86_64-linux-gnu/bits/huge_val.h \
  /usr/include/x86_64-linux-gnu/bits/huge_valf.h \
  /usr/include/x86_64-linux-gnu/bits/huge_vall.h \
@@ -120,7 +120,7 @@ unit/EGOneStepGen.o: unit/EGOneStepGen.cpp /usr/include/stdc-predef.h \
 
 /usr/include/stdc-predef.h:
 
-/home/milde/programming/synthesizer/neonlicht/src/include/EGOneStepGen.h:
+/home/milde/programming/neonlicht/neonlicht/src/include/EGOneStepGen.h:
 
 /usr/include/c++/4.8/iostream:
 
@@ -384,17 +384,17 @@ unit/EGOneStepGen.o: unit/EGOneStepGen.cpp /usr/include/stdc-predef.h \
 
 /usr/include/c++/4.8/bits/istream.tcc:
 
-/home/milde/programming/synthesizer/neonlicht/src/include/EnvelopeGen.h:
+/home/milde/programming/neonlicht/neonlicht/src/include/EnvelopeGen.h:
 
-/home/milde/programming/synthesizer/neonlicht/src/include/UGen.h:
+/home/milde/programming/neonlicht/neonlicht/src/include/UGen.h:
 
-/home/milde/programming/synthesizer/neonlicht/src/include/Port.h:
+/home/milde/programming/neonlicht/neonlicht/src/include/Port.h:
 
-/home/milde/programming/synthesizer/neonlicht/src/include/PortType.h:
+/home/milde/programming/neonlicht/neonlicht/src/include/PortType.h:
 
-/home/milde/programming/synthesizer/neonlicht/src/include/IDGenerator.h:
+/home/milde/programming/neonlicht/neonlicht/src/include/IDGenerator.h:
 
-/home/milde/programming/synthesizer/neonlicht/src/include/Interpolation.h:
+/home/milde/programming/neonlicht/neonlicht/src/include/Interpolation.h:
 
 /usr/include/math.h:
 
