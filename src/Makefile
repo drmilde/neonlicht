@@ -124,12 +124,13 @@ am_kraftmaschine_OBJECTS = kraftmaschine.$(OBJEXT) Neonlicht.$(OBJEXT) \
 	unit/EGUpDownGen.$(OBJEXT) unit/EnvelopeGen.$(OBJEXT) \
 	unit/GatedConstantGen.$(OBJEXT) unit/InvertGen.$(OBJEXT) \
 	unit/MidiInputGen.$(OBJEXT) unit/MoogVCFGen.$(OBJEXT) \
-	unit/MultiplyGen.$(OBJEXT) unit/MultiplyTwoGen.$(OBJEXT) \
-	unit/MultiSwitch5Gen.$(OBJEXT) unit/NoiseGen.$(OBJEXT) \
-	unit/NumberGen.$(OBJEXT) unit/OscillatorGen.$(OBJEXT) \
-	unit/OnePoleLPFGen.$(OBJEXT) unit/Patch.$(OBJEXT) \
-	unit/PhasorGen.$(OBJEXT) unit/Port.$(OBJEXT) \
-	unit/PulseGen.$(OBJEXT) unit/STKAdapterGen.$(OBJEXT) \
+	unit/MoogVCFv2Gen.$(OBJEXT) unit/MultiplyGen.$(OBJEXT) \
+	unit/MultiplyTwoGen.$(OBJEXT) unit/MultiSwitch5Gen.$(OBJEXT) \
+	unit/NoiseGen.$(OBJEXT) unit/NumberGen.$(OBJEXT) \
+	unit/OscillatorGen.$(OBJEXT) unit/OnePoleLPFGen.$(OBJEXT) \
+	unit/Patch.$(OBJEXT) unit/PhasorGen.$(OBJEXT) \
+	unit/Port.$(OBJEXT) unit/PulseGen.$(OBJEXT) \
+	unit/ResCutFilterGen.$(OBJEXT) unit/STKAdapterGen.$(OBJEXT) \
 	unit/STKBiQuadGen.$(OBJEXT) unit/STKOnePoleGen.$(OBJEXT) \
 	unit/STKOneZeroGen.$(OBJEXT) unit/STKTwoPoleGen.$(OBJEXT) \
 	unit/STKTwoZeroGen.$(OBJEXT) unit/SawGen.$(OBJEXT) \
@@ -158,12 +159,13 @@ am_ugentest_OBJECTS = ugentest.$(OBJEXT) util/CosineTable.$(OBJEXT) \
 	unit/EGUpDownGen.$(OBJEXT) unit/EnvelopeGen.$(OBJEXT) \
 	unit/GatedConstantGen.$(OBJEXT) unit/InvertGen.$(OBJEXT) \
 	unit/MidiInputGen.$(OBJEXT) unit/MoogVCFGen.$(OBJEXT) \
-	unit/MultiplyGen.$(OBJEXT) unit/MultiplyTwoGen.$(OBJEXT) \
-	unit/MultiSwitch5Gen.$(OBJEXT) unit/NoiseGen.$(OBJEXT) \
-	unit/NumberGen.$(OBJEXT) unit/OscillatorGen.$(OBJEXT) \
-	unit/OnePoleLPFGen.$(OBJEXT) unit/Patch.$(OBJEXT) \
-	unit/PhasorGen.$(OBJEXT) unit/Port.$(OBJEXT) \
-	unit/PulseGen.$(OBJEXT) unit/STKAdapterGen.$(OBJEXT) \
+	unit/MoogVCFv2Gen.$(OBJEXT) unit/MultiplyGen.$(OBJEXT) \
+	unit/MultiplyTwoGen.$(OBJEXT) unit/MultiSwitch5Gen.$(OBJEXT) \
+	unit/NoiseGen.$(OBJEXT) unit/NumberGen.$(OBJEXT) \
+	unit/OscillatorGen.$(OBJEXT) unit/OnePoleLPFGen.$(OBJEXT) \
+	unit/Patch.$(OBJEXT) unit/PhasorGen.$(OBJEXT) \
+	unit/Port.$(OBJEXT) unit/PulseGen.$(OBJEXT) \
+	unit/ResCutFilterGen.$(OBJEXT) unit/STKAdapterGen.$(OBJEXT) \
 	unit/STKBiQuadGen.$(OBJEXT) unit/STKOnePoleGen.$(OBJEXT) \
 	unit/STKOneZeroGen.$(OBJEXT) unit/STKTwoPoleGen.$(OBJEXT) \
 	unit/STKTwoZeroGen.$(OBJEXT) unit/SawGen.$(OBJEXT) \
@@ -377,6 +379,7 @@ kraftmaschine_SOURCES = kraftmaschine.cpp Neonlicht.cpp \
 	unit/InvertGen.cpp \
 	unit/MidiInputGen.cpp \
 	unit/MoogVCFGen.cpp \
+	unit/MoogVCFv2Gen.cpp \
 	unit/MultiplyGen.cpp \
 	unit/MultiplyTwoGen.cpp \
 	unit/MultiSwitch5Gen.cpp \
@@ -388,6 +391,7 @@ kraftmaschine_SOURCES = kraftmaschine.cpp Neonlicht.cpp \
 	unit/PhasorGen.cpp \
 	unit/Port.cpp \
 	unit/PulseGen.cpp \
+	unit/ResCutFilterGen.cpp \
 	unit/STKAdapterGen.cpp \
 	unit/STKBiQuadGen.cpp \
 	unit/STKOnePoleGen.cpp \
@@ -428,6 +432,7 @@ ugentest_SOURCES = ugentest.cpp \
 	unit/InvertGen.cpp \
 	unit/MidiInputGen.cpp \
 	unit/MoogVCFGen.cpp \
+	unit/MoogVCFv2Gen.cpp \
 	unit/MultiplyGen.cpp \
 	unit/MultiplyTwoGen.cpp \
 	unit/MultiSwitch5Gen.cpp \
@@ -439,6 +444,7 @@ ugentest_SOURCES = ugentest.cpp \
 	unit/PhasorGen.cpp \
 	unit/Port.cpp \
 	unit/PulseGen.cpp \
+	unit/ResCutFilterGen.cpp \
 	unit/STKAdapterGen.cpp \
 	unit/STKBiQuadGen.cpp \
 	unit/STKOnePoleGen.cpp \
@@ -682,6 +688,8 @@ unit/MidiInputGen.$(OBJEXT): unit/$(am__dirstamp) \
 	unit/$(DEPDIR)/$(am__dirstamp)
 unit/MoogVCFGen.$(OBJEXT): unit/$(am__dirstamp) \
 	unit/$(DEPDIR)/$(am__dirstamp)
+unit/MoogVCFv2Gen.$(OBJEXT): unit/$(am__dirstamp) \
+	unit/$(DEPDIR)/$(am__dirstamp)
 unit/MultiplyGen.$(OBJEXT): unit/$(am__dirstamp) \
 	unit/$(DEPDIR)/$(am__dirstamp)
 unit/MultiplyTwoGen.$(OBJEXT): unit/$(am__dirstamp) \
@@ -703,6 +711,8 @@ unit/PhasorGen.$(OBJEXT): unit/$(am__dirstamp) \
 unit/Port.$(OBJEXT): unit/$(am__dirstamp) \
 	unit/$(DEPDIR)/$(am__dirstamp)
 unit/PulseGen.$(OBJEXT): unit/$(am__dirstamp) \
+	unit/$(DEPDIR)/$(am__dirstamp)
+unit/ResCutFilterGen.$(OBJEXT): unit/$(am__dirstamp) \
 	unit/$(DEPDIR)/$(am__dirstamp)
 unit/STKAdapterGen.$(OBJEXT): unit/$(am__dirstamp) \
 	unit/$(DEPDIR)/$(am__dirstamp)
@@ -796,6 +806,7 @@ include unit/$(DEPDIR)/GatedConstantGen.Po
 include unit/$(DEPDIR)/InvertGen.Po
 include unit/$(DEPDIR)/MidiInputGen.Po
 include unit/$(DEPDIR)/MoogVCFGen.Po
+include unit/$(DEPDIR)/MoogVCFv2Gen.Po
 include unit/$(DEPDIR)/MultiSwitch5Gen.Po
 include unit/$(DEPDIR)/MultiplyGen.Po
 include unit/$(DEPDIR)/MultiplyTwoGen.Po
@@ -807,6 +818,7 @@ include unit/$(DEPDIR)/Patch.Po
 include unit/$(DEPDIR)/PhasorGen.Po
 include unit/$(DEPDIR)/Port.Po
 include unit/$(DEPDIR)/PulseGen.Po
+include unit/$(DEPDIR)/ResCutFilterGen.Po
 include unit/$(DEPDIR)/STKAdapterGen.Po
 include unit/$(DEPDIR)/STKBiQuadGen.Po
 include unit/$(DEPDIR)/STKOnePoleGen.Po

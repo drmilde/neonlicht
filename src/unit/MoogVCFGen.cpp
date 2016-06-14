@@ -6,13 +6,37 @@ MoogVCFGen::MoogVCFGen() : MoogVCFGen("Robert") {
   // do something useful here
 }
 
-MoogVCFGen::MoogVCFGen(std::string name) : UGen(name, 4) {
-
+MoogVCFGen::MoogVCFGen(std::string name) : ResCutFilterGen(name) {
     cutoff = 440; // cutoff freq in Hz
-    fs = 44100.0;     // sampling frequency //(e.g. 44100Hz)
     res = 0.5;    // resonance [0 - 1] (minimum - maximum)
+    
+    update();
 
-    f = 2 * cutoff / fs; // [0 - 1]
+    setOut1(0);
+}
+
+void MoogVCFGen::control (std::string portName, float value) {
+  ResCutFilterGen::control(portName, value); // process cutoff / resonance
+  update();
+  // add further controls here
+}
+
+// fast access functions 
+void MoogVCFGen::setCutoff(float v) {
+  ResCutFilterGen::setCutoff(v);
+  update();
+}
+
+void MoogVCFGen::setResonance(float v) {
+  ResCutFilterGen::setResonance(v);
+  update();
+}
+
+
+void MoogVCFGen::update() {
+    fs = 44100.0; // sampling frequency //(e.g. 44100Hz)
+
+    f = 2 * (cutoff / fs); // [0 - 1]
     k = (3.6 * f) - (1.6*f*f) - 1; //(Empirical tunning)
     p = (k+1)*0.5;
 
@@ -20,30 +44,9 @@ MoogVCFGen::MoogVCFGen(std::string name) : UGen(name, 4) {
     r = res*scale;
     
     y1=y2=y3=y4=oldx=oldy1=oldy2=oldy3=0;
-
-    setOut1(0);
 }
 
-void MoogVCFGen::control (std::string portName, float value) {
-  if (portName == "cutoff") {    
-    setCutoff(Interpolation::map(value, 0.0, 1.0, 20.0, 22050.0));
-  }
-
-  if (portName == "resonance") {
-    setResonance(value);    
-  }
-}
-
-// fast access functions
-
-void MoogVCFGen::setCutoff(float v) {
-  cutoff = v;
-}
-
-void MoogVCFGen::setResonance(float v) {
-  res = v;
-}
-
+// fast access functions are inherited
 
 // overrides tick() in UGen
 float MoogVCFGen::tick() {

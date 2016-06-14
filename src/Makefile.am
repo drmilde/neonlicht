@@ -57,6 +57,7 @@ kraftmaschine_SOURCES = kraftmaschine.cpp Neonlicht.cpp \
 	unit/InvertGen.cpp \
 	unit/MidiInputGen.cpp \
 	unit/MoogVCFGen.cpp \
+	unit/MoogVCFv2Gen.cpp \
 	unit/MultiplyGen.cpp \
 	unit/MultiplyTwoGen.cpp \
 	unit/MultiSwitch5Gen.cpp \
@@ -68,6 +69,7 @@ kraftmaschine_SOURCES = kraftmaschine.cpp Neonlicht.cpp \
 	unit/PhasorGen.cpp \
 	unit/Port.cpp \
 	unit/PulseGen.cpp \
+	unit/ResCutFilterGen.cpp \
 	unit/STKAdapterGen.cpp \
 	unit/STKBiQuadGen.cpp \
 	unit/STKOnePoleGen.cpp \
@@ -108,6 +110,7 @@ ugentest_SOURCES =  ugentest.cpp \
 	unit/InvertGen.cpp \
 	unit/MidiInputGen.cpp \
 	unit/MoogVCFGen.cpp \
+	unit/MoogVCFv2Gen.cpp \
 	unit/MultiplyGen.cpp \
 	unit/MultiplyTwoGen.cpp \
 	unit/MultiSwitch5Gen.cpp \
@@ -119,6 +122,7 @@ ugentest_SOURCES =  ugentest.cpp \
 	unit/PhasorGen.cpp \
 	unit/Port.cpp \
 	unit/PulseGen.cpp \
+	unit/ResCutFilterGen.cpp \
 	unit/STKAdapterGen.cpp \
 	unit/STKBiQuadGen.cpp \
 	unit/STKOnePoleGen.cpp \

@@ -1,13 +1,14 @@
-#ifndef _MOOG_VCF_GEN_h_
-#define _MOOG_VCF_GEN_h_
+#ifndef _MOOG_VCF_v2_GEN_h_
+#define _MOOG_VCF_v2_GEN_h_
 
 #include "ResCutFilterGen.h"
 
 namespace unit {
   /**
-   * MoogVCFGen is approximating the 4 ladder Moog lowpass.
+   * MoogVCFv2Gen is approximating the 4 ladder Moog lowpass.
    * Type : 24db resonant lowpass
-   * References : CSound source code, Stilson/Smith CCRMA paper.
+   * References : CSound source code, Stilson/Smith CCRMA paper., 
+   * Timo Tossavainen (?) version
    *
    * Filtering the in port **in1**, **out1** stores the output value. 
    *
@@ -16,7 +17,7 @@ namespace unit {
    * Control-Interface
    *
    * - **control("cutoff", value)**: [0-1] is mapped to [20-22050]
-   * - **control("resonance", value)**: [0-1] is mapped to [0-1]
+   * - **control("resonance", value)**: [0-1] is mapped to [0-4]
    *
    * Fast access functions
    * - setCutoff(float v);
@@ -28,38 +29,33 @@ namespace unit {
    * @since 04-2016
    * @version 1.0
    **/
-  class MoogVCFGen: public ResCutFilterGen {
+  class MoogVCFv2Gen: public ResCutFilterGen {
 
   public:
-    MoogVCFGen();
-    MoogVCFGen(std::string name);
+    MoogVCFv2Gen();
+    MoogVCFv2Gen(std::string name);
   
     float tick(); // override standard implementation
     void control(std::string portName, float value);
-
+    
     void setCutoff(float v);
     void setResonance(float v);
+    
 
   private:
     void update();
-    
-    float fs;     // sampling frequency //(e.g. 44100Hz)
+ 
+    float f;
+    float fb;
 
-    float f; // [0 - 1]
-    float k; //(Empirical tunning)
-    float p;
-    float scale;
-    float r;
-
-    float y1;
-    float y2;
-    float y3;
-    float y4;
-    float oldx;
-    float oldy1;
-    float oldy2;
-    float oldy3;
-    
+    float in1;
+    float in2;
+    float in3;
+    float in4;
+    float out1;
+    float out2;
+    float out3;
+    float out4;
   };
 }
 
