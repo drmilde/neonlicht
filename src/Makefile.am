@@ -56,6 +56,7 @@ kraftmaschine_SOURCES = kraftmaschine.cpp Neonlicht.cpp \
 	unit/GatedConstantGen.cpp \
 	unit/InvertGen.cpp \
 	unit/MidiInputGen.cpp \
+	unit/MoogVCFGen.cpp \
 	unit/MultiplyGen.cpp \
 	unit/MultiplyTwoGen.cpp \
 	unit/MultiSwitch5Gen.cpp \
@@ -106,6 +107,7 @@ ugentest_SOURCES =  ugentest.cpp \
 	unit/GatedConstantGen.cpp \
 	unit/InvertGen.cpp \
 	unit/MidiInputGen.cpp \
+	unit/MoogVCFGen.cpp \
 	unit/MultiplyGen.cpp \
 	unit/MultiplyTwoGen.cpp \
 	unit/MultiSwitch5Gen.cpp \
