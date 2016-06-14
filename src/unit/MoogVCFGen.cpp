@@ -26,11 +26,22 @@ MoogVCFGen::MoogVCFGen(std::string name) : UGen(name, 4) {
 
 void MoogVCFGen::control (std::string portName, float value) {
   if (portName == "cutoff") {    
-    cutoff = Interpolation::map(value, 0.0, 1.0, 20.0, 22050.0);
+    setCutoff(Interpolation::map(value, 0.0, 1.0, 20.0, 22050.0));
   }
+
   if (portName == "resonance") {
-    res = value;    
+    setResonance(value);    
   }
+}
+
+// fast access functions
+
+void MoogVCFGen::setCutoff(float v) {
+  cutoff = v;
+}
+
+void MoogVCFGen::setResonance(float v) {
+  res = v;
 }
 
 

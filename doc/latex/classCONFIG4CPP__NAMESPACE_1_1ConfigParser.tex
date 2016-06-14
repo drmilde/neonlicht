@@ -1,0 +1,123 @@
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1ConfigParser}{\section{C\-O\-N\-F\-I\-G4\-C\-P\-P\-\_\-\-N\-A\-M\-E\-S\-P\-A\-C\-E\-:\-:Config\-Parser Class Reference}
+\label{classCONFIG4CPP__NAMESPACE_1_1ConfigParser}\index{C\-O\-N\-F\-I\-G4\-C\-P\-P\-\_\-\-N\-A\-M\-E\-S\-P\-A\-C\-E\-::\-Config\-Parser@{C\-O\-N\-F\-I\-G4\-C\-P\-P\-\_\-\-N\-A\-M\-E\-S\-P\-A\-C\-E\-::\-Config\-Parser}}
+}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1ConfigParser_a81b932edd6cd656d40f70cd9509777e2}{{\bfseries Config\-Parser} (Configuration\-::\-Source\-Type source\-Type, const char $\ast$source, const char $\ast$trusted\-Cmd\-Line, const char $\ast$source\-Description, \hyperlink{classCONFIG4CPP__NAMESPACE_1_1ConfigurationImpl}{Configuration\-Impl} $\ast$config, bool if\-Exists\-Is\-Specified=false)  throw (\-Configuration\-Exception)}\label{classCONFIG4CPP__NAMESPACE_1_1ConfigParser_a81b932edd6cd656d40f70cd9509777e2}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1ConfigParser_af5a88acec6fae91a5fcb427e9d554358}{void {\bfseries parse\-Stmt\-List} ()}\label{classCONFIG4CPP__NAMESPACE_1_1ConfigParser_af5a88acec6fae91a5fcb427e9d554358}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1ConfigParser_ab383c065f81d9cfc58746f116b8ff90a}{void {\bfseries parse\-Stmt} ()}\label{classCONFIG4CPP__NAMESPACE_1_1ConfigParser_ab383c065f81d9cfc58746f116b8ff90a}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1ConfigParser_a2ce3ce02a7ea8d8e0879010c75e03652}{void {\bfseries parse\-Include\-Stmt} ()}\label{classCONFIG4CPP__NAMESPACE_1_1ConfigParser_a2ce3ce02a7ea8d8e0879010c75e03652}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1ConfigParser_a5166490f104d27861c8cdb50a707bc99}{void {\bfseries parse\-Copy\-Stmt} ()}\label{classCONFIG4CPP__NAMESPACE_1_1ConfigParser_a5166490f104d27861c8cdb50a707bc99}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1ConfigParser_a1a3a120168949e5063444055bdd469d6}{void {\bfseries parse\-Remove\-Stmt} ()}\label{classCONFIG4CPP__NAMESPACE_1_1ConfigParser_a1a3a120168949e5063444055bdd469d6}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1ConfigParser_a61ae1ac2164d0472eeb752ad380c6e6c}{void {\bfseries parse\-Error\-Stmt} ()}\label{classCONFIG4CPP__NAMESPACE_1_1ConfigParser_a61ae1ac2164d0472eeb752ad380c6e6c}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1ConfigParser_a6e7f827d10772dfd7f1fcc3f1b9bdded}{void {\bfseries parse\-If\-Stmt} ()}\label{classCONFIG4CPP__NAMESPACE_1_1ConfigParser_a6e7f827d10772dfd7f1fcc3f1b9bdded}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1ConfigParser_aa26b77130b24a00061163478fcc10d28}{void {\bfseries skip\-To\-Closing\-Brace} ()}\label{classCONFIG4CPP__NAMESPACE_1_1ConfigParser_aa26b77130b24a00061163478fcc10d28}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1ConfigParser_a3f8779c96cc188c9665a180d62c50350}{bool {\bfseries parse\-Condition} ()}\label{classCONFIG4CPP__NAMESPACE_1_1ConfigParser_a3f8779c96cc188c9665a180d62c50350}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1ConfigParser_a9a957643b9bc9f9d7dfd32e6cbaef88d}{bool {\bfseries parse\-Or\-Condition} ()}\label{classCONFIG4CPP__NAMESPACE_1_1ConfigParser_a9a957643b9bc9f9d7dfd32e6cbaef88d}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1ConfigParser_ae9db19b13ea66f280fcd12e81bb09378}{bool {\bfseries parse\-And\-Condition} ()}\label{classCONFIG4CPP__NAMESPACE_1_1ConfigParser_ae9db19b13ea66f280fcd12e81bb09378}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1ConfigParser_ad1f02197a52ffe992cf140bddff335ca}{bool {\bfseries parse\-Terminal\-Condition} ()}\label{classCONFIG4CPP__NAMESPACE_1_1ConfigParser_ad1f02197a52ffe992cf140bddff335ca}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1ConfigParser_a4377ccf82778184d5c9795fc35ba883c}{void {\bfseries parse\-Scope} (\hyperlink{classCONFIG4CPP__NAMESPACE_1_1LexToken}{Lex\-Token} \&scope\-Name)}\label{classCONFIG4CPP__NAMESPACE_1_1ConfigParser_a4377ccf82778184d5c9795fc35ba883c}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1ConfigParser_a6f75e8eb8c30bb26d41da9044e22aefd}{void {\bfseries parse\-Rhs\-Assign\-Stmt} (\hyperlink{classCONFIG4CPP__NAMESPACE_1_1LexToken}{Lex\-Token} \&var\-Name, short assignment\-Type)}\label{classCONFIG4CPP__NAMESPACE_1_1ConfigParser_a6f75e8eb8c30bb26d41da9044e22aefd}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1ConfigParser_a65edbff9a96b90e1726f7e52c84ab9ff}{void {\bfseries parse\-String\-Expr} (\hyperlink{classCONFIG4CPP__NAMESPACE_1_1StringBuffer}{String\-Buffer} \&expr)}\label{classCONFIG4CPP__NAMESPACE_1_1ConfigParser_a65edbff9a96b90e1726f7e52c84ab9ff}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1ConfigParser_a2e2cc8642bf15a9211ade425201e7980}{void {\bfseries parse\-String} (\hyperlink{classCONFIG4CPP__NAMESPACE_1_1StringBuffer}{String\-Buffer} \&expr)}\label{classCONFIG4CPP__NAMESPACE_1_1ConfigParser_a2e2cc8642bf15a9211ade425201e7980}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1ConfigParser_a3162eea437dc6d70e59717073a56f00e}{void {\bfseries parse\-Read\-File} (\hyperlink{classCONFIG4CPP__NAMESPACE_1_1StringBuffer}{String\-Buffer} \&str)}\label{classCONFIG4CPP__NAMESPACE_1_1ConfigParser_a3162eea437dc6d70e59717073a56f00e}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1ConfigParser_a2c7ae0bf063922025d2a77803bf12d5a}{void {\bfseries parse\-Env} (\hyperlink{classCONFIG4CPP__NAMESPACE_1_1StringBuffer}{String\-Buffer} \&str)}\label{classCONFIG4CPP__NAMESPACE_1_1ConfigParser_a2c7ae0bf063922025d2a77803bf12d5a}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1ConfigParser_af5f00fe62adeb51fb3e60e0cb6f6540f}{void {\bfseries parse\-Sibling\-Scope} (\hyperlink{classCONFIG4CPP__NAMESPACE_1_1StringBuffer}{String\-Buffer} \&str)}\label{classCONFIG4CPP__NAMESPACE_1_1ConfigParser_af5f00fe62adeb51fb3e60e0cb6f6540f}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1ConfigParser_a6f23527a2348b917ca3b6dd3aa41f6f9}{void {\bfseries parse\-Exec} (\hyperlink{classCONFIG4CPP__NAMESPACE_1_1StringBuffer}{String\-Buffer} \&str)}\label{classCONFIG4CPP__NAMESPACE_1_1ConfigParser_a6f23527a2348b917ca3b6dd3aa41f6f9}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1ConfigParser_a1f01cfe9b257aa721d1c00fcc71acceb}{void {\bfseries parse\-Join} (\hyperlink{classCONFIG4CPP__NAMESPACE_1_1StringBuffer}{String\-Buffer} \&str)}\label{classCONFIG4CPP__NAMESPACE_1_1ConfigParser_a1f01cfe9b257aa721d1c00fcc71acceb}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1ConfigParser_a551808a869b6a3e8437de5b7aca9d3c0}{void {\bfseries parse\-Replace} (\hyperlink{classCONFIG4CPP__NAMESPACE_1_1StringBuffer}{String\-Buffer} \&str)}\label{classCONFIG4CPP__NAMESPACE_1_1ConfigParser_a551808a869b6a3e8437de5b7aca9d3c0}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1ConfigParser_a8c45c07fc3916ac9be956a47c0aedf6b}{void {\bfseries parse\-Split} (\hyperlink{classCONFIG4CPP__NAMESPACE_1_1StringVector}{String\-Vector} \&str)}\label{classCONFIG4CPP__NAMESPACE_1_1ConfigParser_a8c45c07fc3916ac9be956a47c0aedf6b}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1ConfigParser_aa5b37dbf101ba1dda5feaa045fef02c9}{void {\bfseries parse\-List\-Expr} (\hyperlink{classCONFIG4CPP__NAMESPACE_1_1StringVector}{String\-Vector} \&expr)}\label{classCONFIG4CPP__NAMESPACE_1_1ConfigParser_aa5b37dbf101ba1dda5feaa045fef02c9}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1ConfigParser_a950fe9e834a17b827670f970ccdc9854}{void {\bfseries parse\-List} (\hyperlink{classCONFIG4CPP__NAMESPACE_1_1StringVector}{String\-Vector} \&expr)}\label{classCONFIG4CPP__NAMESPACE_1_1ConfigParser_a950fe9e834a17b827670f970ccdc9854}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1ConfigParser_af2e834469087ef4e48208fc219c1bdca}{void {\bfseries parse\-String\-Expr\-List} (\hyperlink{classCONFIG4CPP__NAMESPACE_1_1StringVector}{String\-Vector} \&list)}\label{classCONFIG4CPP__NAMESPACE_1_1ConfigParser_af2e834469087ef4e48208fc219c1bdca}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1ConfigParser_acfa10a3dec5dca05330e6d25d459ac88}{void {\bfseries get\-Directory\-Of\-File} (const char $\ast$filename, \hyperlink{classCONFIG4CPP__NAMESPACE_1_1StringBuffer}{String\-Buffer} \&str)}\label{classCONFIG4CPP__NAMESPACE_1_1ConfigParser_acfa10a3dec5dca05330e6d25d459ac88}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1ConfigParser_a95552214c6e661a316f20c799fc8926d}{void {\bfseries accept} (short, const char $\ast$err\-Msg)}\label{classCONFIG4CPP__NAMESPACE_1_1ConfigParser_a95552214c6e661a316f20c799fc8926d}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1ConfigParser_a7a5b71321831867df81f5b5ce73a318f}{void {\bfseries error} (const char $\ast$err\-Msg, bool print\-Near=true)}\label{classCONFIG4CPP__NAMESPACE_1_1ConfigParser_a7a5b71321831867df81f5b5ce73a318f}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1ConfigParser_a0454d15db35437983805aa47010a0a0d}{\hyperlink{classCONFIG4CPP__NAMESPACE_1_1ConfigLex}{Config\-Lex} $\ast$ {\bfseries m\-\_\-lex}}\label{classCONFIG4CPP__NAMESPACE_1_1ConfigParser_a0454d15db35437983805aa47010a0a0d}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1ConfigParser_a16ae5acb4160f597143d399ceb1c22cf}{\hyperlink{classCONFIG4CPP__NAMESPACE_1_1LexToken}{Lex\-Token} {\bfseries m\-\_\-token}}\label{classCONFIG4CPP__NAMESPACE_1_1ConfigParser_a16ae5acb4160f597143d399ceb1c22cf}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1ConfigParser_a716038bffef5fa6a143f673115bedefb}{\hyperlink{classCONFIG4CPP__NAMESPACE_1_1ConfigurationImpl}{Configuration\-Impl} $\ast$ {\bfseries m\-\_\-config}}\label{classCONFIG4CPP__NAMESPACE_1_1ConfigParser_a716038bffef5fa6a143f673115bedefb}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1ConfigParser_a19b1290ffae923b11d2a5352d8629433}{bool {\bfseries m\-\_\-error\-In\-Included\-File}}\label{classCONFIG4CPP__NAMESPACE_1_1ConfigParser_a19b1290ffae923b11d2a5352d8629433}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1ConfigParser_a788d825da67fb95584cb85c47f7b6a31}{\hyperlink{classCONFIG4CPP__NAMESPACE_1_1StringBuffer}{String\-Buffer} {\bfseries m\-\_\-file\-Name}}\label{classCONFIG4CPP__NAMESPACE_1_1ConfigParser_a788d825da67fb95584cb85c47f7b6a31}
+
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/configuration/config4cpp/src/Config\-Parser.\-h\item 
+src/configuration/config4cpp/src/Config\-Parser.\-cpp\end{DoxyCompactItemize}

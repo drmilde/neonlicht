@@ -10,22 +10,22 @@
 namespace unit {
   /**
    * MoogVCFGen is approximating the 4 ladder Moog lowpass.
+   * Type : 24db resonant lowpass
+   * References : CSound source code, Stilson/Smith CCRMA paper.
    *
-   * mixing the in ports **in1** and **in2**. Both values are
-   * scaled by **amnt1** and **amnt2**. 
-   * The mixer is calculating z = (in1 * amnt1) + (in2 * amnt2).
-   * The in ports amnt1 and amnt1 are scaled by **0.5f** when being set with the control
-   * interface.
+   * Filtering the in port **in1**, **out1** stores the output value. 
    *
    * - **tick()** is providing the filtered input value.
    *
    * Control-Interface
    *
-   * - **control("amnt1", value)**: stores the value in amnt1. 
-   * - **control("amnt2", value)**: stores the value in amnt2. 
+   * - **control("cutoff", value)**: [0-1] is mapped to [20-22050]
+   * - **control("resonance", value)**: [0-1] is mapped to [0-1]
    *
    * Fast access functions
-   * - none, but the standard fast access functions
+   * - setCutoff(float v);
+   * - setResonance(float v);
+   * - the standard fast access functions
    *
    * @author jtm,
    * email: @email milde@hs-fulda.de
@@ -40,6 +40,9 @@ namespace unit {
   
     float tick(); // override standard implementation
     void control(std::string portName, float value);
+
+    void setCutoff(float v);
+    void setResonance(float v);
 
   private:
     float cutoff; // cutoff freq in Hz

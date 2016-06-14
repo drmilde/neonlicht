@@ -1,0 +1,98 @@
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1LexBase}{\section{C\-O\-N\-F\-I\-G4\-C\-P\-P\-\_\-\-N\-A\-M\-E\-S\-P\-A\-C\-E\-:\-:Lex\-Base Class Reference}
+\label{classCONFIG4CPP__NAMESPACE_1_1LexBase}\index{C\-O\-N\-F\-I\-G4\-C\-P\-P\-\_\-\-N\-A\-M\-E\-S\-P\-A\-C\-E\-::\-Lex\-Base@{C\-O\-N\-F\-I\-G4\-C\-P\-P\-\_\-\-N\-A\-M\-E\-S\-P\-A\-C\-E\-::\-Lex\-Base}}
+}
+Inheritance diagram for C\-O\-N\-F\-I\-G4\-C\-P\-P\-\_\-\-N\-A\-M\-E\-S\-P\-A\-C\-E\-:\-:Lex\-Base\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classCONFIG4CPP__NAMESPACE_1_1LexBase}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structCONFIG4CPP__NAMESPACE_1_1LexBase_1_1FuncInfo}{Func\-Info}
+\item 
+struct \hyperlink{structCONFIG4CPP__NAMESPACE_1_1LexBase_1_1KeywordInfo}{Keyword\-Info}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bfseries Function\-Type} \{ {\bfseries N\-O\-T\-\_\-\-A\-\_\-\-F\-U\-N\-C} = 1, 
+{\bfseries S\-T\-R\-I\-N\-G\-\_\-\-F\-U\-N\-C} = 2, 
+{\bfseries L\-I\-S\-T\-\_\-\-F\-U\-N\-C} = 3, 
+{\bfseries B\-O\-O\-L\-\_\-\-F\-U\-N\-C} = 4
+ \}
+\item 
+enum {\bfseries Lex\-Base\-Symbols} \{ \\*
+{\bfseries L\-E\-X\-\_\-\-I\-D\-E\-N\-T\-\_\-\-S\-Y\-M} = 1, 
+{\bfseries L\-E\-X\-\_\-\-S\-E\-M\-I\-C\-O\-L\-O\-N\-\_\-\-S\-Y\-M} = 2, 
+{\bfseries L\-E\-X\-\_\-\-P\-L\-U\-S\-\_\-\-S\-Y\-M} = 3, 
+{\bfseries L\-E\-X\-\_\-\-Q\-U\-E\-S\-T\-I\-O\-N\-\_\-\-E\-Q\-U\-A\-L\-S\-\_\-\-S\-Y\-M} = 4, 
+\\*
+{\bfseries L\-E\-X\-\_\-\-E\-Q\-U\-A\-L\-S\-\_\-\-S\-Y\-M} = 5, 
+{\bfseries L\-E\-X\-\_\-\-E\-Q\-U\-A\-L\-S\-\_\-\-E\-Q\-U\-A\-L\-S\-\_\-\-S\-Y\-M} = 6, 
+{\bfseries L\-E\-X\-\_\-\-N\-O\-T\-\_\-\-E\-Q\-U\-A\-L\-S\-\_\-\-S\-Y\-M} = 7, 
+{\bfseries L\-E\-X\-\_\-\-S\-T\-R\-I\-N\-G\-\_\-\-S\-Y\-M} = 8, 
+\\*
+{\bfseries L\-E\-X\-\_\-\-C\-O\-M\-M\-A\-\_\-\-S\-Y\-M} = 9, 
+{\bfseries L\-E\-X\-\_\-\-A\-N\-D\-\_\-\-S\-Y\-M} = 10, 
+{\bfseries L\-E\-X\-\_\-\-O\-R\-\_\-\-S\-Y\-M} = 11, 
+{\bfseries L\-E\-X\-\_\-\-N\-O\-T\-\_\-\-S\-Y\-M} = 12, 
+\\*
+{\bfseries L\-E\-X\-\_\-\-A\-T\-\_\-\-S\-Y\-M} = 13, 
+{\bfseries L\-E\-X\-\_\-\-O\-P\-E\-N\-\_\-\-B\-R\-A\-C\-K\-E\-T\-\_\-\-S\-Y\-M} = 14, 
+{\bfseries L\-E\-X\-\_\-\-C\-L\-O\-S\-E\-\_\-\-B\-R\-A\-C\-K\-E\-T\-\_\-\-S\-Y\-M} = 15, 
+{\bfseries L\-E\-X\-\_\-\-O\-P\-E\-N\-\_\-\-B\-R\-A\-C\-E\-\_\-\-S\-Y\-M} = 16, 
+\\*
+{\bfseries L\-E\-X\-\_\-\-C\-L\-O\-S\-E\-\_\-\-B\-R\-A\-C\-E\-\_\-\-S\-Y\-M} = 17, 
+{\bfseries L\-E\-X\-\_\-\-O\-P\-E\-N\-\_\-\-P\-A\-R\-E\-N\-\_\-\-S\-Y\-M} = 18, 
+{\bfseries L\-E\-X\-\_\-\-C\-L\-O\-S\-E\-\_\-\-P\-A\-R\-E\-N\-\_\-\-S\-Y\-M} = 19, 
+{\bfseries L\-E\-X\-\_\-\-E\-O\-F\-\_\-\-S\-Y\-M} = 20, 
+\\*
+{\bfseries L\-E\-X\-\_\-\-U\-N\-K\-N\-O\-W\-N\-\_\-\-S\-Y\-M} = 21, 
+{\bfseries L\-E\-X\-\_\-\-U\-N\-K\-N\-O\-W\-N\-\_\-\-F\-U\-N\-C\-\_\-\-S\-Y\-M} = 22, 
+{\bfseries L\-E\-X\-\_\-\-I\-D\-E\-N\-T\-\_\-\-T\-O\-O\-\_\-\-L\-O\-N\-G\-\_\-\-S\-Y\-M} = 23, 
+{\bfseries L\-E\-X\-\_\-\-S\-T\-R\-I\-N\-G\-\_\-\-W\-I\-T\-H\-\_\-\-E\-O\-L\-\_\-\-S\-Y\-M} = 24, 
+\\*
+{\bfseries L\-E\-X\-\_\-\-I\-L\-L\-E\-G\-A\-L\-\_\-\-I\-D\-E\-N\-T\-\_\-\-S\-Y\-M} = 25, 
+{\bfseries L\-E\-X\-\_\-\-T\-W\-O\-\_\-\-D\-O\-T\-S\-\_\-\-I\-D\-E\-N\-T\-\_\-\-S\-Y\-M} = 26, 
+{\bfseries L\-E\-X\-\_\-\-B\-L\-O\-C\-K\-\_\-\-S\-T\-R\-I\-N\-G\-\_\-\-W\-I\-T\-H\-\_\-\-E\-O\-F\-\_\-\-S\-Y\-M} = 27, 
+{\bfseries L\-E\-X\-\_\-\-S\-O\-L\-E\-\_\-\-D\-O\-T\-\_\-\-I\-D\-E\-N\-T\-\_\-\-S\-Y\-M} = 28
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1LexBase_ac22c286e98a298acb77cf649e9fc7c07}{void {\bfseries next\-Token} (\hyperlink{classCONFIG4CPP__NAMESPACE_1_1LexToken}{Lex\-Token} \&token)}\label{classCONFIG4CPP__NAMESPACE_1_1LexBase_ac22c286e98a298acb77cf649e9fc7c07}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1LexBase_a6105dd05de2a9c510496b9f42b23e238}{{\bfseries Lex\-Base} (Configuration\-::\-Source\-Type source\-Type, const char $\ast$source, \hyperlink{classCONFIG4CPP__NAMESPACE_1_1UidIdentifierProcessor}{Uid\-Identifier\-Processor} $\ast$uid\-Identifier\-Processor)  throw (\-Configuration\-Exception)}\label{classCONFIG4CPP__NAMESPACE_1_1LexBase_a6105dd05de2a9c510496b9f42b23e238}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1LexBase_aea73aeb02d65ce8086297f871d0c6865}{{\bfseries Lex\-Base} (const char $\ast$str)  throw (\-Configuration\-Exception)}\label{classCONFIG4CPP__NAMESPACE_1_1LexBase_aea73aeb02d65ce8086297f871d0c6865}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1LexBase_ae6266e0474783cb87ab2f111431591dd}{\hyperlink{structCONFIG4CPP__NAMESPACE_1_1LexBase_1_1KeywordInfo}{Keyword\-Info} $\ast$ {\bfseries m\-\_\-keyword\-Info\-Array}}\label{classCONFIG4CPP__NAMESPACE_1_1LexBase_ae6266e0474783cb87ab2f111431591dd}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1LexBase_a99c1cdbe1124a0c24c972d0c988b674e}{int {\bfseries m\-\_\-keyword\-Info\-Array\-Size}}\label{classCONFIG4CPP__NAMESPACE_1_1LexBase_a99c1cdbe1124a0c24c972d0c988b674e}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1LexBase_a4bce40b400287573c3ed00966ee63313}{\hyperlink{structCONFIG4CPP__NAMESPACE_1_1LexBase_1_1FuncInfo}{Func\-Info} $\ast$ {\bfseries m\-\_\-func\-Info\-Array}}\label{classCONFIG4CPP__NAMESPACE_1_1LexBase_a4bce40b400287573c3ed00966ee63313}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1LexBase_a167be1b93d17933ddeefa636f8b53af4}{int {\bfseries m\-\_\-func\-Info\-Array\-Size}}\label{classCONFIG4CPP__NAMESPACE_1_1LexBase_a167be1b93d17933ddeefa636f8b53af4}
+
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/configuration/config4cpp/src/Lex\-Base.\-h\item 
+src/configuration/config4cpp/src/Lex\-Base.\-cpp\end{DoxyCompactItemize}

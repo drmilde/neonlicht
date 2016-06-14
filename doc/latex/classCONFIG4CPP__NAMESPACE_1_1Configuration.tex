@@ -1,0 +1,330 @@
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1Configuration}{\section{C\-O\-N\-F\-I\-G4\-C\-P\-P\-\_\-\-N\-A\-M\-E\-S\-P\-A\-C\-E\-:\-:Configuration Class Reference}
+\label{classCONFIG4CPP__NAMESPACE_1_1Configuration}\index{C\-O\-N\-F\-I\-G4\-C\-P\-P\-\_\-\-N\-A\-M\-E\-S\-P\-A\-C\-E\-::\-Configuration@{C\-O\-N\-F\-I\-G4\-C\-P\-P\-\_\-\-N\-A\-M\-E\-S\-P\-A\-C\-E\-::\-Configuration}}
+}
+Inheritance diagram for C\-O\-N\-F\-I\-G4\-C\-P\-P\-\_\-\-N\-A\-M\-E\-S\-P\-A\-C\-E\-:\-:Configuration\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classCONFIG4CPP__NAMESPACE_1_1Configuration}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bfseries Type} \{ \\*
+{\bfseries C\-F\-G\-\_\-\-N\-O\-\_\-\-V\-A\-L\-U\-E} = 0, 
+{\bfseries C\-F\-G\-\_\-\-S\-T\-R\-I\-N\-G} = 1, 
+{\bfseries C\-F\-G\-\_\-\-L\-I\-S\-T} = 2, 
+{\bfseries C\-F\-G\-\_\-\-S\-C\-O\-P\-E} = 4, 
+\\*
+{\bfseries C\-F\-G\-\_\-\-V\-A\-R\-I\-A\-B\-L\-E\-S} = 3, 
+{\bfseries C\-F\-G\-\_\-\-S\-C\-O\-P\-E\-\_\-\-A\-N\-D\-\_\-\-V\-A\-R\-S} = 7
+ \}
+\item 
+enum {\bfseries Source\-Type} \{ {\bfseries I\-N\-P\-U\-T\-\_\-\-F\-I\-L\-E}, 
+{\bfseries I\-N\-P\-U\-T\-\_\-\-S\-T\-R\-I\-N\-G}, 
+{\bfseries I\-N\-P\-U\-T\-\_\-\-E\-X\-E\-C}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1Configuration_a6b4d9a5b754f030613092e8238ada051}{virtual void {\bfseries destroy} ()}\label{classCONFIG4CPP__NAMESPACE_1_1Configuration_a6b4d9a5b754f030613092e8238ada051}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1Configuration_a4ee48cc141113b59c7cdbd684f6f6280}{virtual void {\bfseries set\-Fallback\-Configuration} (\hyperlink{classCONFIG4CPP__NAMESPACE_1_1Configuration}{Configuration} $\ast$cfg)=0}\label{classCONFIG4CPP__NAMESPACE_1_1Configuration_a4ee48cc141113b59c7cdbd684f6f6280}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1Configuration_acdabd2bcec65531f37749d05d88bacf0}{virtual void {\bfseries set\-Fallback\-Configuration} (Configuration\-::\-Source\-Type source\-Type, const char $\ast$source, const char $\ast$source\-Description=\char`\"{}\char`\"{})=0  throw (\-Configuration\-Exception)}\label{classCONFIG4CPP__NAMESPACE_1_1Configuration_acdabd2bcec65531f37749d05d88bacf0}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1Configuration_a74eb6b4c18c63a6ed458b5d115942908}{virtual const \hyperlink{classCONFIG4CPP__NAMESPACE_1_1Configuration}{Configuration} $\ast$ {\bfseries get\-Fallback\-Configuration} ()=0}\label{classCONFIG4CPP__NAMESPACE_1_1Configuration_a74eb6b4c18c63a6ed458b5d115942908}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1Configuration_a10a398ed7d0eb8b331fea8fc64c32679}{virtual void {\bfseries set\-Security\-Configuration} (\hyperlink{classCONFIG4CPP__NAMESPACE_1_1Configuration}{Configuration} $\ast$cfg, bool take\-Ownership, const char $\ast$scope=\char`\"{}\char`\"{})=0  throw (\-Configuration\-Exception)}\label{classCONFIG4CPP__NAMESPACE_1_1Configuration_a10a398ed7d0eb8b331fea8fc64c32679}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1Configuration_a7169b8486ab3b27e1d0c76c44dc41025}{virtual void {\bfseries set\-Security\-Configuration} (const char $\ast$cfg\-Input, const char $\ast$scope=\char`\"{}\char`\"{})=0  throw (\-Configuration\-Exception)}\label{classCONFIG4CPP__NAMESPACE_1_1Configuration_a7169b8486ab3b27e1d0c76c44dc41025}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1Configuration_a80dbde63ed753da122a831adf4c34f4d}{virtual void {\bfseries get\-Security\-Configuration} (const \hyperlink{classCONFIG4CPP__NAMESPACE_1_1Configuration}{Configuration} $\ast$\&cfg, const char $\ast$\&scope)=0}\label{classCONFIG4CPP__NAMESPACE_1_1Configuration_a80dbde63ed753da122a831adf4c34f4d}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1Configuration_a9962e8e2d624ff8b4ddf688098d876ca}{virtual void {\bfseries parse} (Configuration\-::\-Source\-Type source\-Type, const char $\ast$source, const char $\ast$source\-Description=\char`\"{}\char`\"{})=0  throw (\-Configuration\-Exception)}\label{classCONFIG4CPP__NAMESPACE_1_1Configuration_a9962e8e2d624ff8b4ddf688098d876ca}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1Configuration_a879e4483675830ae4210eaa906ad9d6c}{void {\bfseries parse} (const char $\ast$source\-Type\-And\-Source)  throw (\-Configuration\-Exception)}\label{classCONFIG4CPP__NAMESPACE_1_1Configuration_a879e4483675830ae4210eaa906ad9d6c}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1Configuration_a1606e08d467c38e549800710a385ab30}{virtual const char $\ast$ {\bfseries file\-Name} () const =0}\label{classCONFIG4CPP__NAMESPACE_1_1Configuration_a1606e08d467c38e549800710a385ab30}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1Configuration_adfb6ac40fe1cfd06383bc54a7c82e69b}{virtual void {\bfseries list\-Fully\-Scoped\-Names} (const char $\ast$scope, const char $\ast$local\-Name, Type type\-Mask, bool recursive, \hyperlink{classCONFIG4CPP__NAMESPACE_1_1StringVector}{String\-Vector} \&names) const =0  throw (\-Configuration\-Exception)}\label{classCONFIG4CPP__NAMESPACE_1_1Configuration_adfb6ac40fe1cfd06383bc54a7c82e69b}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1Configuration_a925700c23182f453b1913184b87db859}{virtual void {\bfseries list\-Fully\-Scoped\-Names} (const char $\ast$scope, const char $\ast$local\-Name, Type type\-Mask, bool recursive, const char $\ast$filter\-Pattern, \hyperlink{classCONFIG4CPP__NAMESPACE_1_1StringVector}{String\-Vector} \&names) const =0  throw (\-Configuration\-Exception)}\label{classCONFIG4CPP__NAMESPACE_1_1Configuration_a925700c23182f453b1913184b87db859}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1Configuration_ae00584fdb96a5d9157e3dadc3abd58c4}{virtual void {\bfseries list\-Fully\-Scoped\-Names} (const char $\ast$scope, const char $\ast$local\-Name, Type type\-Mask, bool recursive, const \hyperlink{classCONFIG4CPP__NAMESPACE_1_1StringVector}{String\-Vector} \&filter\-Patterns, \hyperlink{classCONFIG4CPP__NAMESPACE_1_1StringVector}{String\-Vector} \&names) const =0  throw (\-Configuration\-Exception)}\label{classCONFIG4CPP__NAMESPACE_1_1Configuration_ae00584fdb96a5d9157e3dadc3abd58c4}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1Configuration_ab8db65ad603a5fe0fb024c7fdd20b934}{virtual void {\bfseries list\-Locally\-Scoped\-Names} (const char $\ast$scope, const char $\ast$local\-Name, Type type\-Mask, bool recursive, \hyperlink{classCONFIG4CPP__NAMESPACE_1_1StringVector}{String\-Vector} \&names) const =0  throw (\-Configuration\-Exception)}\label{classCONFIG4CPP__NAMESPACE_1_1Configuration_ab8db65ad603a5fe0fb024c7fdd20b934}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1Configuration_a1b2525a187ee91637a47088acc92e090}{virtual void {\bfseries list\-Locally\-Scoped\-Names} (const char $\ast$scope, const char $\ast$local\-Name, Type type\-Mask, bool recursive, const char $\ast$filter\-Pattern, \hyperlink{classCONFIG4CPP__NAMESPACE_1_1StringVector}{String\-Vector} \&names) const =0  throw (\-Configuration\-Exception)}\label{classCONFIG4CPP__NAMESPACE_1_1Configuration_a1b2525a187ee91637a47088acc92e090}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1Configuration_a5e72ebf192e21763966cda00def37d3f}{virtual void {\bfseries list\-Locally\-Scoped\-Names} (const char $\ast$scope, const char $\ast$local\-Name, Type type\-Mask, bool recursive, const \hyperlink{classCONFIG4CPP__NAMESPACE_1_1StringVector}{String\-Vector} \&filter\-Patterns, \hyperlink{classCONFIG4CPP__NAMESPACE_1_1StringVector}{String\-Vector} \&names) const =0  throw (\-Configuration\-Exception)}\label{classCONFIG4CPP__NAMESPACE_1_1Configuration_a5e72ebf192e21763966cda00def37d3f}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1Configuration_a54699fc992061b0521fad2df4d6dfaff}{virtual Type {\bfseries type} (const char $\ast$scope, const char $\ast$local\-Name) const =0}\label{classCONFIG4CPP__NAMESPACE_1_1Configuration_a54699fc992061b0521fad2df4d6dfaff}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1Configuration_a968327608bf4387631d11680351c25b4}{virtual bool {\bfseries uid\-Equals} (const char $\ast$s1, const char $\ast$s2) const =0}\label{classCONFIG4CPP__NAMESPACE_1_1Configuration_a968327608bf4387631d11680351c25b4}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1Configuration_adb4c381219440ecb32f5be2befc463f4}{virtual void {\bfseries expand\-Uid} (\hyperlink{classCONFIG4CPP__NAMESPACE_1_1StringBuffer}{String\-Buffer} \&spelling)=0  throw (\-Configuration\-Exception)}\label{classCONFIG4CPP__NAMESPACE_1_1Configuration_adb4c381219440ecb32f5be2befc463f4}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1Configuration_a261d0010d8b27a46991a9feccc916c9c}{virtual const char $\ast$ {\bfseries unexpand\-Uid} (const char $\ast$spelling, \hyperlink{classCONFIG4CPP__NAMESPACE_1_1StringBuffer}{String\-Buffer} \&buf) const =0}\label{classCONFIG4CPP__NAMESPACE_1_1Configuration_a261d0010d8b27a46991a9feccc916c9c}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1Configuration_aa7dfe8b35c1cd9d7d18ff62de1894582}{virtual void {\bfseries dump} (\hyperlink{classCONFIG4CPP__NAMESPACE_1_1StringBuffer}{String\-Buffer} \&buf, bool want\-Expanded\-Uid\-Names) const =0}\label{classCONFIG4CPP__NAMESPACE_1_1Configuration_aa7dfe8b35c1cd9d7d18ff62de1894582}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1Configuration_a0c705b81a30495e9790ba24e17307819}{virtual void {\bfseries dump} (\hyperlink{classCONFIG4CPP__NAMESPACE_1_1StringBuffer}{String\-Buffer} \&buf, bool want\-Expanded\-Uid\-Names, const char $\ast$scope, const char $\ast$local\-Name) const =0  throw (\-Configuration\-Exception)}\label{classCONFIG4CPP__NAMESPACE_1_1Configuration_a0c705b81a30495e9790ba24e17307819}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1Configuration_a5ec6d5ccda2d6aab3c131d1393ece28b}{virtual bool {\bfseries is\-Boolean} (const char $\ast$str) const =0}\label{classCONFIG4CPP__NAMESPACE_1_1Configuration_a5ec6d5ccda2d6aab3c131d1393ece28b}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1Configuration_afed6a132f859dbdde3e813817f0dfd99}{virtual bool {\bfseries is\-Int} (const char $\ast$str) const =0}\label{classCONFIG4CPP__NAMESPACE_1_1Configuration_afed6a132f859dbdde3e813817f0dfd99}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1Configuration_a33e20bf019112adf8a96e1777ce535fc}{virtual bool {\bfseries is\-Float} (const char $\ast$str) const =0}\label{classCONFIG4CPP__NAMESPACE_1_1Configuration_a33e20bf019112adf8a96e1777ce535fc}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1Configuration_af54efe6873b6047cfea57c1e478853c0}{virtual bool {\bfseries is\-Duration\-Microseconds} (const char $\ast$str) const =0}\label{classCONFIG4CPP__NAMESPACE_1_1Configuration_af54efe6873b6047cfea57c1e478853c0}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1Configuration_ab31031ad55a6b9cc2e7081d3d81b6785}{virtual bool {\bfseries is\-Duration\-Milliseconds} (const char $\ast$str) const =0}\label{classCONFIG4CPP__NAMESPACE_1_1Configuration_ab31031ad55a6b9cc2e7081d3d81b6785}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1Configuration_a6655a4960b5998c9ca22eff7960f6ecb}{virtual bool {\bfseries is\-Duration\-Seconds} (const char $\ast$str) const =0}\label{classCONFIG4CPP__NAMESPACE_1_1Configuration_a6655a4960b5998c9ca22eff7960f6ecb}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1Configuration_aef8085f40dd1764bd202b27638632547}{virtual bool {\bfseries is\-Memory\-Size\-Bytes} (const char $\ast$str) const =0}\label{classCONFIG4CPP__NAMESPACE_1_1Configuration_aef8085f40dd1764bd202b27638632547}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1Configuration_a153533d8400d62fa5923c86c61a778f4}{virtual bool {\bfseries is\-Memory\-Size\-K\-B} (const char $\ast$str) const =0}\label{classCONFIG4CPP__NAMESPACE_1_1Configuration_a153533d8400d62fa5923c86c61a778f4}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1Configuration_ac9dd169927020ccda8a8b8bea723a852}{virtual bool {\bfseries is\-Memory\-Size\-M\-B} (const char $\ast$str) const =0}\label{classCONFIG4CPP__NAMESPACE_1_1Configuration_ac9dd169927020ccda8a8b8bea723a852}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1Configuration_ad9cf0942d78dfda6871221911b43e645}{virtual bool {\bfseries is\-Enum} (const char $\ast$str, const \hyperlink{structCONFIG4CPP__NAMESPACE_1_1EnumNameAndValue}{Enum\-Name\-And\-Value} $\ast$enum\-Info, int num\-Enums) const =0}\label{classCONFIG4CPP__NAMESPACE_1_1Configuration_ad9cf0942d78dfda6871221911b43e645}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1Configuration_ad50807b263087f742816a6092bb72e14}{virtual bool {\bfseries is\-Float\-With\-Units} (const char $\ast$str, const char $\ast$$\ast$allowed\-Units, int allowed\-Units\-Size) const =0}\label{classCONFIG4CPP__NAMESPACE_1_1Configuration_ad50807b263087f742816a6092bb72e14}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1Configuration_a08a300bc4cee2f0f42d05911641124d6}{virtual bool {\bfseries is\-Int\-With\-Units} (const char $\ast$str, const char $\ast$$\ast$allowed\-Units, int allowed\-Units\-Size) const =0}\label{classCONFIG4CPP__NAMESPACE_1_1Configuration_a08a300bc4cee2f0f42d05911641124d6}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1Configuration_af132131731f7e2c4910d124b4de1152e}{virtual bool {\bfseries is\-Units\-With\-Float} (const char $\ast$str, const char $\ast$$\ast$allowed\-Units, int allowed\-Units\-Size) const =0}\label{classCONFIG4CPP__NAMESPACE_1_1Configuration_af132131731f7e2c4910d124b4de1152e}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1Configuration_a845b2bdfc6a74f1524750d0e002fa155}{virtual bool {\bfseries is\-Units\-With\-Int} (const char $\ast$str, const char $\ast$$\ast$allowed\-Units, int allowed\-Units\-Size) const =0}\label{classCONFIG4CPP__NAMESPACE_1_1Configuration_a845b2bdfc6a74f1524750d0e002fa155}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1Configuration_a80f6dcd2137e1fe9672a18d8ed6c22dd}{virtual bool {\bfseries string\-To\-Boolean} (const char $\ast$scope, const char $\ast$local\-Name, const char $\ast$str) const =0  throw (\-Configuration\-Exception)}\label{classCONFIG4CPP__NAMESPACE_1_1Configuration_a80f6dcd2137e1fe9672a18d8ed6c22dd}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1Configuration_a1993b784e8ac66c63dcb9ac802661dfd}{virtual int {\bfseries string\-To\-Int} (const char $\ast$scope, const char $\ast$local\-Name, const char $\ast$str) const =0  throw (\-Configuration\-Exception)}\label{classCONFIG4CPP__NAMESPACE_1_1Configuration_a1993b784e8ac66c63dcb9ac802661dfd}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1Configuration_af8ce9732bcd6a7079179b98aaaf764fc}{virtual float {\bfseries string\-To\-Float} (const char $\ast$scope, const char $\ast$local\-Name, const char $\ast$str) const =0  throw (\-Configuration\-Exception)}\label{classCONFIG4CPP__NAMESPACE_1_1Configuration_af8ce9732bcd6a7079179b98aaaf764fc}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1Configuration_a80a4e0f72cd68ddbf49b641385f0f583}{virtual int {\bfseries string\-To\-Duration\-Seconds} (const char $\ast$scope, const char $\ast$local\-Name, const char $\ast$str) const =0  throw (\-Configuration\-Exception)}\label{classCONFIG4CPP__NAMESPACE_1_1Configuration_a80a4e0f72cd68ddbf49b641385f0f583}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1Configuration_ad0f5ff24d51e84e0dea736b8cf08876f}{virtual int {\bfseries string\-To\-Duration\-Milliseconds} (const char $\ast$scope, const char $\ast$local\-Name, const char $\ast$str) const =0  throw (\-Configuration\-Exception)}\label{classCONFIG4CPP__NAMESPACE_1_1Configuration_ad0f5ff24d51e84e0dea736b8cf08876f}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1Configuration_a540eed3e343c481b1333e29d2c1f418e}{virtual int {\bfseries string\-To\-Duration\-Microseconds} (const char $\ast$scope, const char $\ast$local\-Name, const char $\ast$str) const =0  throw (\-Configuration\-Exception)}\label{classCONFIG4CPP__NAMESPACE_1_1Configuration_a540eed3e343c481b1333e29d2c1f418e}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1Configuration_a35490a4272c0724867821660792cc19f}{virtual int {\bfseries string\-To\-Memory\-Size\-Bytes} (const char $\ast$scope, const char $\ast$local\-Name, const char $\ast$str) const =0  throw (\-Configuration\-Exception)}\label{classCONFIG4CPP__NAMESPACE_1_1Configuration_a35490a4272c0724867821660792cc19f}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1Configuration_a4240e07235083dcac0628e7aa02c491c}{virtual int {\bfseries string\-To\-Memory\-Size\-K\-B} (const char $\ast$scope, const char $\ast$local\-Name, const char $\ast$str) const =0  throw (\-Configuration\-Exception)}\label{classCONFIG4CPP__NAMESPACE_1_1Configuration_a4240e07235083dcac0628e7aa02c491c}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1Configuration_a2c4feaf8af621754b16caedbd656861b}{virtual int {\bfseries string\-To\-Memory\-Size\-M\-B} (const char $\ast$scope, const char $\ast$local\-Name, const char $\ast$str) const =0  throw (\-Configuration\-Exception)}\label{classCONFIG4CPP__NAMESPACE_1_1Configuration_a2c4feaf8af621754b16caedbd656861b}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1Configuration_a64718b9caddf3b07506aa11447708efe}{virtual int {\bfseries string\-To\-Enum} (const char $\ast$scope, const char $\ast$local\-Name, const char $\ast$type\-Name, const char $\ast$str, const \hyperlink{structCONFIG4CPP__NAMESPACE_1_1EnumNameAndValue}{Enum\-Name\-And\-Value} $\ast$enum\-Info, int num\-Enums) const =0  throw (\-Configuration\-Exception)}\label{classCONFIG4CPP__NAMESPACE_1_1Configuration_a64718b9caddf3b07506aa11447708efe}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1Configuration_aad3a6f150579d84401941d5cbf3cf0e7}{virtual void {\bfseries string\-To\-Float\-With\-Units} (const char $\ast$scope, const char $\ast$local\-Name, const char $\ast$type\-Name, const char $\ast$str, const char $\ast$$\ast$allowed\-Units, int allowed\-Units\-Size, float \&float\-Result, const char $\ast$\&units\-Result) const =0  throw (\-Configuration\-Exception)}\label{classCONFIG4CPP__NAMESPACE_1_1Configuration_aad3a6f150579d84401941d5cbf3cf0e7}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1Configuration_acca91fff8c2cd14d72bd37953697ada5}{virtual void {\bfseries string\-To\-Units\-With\-Float} (const char $\ast$scope, const char $\ast$local\-Name, const char $\ast$type\-Name, const char $\ast$str, const char $\ast$$\ast$allowed\-Units, int allowed\-Units\-Size, float \&float\-Result, const char $\ast$\&units\-Result) const =0  throw (\-Configuration\-Exception)}\label{classCONFIG4CPP__NAMESPACE_1_1Configuration_acca91fff8c2cd14d72bd37953697ada5}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1Configuration_a8f360ff006adbd573557344427d42f9f}{virtual void {\bfseries string\-To\-Int\-With\-Units} (const char $\ast$scope, const char $\ast$local\-Name, const char $\ast$type\-Name, const char $\ast$str, const char $\ast$$\ast$allowed\-Units, int allowed\-Units\-Size, int \&int\-Result, const char $\ast$\&units\-Result) const =0  throw (\-Configuration\-Exception)}\label{classCONFIG4CPP__NAMESPACE_1_1Configuration_a8f360ff006adbd573557344427d42f9f}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1Configuration_a9a11a56622c5be047b4e6a77164f854b}{virtual void {\bfseries string\-To\-Units\-With\-Int} (const char $\ast$scope, const char $\ast$local\-Name, const char $\ast$type\-Name, const char $\ast$str, const char $\ast$$\ast$allowed\-Units, int allowed\-Units\-Size, int \&int\-Result, const char $\ast$\&units\-Result) const =0  throw (\-Configuration\-Exception)}\label{classCONFIG4CPP__NAMESPACE_1_1Configuration_a9a11a56622c5be047b4e6a77164f854b}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1Configuration_a29c789b915ec62161af3f20f0e4f95cc}{virtual const char $\ast$ {\bfseries lookup\-String} (const char $\ast$scope, const char $\ast$local\-Name, const char $\ast$default\-Val) const =0  throw (\-Configuration\-Exception)}\label{classCONFIG4CPP__NAMESPACE_1_1Configuration_a29c789b915ec62161af3f20f0e4f95cc}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1Configuration_a8d44332a14b2e39dba5a1876ccafe034}{virtual const char $\ast$ {\bfseries lookup\-String} (const char $\ast$scope, const char $\ast$local\-Name) const =0  throw (\-Configuration\-Exception)}\label{classCONFIG4CPP__NAMESPACE_1_1Configuration_a8d44332a14b2e39dba5a1876ccafe034}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1Configuration_adcec7aa081ec51f9db73ccfecf57627f}{virtual void {\bfseries lookup\-List} (const char $\ast$scope, const char $\ast$local\-Name, const char $\ast$$\ast$\&array, int \&array\-Size, const char $\ast$$\ast$default\-Array, int default\-Array\-Size) const =0  throw (\-Configuration\-Exception)}\label{classCONFIG4CPP__NAMESPACE_1_1Configuration_adcec7aa081ec51f9db73ccfecf57627f}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1Configuration_a79804bbb433302ff8af28d5f9136c295}{virtual void {\bfseries lookup\-List} (const char $\ast$scope, const char $\ast$local\-Name, const char $\ast$$\ast$\&array, int \&array\-Size) const =0  throw (\-Configuration\-Exception)}\label{classCONFIG4CPP__NAMESPACE_1_1Configuration_a79804bbb433302ff8af28d5f9136c295}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1Configuration_ac74b044af14ff94efd5a2c9fba701e9a}{virtual void {\bfseries lookup\-List} (const char $\ast$scope, const char $\ast$local\-Name, \hyperlink{classCONFIG4CPP__NAMESPACE_1_1StringVector}{String\-Vector} \&list, const \hyperlink{classCONFIG4CPP__NAMESPACE_1_1StringVector}{String\-Vector} \&default\-List) const =0  throw (\-Configuration\-Exception)}\label{classCONFIG4CPP__NAMESPACE_1_1Configuration_ac74b044af14ff94efd5a2c9fba701e9a}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1Configuration_a521f2aab1656d6e5167a42d160dee252}{virtual void {\bfseries lookup\-List} (const char $\ast$scope, const char $\ast$local\-Name, \hyperlink{classCONFIG4CPP__NAMESPACE_1_1StringVector}{String\-Vector} \&list) const =0  throw (\-Configuration\-Exception)}\label{classCONFIG4CPP__NAMESPACE_1_1Configuration_a521f2aab1656d6e5167a42d160dee252}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1Configuration_af8e8ace7fe8ba60b580dc7575fb8218f}{virtual int {\bfseries lookup\-Int} (const char $\ast$scope, const char $\ast$local\-Name, int default\-Val) const =0  throw (\-Configuration\-Exception)}\label{classCONFIG4CPP__NAMESPACE_1_1Configuration_af8e8ace7fe8ba60b580dc7575fb8218f}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1Configuration_a5be802f9ec20e88ecc6e0312fdfb1fb5}{virtual int {\bfseries lookup\-Int} (const char $\ast$scope, const char $\ast$local\-Name) const =0  throw (\-Configuration\-Exception)}\label{classCONFIG4CPP__NAMESPACE_1_1Configuration_a5be802f9ec20e88ecc6e0312fdfb1fb5}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1Configuration_aa95a3d368ba9cc6e9504c7d7e76b0a86}{virtual float {\bfseries lookup\-Float} (const char $\ast$scope, const char $\ast$local\-Name, float default\-Val) const =0  throw (\-Configuration\-Exception)}\label{classCONFIG4CPP__NAMESPACE_1_1Configuration_aa95a3d368ba9cc6e9504c7d7e76b0a86}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1Configuration_a9abd2d9569ce735829e20456d663938c}{virtual float {\bfseries lookup\-Float} (const char $\ast$scope, const char $\ast$local\-Name) const =0  throw (\-Configuration\-Exception)}\label{classCONFIG4CPP__NAMESPACE_1_1Configuration_a9abd2d9569ce735829e20456d663938c}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1Configuration_a2ae8691ea64b67ba84d21e9512f44b24}{virtual int {\bfseries lookup\-Enum} (const char $\ast$scope, const char $\ast$local\-Name, const char $\ast$type\-Name, const \hyperlink{structCONFIG4CPP__NAMESPACE_1_1EnumNameAndValue}{Enum\-Name\-And\-Value} $\ast$enum\-Info, int num\-Enums, const char $\ast$default\-Val) const =0  throw (\-Configuration\-Exception)}\label{classCONFIG4CPP__NAMESPACE_1_1Configuration_a2ae8691ea64b67ba84d21e9512f44b24}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1Configuration_adfed2a57303fdb4c8e7191832890f750}{virtual int {\bfseries lookup\-Enum} (const char $\ast$scope, const char $\ast$local\-Name, const char $\ast$type\-Name, const \hyperlink{structCONFIG4CPP__NAMESPACE_1_1EnumNameAndValue}{Enum\-Name\-And\-Value} $\ast$enum\-Info, int num\-Enums, int default\-Val) const =0  throw (\-Configuration\-Exception)}\label{classCONFIG4CPP__NAMESPACE_1_1Configuration_adfed2a57303fdb4c8e7191832890f750}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1Configuration_a604084c81180661f830c4da1c0fe9366}{virtual int {\bfseries lookup\-Enum} (const char $\ast$scope, const char $\ast$local\-Name, const char $\ast$type\-Name, const \hyperlink{structCONFIG4CPP__NAMESPACE_1_1EnumNameAndValue}{Enum\-Name\-And\-Value} $\ast$enum\-Info, int num\-Enums) const =0  throw (\-Configuration\-Exception)}\label{classCONFIG4CPP__NAMESPACE_1_1Configuration_a604084c81180661f830c4da1c0fe9366}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1Configuration_a292fcba7dc020393a230a1190e551184}{virtual bool {\bfseries lookup\-Boolean} (const char $\ast$scope, const char $\ast$local\-Name, bool default\-Val) const =0  throw (\-Configuration\-Exception)}\label{classCONFIG4CPP__NAMESPACE_1_1Configuration_a292fcba7dc020393a230a1190e551184}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1Configuration_aeef7e63e598546b9713ee1a2b9517b9e}{virtual bool {\bfseries lookup\-Boolean} (const char $\ast$scope, const char $\ast$local\-Name) const =0  throw (\-Configuration\-Exception)}\label{classCONFIG4CPP__NAMESPACE_1_1Configuration_aeef7e63e598546b9713ee1a2b9517b9e}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1Configuration_a06356d620f19cc192b43c5663fe2e73f}{virtual void {\bfseries lookup\-Float\-With\-Units} (const char $\ast$scope, const char $\ast$local\-Name, const char $\ast$type\-Name, const char $\ast$$\ast$allowed\-Units, int allowed\-Units\-Size, float \&float\-Result, const char $\ast$\&units\-Result) const =0  throw (\-Configuration\-Exception)}\label{classCONFIG4CPP__NAMESPACE_1_1Configuration_a06356d620f19cc192b43c5663fe2e73f}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1Configuration_a1c9cae8721b367b5181f95091a0d9f77}{virtual void {\bfseries lookup\-Float\-With\-Units} (const char $\ast$scope, const char $\ast$local\-Name, const char $\ast$type\-Name, const char $\ast$$\ast$allowed\-Units, int allowed\-Units\-Size, float \&float\-Result, const char $\ast$\&units\-Result, float default\-Float, const char $\ast$default\-Units) const =0  throw (\-Configuration\-Exception)}\label{classCONFIG4CPP__NAMESPACE_1_1Configuration_a1c9cae8721b367b5181f95091a0d9f77}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1Configuration_a604b3d82b8e688f8f97326ef86afa763}{virtual void {\bfseries lookup\-Units\-With\-Float} (const char $\ast$scope, const char $\ast$local\-Name, const char $\ast$type\-Name, const char $\ast$$\ast$allowed\-Units, int allowed\-Units\-Size, float \&float\-Result, const char $\ast$\&units\-Result) const =0  throw (\-Configuration\-Exception)}\label{classCONFIG4CPP__NAMESPACE_1_1Configuration_a604b3d82b8e688f8f97326ef86afa763}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1Configuration_a9a30a5b4f012a9b8b2e19361a272b049}{virtual void {\bfseries lookup\-Units\-With\-Float} (const char $\ast$scope, const char $\ast$local\-Name, const char $\ast$type\-Name, const char $\ast$$\ast$allowed\-Units, int allowed\-Units\-Size, float \&float\-Result, const char $\ast$\&units\-Result, float default\-Float, const char $\ast$default\-Units) const =0  throw (\-Configuration\-Exception)}\label{classCONFIG4CPP__NAMESPACE_1_1Configuration_a9a30a5b4f012a9b8b2e19361a272b049}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1Configuration_a7182f206efac4765215534807d1c2485}{virtual void {\bfseries lookup\-Int\-With\-Units} (const char $\ast$scope, const char $\ast$local\-Name, const char $\ast$type\-Name, const char $\ast$$\ast$allowed\-Units, int allowed\-Units\-Size, int \&int\-Result, const char $\ast$\&units\-Result) const =0  throw (\-Configuration\-Exception)}\label{classCONFIG4CPP__NAMESPACE_1_1Configuration_a7182f206efac4765215534807d1c2485}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1Configuration_a34ecd7e12e787054b7cc49de6570d7f4}{virtual void {\bfseries lookup\-Int\-With\-Units} (const char $\ast$scope, const char $\ast$local\-Name, const char $\ast$type\-Name, const char $\ast$$\ast$allowed\-Units, int allowed\-Units\-Size, int \&int\-Result, const char $\ast$\&units\-Result, int default\-Int, const char $\ast$default\-Units) const =0  throw (\-Configuration\-Exception)}\label{classCONFIG4CPP__NAMESPACE_1_1Configuration_a34ecd7e12e787054b7cc49de6570d7f4}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1Configuration_aeef6917fd510cce95021efe7146f5f2d}{virtual void {\bfseries lookup\-Units\-With\-Int} (const char $\ast$scope, const char $\ast$local\-Name, const char $\ast$type\-Name, const char $\ast$$\ast$allowed\-Units, int allowed\-Units\-Size, int \&int\-Result, const char $\ast$\&units\-Result) const =0  throw (\-Configuration\-Exception)}\label{classCONFIG4CPP__NAMESPACE_1_1Configuration_aeef6917fd510cce95021efe7146f5f2d}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1Configuration_aaf749dca18f5dd7d82b49f1bc0ae5815}{virtual void {\bfseries lookup\-Units\-With\-Int} (const char $\ast$scope, const char $\ast$local\-Name, const char $\ast$type\-Name, const char $\ast$$\ast$allowed\-Units, int allowed\-Units\-Size, int \&int\-Result, const char $\ast$\&units\-Result, int default\-Int, const char $\ast$default\-Units) const =0  throw (\-Configuration\-Exception)}\label{classCONFIG4CPP__NAMESPACE_1_1Configuration_aaf749dca18f5dd7d82b49f1bc0ae5815}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1Configuration_ae765bb1acc8740a92d1ed451c210267a}{virtual int {\bfseries lookup\-Duration\-Microseconds} (const char $\ast$scope, const char $\ast$local\-Name, int default\-Val) const =0  throw (\-Configuration\-Exception)}\label{classCONFIG4CPP__NAMESPACE_1_1Configuration_ae765bb1acc8740a92d1ed451c210267a}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1Configuration_a411801a2337daf86b335cc9fa2c6d6fb}{virtual int {\bfseries lookup\-Duration\-Microseconds} (const char $\ast$scope, const char $\ast$local\-Name) const =0  throw (\-Configuration\-Exception)}\label{classCONFIG4CPP__NAMESPACE_1_1Configuration_a411801a2337daf86b335cc9fa2c6d6fb}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1Configuration_ac3f5af404012b6b1a3cfb2b177fb8b62}{virtual int {\bfseries lookup\-Duration\-Milliseconds} (const char $\ast$scope, const char $\ast$local\-Name, int default\-Val) const =0  throw (\-Configuration\-Exception)}\label{classCONFIG4CPP__NAMESPACE_1_1Configuration_ac3f5af404012b6b1a3cfb2b177fb8b62}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1Configuration_a060f220e870ad75ba029123283b7772f}{virtual int {\bfseries lookup\-Duration\-Milliseconds} (const char $\ast$scope, const char $\ast$local\-Name) const =0  throw (\-Configuration\-Exception)}\label{classCONFIG4CPP__NAMESPACE_1_1Configuration_a060f220e870ad75ba029123283b7772f}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1Configuration_a3b4815de4f40b8a75e8399f298041b8a}{virtual int {\bfseries lookup\-Duration\-Seconds} (const char $\ast$scope, const char $\ast$local\-Name, int default\-Val) const =0  throw (\-Configuration\-Exception)}\label{classCONFIG4CPP__NAMESPACE_1_1Configuration_a3b4815de4f40b8a75e8399f298041b8a}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1Configuration_af01f653956f637de24a7d3c3b24345e0}{virtual int {\bfseries lookup\-Duration\-Seconds} (const char $\ast$scope, const char $\ast$local\-Name) const =0  throw (\-Configuration\-Exception)}\label{classCONFIG4CPP__NAMESPACE_1_1Configuration_af01f653956f637de24a7d3c3b24345e0}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1Configuration_a2cf4fb9d8b7cae7a7faba0e92911ecae}{virtual int {\bfseries lookup\-Memory\-Size\-Bytes} (const char $\ast$scope, const char $\ast$local\-Name, int default\-Val) const =0  throw (\-Configuration\-Exception)}\label{classCONFIG4CPP__NAMESPACE_1_1Configuration_a2cf4fb9d8b7cae7a7faba0e92911ecae}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1Configuration_ae37820eea8f3a35858f37876fa1ee921}{virtual int {\bfseries lookup\-Memory\-Size\-Bytes} (const char $\ast$scope, const char $\ast$local\-Name) const =0  throw (\-Configuration\-Exception)}\label{classCONFIG4CPP__NAMESPACE_1_1Configuration_ae37820eea8f3a35858f37876fa1ee921}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1Configuration_a60223b88f9f8ec41d1551403ba3ea192}{virtual int {\bfseries lookup\-Memory\-Size\-K\-B} (const char $\ast$scope, const char $\ast$local\-Name, int default\-Val) const =0  throw (\-Configuration\-Exception)}\label{classCONFIG4CPP__NAMESPACE_1_1Configuration_a60223b88f9f8ec41d1551403ba3ea192}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1Configuration_a44dd9f98cff623000df1e6eca7a92f4c}{virtual int {\bfseries lookup\-Memory\-Size\-K\-B} (const char $\ast$scope, const char $\ast$local\-Name) const =0  throw (\-Configuration\-Exception)}\label{classCONFIG4CPP__NAMESPACE_1_1Configuration_a44dd9f98cff623000df1e6eca7a92f4c}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1Configuration_adbfc936338d4c86e7c2ce9d1efb38ac3}{virtual int {\bfseries lookup\-Memory\-Size\-M\-B} (const char $\ast$scope, const char $\ast$local\-Name, int default\-Val) const =0  throw (\-Configuration\-Exception)}\label{classCONFIG4CPP__NAMESPACE_1_1Configuration_adbfc936338d4c86e7c2ce9d1efb38ac3}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1Configuration_af4c75331ada2a8ea767759e598dc4813}{virtual int {\bfseries lookup\-Memory\-Size\-M\-B} (const char $\ast$scope, const char $\ast$local\-Name) const =0  throw (\-Configuration\-Exception)}\label{classCONFIG4CPP__NAMESPACE_1_1Configuration_af4c75331ada2a8ea767759e598dc4813}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1Configuration_a6acec433039e028637a396dacbabf06b}{virtual void {\bfseries lookup\-Scope} (const char $\ast$scope, const char $\ast$local\-Name) const =0  throw (\-Configuration\-Exception)}\label{classCONFIG4CPP__NAMESPACE_1_1Configuration_a6acec433039e028637a396dacbabf06b}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1Configuration_ab7050a889854c6925338ff9b6b751e82}{virtual void {\bfseries insert\-String} (const char $\ast$scope, const char $\ast$local\-Name, const char $\ast$str\-Value)=0  throw (\-Configuration\-Exception)}\label{classCONFIG4CPP__NAMESPACE_1_1Configuration_ab7050a889854c6925338ff9b6b751e82}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1Configuration_a3e1c09a93f7ac0abe44368d9a65afd23}{virtual void {\bfseries insert\-List} (const char $\ast$scope, const char $\ast$local\-Name, const char $\ast$$\ast$array, int array\-Size)=0  throw (\-Configuration\-Exception)}\label{classCONFIG4CPP__NAMESPACE_1_1Configuration_a3e1c09a93f7ac0abe44368d9a65afd23}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1Configuration_a0bc15285cf5f7ea5aa2ccf26a94590a3}{virtual void {\bfseries insert\-List} (const char $\ast$scope, const char $\ast$local\-Name, const char $\ast$$\ast$null\-Terminated\-Array)=0  throw (\-Configuration\-Exception)}\label{classCONFIG4CPP__NAMESPACE_1_1Configuration_a0bc15285cf5f7ea5aa2ccf26a94590a3}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1Configuration_a6496260411337a65f0d82fae0ff552c6}{virtual void {\bfseries insert\-List} (const char $\ast$scope, const char $\ast$local\-Name, const \hyperlink{classCONFIG4CPP__NAMESPACE_1_1StringVector}{String\-Vector} \&vec)=0  throw (\-Configuration\-Exception)}\label{classCONFIG4CPP__NAMESPACE_1_1Configuration_a6496260411337a65f0d82fae0ff552c6}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1Configuration_a497d3a52000cdf672ad893db8ea1ccef}{virtual void {\bfseries ensure\-Scope\-Exists} (const char $\ast$scope, const char $\ast$local\-Name)=0  throw (\-Configuration\-Exception)}\label{classCONFIG4CPP__NAMESPACE_1_1Configuration_a497d3a52000cdf672ad893db8ea1ccef}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1Configuration_abe28bb7ebf77e8b98847cbc457f58bc7}{virtual void {\bfseries remove} (const char $\ast$scope, const char $\ast$local\-Name)=0  throw (\-Configuration\-Exception)}\label{classCONFIG4CPP__NAMESPACE_1_1Configuration_abe28bb7ebf77e8b98847cbc457f58bc7}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1Configuration_ab4b0970b66d66ef42f63f7701c3ca928}{virtual void {\bfseries empty} ()=0}\label{classCONFIG4CPP__NAMESPACE_1_1Configuration_ab4b0970b66d66ef42f63f7701c3ca928}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1Configuration_afc76ea7c7408eaa284f7f78280d7ea0a}{static \hyperlink{classCONFIG4CPP__NAMESPACE_1_1Configuration}{Configuration} $\ast$ {\bfseries create} ()}\label{classCONFIG4CPP__NAMESPACE_1_1Configuration_afc76ea7c7408eaa284f7f78280d7ea0a}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1Configuration_a80e05a00907f4120cd854a0e9eb3a984}{static void {\bfseries merge\-Names} (const char $\ast$scope, const char $\ast$local\-Name, \hyperlink{classCONFIG4CPP__NAMESPACE_1_1StringBuffer}{String\-Buffer} \&fully\-Scoped\-Name)}\label{classCONFIG4CPP__NAMESPACE_1_1Configuration_a80e05a00907f4120cd854a0e9eb3a984}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1Configuration_a1f2a054198d9049975b20fc321f276b7}{static int {\bfseries mbstrlen} (const char $\ast$str)}\label{classCONFIG4CPP__NAMESPACE_1_1Configuration_a1f2a054198d9049975b20fc321f276b7}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1Configuration_a53dbcaf469fb63b08343575c983d16f6}{static bool {\bfseries pattern\-Match} (const char $\ast$str, const char $\ast$pattern)}\label{classCONFIG4CPP__NAMESPACE_1_1Configuration_a53dbcaf469fb63b08343575c983d16f6}
+
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/configuration/config4cpp/include/config4cpp/Configuration.\-h\item 
+src/configuration/config4cpp/src/Configuration.\-cpp\end{DoxyCompactItemize}

@@ -1,0 +1,60 @@
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1SchemaType}{\section{C\-O\-N\-F\-I\-G4\-C\-P\-P\-\_\-\-N\-A\-M\-E\-S\-P\-A\-C\-E\-:\-:Schema\-Type Class Reference}
+\label{classCONFIG4CPP__NAMESPACE_1_1SchemaType}\index{C\-O\-N\-F\-I\-G4\-C\-P\-P\-\_\-\-N\-A\-M\-E\-S\-P\-A\-C\-E\-::\-Schema\-Type@{C\-O\-N\-F\-I\-G4\-C\-P\-P\-\_\-\-N\-A\-M\-E\-S\-P\-A\-C\-E\-::\-Schema\-Type}}
+}
+Inheritance diagram for C\-O\-N\-F\-I\-G4\-C\-P\-P\-\_\-\-N\-A\-M\-E\-S\-P\-A\-C\-E\-:\-:Schema\-Type\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=12.000000cm]{classCONFIG4CPP__NAMESPACE_1_1SchemaType}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1SchemaType_a253d19cc29fbc5c77cdacff617b155a4}{{\bfseries Schema\-Type} (const char $\ast$type\-Name, const char $\ast$class\-Name, Configuration\-::\-Type cfg\-Type)}\label{classCONFIG4CPP__NAMESPACE_1_1SchemaType_a253d19cc29fbc5c77cdacff617b155a4}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1SchemaType_acee6e27a98ec3b847e9b7ed52d7bdfc5}{const char $\ast$ {\bfseries type\-Name} () const }\label{classCONFIG4CPP__NAMESPACE_1_1SchemaType_acee6e27a98ec3b847e9b7ed52d7bdfc5}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1SchemaType_a9db17b690f59eae1b9e56d731db7350f}{const char $\ast$ {\bfseries class\-Name} () const }\label{classCONFIG4CPP__NAMESPACE_1_1SchemaType_a9db17b690f59eae1b9e56d731db7350f}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1SchemaType_a996bbaa17ce3ca52951b7a64977b1ac7}{Configuration\-::\-Type {\bfseries cfg\-Type} () const }\label{classCONFIG4CPP__NAMESPACE_1_1SchemaType_a996bbaa17ce3ca52951b7a64977b1ac7}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1SchemaType_a7951ab8f525833bc06272820f69733ea}{virtual void {\bfseries check\-Rule} (const \hyperlink{classCONFIG4CPP__NAMESPACE_1_1SchemaValidator}{Schema\-Validator} $\ast$sv, const \hyperlink{classCONFIG4CPP__NAMESPACE_1_1Configuration}{Configuration} $\ast$cfg, const char $\ast$type\-Name, const \hyperlink{classCONFIG4CPP__NAMESPACE_1_1StringVector}{String\-Vector} \&type\-Args, const char $\ast$rule) const =0  throw (\-Configuration\-Exception)}\label{classCONFIG4CPP__NAMESPACE_1_1SchemaType_a7951ab8f525833bc06272820f69733ea}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1SchemaType_a694211a9a083ac45039dbe888c8ada6e}{virtual void {\bfseries validate} (const \hyperlink{classCONFIG4CPP__NAMESPACE_1_1SchemaValidator}{Schema\-Validator} $\ast$sv, const \hyperlink{classCONFIG4CPP__NAMESPACE_1_1Configuration}{Configuration} $\ast$cfg, const char $\ast$scope, const char $\ast$name, const char $\ast$type\-Name, const char $\ast$orig\-Type\-Name, const \hyperlink{classCONFIG4CPP__NAMESPACE_1_1StringVector}{String\-Vector} \&type\-Args, int indent\-Level) const   throw (\-Configuration\-Exception)}\label{classCONFIG4CPP__NAMESPACE_1_1SchemaType_a694211a9a083ac45039dbe888c8ada6e}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1SchemaType_ac2dcd5eb5d90d17f9b24ecd67758f79b}{virtual bool {\bfseries is\-A} (const \hyperlink{classCONFIG4CPP__NAMESPACE_1_1SchemaValidator}{Schema\-Validator} $\ast$sv, const \hyperlink{classCONFIG4CPP__NAMESPACE_1_1Configuration}{Configuration} $\ast$cfg, const char $\ast$value, const char $\ast$type\-Name, const \hyperlink{classCONFIG4CPP__NAMESPACE_1_1StringVector}{String\-Vector} \&type\-Args, int indent\-Level, \hyperlink{classCONFIG4CPP__NAMESPACE_1_1StringBuffer}{String\-Buffer} \&err\-Suffix) const }\label{classCONFIG4CPP__NAMESPACE_1_1SchemaType_ac2dcd5eb5d90d17f9b24ecd67758f79b}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1SchemaType_a7417b9c4739c2e02a3df352bdaf52add}{\hyperlink{classCONFIG4CPP__NAMESPACE_1_1SchemaType}{Schema\-Type} $\ast$ {\bfseries find\-Type} (const \hyperlink{classCONFIG4CPP__NAMESPACE_1_1SchemaValidator}{Schema\-Validator} $\ast$sv, const char $\ast$name) const }\label{classCONFIG4CPP__NAMESPACE_1_1SchemaType_a7417b9c4739c2e02a3df352bdaf52add}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1SchemaType_a0c6f1eea6ea1f6c84fe013a9b12fa2a7}{void {\bfseries call\-Validate} (const \hyperlink{classCONFIG4CPP__NAMESPACE_1_1SchemaType}{Schema\-Type} $\ast$target, const \hyperlink{classCONFIG4CPP__NAMESPACE_1_1SchemaValidator}{Schema\-Validator} $\ast$sv, const \hyperlink{classCONFIG4CPP__NAMESPACE_1_1Configuration}{Configuration} $\ast$cfg, const char $\ast$scope, const char $\ast$name, const char $\ast$type\-Name, const char $\ast$orig\-Type\-Name, const \hyperlink{classCONFIG4CPP__NAMESPACE_1_1StringVector}{String\-Vector} \&type\-Args, int indent\-Level) const   throw (\-Configuration\-Exception)}\label{classCONFIG4CPP__NAMESPACE_1_1SchemaType_a0c6f1eea6ea1f6c84fe013a9b12fa2a7}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1SchemaType_a83f255330f3ae79110adbccf9e6ecc06}{bool {\bfseries call\-Is\-A} (const \hyperlink{classCONFIG4CPP__NAMESPACE_1_1SchemaType}{Schema\-Type} $\ast$target, const \hyperlink{classCONFIG4CPP__NAMESPACE_1_1SchemaValidator}{Schema\-Validator} $\ast$sv, const \hyperlink{classCONFIG4CPP__NAMESPACE_1_1Configuration}{Configuration} $\ast$cfg, const char $\ast$value, const char $\ast$type\-Name, const \hyperlink{classCONFIG4CPP__NAMESPACE_1_1StringVector}{String\-Vector} \&type\-Args, int indent\-Level, \hyperlink{classCONFIG4CPP__NAMESPACE_1_1StringBuffer}{String\-Buffer} \&err\-Suffix) const }\label{classCONFIG4CPP__NAMESPACE_1_1SchemaType_a83f255330f3ae79110adbccf9e6ecc06}
+
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1SchemaType_af8cde46b6af04882af19fea29321f27b}{class {\bfseries Schema\-Validator}}\label{classCONFIG4CPP__NAMESPACE_1_1SchemaType_af8cde46b6af04882af19fea29321f27b}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1SchemaType_aacf417b319ed18d9192f294e9267b3b7}{class {\bfseries Schema\-Parser}}\label{classCONFIG4CPP__NAMESPACE_1_1SchemaType_aacf417b319ed18d9192f294e9267b3b7}
+
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/configuration/config4cpp/include/config4cpp/Schema\-Type.\-h\item 
+src/configuration/config4cpp/src/Schema\-Type.\-cpp\end{DoxyCompactItemize}

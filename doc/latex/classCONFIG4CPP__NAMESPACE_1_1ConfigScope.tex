@@ -1,0 +1,102 @@
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1ConfigScope}{\section{C\-O\-N\-F\-I\-G4\-C\-P\-P\-\_\-\-N\-A\-M\-E\-S\-P\-A\-C\-E\-:\-:Config\-Scope Class Reference}
+\label{classCONFIG4CPP__NAMESPACE_1_1ConfigScope}\index{C\-O\-N\-F\-I\-G4\-C\-P\-P\-\_\-\-N\-A\-M\-E\-S\-P\-A\-C\-E\-::\-Config\-Scope@{C\-O\-N\-F\-I\-G4\-C\-P\-P\-\_\-\-N\-A\-M\-E\-S\-P\-A\-C\-E\-::\-Config\-Scope}}
+}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1ConfigScope_a5ea740332c7e0b1034e6d6f3f3813377}{{\bfseries Config\-Scope} (\hyperlink{classCONFIG4CPP__NAMESPACE_1_1ConfigScope}{Config\-Scope} $\ast$parent\-Scope, const char $\ast$name)}\label{classCONFIG4CPP__NAMESPACE_1_1ConfigScope_a5ea740332c7e0b1034e6d6f3f3813377}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1ConfigScope_a1f257a2251f826a2eff0be7e0a528225}{const char $\ast$ {\bfseries scoped\-Name} () const }\label{classCONFIG4CPP__NAMESPACE_1_1ConfigScope_a1f257a2251f826a2eff0be7e0a528225}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1ConfigScope_a5da51e5c55fd19e8f10102011005e488}{bool {\bfseries add\-Or\-Replace\-String} (const char $\ast$name, const char $\ast$str)}\label{classCONFIG4CPP__NAMESPACE_1_1ConfigScope_a5da51e5c55fd19e8f10102011005e488}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1ConfigScope_aef6266efa39766595d426f1d8d801407}{bool {\bfseries add\-Or\-Replace\-List} (const char $\ast$name, const char $\ast$$\ast$array, int size)}\label{classCONFIG4CPP__NAMESPACE_1_1ConfigScope_aef6266efa39766595d426f1d8d801407}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1ConfigScope_a66239a4d9ab5e093e2fa152cbadd5d09}{bool {\bfseries add\-Or\-Replace\-List} (const char $\ast$name, const \hyperlink{classCONFIG4CPP__NAMESPACE_1_1StringVector}{String\-Vector} \&list)}\label{classCONFIG4CPP__NAMESPACE_1_1ConfigScope_a66239a4d9ab5e093e2fa152cbadd5d09}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1ConfigScope_a5b8dd11c8741bac3996d9b9b63345520}{bool {\bfseries ensure\-Scope\-Exists} (const char $\ast$name, \hyperlink{classCONFIG4CPP__NAMESPACE_1_1ConfigScope}{Config\-Scope} $\ast$\&scope)}\label{classCONFIG4CPP__NAMESPACE_1_1ConfigScope_a5b8dd11c8741bac3996d9b9b63345520}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1ConfigScope_a5a4cf3057c9a8295fdc88d07374eb1e1}{bool {\bfseries remove\-Item} (const char $\ast$name)}\label{classCONFIG4CPP__NAMESPACE_1_1ConfigScope_a5a4cf3057c9a8295fdc88d07374eb1e1}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1ConfigScope_a2dc87e96a4a54182f9fd87b513a0dc7f}{\hyperlink{classCONFIG4CPP__NAMESPACE_1_1ConfigItem}{Config\-Item} $\ast$ {\bfseries find\-Item} (const char $\ast$name) const }\label{classCONFIG4CPP__NAMESPACE_1_1ConfigScope_a2dc87e96a4a54182f9fd87b513a0dc7f}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1ConfigScope_aef6770e9e55b3ef7e6e086b8c5d33efe}{\hyperlink{classCONFIG4CPP__NAMESPACE_1_1ConfigScopeEntry}{Config\-Scope\-Entry} $\ast$ {\bfseries find\-Entry} (const char $\ast$name, int \&index) const }\label{classCONFIG4CPP__NAMESPACE_1_1ConfigScope_aef6770e9e55b3ef7e6e086b8c5d33efe}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1ConfigScope_a1e5997b463c8c7d90e41b0d333779dfb}{bool {\bfseries is\-\_\-in\-\_\-table} (const char $\ast$name) const }\label{classCONFIG4CPP__NAMESPACE_1_1ConfigScope_a1e5997b463c8c7d90e41b0d333779dfb}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1ConfigScope_afa44121e162e8fe8b8c60557a4efdddf}{void {\bfseries list\-Fully\-Scoped\-Names} (Configuration\-::\-Type type\-Mask, bool recursive, \hyperlink{classCONFIG4CPP__NAMESPACE_1_1StringVector}{String\-Vector} \&vec) const }\label{classCONFIG4CPP__NAMESPACE_1_1ConfigScope_afa44121e162e8fe8b8c60557a4efdddf}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1ConfigScope_a51bc6cabe45220aedbc64a14f8c3ed42}{void {\bfseries list\-Fully\-Scoped\-Names} (Configuration\-::\-Type type\-Mask, bool recursive, const \hyperlink{classCONFIG4CPP__NAMESPACE_1_1StringVector}{String\-Vector} \&filter\-Patterns, \hyperlink{classCONFIG4CPP__NAMESPACE_1_1StringVector}{String\-Vector} \&vec) const }\label{classCONFIG4CPP__NAMESPACE_1_1ConfigScope_a51bc6cabe45220aedbc64a14f8c3ed42}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1ConfigScope_ae134663c3719c1c3e2b1722083a6f694}{void {\bfseries list\-Locally\-Scoped\-Names} (Configuration\-::\-Type type\-Mask, bool recursive, const \hyperlink{classCONFIG4CPP__NAMESPACE_1_1StringVector}{String\-Vector} \&filter\-Patterns, \hyperlink{classCONFIG4CPP__NAMESPACE_1_1StringVector}{String\-Vector} \&vec) const }\label{classCONFIG4CPP__NAMESPACE_1_1ConfigScope_ae134663c3719c1c3e2b1722083a6f694}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1ConfigScope_ac5be996819457c45865ef96905891dc4}{\hyperlink{classCONFIG4CPP__NAMESPACE_1_1ConfigScope}{Config\-Scope} $\ast$ {\bfseries parent\-Scope} () const }\label{classCONFIG4CPP__NAMESPACE_1_1ConfigScope_ac5be996819457c45865ef96905891dc4}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1ConfigScope_af53f0d942b0ab10915d2f3d0ed212b45}{\hyperlink{classCONFIG4CPP__NAMESPACE_1_1ConfigScope}{Config\-Scope} $\ast$ {\bfseries root\-Scope} () const }\label{classCONFIG4CPP__NAMESPACE_1_1ConfigScope_af53f0d942b0ab10915d2f3d0ed212b45}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1ConfigScope_a7e95e74ee979c6722169ccbbc95d0053}{void {\bfseries dump} (\hyperlink{classCONFIG4CPP__NAMESPACE_1_1StringBuffer}{String\-Buffer} \&buf, bool want\-Expanded\-Uid\-Names, int indent\-Level=0) const }\label{classCONFIG4CPP__NAMESPACE_1_1ConfigScope_a7e95e74ee979c6722169ccbbc95d0053}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1ConfigScope_ae77738a5402736d20f35c3b8e417e93d}{int {\bfseries hash} (const char $\ast$name) const }\label{classCONFIG4CPP__NAMESPACE_1_1ConfigScope_ae77738a5402736d20f35c3b8e417e93d}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1ConfigScope_afb65eea5721ffcbc64612346b751aaa7}{void {\bfseries grow\-If\-Too\-Full} ()}\label{classCONFIG4CPP__NAMESPACE_1_1ConfigScope_afb65eea5721ffcbc64612346b751aaa7}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1ConfigScope_abb3d10b2b4a0677601c436956d71d986}{void {\bfseries list\-Local\-Names} (Configuration\-::\-Type type\-Mask, \hyperlink{classCONFIG4CPP__NAMESPACE_1_1StringVector}{String\-Vector} \&vec) const }\label{classCONFIG4CPP__NAMESPACE_1_1ConfigScope_abb3d10b2b4a0677601c436956d71d986}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1ConfigScope_a9bb347d4123de91e2224cb6465301f7e}{void {\bfseries list\-Scoped\-Names\-Helper} (const char $\ast$prefix, Configuration\-::\-Type type\-Mask, bool recursive, const \hyperlink{classCONFIG4CPP__NAMESPACE_1_1StringVector}{String\-Vector} \&filter\-Patterns, \hyperlink{classCONFIG4CPP__NAMESPACE_1_1StringVector}{String\-Vector} \&vec) const }\label{classCONFIG4CPP__NAMESPACE_1_1ConfigScope_a9bb347d4123de91e2224cb6465301f7e}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1ConfigScope_aa9df66ae25814884e1827a7cc7b17b15}{bool {\bfseries list\-Filter} (const char $\ast$name, const \hyperlink{classCONFIG4CPP__NAMESPACE_1_1StringVector}{String\-Vector} \&filter\-Patterns) const }\label{classCONFIG4CPP__NAMESPACE_1_1ConfigScope_aa9df66ae25814884e1827a7cc7b17b15}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1ConfigScope_aba00a73bd33dbe9262f1c404291c2b04}{\hyperlink{classCONFIG4CPP__NAMESPACE_1_1ConfigScope}{Config\-Scope} \& {\bfseries operator=} (const \hyperlink{classCONFIG4CPP__NAMESPACE_1_1ConfigScope}{Config\-Scope} \&)}\label{classCONFIG4CPP__NAMESPACE_1_1ConfigScope_aba00a73bd33dbe9262f1c404291c2b04}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1ConfigScope_a1afac7d7b7b9d69df84b64540ba4e6ff}{\hyperlink{classCONFIG4CPP__NAMESPACE_1_1ConfigScope}{Config\-Scope} $\ast$ {\bfseries m\-\_\-parent\-Scope}}\label{classCONFIG4CPP__NAMESPACE_1_1ConfigScope_a1afac7d7b7b9d69df84b64540ba4e6ff}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1ConfigScope_a9208797fe48b6c42b1dffcb16532b1bb}{\hyperlink{classCONFIG4CPP__NAMESPACE_1_1StringBuffer}{String\-Buffer} {\bfseries m\-\_\-scoped\-Name}}\label{classCONFIG4CPP__NAMESPACE_1_1ConfigScope_a9208797fe48b6c42b1dffcb16532b1bb}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1ConfigScope_a1ea2061a66dcaa846f493ddb69cd074c}{\hyperlink{classCONFIG4CPP__NAMESPACE_1_1StringBuffer}{String\-Buffer} {\bfseries m\-\_\-local\-Name}}\label{classCONFIG4CPP__NAMESPACE_1_1ConfigScope_a1ea2061a66dcaa846f493ddb69cd074c}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1ConfigScope_a6d57c62c3b41899f904973c9d4d10fe7}{\hyperlink{classCONFIG4CPP__NAMESPACE_1_1ConfigScopeEntry}{Config\-Scope\-Entry} $\ast$ {\bfseries m\-\_\-table}}\label{classCONFIG4CPP__NAMESPACE_1_1ConfigScope_a6d57c62c3b41899f904973c9d4d10fe7}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1ConfigScope_a7e37ddcd5996730d3f2bd594121409d4}{int {\bfseries m\-\_\-table\-Size}}\label{classCONFIG4CPP__NAMESPACE_1_1ConfigScope_a7e37ddcd5996730d3f2bd594121409d4}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1ConfigScope_aacd0050ed02f443083a7658fff3776fe}{int {\bfseries m\-\_\-num\-Entries}}\label{classCONFIG4CPP__NAMESPACE_1_1ConfigScope_aacd0050ed02f443083a7658fff3776fe}
+
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/configuration/config4cpp/src/Config\-Scope.\-h\item 
+src/configuration/config4cpp/src/Config\-Scope.\-cpp\end{DoxyCompactItemize}

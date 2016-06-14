@@ -1,0 +1,59 @@
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1SchemaValidator}{\section{C\-O\-N\-F\-I\-G4\-C\-P\-P\-\_\-\-N\-A\-M\-E\-S\-P\-A\-C\-E\-:\-:Schema\-Validator Class Reference}
+\label{classCONFIG4CPP__NAMESPACE_1_1SchemaValidator}\index{C\-O\-N\-F\-I\-G4\-C\-P\-P\-\_\-\-N\-A\-M\-E\-S\-P\-A\-C\-E\-::\-Schema\-Validator@{C\-O\-N\-F\-I\-G4\-C\-P\-P\-\_\-\-N\-A\-M\-E\-S\-P\-A\-C\-E\-::\-Schema\-Validator}}
+}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bfseries Force\-Mode} \{ {\bfseries D\-O\-\_\-\-N\-O\-T\-\_\-\-F\-O\-R\-C\-E}, 
+{\bfseries F\-O\-R\-C\-E\-\_\-\-O\-P\-T\-I\-O\-N\-A\-L}, 
+{\bfseries F\-O\-R\-C\-E\-\_\-\-R\-E\-Q\-U\-I\-R\-E\-D}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1SchemaValidator_a5dbbf5ecd6ee7969bf5889941084657b}{void {\bfseries want\-Diagnostics} (bool value)}\label{classCONFIG4CPP__NAMESPACE_1_1SchemaValidator_a5dbbf5ecd6ee7969bf5889941084657b}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1SchemaValidator_a23e2382ac47e69d12cc44d35e1de4352}{bool {\bfseries want\-Diagnostics} ()}\label{classCONFIG4CPP__NAMESPACE_1_1SchemaValidator_a23e2382ac47e69d12cc44d35e1de4352}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1SchemaValidator_a5b75f10c38f46aed325ebe1c222db25d}{void {\bfseries parse\-Schema} (const char $\ast$$\ast$schema, int schema\-Size)  throw (\-Configuration\-Exception)}\label{classCONFIG4CPP__NAMESPACE_1_1SchemaValidator_a5b75f10c38f46aed325ebe1c222db25d}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1SchemaValidator_a2eb075c6f649bedaafe38ff6e5c84f2f}{void {\bfseries parse\-Schema} (const char $\ast$$\ast$null\-Terminated\-Schema)  throw (\-Configuration\-Exception)}\label{classCONFIG4CPP__NAMESPACE_1_1SchemaValidator_a2eb075c6f649bedaafe38ff6e5c84f2f}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1SchemaValidator_a062b6b1e6444357a647c4e8c4a2e3b77}{void {\bfseries validate} (const \hyperlink{classCONFIG4CPP__NAMESPACE_1_1Configuration}{Configuration} $\ast$cfg, const char $\ast$scope, const char $\ast$local\-Name, Force\-Mode force\-Mode=D\-O\-\_\-\-N\-O\-T\-\_\-\-F\-O\-R\-C\-E) const   throw (\-Configuration\-Exception)}\label{classCONFIG4CPP__NAMESPACE_1_1SchemaValidator_a062b6b1e6444357a647c4e8c4a2e3b77}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1SchemaValidator_a1145a4d7ce20fe64ba9c51f8b6322b5b}{void {\bfseries validate} (const \hyperlink{classCONFIG4CPP__NAMESPACE_1_1Configuration}{Configuration} $\ast$cfg, const char $\ast$scope, const char $\ast$local\-Name, bool recurse\-Into\-Subscopes, Configuration\-::\-Type type\-Mask, Force\-Mode force\-Mode=D\-O\-\_\-\-N\-O\-T\-\_\-\-F\-O\-R\-C\-E) const   throw (\-Configuration\-Exception)}\label{classCONFIG4CPP__NAMESPACE_1_1SchemaValidator_a1145a4d7ce20fe64ba9c51f8b6322b5b}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1SchemaValidator_a0f9a5ec0f1bccf1d6a7ad6683ac79b21}{void {\bfseries register\-Type} (\hyperlink{classCONFIG4CPP__NAMESPACE_1_1SchemaType}{Schema\-Type} $\ast$type)  throw (\-Configuration\-Exception)}\label{classCONFIG4CPP__NAMESPACE_1_1SchemaValidator_a0f9a5ec0f1bccf1d6a7ad6683ac79b21}
+
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1SchemaValidator_aacf417b319ed18d9192f294e9267b3b7}{class {\bfseries Schema\-Parser}}\label{classCONFIG4CPP__NAMESPACE_1_1SchemaValidator_aacf417b319ed18d9192f294e9267b3b7}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1SchemaValidator_ab2fb09983e4076374aabf2bdf92643ab}{class {\bfseries Schema\-Type}}\label{classCONFIG4CPP__NAMESPACE_1_1SchemaValidator_ab2fb09983e4076374aabf2bdf92643ab}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1SchemaValidator_ab71ce25ac9889257c422db208ec91754}{int {\bfseries compare\-Schema\-Id\-Rule\-Info} (const void $\ast$, const void $\ast$)}\label{classCONFIG4CPP__NAMESPACE_1_1SchemaValidator_ab71ce25ac9889257c422db208ec91754}
+
+\item 
+\hypertarget{classCONFIG4CPP__NAMESPACE_1_1SchemaValidator_a94d8ea775a97af3b1429081ba297f37d}{int {\bfseries compare\-Schema\-Type} (const void $\ast$, const void $\ast$)}\label{classCONFIG4CPP__NAMESPACE_1_1SchemaValidator_a94d8ea775a97af3b1429081ba297f37d}
+
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/configuration/config4cpp/include/config4cpp/Schema\-Validator.\-h\item 
+src/configuration/config4cpp/src/Schema\-Validator.\-cpp\end{DoxyCompactItemize}
